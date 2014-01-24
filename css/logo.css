@@ -1,0 +1,221 @@
+.logo {
+  height: 260px;
+  width: 350px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-right: 11px;
+  text-align: center; }
+  .logo h1 {
+    display: none; }
+  .logo .the-magic-of {
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 22px;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 28px;
+    padding-left: 16px;
+    color: #aaaaaa; }
+  .logo .css-rainbow {
+    max-width: 100%;
+    font-size: 0; }
+    .logo .css-rainbow .css-letter {
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline;
+      margin-right: 50px; }
+    .logo .css-rainbow .css-rainbow-c {
+      width: 61px;
+      height: 124px;
+      position: relative;
+      top: -59px; }
+      .logo .css-rainbow .css-rainbow-c .rainbow {
+        -webkit-transform: rotateZ(-90deg);
+        -moz-transform: rotateZ(-90deg);
+        -ms-transform: rotateZ(-90deg);
+        -o-transform: rotateZ(-90deg);
+        transform: rotateZ(-90deg);
+        -webkit-transform-origin: 100% 100% 0 50%;
+        -moz-transform-origin: 100% 100% 0 50%;
+        -ms-transform-origin: 100% 100% 0 50%;
+        -o-transform-origin: 100% 100% 0 50%;
+        transform-origin: 100% 100% 0 50%;
+        position: absolute;
+        top: -60px; }
+        .logo .css-rainbow .css-rainbow-c .rainbow .bands {
+          -webkit-transform: rotateZ(45deg);
+          -moz-transform: rotateZ(45deg);
+          -ms-transform: rotateZ(45deg);
+          -o-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+          position: relative;
+          height: 124px;
+          width: 124px; }
+          .logo .css-rainbow .css-rainbow-c .rainbow .bands div {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            position: absolute;
+            border-width: 9px;
+            border-style: solid;
+            width: 100%;
+            height: 100%;
+            border-bottom-color: transparent;
+            border-right-color: transparent; }
+            .logo .css-rainbow .css-rainbow-c .rainbow .bands div:nth-child(1) {
+              width: 124px;
+              height: 124px;
+              top: 0px;
+              left: 0px; }
+            .logo .css-rainbow .css-rainbow-c .rainbow .bands div:nth-child(2) {
+              width: 106px;
+              height: 106px;
+              top: 9px;
+              left: 9px; }
+            .logo .css-rainbow .css-rainbow-c .rainbow .bands div:nth-child(3) {
+              width: 88px;
+              height: 88px;
+              top: 18px;
+              left: 18px; }
+            .logo .css-rainbow .css-rainbow-c .rainbow .bands div:nth-child(4) {
+              width: 70px;
+              height: 70px;
+              top: 27px;
+              left: 27px; }
+            .logo .css-rainbow .css-rainbow-c .rainbow .bands div:nth-child(5) {
+              width: 52px;
+              height: 52px;
+              top: 36px;
+              left: 36px; }
+            .logo .css-rainbow .css-rainbow-c .rainbow .bands div:nth-child(6) {
+              width: 34px;
+              height: 34px;
+              top: 45px;
+              left: 45px; }
+          .logo .css-rainbow .css-rainbow-c .rainbow .bands .red {
+            border-top-color: #ff4136;
+            border-left-color: #ff4136; }
+          .logo .css-rainbow .css-rainbow-c .rainbow .bands .orange {
+            border-top-color: #ff851b;
+            border-left-color: #ff851b; }
+          .logo .css-rainbow .css-rainbow-c .rainbow .bands .yellow {
+            border-top-color: #ffdc00;
+            border-left-color: #ffdc00; }
+          .logo .css-rainbow .css-rainbow-c .rainbow .bands .green {
+            border-top-color: #2ecc40;
+            border-left-color: #2ecc40; }
+          .logo .css-rainbow .css-rainbow-c .rainbow .bands .blue {
+            border-top-color: #0074d9;
+            border-left-color: #0074d9; }
+          .logo .css-rainbow .css-rainbow-c .rainbow .bands .purple {
+            border-top-color: #b10dc9;
+            border-left-color: #b10dc9; }
+    .logo .css-rainbow .css-rainbow-s {
+      -webkit-transform: rotateZ(22.5deg);
+      -moz-transform: rotateZ(22.5deg);
+      -ms-transform: rotateZ(22.5deg);
+      -o-transform: rotateZ(22.5deg);
+      transform: rotateZ(22.5deg);
+      width: 61px;
+      height: 124px; }
+      .logo .css-rainbow .css-rainbow-s .rainbow {
+        position: absolute; }
+        .logo .css-rainbow .css-rainbow-s .rainbow .bands {
+          -webkit-transform: rotateZ(45deg);
+          -moz-transform: rotateZ(45deg);
+          -ms-transform: rotateZ(45deg);
+          -o-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+          position: relative;
+          height: 80px;
+          width: 80px; }
+          .logo .css-rainbow .css-rainbow-s .rainbow .bands div {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            position: absolute;
+            border-width: 6px;
+            border-style: solid;
+            width: 100%;
+            height: 100%;
+            border-bottom-color: transparent;
+            border-right-color: transparent; }
+            .logo .css-rainbow .css-rainbow-s .rainbow .bands div:nth-child(1) {
+              width: 80px;
+              height: 80px;
+              top: 0px;
+              left: 0px; }
+            .logo .css-rainbow .css-rainbow-s .rainbow .bands div:nth-child(2) {
+              width: 68px;
+              height: 68px;
+              top: 6px;
+              left: 6px; }
+            .logo .css-rainbow .css-rainbow-s .rainbow .bands div:nth-child(3) {
+              width: 56px;
+              height: 56px;
+              top: 12px;
+              left: 12px; }
+            .logo .css-rainbow .css-rainbow-s .rainbow .bands div:nth-child(4) {
+              width: 44px;
+              height: 44px;
+              top: 18px;
+              left: 18px; }
+            .logo .css-rainbow .css-rainbow-s .rainbow .bands div:nth-child(5) {
+              width: 32px;
+              height: 32px;
+              top: 24px;
+              left: 24px; }
+            .logo .css-rainbow .css-rainbow-s .rainbow .bands div:nth-child(6) {
+              width: 20px;
+              height: 20px;
+              top: 30px;
+              left: 30px; }
+          .logo .css-rainbow .css-rainbow-s .rainbow .bands .red {
+            border-top-color: #ff4136;
+            border-left-color: #ff4136; }
+          .logo .css-rainbow .css-rainbow-s .rainbow .bands .orange {
+            border-top-color: #ff851b;
+            border-left-color: #ff851b; }
+          .logo .css-rainbow .css-rainbow-s .rainbow .bands .yellow {
+            border-top-color: #ffdc00;
+            border-left-color: #ffdc00; }
+          .logo .css-rainbow .css-rainbow-s .rainbow .bands .green {
+            border-top-color: #2ecc40;
+            border-left-color: #2ecc40; }
+          .logo .css-rainbow .css-rainbow-s .rainbow .bands .blue {
+            border-top-color: #0074d9;
+            border-left-color: #0074d9; }
+          .logo .css-rainbow .css-rainbow-s .rainbow .bands .purple {
+            border-top-color: #b10dc9;
+            border-left-color: #b10dc9; }
+      .logo .css-rainbow .css-rainbow-s .top-half {
+        position: absolute;
+        width: 80px;
+        height: 60px; }
+        .logo .css-rainbow .css-rainbow-s .top-half .rainbow {
+          -webkit-transform: rotateZ(-90deg);
+          -moz-transform: rotateZ(-90deg);
+          -ms-transform: rotateZ(-90deg);
+          -o-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg); }
+      .logo .css-rainbow .css-rainbow-s .bottom-half {
+        position: absolute;
+        width: 80px;
+        height: 60px; }
+        .logo .css-rainbow .css-rainbow-s .bottom-half .rainbow {
+          -webkit-transform: rotateZ(90deg);
+          -moz-transform: rotateZ(90deg);
+          -ms-transform: rotateZ(90deg);
+          -o-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+          top: 44px; }
+      .logo .css-rainbow .css-rainbow-s:last-child {
+        margin-right: 0; }

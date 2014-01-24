@@ -1,0 +1,75 @@
+@import compass/css3
+
+@import rainbow
+
+.logo
+    height: 260px
+    width: 350px
+    margin: 0 auto
+    max-width: 100%
+    padding-right: 11px
+    text-align: center
+
+    h1
+        display: none
+
+    .the-magic-of
+        font-weight: 100
+        text-transform: uppercase
+        letter-spacing: .4em
+        font-size: 22px
+        line-height: 1
+        position: relative
+        margin-bottom: 28px
+        padding-left: 16px
+        color: #aaa
+
+    .css-rainbow
+        max-width: 100%
+        font-size: 0
+
+        .css-letter
+            +inline-block
+            margin-right: 50px
+
+        .css-rainbow-c
+            width: 61px
+            height: 124px
+            position: relative
+            top: -59px
+
+            .rainbow
+                +rainbow(124px, 9px)
+                +transform(rotateZ(-90deg))
+                +transform-origin(100% 100% 0)
+                position: absolute
+                top: -60px
+
+        .css-rainbow-s
+            +transform(rotateZ(22.5deg))
+            width: 61px
+            height: 124px
+
+            .rainbow
+                +rainbow(80px, 6px)
+                position: absolute
+
+            .top-half
+                position: absolute
+                width: 80px
+                height: 60px
+
+                .rainbow
+                    +transform(rotateZ(-90deg))
+
+            .bottom-half
+                position: absolute
+                width: 80px
+                height: 60px
+
+                .rainbow
+                    +transform(rotateZ(90deg))
+                    top: 44px
+
+            &:last-child
+                margin-right: 0
