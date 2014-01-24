@@ -1,0 +1,16 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "proxima-nova", "Helvetica Neue", sans-serif;
+  color: #464646;
+  margin: 0; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both; }
