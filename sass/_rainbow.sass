@@ -1,0 +1,49 @@
+@import compass/css3
+
+=rainbow($rainbowSize, $bandWidth)
+    .bands
+        +transform(rotateZ(45deg))
+        position: relative
+        height: $rainbowSize
+        width: $rainbowSize
+
+        div
+            +border-radius(50%)
+            position: absolute
+            border-width: $bandWidth
+            border-style: solid
+            width: 100%
+            height: 100%
+            border-bottom-color: transparent
+            border-right-color: transparent
+
+            @for $i from 1 through 6
+                &:nth-child(#{ $i })
+                    width: $rainbowSize - (($i - 1) * 2 * $bandWidth)
+                    height: $rainbowSize - (($i - 1) * 2 * $bandWidth)
+                    top: ($i - 1) * $bandWidth
+                    left: ($i - 1) * $bandWidth
+
+        .red
+            border-top-color: #ff4136
+            border-left-color: #ff4136
+
+        .orange
+            border-top-color: #ff851b
+            border-left-color: #ff851b
+
+        .yellow
+            border-top-color: #ffdc00
+            border-left-color: #ffdc00
+
+        .green
+            border-top-color: #2ecc40
+            border-left-color: #2ecc40
+
+        .blue
+            border-top-color: #0074d9
+            border-left-color: #0074d9
+
+        .purple
+            border-top-color: #b10dc9
+            border-left-color: #b10dc9
