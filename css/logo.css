@@ -39,13 +39,8 @@
         -ms-transform: rotateZ(-90deg);
         -o-transform: rotateZ(-90deg);
         transform: rotateZ(-90deg);
-        -webkit-transform-origin: 100% 100% 0 50%;
-        -moz-transform-origin: 100% 100% 0 50%;
-        -ms-transform-origin: 100% 100% 0 50%;
-        -o-transform-origin: 100% 100% 0 50%;
-        transform-origin: 100% 100% 0 50%;
         position: absolute;
-        top: -60px; }
+        top: 62px; }
         .logo .css-rainbow .css-rainbow-c .rainbow .bands {
           -webkit-transform: rotateZ(45deg);
           -moz-transform: rotateZ(45deg);
