@@ -1,0 +1,99 @@
+@import compass/css3
+
+@import rainbow
+
+html, body
+    overflow: hidden
+    height: 100%
+    width: 100%
+
+.page-scroll
+    position: fixed
+    margin: auto
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+
+.page
+    text-align: center
+
+.page-inner
+    padding: 20px 0
+
+@media (min-width: 768px)
+    .page-outer
+        height: 100%
+        width: 100%
+        display: table
+
+    .page
+        display: table-cell
+        vertical-align: middle
+
+    .page-inner
+        padding: 200px 0
+        position: relative
+
+.animated-rainbow
+    display: none
+
+    // TODO - finish
+    // position: absolute
+    // margin-left: -400px
+    // height: 400px
+    // width: 800px
+    // top: -170px
+    // left: 50%
+    // right: 0
+    // bottom: 0
+    // overflow: hidden
+
+    // .rainbow
+    //     +rainbow(800px, 10px)
+    //     +transform(rotateZ(180deg))
+    //     +transition(transform 5s 5s ease-in-out forwards)
+    //     -webkit-backface-visibility: hidden
+
+    // &.animated .rainbow
+    //     +transform(rotateZ(360deg))
+
+.separator
+    height: 20px
+
+    @media (min-width: 768px)
+        height: 60px
+
+h2
+    font-weight: 100
+    text-transform: uppercase
+    letter-spacing: .4em
+    font-size: 22px
+    line-height: 1
+    position: relative
+    margin-bottom: 28px
+    padding-left: 16px
+    color: #aaa
+
+.lesson
+    font-weight: 300
+    letter-spacing: 0.01em
+    font-size: 32px
+    line-height: 1
+    position: relative
+    margin: 80px 0
+    padding-left: 16px
+
+    .number
+        margin-bottom: 13px
+        color: #aaa
+        font-size: 20px
+
+    a
+        color: inherit
+        text-decoration: none
+
+        &:hover
+            text-decoration: underline
