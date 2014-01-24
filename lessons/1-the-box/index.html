@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Box &mdash; Lesson 1 &mdash; Magic of CSS &mdash; HubSpot &mdash; by Adam Schwartz</title>
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="icon" href="http://static.hubspot.com/favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="../../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../../css/logo.css">
+        <link rel="stylesheet" type="text/css" href="../../css/lessons.css">
+
+        <script type="text/javascript" src="//use.typekit.net/jbn8qxr.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="logo"> <h1>The Magic of CSS</h1> <div class="the-magic-of">The Magic Of</div> <div class="css-rainbow"> <div class="css-letter css-rainbow-c"> <div class="rainbow"> <div class="bands"> <div class="red"></div> <div class="orange"></div> <div class="yellow"></div> <div class="green"></div> <div class="blue"></div> <div class="purple"></div> </div> </div> </div> <div class="css-letter css-rainbow-s"> <div class="top-half"> <div class="rainbow"> <div class="bands"> <div class="red"></div> <div class="orange"></div> <div class="yellow"></div> <div class="green"></div> <div class="blue"></div> <div class="purple"></div> </div> </div> </div> <div class="bottom-half"> <div class="rainbow"> <div class="bands"> <div class="purple"></div> <div class="blue"></div> <div class="green"></div> <div class="yellow"></div> <div class="orange"></div> <div class="red"></div> </div> </div> </div> </div> <div class="css-letter css-rainbow-s"> <div class="top-half"> <div class="rainbow"> <div class="bands"> <div class="red"></div> <div class="orange"></div> <div class="yellow"></div> <div class="green"></div> <div class="blue"></div> <div class="purple"></div> </div> </div> </div> <div class="bottom-half"> <div class="rainbow"> <div class="bands"> <div class="purple"></div> <div class="blue"></div> <div class="green"></div> <div class="yellow"></div> <div class="orange"></div> <div class="red"></div> </div> </div> </div> </div> </div> </div>
+
+        <div class="lesson">
+            <h1>
+                <span class="number">Lesson 1</span>
+                <span class="title">The Box</span>
+            </h1>
+
+            <h2>Box model</h2>
+
+            <p>In CSS, the <a href="http://www.w3.org/TR/CSS2/box.html">box model</a>
+            describes the rectangular boxes that are generated for elements layed out in the page.</p>
+
+            <figure>
+                <img src="images/box-model.png">
+                <figcaption>A picture of the box model</figcaption>
+            </figure>
+
+            <p>Some interesting facts:</p>
+            <ul>
+                <li><code>border-radius</code> rounds out the corners of this box</li>
+                <li><code>box-shadow</code> adds a shadow to this box</li>
+                <li><code>oultine</code> and <code>box-shadow</code> aren't part of the box, and therefore have no effect on the layout</li>
+            </ul>
+
+            <h2><code>box-sizing</code></h2>
+
+            <p>The <code>box-sizing</code> property gives you a little control around
+            how boxes are sized within this model. The two possible values for
+            <code>box-sizing</code> are <code>content-box</code> and <code>border-box</code>.</p>
+
+            <dl>
+                <dt><code>content-box</code></dt>
+                    <dl><em>The default.</em> When computing the size of a box, padding and border are added.</dl>
+                <dt><code>border-box</code></dt>
+                    <dl>When computing the size of a box, padding and border are folded in.</dl>
+            </dl>
+
+            <p>For example:</p>
+
+            <h3>Example</h3>
+
+            <p>Both of these boxes have the following CSS:</p>
+
+            <pre><code>.box {
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    border: 2px solid
+}</code></pre>
+
+            <style>
+                .example-box-sizing .box {
+                    height: 20px;
+                    width: 20px;
+                    padding: 10px;
+                    border: 2px solid
+                }
+            </style>
+
+            <div class="example side-by-side example-box-sizing">
+                <div class="left">
+                    <h4><code>content-box</code></h4>
+                    <div class="example-content">
+                        <div class="box" style="box-sizing: content-box"></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h4><code>border-box</code></h4>
+                    <div class="example-content">
+                        <div class="box" style="box-sizing: border-box"></div>
+                    </div>
+                </div>
+            </div>
+
+            <p>In the <code>border-box</code> case, the width and height
+            of the <code>.box</code> are <code>20px</code>, <em>exactly what we set</em>.
+            In the <code>content-box</code> case, the width and height
+            are <code>44 = 20 + (2 * 10) + (2 * 2)</code>, since we need to include
+            the padding and border on both sides.
+            </p>
+
+
+
+
+
+
+
+
+            <h2><em>tl;dr</em> for this lesson</h2>
+
+            <p>If you <code>height</code> and <code>width</code> to behave in the
+            most intuitive way, <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">listen to Paul Irish</a>
+            and put this at the top of yur CSS:</p>
+
+            <pre><code>* {
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /* Needed for mobile webkit */
+    -moz-box-sizing: border-box; /* Needed for Firefox */
+    box-sizing: border-box
+}</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
