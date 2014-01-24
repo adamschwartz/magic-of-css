@@ -1,0 +1,32 @@
+@import compass/utilities/general/clearfix
+
+body
+    font-family: "proxima-nova", "Helvetica Neue", sans-serif
+    margin: 0
+
+    @media (min-width: 768px)
+        margin: 8em 0
+
+h1
+    text-align: center
+
+    .number:after
+        content: ":"
+
+.lesson
+    max-width: 40em
+    padding: 0 12px
+    margin: 0 auto
+
+.example
+
+    &.side-by-side
+        +pie-clearfix
+
+        .left
+            float: left
+            width: 50%
+
+        .right
+            float: right
+            width: 50%

@@ -1,0 +1,29 @@
+body {
+  font-family: "proxima-nova", "Helvetica Neue", sans-serif;
+  margin: 0; }
+  @media (min-width: 768px) {
+    body {
+      margin: 8em 0; } }
+
+h1 {
+  text-align: center; }
+  h1 .number:after {
+    content: ":"; }
+
+.lesson {
+  max-width: 40em;
+  padding: 0 12px;
+  margin: 0 auto; }
+
+.example.side-by-side {
+  *zoom: 1; }
+  .example.side-by-side:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .example.side-by-side .left {
+    float: left;
+    width: 50%; }
+  .example.side-by-side .right {
+    float: right;
+    width: 50%; }
