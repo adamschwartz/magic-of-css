@@ -98,39 +98,18 @@
             <p>In the <code>border-box</code> case, the width and height
             of the <code>.box</code> are <code>20px</code>, <em>exactly what we set</em>.
             In the <code>content-box</code> case, the width and height
-            are <code>44 = 20 + (2 * 10) + (2 * 2)</code>, since we need to include
+            are <code>44px = 20 + (2 * 10) + (2 * 2)</code>, since we need to include
             the padding and border on both sides.
             </p>
 
-
-
-
-
-
-
-
             <h2><em>tl;dr</em> for this lesson</h2>
 
-            <p>If you <code>height</code> and <code>width</code> to behave in the
+            <p>If you want <code>height</code> and <code>width</code> to behave in the
             most intuitive way, <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">listen to Paul Irish</a>
             and put this at the top of yur CSS:</p>
 
-            <pre><code>* {
-*, *:before, *:after {
+            <pre><code>*, *:before, *:after {
     -webkit-box-sizing: border-box; /* Needed for mobile webkit */
     -moz-box-sizing: border-box; /* Needed for Firefox */
     box-sizing: border-box
 }</code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
