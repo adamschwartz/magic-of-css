@@ -3,11 +3,10 @@
 @import rainbow
 
 .logo
-    height: 260px
-    width: 350px
+    height: 174px
+    width: 295px
     margin: 0 auto
     max-width: 100%
-    padding-right: 11px
     text-align: center
 
     h1
@@ -21,33 +20,32 @@
         line-height: 1
         position: relative
         margin-bottom: 28px
-        padding-left: 16px
         color: #aaa
 
     .css-rainbow
         max-width: 100%
+        white-space: nowrap
         font-size: 0
 
         .css-letter
             +inline-block
-            margin-right: 50px
 
         .css-rainbow-c
-            width: 61px
+            width: 62px
             height: 124px
             position: relative
-            top: -59px
+            margin-right: 50px
 
             .rainbow
                 +rainbow(124px, 9px)
                 +transform(rotateZ(-90deg))
                 position: absolute
-                top: 62px
 
         .css-rainbow-s
             +transform(rotateZ(22.5deg))
-            width: 61px
+            width: 80px
             height: 124px
+            margin-right: 30px
 
             .rainbow
                 +rainbow(80px, 6px)
@@ -71,4 +69,4 @@
                     top: 44px
 
             &:last-child
-                margin-right: 0
+                margin-right: -7px
