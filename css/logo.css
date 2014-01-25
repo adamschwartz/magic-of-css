@@ -3,7 +3,8 @@
   width: 295px;
   margin: 0 auto;
   max-width: 100%;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   .logo h1 {
     display: none; }
   .logo .the-magic-of {
@@ -27,9 +28,10 @@
       zoom: 1;
       *display: inline; }
     .logo .css-rainbow .css-rainbow-c {
+      position: relative;
+      overflow: hidden;
       width: 62px;
       height: 124px;
-      position: relative;
       margin-right: 50px; }
       .logo .css-rainbow .css-rainbow-c .rainbow {
         -webkit-transform: rotateZ(-90deg);
@@ -115,8 +117,7 @@
       -o-transform: rotateZ(22.5deg);
       transform: rotateZ(22.5deg);
       width: 80px;
-      height: 124px;
-      margin-right: 30px; }
+      height: 124px; }
       .logo .css-rainbow .css-rainbow-s .rainbow {
         position: absolute; }
         .logo .css-rainbow .css-rainbow-s .rainbow .bands {
@@ -191,8 +192,9 @@
             border-left-color: #b10dc9; }
       .logo .css-rainbow .css-rainbow-s .top-half {
         position: absolute;
-        width: 80px;
-        height: 60px; }
+        overflow: hidden;
+        width: 40px;
+        height: 80px; }
         .logo .css-rainbow .css-rainbow-s .top-half .rainbow {
           -webkit-transform: rotateZ(-90deg);
           -moz-transform: rotateZ(-90deg);
@@ -201,14 +203,19 @@
           transform: rotateZ(-90deg); }
       .logo .css-rainbow .css-rainbow-s .bottom-half {
         position: absolute;
-        width: 80px;
-        height: 60px; }
+        overflow: hidden;
+        width: 40px;
+        height: 80px;
+        top: 44px;
+        left: 40px; }
         .logo .css-rainbow .css-rainbow-s .bottom-half .rainbow {
           -webkit-transform: rotateZ(90deg);
           -moz-transform: rotateZ(90deg);
           -ms-transform: rotateZ(90deg);
           -o-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
-          top: 44px; }
-      .logo .css-rainbow .css-rainbow-s:last-child {
+          left: -40px; }
+      .logo .css-rainbow .css-rainbow-s.css-rainbow-s-1 {
+        margin-right: 30px; }
+      .logo .css-rainbow .css-rainbow-s.css-rainbow-s-2 {
         margin-right: -7px; }

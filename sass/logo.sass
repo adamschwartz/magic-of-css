@@ -8,6 +8,7 @@
     margin: 0 auto
     max-width: 100%
     text-align: center
+    overflow: hidden
 
     h1
         display: none
@@ -31,9 +32,10 @@
             +inline-block
 
         .css-rainbow-c
+            position: relative
+            overflow: hidden
             width: 62px
             height: 124px
-            position: relative
             margin-right: 50px
 
             .rainbow
@@ -45,7 +47,6 @@
             +transform(rotateZ(22.5deg))
             width: 80px
             height: 124px
-            margin-right: 30px
 
             .rainbow
                 +rainbow(80px, 6px)
@@ -53,20 +54,27 @@
 
             .top-half
                 position: absolute
-                width: 80px
-                height: 60px
+                overflow: hidden
+                width: 40px
+                height: 80px
 
                 .rainbow
                     +transform(rotateZ(-90deg))
 
             .bottom-half
                 position: absolute
-                width: 80px
-                height: 60px
+                overflow: hidden
+                width: 40px
+                height: 80px
+                top: 44px
+                left: 40px
 
                 .rainbow
                     +transform(rotateZ(90deg))
-                    top: 44px
+                    left: -40px
 
-            &:last-child
+            &.css-rainbow-s-1
+                margin-right: 30px
+
+            &.css-rainbow-s-2
                 margin-right: -7px
