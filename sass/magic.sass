@@ -37,29 +37,6 @@ html, body
         padding: 200px 0
         position: relative
 
-.animated-rainbow
-    display: none
-
-    // TODO - finish
-    // position: absolute
-    // margin-left: -400px
-    // height: 400px
-    // width: 800px
-    // top: -170px
-    // left: 50%
-    // right: 0
-    // bottom: 0
-    // overflow: hidden
-
-    // .rainbow
-    //     +rainbow(800px, 10px)
-    //     +transform(rotateZ(180deg))
-    //     +transition(transform 5s 5s ease-in-out forwards)
-    //     -webkit-backface-visibility: hidden
-
-    // &.animated .rainbow
-    //     +transform(rotateZ(360deg))
-
 .separator
     height: 40px
 
@@ -100,3 +77,67 @@ h2
 
         &:hover
             text-decoration: underline
+
+// Loading animation
+
+.logo
+
+    .the-magic-of
+        +transition(opacity 800ms ease-in-out 1300ms forwards)
+        opacity: 0
+
+        .trigger-pageload-animations &
+            opacity: 1
+
+    .css-rainbow
+
+        .css-rainbow-c .rainbow
+            +transition(transform 800ms ease-in-out 0ms forwards)
+            +transform(rotateZ(90deg))
+            -webkit-backface-visibility: hidden
+
+            .trigger-pageload-animations &
+                +transform(rotateZ(-90deg))
+
+        .css-rainbow-s-1
+
+            .bottom-half .rainbow
+                +transition(transform 400ms ease-in 600ms forwards)
+                +transform(rotateZ(270deg))
+                -webkit-backface-visibility: hidden
+
+                .trigger-pageload-animations &
+                    +transform(rotateZ(90deg))
+
+            .top-half .rainbow
+                +transition(transform 400ms ease-out 1000ms forwards)
+                +transform(rotateZ(90deg))
+                -webkit-backface-visibility: hidden
+
+                .trigger-pageload-animations &
+                    +transform(rotateZ(270deg))
+
+        .css-rainbow-s-2
+
+            .bottom-half .rainbow
+                +transition(transform 400ms ease-in 800ms forwards)
+                +transform(rotateZ(270deg))
+                -webkit-backface-visibility: hidden
+
+                .trigger-pageload-animations &
+                    +transform(rotateZ(90deg))
+
+            .top-half .rainbow
+                +transition(transform 400ms ease-out 1200ms forwards)
+                +transform(rotateZ(90deg))
+                -webkit-backface-visibility: hidden
+
+                .trigger-pageload-animations &
+                    +transform(rotateZ(270deg))
+
+.page-inner > *:not(.logo)
+    +transition(opacity 800ms ease-in-out 1300ms forwards)
+    opacity: 0
+
+    .trigger-pageload-animations &
+        opacity: 1

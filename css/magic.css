@@ -32,9 +32,6 @@ html, body {
   .page-inner {
     padding: 200px 0;
     position: relative; } }
-.animated-rainbow {
-  display: none; }
-
 .separator {
   height: 40px; }
   @media (min-width: 768px) {
@@ -72,3 +69,113 @@ h2 {
     text-decoration: none; }
     .lesson a:hover {
       text-decoration: underline; }
+
+.logo .the-magic-of {
+  -webkit-transition: opacity 800ms ease-in-out;
+  -webkit-transition-delay: 1300ms;
+  -moz-transition: opacity 800ms ease-in-out 1300ms;
+  -o-transition: opacity 800ms ease-in-out 1300ms;
+  transition: opacity 800ms ease-in-out 1300ms forwards;
+  opacity: 0; }
+  .trigger-pageload-animations .logo .the-magic-of {
+    opacity: 1; }
+.logo .css-rainbow .css-rainbow-c .rainbow {
+  -webkit-transition: -webkit-transform 800ms ease-in-out;
+  -webkit-transition-delay: 0ms;
+  -moz-transition: -moz-transform 800ms ease-in-out 0ms;
+  -o-transition: -o-transform 800ms ease-in-out 0ms;
+  transition: transform 800ms ease-in-out 0ms forwards;
+  -webkit-transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  -o-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+  -webkit-backface-visibility: hidden; }
+  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-c .rainbow {
+    -webkit-transform: rotateZ(-90deg);
+    -moz-transform: rotateZ(-90deg);
+    -ms-transform: rotateZ(-90deg);
+    -o-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg); }
+.logo .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
+  -webkit-transition: -webkit-transform 400ms ease-in;
+  -webkit-transition-delay: 600ms;
+  -moz-transition: -moz-transform 400ms ease-in 600ms;
+  -o-transition: -o-transform 400ms ease-in 600ms;
+  transition: transform 400ms ease-in 600ms forwards;
+  -webkit-transform: rotateZ(270deg);
+  -moz-transform: rotateZ(270deg);
+  -ms-transform: rotateZ(270deg);
+  -o-transform: rotateZ(270deg);
+  transform: rotateZ(270deg);
+  -webkit-backface-visibility: hidden; }
+  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+    transform: rotateZ(90deg); }
+.logo .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
+  -webkit-transition: -webkit-transform 400ms ease-out;
+  -webkit-transition-delay: 1000ms;
+  -moz-transition: -moz-transform 400ms ease-out 1000ms;
+  -o-transition: -o-transform 400ms ease-out 1000ms;
+  transition: transform 400ms ease-out 1000ms forwards;
+  -webkit-transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  -o-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+  -webkit-backface-visibility: hidden; }
+  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
+    -webkit-transform: rotateZ(270deg);
+    -moz-transform: rotateZ(270deg);
+    -ms-transform: rotateZ(270deg);
+    -o-transform: rotateZ(270deg);
+    transform: rotateZ(270deg); }
+.logo .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
+  -webkit-transition: -webkit-transform 400ms ease-in;
+  -webkit-transition-delay: 800ms;
+  -moz-transition: -moz-transform 400ms ease-in 800ms;
+  -o-transition: -o-transform 400ms ease-in 800ms;
+  transition: transform 400ms ease-in 800ms forwards;
+  -webkit-transform: rotateZ(270deg);
+  -moz-transform: rotateZ(270deg);
+  -ms-transform: rotateZ(270deg);
+  -o-transform: rotateZ(270deg);
+  transform: rotateZ(270deg);
+  -webkit-backface-visibility: hidden; }
+  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+    transform: rotateZ(90deg); }
+.logo .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
+  -webkit-transition: -webkit-transform 400ms ease-out;
+  -webkit-transition-delay: 1200ms;
+  -moz-transition: -moz-transform 400ms ease-out 1200ms;
+  -o-transition: -o-transform 400ms ease-out 1200ms;
+  transition: transform 400ms ease-out 1200ms forwards;
+  -webkit-transform: rotateZ(90deg);
+  -moz-transform: rotateZ(90deg);
+  -ms-transform: rotateZ(90deg);
+  -o-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+  -webkit-backface-visibility: hidden; }
+  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
+    -webkit-transform: rotateZ(270deg);
+    -moz-transform: rotateZ(270deg);
+    -ms-transform: rotateZ(270deg);
+    -o-transform: rotateZ(270deg);
+    transform: rotateZ(270deg); }
+
+.page-inner > *:not(.logo) {
+  -webkit-transition: opacity 800ms ease-in-out;
+  -webkit-transition-delay: 1300ms;
+  -moz-transition: opacity 800ms ease-in-out 1300ms;
+  -o-transition: opacity 800ms ease-in-out 1300ms;
+  transition: opacity 800ms ease-in-out 1300ms forwards;
+  opacity: 0; }
+  .trigger-pageload-animations .page-inner > *:not(.logo) {
+    opacity: 1; }
