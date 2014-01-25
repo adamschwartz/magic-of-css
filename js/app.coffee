@@ -1,7 +1,7 @@
 app = {}
 
 app.init = ->
-    $('.animated-rainbow').addClass('animated')
+    $('body').addClass('trigger-pageload-animations')
 
 window.app = app
 $ app.init

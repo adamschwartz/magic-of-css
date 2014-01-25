@@ -2,7 +2,7 @@
   var app;
   app = {};
   app.init = function() {
-    return $('.animated-rainbow').addClass('animated');
+    return $('body').addClass('trigger-pageload-animations');
   };
   window.app = app;
   $(app.init);
