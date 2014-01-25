@@ -36,10 +36,10 @@ html, body {
   display: none; }
 
 .separator {
-  height: 20px; }
+  height: 40px; }
   @media (min-width: 768px) {
     .separator {
-      height: 60px; } }
+      height: 160px; } }
 
 h2 {
   font-weight: 100;
@@ -48,9 +48,12 @@ h2 {
   font-size: 22px;
   line-height: 1;
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
   padding-left: 16px;
   color: #aaaaaa; }
+  @media (min-width: 768px) {
+    h2 {
+      margin-bottom: 80px; } }
 
 .lesson {
   font-weight: 300;
@@ -58,7 +61,7 @@ h2 {
   font-size: 32px;
   line-height: 1;
   position: relative;
-  margin: 80px 0;
+  margin: 0 0 80px;
   padding-left: 16px; }
   .lesson .number {
     margin-bottom: 13px;
