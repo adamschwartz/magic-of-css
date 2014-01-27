@@ -177,3 +177,40 @@ h2 {
   opacity: 0; }
   .trigger-pageload-animations .page-inner > *:not(.logo) {
     opacity: 1; }
+
+.trigger-pageload-animations .logo:hover {
+  overflow: visible !important; }
+  .trigger-pageload-animations .logo:hover * {
+    overflow: visible !important;
+    border-bottom-color: #464646 !important;
+    border-right-color: #464646 !important; }
+  .trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-c .rainbow {
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+    transform: rotateZ(90deg); }
+  .trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
+    -webkit-transform: rotateZ(270deg);
+    -moz-transform: rotateZ(270deg);
+    -ms-transform: rotateZ(270deg);
+    -o-transform: rotateZ(270deg);
+    transform: rotateZ(270deg); }
+  .trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+    transform: rotateZ(90deg); }
+  .trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
+    -webkit-transform: rotateZ(270deg);
+    -moz-transform: rotateZ(270deg);
+    -ms-transform: rotateZ(270deg);
+    -o-transform: rotateZ(270deg);
+    transform: rotateZ(270deg); }
+  .trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateZ(90deg);
+    transform: rotateZ(90deg); }
