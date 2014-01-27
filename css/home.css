@@ -19,7 +19,7 @@ html, body {
 .page-inner {
   padding: 20px 0; }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .page-outer {
     height: 100%;
     width: 100%;
@@ -34,7 +34,7 @@ html, body {
     position: relative; } }
 .separator {
   height: 40px; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     .separator {
       height: 160px; } }
 
@@ -47,7 +47,7 @@ h2 {
   position: relative;
   margin-bottom: 40px;
   color: #aaaaaa; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     h2 {
       margin-bottom: 80px; } }
 

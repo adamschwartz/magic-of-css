@@ -1,7 +1,7 @@
 body {
   font-family: "proxima-nova", "Helvetica Neue", sans-serif;
   margin: 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     body {
       margin: 8em 0; } }
 
@@ -28,7 +28,7 @@ img {
 
 .logo {
   margin: 2em auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     .logo {
       margin: 8em auto; } }
 
