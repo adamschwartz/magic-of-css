@@ -3,6 +3,8 @@
 @import rainbow
 
 .logo
+    display: block
+    text-decoration: none
     height: 174px
     width: 295px
     margin: 0 auto
@@ -78,3 +80,6 @@
 
             &.css-rainbow-s-2
                 margin-right: -7px
+
+    @media (max-width: 768px)
+        +transform(scale(.75))

@@ -1,4 +1,6 @@
 .logo {
+  display: block;
+  text-decoration: none;
   height: 174px;
   width: 295px;
   margin: 0 auto;
@@ -219,3 +221,10 @@
         margin-right: 30px; }
       .logo .css-rainbow .css-rainbow-s.css-rainbow-s-2 {
         margin-right: -7px; }
+  @media (max-width: 768px) {
+    .logo {
+      -webkit-transform: scale(0.75);
+      -moz-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+      -o-transform: scale(0.75);
+      transform: scale(0.75); } }
