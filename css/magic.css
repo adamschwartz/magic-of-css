@@ -46,7 +46,6 @@ h2 {
   line-height: 1;
   position: relative;
   margin-bottom: 40px;
-  padding-left: 16px;
   color: #aaaaaa; }
   @media (min-width: 768px) {
     h2 {
@@ -58,8 +57,7 @@ h2 {
   font-size: 32px;
   line-height: 1;
   position: relative;
-  margin: 0 0 80px;
-  padding-left: 16px; }
+  margin: 0 0 80px; }
   .lesson .number {
     margin-bottom: 13px;
     color: #aaaaaa;
