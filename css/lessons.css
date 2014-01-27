@@ -10,6 +10,9 @@ h1 {
   h1 .number:after {
     content: ":"; }
 
+img {
+  max-width: 100%; }
+
 .logo {
   margin-bottom: 100px; }
 
