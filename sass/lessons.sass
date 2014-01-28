@@ -1,3 +1,4 @@
+@import compass/css3
 @import compass/utilities/general/clearfix
 
 body
@@ -77,3 +78,63 @@ pre > code
     font-size: inherit
     background: transparent
     padding: 0
+
+hr
+    +background-image(linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent))
+    height: 1px
+    width: 100%
+    border: 0
+    margin: 2em auto
+
+nav.lesson-navigation
+    position: relative
+    height: 40px
+
+    a
+        +box-sizing(border-box)
+        +inline-block
+        position: absolute
+        padding: 6px 15px
+        background: #eee
+        border: 0
+        height: 100%
+        line-height: 27px
+        color: #777
+        text-decoration: none
+
+        .title
+            display: none
+
+        .number:before
+            content: "Lesson "
+
+        @media (min-width: 769px)
+
+            .title
+                display: inline
+
+            .number:after
+                content: ": "
+
+        &:after
+            content: ""
+            position: absolute
+            background: transparent
+            height: 0
+            width: 0
+            border: 20px solid
+            top: 0
+
+        &.next-lesson
+            right: 20px
+
+            &:after
+                left: 100%
+                border-color: transparent transparent transparent #eee
+
+        &.previous-lesson
+            left: 20px
+
+            &:after
+                right: 100%
+                border-color: transparent #eee transparent transparent

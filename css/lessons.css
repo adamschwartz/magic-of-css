@@ -73,3 +73,63 @@ pre > code {
   font-size: inherit;
   background: transparent;
   padding: 0; }
+
+hr {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, transparent), color-stop(10%, rgba(0, 0, 0, 0.1)), color-stop(90%, rgba(0, 0, 0, 0.1)), color-stop(100%, transparent));
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+  background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+  height: 1px;
+  width: 100%;
+  border: 0;
+  margin: 2em auto; }
+
+nav.lesson-navigation {
+  position: relative;
+  height: 40px; }
+  nav.lesson-navigation a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    position: absolute;
+    padding: 6px 15px;
+    background: #eeeeee;
+    border: 0;
+    height: 100%;
+    line-height: 27px;
+    color: #777777;
+    text-decoration: none; }
+    nav.lesson-navigation a .title {
+      display: none; }
+    nav.lesson-navigation a .number:before {
+      content: "Lesson "; }
+    @media (min-width: 769px) {
+      nav.lesson-navigation a .title {
+        display: inline; }
+      nav.lesson-navigation a .number:after {
+        content: ": "; } }
+    nav.lesson-navigation a:after {
+      content: "";
+      position: absolute;
+      background: transparent;
+      height: 0;
+      width: 0;
+      border: 20px solid;
+      top: 0; }
+    nav.lesson-navigation a.next-lesson {
+      right: 20px; }
+      nav.lesson-navigation a.next-lesson:after {
+        left: 100%;
+        border-color: transparent transparent transparent #eeeeee; }
+    nav.lesson-navigation a.previous-lesson {
+      left: 20px; }
+      nav.lesson-navigation a.previous-lesson:after {
+        right: 100%;
+        border-color: transparent #eeeeee transparent transparent; }
