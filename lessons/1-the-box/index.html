@@ -30,12 +30,12 @@
 
             <h2>Box model</h2>
 
-            <p>In CSS, the <a href="http://www.w3.org/TR/CSS2/box.html">box model</a>
+            <p>In CSS, the <a href="http://www.w3.org/TR/CSS2/box.html">box model</a><sup><a href="#cite-1">[1]</a></sup>
             describes the rectangular boxes that are generated for elements layed out in the page.</p>
 
             <figure>
                 <img src="images/box-model.png">
-                <figcaption>A picture of the box model</figcaption>
+                <figcaption>A picture of the box model<sup><a href="#cite-1">[1]</a></sup></figcaption>
             </figure>
 
             <p>Some interesting facts:</p>
@@ -45,11 +45,11 @@
                 <li><code>oultine</code> and <code>box-shadow</code> aren't part of the box, and therefore have no effect on the layout</li>
             </ul>
 
-            <h2><code>box-sizing</code></h2>
+            <h2>Box sizing</h2>
 
             <p>The <code>box-sizing</code> property gives you a little control around
             how boxes are sized within this model. The two possible values for
-            <code>box-sizing</code> are <code>content-box</code> and <code>border-box</code>.</p>
+            <code>box-sizing</code> are <code>content-box</code> and <code>border-box</code><sup><a href="#cite-2">[2]</a></sup>.</p>
 
             <dl>
                 <dt><code>content-box</code></dt>
@@ -102,14 +102,44 @@
             the padding and border on both sides.
             </p>
 
-            <h2><em>tl;dr</em> for this lesson</h2>
+            <h3><em>tl;dr</em></h3>
 
             <p>If you want <code>height</code> and <code>width</code> to behave in the
-            most intuitive way, <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">listen to Paul Irish</a>
-            and put this at the top of yur CSS:</p>
+            most intuitive way,
+            <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">listen to Paul Irish</a><sup><a href="#cite-3">[3]</a></sup>
+            and put this at the top of your CSS:</p>
 
             <pre><code>*, *:before, *:after {
     -webkit-box-sizing: border-box; /* Needed for mobile webkit */
     -moz-box-sizing: border-box; /* Needed for Firefox */
     box-sizing: border-box
 }</code></pre>
+
+            <hr>
+
+            <h3>Further reading</h3>
+
+            <ul>
+                <li><a href="http://caniuse.com/css3-boxsizing">Can I Use: CSS3 Box-sizing?</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Boxes">MDN: Boxes</a></li>
+            </ul>
+
+            <h3>Citations</h3>
+
+            <ol>
+                <li><a id="cite-1" href="http://www.w3.org/TR/CSS2/box.html">w3: Box model</a></li>
+                <li><a id="cite-2" href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">MDN: <code>box-sizing</code></a> — There is also <code>padding-box</code>, but don't worry about that.</li>
+                <li><a id="cite-3" href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">Paul Irish: * { Box-sizing: Border-box } FTW</a></li>
+            </ol>
+
+            <hr>
+
+            <!--nav class="lesson-navigation">
+                <a class="next-lesson" href="../2-layout">
+                    <span class="number">2</span>
+                    <span class="title">Layout</span>
+                </a>
+            </nav-->
+        </div>
+    </body>
+</html>
