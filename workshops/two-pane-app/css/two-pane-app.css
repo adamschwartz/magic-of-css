@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+  overflow: hidden; }
+
+.two-pane-app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+  .two-pane-app *, .two-pane-app *:after, .two-pane-app *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .two-pane-app .top {
+    position: absolute;
+    height: 60px;
+    padding: 20px;
+    line-height: 40px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .two-pane-app .bottom {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    width: 100%; }
+    .two-pane-app .bottom .left {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      overflow: auto; }
+      .two-pane-app .bottom .left .item {
+        height: 64px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer; }
+        .two-pane-app .bottom .left .item:hover, .two-pane-app .bottom .left .item.tether-open {
+          background: rgba(0, 0, 0, 0.1);
+          border-bottom: 1px solid rgba(0, 0, 0, 0); }
+        .two-pane-app .bottom .left .item:last-child {
+          border-bottom: 0; }
+    .two-pane-app .bottom .right {
+      position: absolute;
+      width: 70%;
+      right: 0;
+      height: 100%;
+      padding: 20px; }
+  .two-pane-app .title {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    background: rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 15px;
+    margin-bottom: 20px; }
