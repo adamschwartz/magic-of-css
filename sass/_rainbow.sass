@@ -1,49 +1,39 @@
 @import compass/css3
 
-=rainbow($rainbowSize, $bandWidth)
+$purple: #b10dc9
+$blue: #0074d9
+$green: #2ecc40
+$yellow: #ffdc00
+$orange: #ff851b
+$red: #ff4136
+
+=rainbow($rainbowSize, $bandWidth, $reverse: false)
+    +transform(rotateZ(90deg))
+    +transform-origin(50% 100% 0)
+    height: $rainbowSize / 2
+    width: $rainbowSize
+    overflow: hidden
+    position: relative
+
     .bands
-        +transform(rotateZ(45deg))
-        position: relative
-        height: $rainbowSize
+        position: absolute
+        top: 0
+        left: 0
+        height: $rainbowSize / 2
         width: $rainbowSize
+        overflow: hidden
 
-        div
+        &:before
+            +box-shadow(0 0 0 ($bandWidth * 1) $purple, 0 0 0 ($bandWidth * 2) $blue, 0 0 0 ($bandWidth * 3) $green, 0 0 0 ($bandWidth * 4) $yellow, 0 0 0 ($bandWidth * 5) $orange, 0 0 0 ($bandWidth * 6) $red)
+            @if $reverse
+                +box-shadow(0 0 0 ($bandWidth * 1) $red, 0 0 0 ($bandWidth * 2) $orange, 0 0 0 ($bandWidth * 3) $yellow, 0 0 0 ($bandWidth * 4) $green, 0 0 0 ($bandWidth * 5) $blue, 0 0 0 ($bandWidth * 6) $purple)
             +border-radius(50%)
+            content: ""
+            display: block
             position: absolute
-            border-width: $bandWidth
-            border-style: solid
-            width: 100%
-            height: 100%
-            border-bottom-color: transparent
-            border-right-color: transparent
-
-            @for $i from 1 through 6
-                &:nth-child(#{ $i })
-                    width: $rainbowSize - (($i - 1) * 2 * $bandWidth)
-                    height: $rainbowSize - (($i - 1) * 2 * $bandWidth)
-                    top: ($i - 1) * $bandWidth
-                    left: ($i - 1) * $bandWidth
-
-        .red
-            border-top-color: #ff4136
-            border-left-color: #ff4136
-
-        .orange
-            border-top-color: #ff851b
-            border-left-color: #ff851b
-
-        .yellow
-            border-top-color: #ffdc00
-            border-left-color: #ffdc00
-
-        .green
-            border-top-color: #2ecc40
-            border-left-color: #2ecc40
-
-        .blue
-            border-top-color: #0074d9
-            border-left-color: #0074d9
-
-        .purple
-            border-top-color: #b10dc9
-            border-left-color: #b10dc9
+            margin: auto
+            left: 0
+            right: 0
+            bottom: - ($rainbowSize - ((6 * $bandWidth) * 2)) / 2
+            height: $rainbowSize - ((6 * $bandWidth) * 2)
+            width: $rainbowSize - ((6 * $bandWidth) * 2)

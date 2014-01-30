@@ -52,7 +52,6 @@
             height: 124px
 
             .rainbow
-                +rainbow(80px, 6px)
                 position: absolute
 
             .top-half
@@ -62,6 +61,7 @@
                 height: 80px
 
                 .rainbow
+                    +rainbow(80px, 6px)
                     +transform(rotateZ(-90deg))
 
             .bottom-half
@@ -73,6 +73,7 @@
                 left: 40px
 
                 .rainbow
+                    +rainbow(80px, 6px, true)
                     +transform(rotateZ(90deg))
                     left: -40px
 

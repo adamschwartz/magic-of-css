@@ -141,30 +141,29 @@ h2
         opacity: 1
 
 .trigger-pageload-animations .logo:hover
-    overflow: visible !important
-
-    *
-        overflow: visible !important
-        border-bottom-color: #464646 !important
-        border-right-color: #464646 !important
 
     .css-rainbow
 
         .css-rainbow-c .rainbow
+            +transition(transform 800ms ease-in-out 1200ms forwards)
             +transform(rotateZ(90deg))
 
         .css-rainbow-s-1
 
             .bottom-half .rainbow
+                +transition(transform 400ms ease-out 1000ms forwards)
                 +transform(rotateZ(270deg))
 
             .top-half .rainbow
+                +transition(transform 400ms ease-in 600ms forwards)
                 +transform(rotateZ(90deg))
 
         .css-rainbow-s-2
 
             .bottom-half .rainbow
+                +transition(transform 400ms ease-out 400ms forwards)
                 +transform(rotateZ(270deg))
 
             .top-half .rainbow
+                +transition(transform 400ms ease-in 0ms forwards)
                 +transform(rotateZ(90deg))
