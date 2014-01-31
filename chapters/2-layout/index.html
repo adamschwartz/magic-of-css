@@ -52,9 +52,9 @@
                 <dt><code>block</code></dt>
                     <dl>My width is sized by my parent and I can have widths and heights set on me. My height is determined by my content.</dl>
                 <dt><code>inline</code></dt>
-                    <dl>My width and height are determined by <em>my contents</em> and widths and heights don't do anything to me. Think of me like a word in flowing in a paragraph.</dl>
+                    <dl>My width and height are determined by <em>my contents</em> and widths and heights don't do anything to me. Think of me like a word flowing in a paragraph.</dl>
                 <dt><code>inline-block</code></dt>
-                    <dl>I am the same as <em>block</em> except for the part where I my wy width is determined by my contents.</dl>
+                    <dl>I am the same as <code>block</code> except my width is determined by my contents.</dl>
             </dl>
 
             <p>Let's play with an example.</p>
@@ -113,16 +113,17 @@
             </div>
 
             <p>
-                The key thing to notice in this example is the difference between <code>inline</code> and <code>inline-block</code>.
+                The key thing to notice here is the difference between <code>inline</code> and <code>inline-block</code>.
                 The <code>inline</code> elements display their <code>10px</code> padding and <code>2px</code> border, but only the lefts and rights
-                (and not tops and bottoms) of these actually affect my layout.
+                (and not tops and bottoms) of these actually affect their layout. Whereas the <code>inline-block</code> elements reposition themselves in
+                layout due to their padding and border, just as do the <code>block</code> elements.
             </p>
 
             <h3 class="magic">Horizontal Scrolling with Inline Block</h3>
 
             <p>Horizontal scrolling sections can be tricky. Fortunately, this is one place where <code>inline-block</code> can get us out of a jam.</p>
 
-            <p>Let's say I want to display some code, as this chapter has been so far.</p>
+            <p>Let's say I want to display some code:</p>
 
             <pre><code>body {
     background: red; /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */
@@ -144,7 +145,7 @@
                 wrapper is a block element, sizing itself to the width of its parent, not to the scroll width of its parent.</p>
 
             <p>By adding an <code>inline-block</code> element which wraps all of the rows, we get the scroll we want, and the row elements (still <code>display: block</code>)
-                can fill the width of <em>that</em> element, which is the same as the scroll width of the whole code block.</p>
+                can fill the width of <em>that</em> element, which is the same as the scroll width of the whole code block, because it is sized by <em>its contents</em>—in this case, the longest row.</p>
 
             <style>
                 .example-row-highlight-fix .inline-block {
@@ -163,23 +164,29 @@
             <h2>Tables</h2>
 
             <p>Tables are crazy. We'll have a whole chapter dedicated to them later. But for now, think of
-                a <code>&gt;table&lt;</code> like an <code>inline-block</code> element with one special
-                property: each cell can center its contents vertically.</p>
+                a <code>&lt;table&gt;</code> like an <code>inline-block</code> element with one special
+                property: its <code>table-cell</code> children can center their contents vertically.</p>
 
-            <p>Aside from the relatively new and experimental <code>display</code> property <code>flex</code>, no other element can do this.</p>
+            <p>Aside from the relatively new and experimental <code>display</code> property <code>flex</code> (which may be covered in a later chapter)
+                , no other element can do this.</p>
 
             <p>So with respect to layout, think of tables as a tool which can be used to center arbirtrary content vertically.
-                (Centering something vertically when you know its height and width is trivial, and we'll
-                show how to do this without <code>table</code> later in this chapter.)
+                (Centering something vertically when you know its height is trivial. First position the element, then
+                set a <code>top</code> and <code>bottom</code>, then set <code>margin-top</code> and <code>margin-bottom</code> to <code>auto</code>. Done.)
             </p>
 
             <h2>Text align</h2>
 
-            <p>Basically, text-align lets you align text, inline elements, and inline block elements inside of a
-                parent to the left, right, center, or justified. (You know what these mean if you've ever used a WYSIWYG editor.)
+            <p>Basically, text-align lets you align text, child inline elements, and child inline block elements to the left,
+                right, center, or justified. (You know what these mean if you've ever used a WYSIWYG editor.)
             </p>
 
+            <p>Now for some magic:</p>
+
             <h3 class="magic">Grid with Text-align Justify</h3>
+
+            <p>Since <code>inline-block</code> elements are treated more or less as text, you can use <code>text-align: justify</code>
+                on a list of <code>inline-block</code> elements to create a grid structure.</p>
 
             <pre><code>.grid {
     border: 2px solid;
@@ -275,15 +282,15 @@
 
             <p>
                 But when it comes to positioning, basically what you need to know is that
-                floated elements behave like <code>inline-block</code> elements,
+                floated elements behave kind of like <code>inline-block</code> elements,
                 regardless of what their <code>display</code> property value actually is.
             </p>
 
             <p>
                 The truth is, these days, since <code>inline-block</code> is supported
                 pretty widely, there's not as much use for <code>float</code> anymore.
-                We'll still cover it since it's a tool, and when it's appropriate, it's
-                great. But don't worry about it too much just yet.
+                We'll still cover it since it's a card up your sleeve, and you should
+                know how to whip it out. But don't worry about it too much just yet.
             </p>
 
             <h2>Positioning</h2>
@@ -297,8 +304,16 @@
 
             <p>
                 When an element is positioned, it is layed
-                out according to the properties <code>top</code>, <code>bottom</code>, <code>left</code>,
-                and <code>right</code>.
+                out according to whichever properties <code>top</code>, <code>bottom</code>, <code>left</code>,
+                and <code>right</code> it has set.
+            </p>
+
+            <p>
+                This means not only do these properties reposition (or move) elements, they also can resize elements.
+                Set both a <code>top</code> and <code>bottom</code> (or both a <code>left</code> and <code>right</code>),
+                and your instruction will enforce a size on the element. The precedence here can get a little confusing
+                if an element also has a height and width set. So until you know what you're doing, you'll want to avoid
+                setting <code>top</code>, <code>bottom</code>, <em>and</em> <code>height</code> simultaneously for a positioned element.
             </p>
 
             <p>The <code>position</code> property can take on the following values:</p>
