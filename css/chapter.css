@@ -31,7 +31,7 @@ img {
     .logo {
       margin: 8em auto; } }
 
-.lesson {
+.chapter {
   max-width: 40em;
   padding: 0 12px;
   margin: 0 auto; }
@@ -84,10 +84,10 @@ hr {
   border: 0;
   margin: 2em auto; }
 
-nav.lesson-navigation {
+nav.chapter-navigation {
   position: relative;
   height: 40px; }
-  nav.lesson-navigation a {
+  nav.chapter-navigation a {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -105,16 +105,16 @@ nav.lesson-navigation {
     line-height: 27px;
     color: #777777;
     text-decoration: none; }
-    nav.lesson-navigation a .title {
+    nav.chapter-navigation a .title {
       display: none; }
-    nav.lesson-navigation a .number:before {
-      content: "Lesson "; }
+    nav.chapter-navigation a .number:before {
+      content: "Chapter "; }
     @media (min-width: 769px) {
-      nav.lesson-navigation a .title {
+      nav.chapter-navigation a .title {
         display: inline; }
-      nav.lesson-navigation a .number:after {
+      nav.chapter-navigation a .number:after {
         content: ": "; } }
-    nav.lesson-navigation a:after {
+    nav.chapter-navigation a:after {
       content: "";
       position: absolute;
       background: transparent;
@@ -122,13 +122,51 @@ nav.lesson-navigation {
       width: 0;
       border: 20px solid;
       top: 0; }
-    nav.lesson-navigation a.next-lesson {
+    nav.chapter-navigation a.next-chapter {
       right: 20px; }
-      nav.lesson-navigation a.next-lesson:after {
+      nav.chapter-navigation a.next-chapter:after {
         left: 100%;
         border-color: transparent transparent transparent #eeeeee; }
-    nav.lesson-navigation a.previous-lesson {
+    nav.chapter-navigation a.previous-chapter {
       left: 20px; }
-      nav.lesson-navigation a.previous-lesson:after {
+      nav.chapter-navigation a.previous-chapter:after {
         right: 100%;
         border-color: transparent #eeeeee transparent transparent; }
+
+h3.magic {
+  position: relative; }
+  h3.magic:before {
+    -webkit-box-shadow: 0 -20px #0074d9, 0 -30px #2ecc40, 0 -40px #ffdc00, 0 -50px #ff851b, 0 -60px #ff4136;
+    -moz-box-shadow: 0 -20px #0074d9, 0 -30px #2ecc40, 0 -40px #ffdc00, 0 -50px #ff851b, 0 -60px #ff4136;
+    box-shadow: 0 -20px #0074d9, 0 -30px #2ecc40, 0 -40px #ffdc00, 0 -50px #ff851b, 0 -60px #ff4136;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    content: "";
+    height: 15px;
+    width: 15px;
+    display: block;
+    position: absolute;
+    right: 100%;
+    margin: auto;
+    margin-right: 20px;
+    margin-top: 60px;
+    top: 0;
+    bottom: 0; }
+  h3.magic:after {
+    -webkit-transform: rotateZ(-90deg);
+    -moz-transform: rotateZ(-90deg);
+    -ms-transform: rotateZ(-90deg);
+    -o-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    content: "Magic";
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 10px;
+    right: 100%;
+    position: absolute;
+    color: white;
+    margin-top: 20px;
+    margin-right: 1px; }

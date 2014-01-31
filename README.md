@@ -12,10 +12,10 @@ This is an intermediate-to-advanced course. It assumes an understanding of the [
 
 ### Weekly lectures
 
-Each class will start with a brief lecture, covering a lesson or two from this online textbook. After that, we'll dive into building things, workshop-style. Every lecture, _come prepared to make something_. So bring your laptop and thinking hat.
+Each class will start with a brief lecture, covering a chapter or two from this online textbook. After that, we'll dive into building things, workshop-style. Every lecture, _come prepared to make something_. So bring your laptop and thinking hat.
 
 ### Textbook
 
 - [The Magic of CSS](http://github.hubspot.com/magic-of-css)
-    - [Lesson 1: The Box](http://github.hubspot.com/magic-of-css/lessons/1-the-box/)
-    - ...
+    - [Chapter 1: The Box](http://github.hubspot.com/magic-of-css/chapters/1-the-box)
+    - [Chapter 2: Layout](http://github.hubspot.com/magic-of-css/chapters/2-layout)

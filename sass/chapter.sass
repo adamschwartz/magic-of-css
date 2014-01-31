@@ -1,6 +1,8 @@
 @import compass/css3
 @import compass/utilities/general/clearfix
 
+@import colors
+
 body
     margin: 0
 
@@ -36,7 +38,7 @@ img
     @media (min-width: 769px)
         margin: 8em auto
 
-.lesson
+.chapter
     max-width: 40em
     padding: 0 12px
     margin: 0 auto
@@ -85,7 +87,7 @@ hr
     border: 0
     margin: 2em auto
 
-nav.lesson-navigation
+nav.chapter-navigation
     position: relative
     height: 40px
 
@@ -105,7 +107,7 @@ nav.lesson-navigation
             display: none
 
         .number:before
-            content: "Lesson "
+            content: "Chapter "
 
         @media (min-width: 769px)
 
@@ -124,16 +126,48 @@ nav.lesson-navigation
             border: 20px solid
             top: 0
 
-        &.next-lesson
+        &.next-chapter
             right: 20px
 
             &:after
                 left: 100%
                 border-color: transparent transparent transparent #eee
 
-        &.previous-lesson
+        &.previous-chapter
             left: 20px
 
             &:after
                 right: 100%
                 border-color: transparent #eee transparent transparent
+
+h3.magic
+    position: relative
+
+    $bandWidth: -10px
+
+    &:before
+        +box-shadow(0 ($bandWidth * 2) $blue, 0 ($bandWidth * 3) $green, 0 ($bandWidth * 4) $yellow, 0 ($bandWidth * 5) $orange, 0 ($bandWidth * 6) $red)
+        +border-radius(50%)
+        content: ""
+        height: 15px
+        width: 15px
+        display: block
+        position: absolute
+        right: 100%
+        margin: auto
+        margin-right: 20px
+        margin-top: 60px
+        top: 0
+        bottom: 0
+
+    &:after
+        +transform(rotateZ(-90deg))
+        content: "Magic"
+        text-transform: uppercase
+        letter-spacing: 0.4em
+        font-size: 10px
+        right: 100%
+        position: absolute
+        color: #fff
+        margin-top: 20px
+        margin-right: 1px

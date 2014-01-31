@@ -45,28 +45,40 @@ h2 {
   font-size: 22px;
   line-height: 1;
   position: relative;
-  margin-bottom: 40px;
-  color: #aaaaaa; }
+  margin: 40px 0;
+  color: #aaaaaa;
+  padding: 0 1rem; }
   @media (min-width: 769px) {
     h2 {
-      margin-bottom: 80px; } }
+      margin: 80px 0; } }
 
-.lesson {
+.chapter, .workshop {
   font-weight: 300;
   letter-spacing: 0.01em;
   font-size: 32px;
   line-height: 1;
   position: relative;
-  margin: 0 0 80px; }
-  .lesson .number {
+  width: 14em;
+  max-width: 100%;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0 1rem; }
+  .chapter .number, .workshop .number {
     margin-bottom: 13px;
+    display: inline-block;
     color: #aaaaaa;
-    font-size: 20px; }
-  .lesson a {
+    margin-right: 20px;
+    text-align: center;
+    width: 1em;
+    font-weight: 100; }
+  .chapter a, .workshop a {
     color: inherit;
     text-decoration: none; }
-    .lesson a:hover {
+    .chapter a:hover, .workshop a:hover {
       text-decoration: underline; }
+
+.workshop {
+  text-align: center; }
 
 .logo .the-magic-of {
   -webkit-transition: opacity 800ms ease-in-out;
