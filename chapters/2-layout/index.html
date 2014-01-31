@@ -323,18 +323,21 @@
                 <dt><code>relative</code></dt>
                     <dl>The element is layed out as described above, but additionally, it's position is adjusted by the positioning properties.</dl>
                 <dt><code>absolute</code></dt>
-                    <dl>The element will be removed from its original layout position and positioned relative to its nearest positioned parent using special properties.</dl>
+                    <dl>The element will be removed from its original layout position and positioned relative to its nearest positioned parent by the positioning properties.</dl>
                 <dt><code>fixed</code></dt>
-                    <dl>The element will be removed from its original layout position and positioned relative to the window. (Caveats for mobile devices...)</dl>
+                    <dl>The element will be removed from its original layout position and positioned relative to the window. (Mobile devices with zoom may have indeterminant behavior.)</dl>
             </dl>
 
-            <p>This stuff can be confusing, so we'll highlight some important points about the above:</p>
+            <p>This stuff can be confusing, so we'll highlight some important takeaways from these descriptions:</p>
 
             <ul>
-                <li><code>static</code> and <code>relative</code> elements are part of the layout. When their heights and widths change, so do their document neighbors.</li>
-                <li><code>absolute</code> and <code>fixed</code> elements are not part of normal document layout. When their heights and widths change, only their child elements are affected.</li>
-                <li><code>relative</code> is called that not because it's child elements will be positioned relative to it. That is simply a consequence of it being positioned at all (and so could be said about <code>absolute</code> and <code>fixed</code> elements as well).</li>
+                <li><code>static</code> and <code>relative</code> elements are part of the layout. When their layout changes, so do their document neighbors.</li>
+                <li><code>absolute</code> and <code>fixed</code> elements are not part of normal document layout. When their layouts change, only their child elements are affected.</li>
+                <li><code>relative</code> is so-named not because it's child elements will be positioned "relative" to it. That is simply a consequence of it being positioned at all
+                    (and so the same could be said about <code>absolute</code> and <code>fixed</code> elements as well).</li>
             </ul>
+
+            <p>Now again, for a little magic:</p>
 
             <h3 class="magic">100% <code>top</code>, <code>bottom</code>, <code>left</code>, or <code>right</code></h3>
 
@@ -399,12 +402,12 @@ top: -40px;</code></pre>
                 This part is unideal because it's not <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>
                 and because we had to specify a height. <em>When possible, it's better not to specify fixed values in CSS.</em>
                 The more you can let things get sized by content the better, because it means your design is more flexible,
-                supports more use-cases, and is less-likely to contain bugs.
+                supports more use-cases, and is less likely to create future bugs.
             </p>
 
             <p>
-                So what can we do instead? Use <code>100%</code> values. Instead of thinking moving the child up as a
-                negative <code>top</code>, think of it like a <code>100%</code> bottom.
+                So what can we do instead? Use <code>100%</code> values. Instead of thinking moving the child up by a
+                negative <code>top</code>, think of it as moving <code>100%</code> from the bottom.
             </p>
 
             <p>So now our same example can be coded like this instead:</p>
@@ -453,11 +456,18 @@ top: -40px;</code></pre>
                 </div>
             </div>
 
-            <p>Notice how in this version we were able to simplify the padding and line-height because the child box is now sizing itself to its contents, rather than the other way around.</p>
+            <p>Notice how in this version we were able to simplify the padding and line-height because the child box
+                is now sizing itself to its contents, rather than the other way around.</p>
 
             <h2>Transforms</h2>
 
-            <p>These will definitely get their own chapter. These are where a lot of the real magic lives. But for now, note that unfortunately <a href="http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/">transformed elements are treated as positioned even if they are <code>position: static</code></a><sup><a href="#cite-1">[1]</a>.</p>
+            <p>
+                These will definitely get their own chapter. Transforms are where a lot of the real magic lives.
+                But for now, note that unfortunately
+                <a href="http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/">
+                    transformed elements are treated as positioned even if they are <code>position: static</code></a><sup><a href="#cite-1">[1]</a></sup>.
+                Commit this to memory or at some point this will probably burn you.
+            </p>
 
             <hr>
 
