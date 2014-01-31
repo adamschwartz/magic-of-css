@@ -304,16 +304,15 @@
 
             <p>
                 When an element is positioned, it is layed
-                out according to whichever properties <code>top</code>, <code>bottom</code>, <code>left</code>,
+                out according to whichever direction properties <code>top</code>, <code>bottom</code>, <code>left</code>,
                 and <code>right</code> it has set.
             </p>
 
             <p>
                 This means not only do these properties reposition (or move) elements, they also can resize elements.
                 Set both a <code>top</code> and <code>bottom</code> (or both a <code>left</code> and <code>right</code>),
-                and your instruction will enforce a size on the element. The precedence here can get a little confusing
-                if an element also has a height and width set. So until you know what you're doing, you'll want to avoid
-                setting <code>top</code>, <code>bottom</code>, <em>and</em> <code>height</code> simultaneously for a positioned element.
+                and your instruction will enforce a size on the element. The precedence here can get pretty complicated here, but as a general rule,
+                if you set <code>top</code>, <code>bottom</code>, <em>and</em> <code>height</code> simulatenously for a positioned element, the <code>height</code> value will be ignored.
             </p>
 
             <p>The <code>position</code> property can take on the following values:</p>
@@ -467,6 +466,7 @@ top: -40px;</code></pre>
             <ul>
                 <li><a href="http://quirksmode.org/css/css2/display.html">Quirksmode: <code>display</code></a> — has some great toys for playing with the different property values</li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Layout">MDN: Layout</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">MDN: position</a></li>
             </ul>
 
             <h3>Citations</h3>
