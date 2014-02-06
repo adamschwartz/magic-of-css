@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blackboard — Magic of CSS — HubSpot — by Adam Schwartz</title>
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="icon" href="http://static.hubspot.com/favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="../../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../../css/logo.css">
+
+        <script type="text/javascript" src="//use.typekit.net/jbn8qxr.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <style>
+            html, body {
+                background: #000;
+                color: #fff;
+                height: 100%;
+            }
+
+            .logo {
+                -webkit-transform: scale(0.4);
+                -moz-transform: scale(0.4);
+                -ms-transform: scale(0.4);
+                -o-transform: scale(0.4);
+                transform: scale(0.4);
+                -webkit-transform-origin: 0 0;
+                -moz-transform-origin: 0 0;
+                -ms-transform-origin: 0 0;
+                -o-transform-origin: 0 0;
+                transform-origin: 0 0;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+            }
+
+            .logo h1, .logo .the-magic-of {
+                display: none;
+            }
+
+            .blackboard {
+                width: 100%;
+                min-height: 100%;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                flex-direction: row;
+                -webkit-flex-direction: column;
+                flex-direction: column;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                font-size: 10vh;
+            }
+
+            .blackboard ::-moz-selection {
+                background-color: #00ffb8;
+                color: #fff;
+            }
+
+            .blackboard ::selection {
+                background-color: #00ffb8;
+                color: #fff;
+            }
+
+            .blackboard [contenteditable]:focus {
+                outline: none
+            }
+        </style>
+    </head>
+    <body>
+        <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div></div></a>
+
+        <div class="blackboard"></div>
+
+        <script type="text/javascript">
+            (function(){ try {
+                var insertTextAtCursor = function(text) {
+                    var sel, range, html;
+                    if (window.getSelection) {
+                        sel = window.getSelection();
+                        if (sel.getRangeAt && sel.rangeCount) {
+                            range = sel.getRangeAt(0);
+                            range.deleteContents();
+                            range.insertNode( document.createTextNode(text) );
+                        }
+                    } else if (document.selection && document.selection.createRange) {
+                        document.selection.createRange().text = text;
+                    }
+                }
+                var resetBoard = function() {
+                    if (blackboard.textContent.trim() === '') {
+                        blackboard.innerHTML = '<div contenteditable>Magic</div><br><pre><code contenteditable>/* CSS */</code></pre>'
+                        disableSpellcheck();
+                    }
+                };
+                var blackboard = document.querySelector('.blackboard')
+                var observer = new MutationObserver(resetBoard);
+                observer.observe(blackboard, {
+                    childList: true,
+                    attributes: true,
+                    characterData: true,
+                    subtree: true
+                });
+                resetBoard();
+                var tabDown = false;
+                blackboard.addEventListener('keydown', function(e){
+                    if (tabDown) {
+                        return;
+                    }
+                    if (e.keyCode === 9) { // tab
+                        tabDown = true;
+                        e.preventDefault();
+                        insertTextAtCursor('    ');
+                    }
+                });
+                blackboard.addEventListener('keyup', function(e){
+                    if (e.keyCode === 9) {
+                        tabDown = false;
+                    }
+                });
+            } catch (e) {} })();
+        </script>
+
+        <!-- Start of Async HubSpot Analytics Code -->
+        <script type="text/javascript">
+            (function(d,s,i,r) {
+                if (d.getElementById(i)){return;}
+                var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+                n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/51294.js';
+                e.parentNode.insertBefore(n, e);
+            })(document,"script","hs-analytics",300000);
+        </script>
+        <!-- End of Async HubSpot Analytics Code -->
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-45159009-1', 'hubspot.com');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
