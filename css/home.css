@@ -52,7 +52,7 @@ h2 {
     h2 {
       margin: 80px 0; } }
 
-.chapter, .workshop {
+.chapter, .potion {
   font-weight: 300;
   letter-spacing: 0.01em;
   font-size: 32px;
@@ -63,7 +63,7 @@ h2 {
   text-align: left;
   margin: 0 auto;
   padding: 0 1rem; }
-  .chapter .number, .workshop .number {
+  .chapter .number, .potion .number {
     margin-bottom: 13px;
     display: inline-block;
     color: #aaaaaa;
@@ -71,13 +71,13 @@ h2 {
     text-align: center;
     width: 1em;
     font-weight: 100; }
-  .chapter a, .workshop a {
+  .chapter a, .potion a {
     color: inherit;
     text-decoration: none; }
-    .chapter a:hover, .workshop a:hover {
+    .chapter a:hover, .potion a:hover {
       text-decoration: underline; }
 
-.workshop {
+.potion {
   text-align: center; }
 
 .logo .the-magic-of {
@@ -189,6 +189,12 @@ h2 {
   opacity: 0; }
   .trigger-pageload-animations .page-inner > *:not(.logo) {
     opacity: 1; }
+
+.window-has-been-scrolled * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }
 
 .trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-c .rainbow {
   -webkit-transition: -webkit-transform 800ms ease-in-out;

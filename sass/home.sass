@@ -57,7 +57,7 @@ h2
     @media (min-width: 769px)
         margin: 80px 0
 
-.chapter, .workshop
+.chapter, .potion
     font-weight: 300
     letter-spacing: 0.01em
     font-size: 32px
@@ -85,7 +85,7 @@ h2
         &:hover
             text-decoration: underline
 
-.workshop
+.potion
     text-align: center
 
 // Loading animation
@@ -151,6 +151,9 @@ h2
 
     .trigger-pageload-animations &
         opacity: 1
+
+.window-has-been-scrolled *
+    +transition(none !important)
 
 .trigger-pageload-animations .logo:hover
 

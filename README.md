@@ -12,7 +12,7 @@ This is an intermediate-to-advanced course. It assumes an understanding of the [
 
 ### Weekly lectures
 
-Each class will start with a brief lecture, covering a chapter or two from this online textbook. After that, we'll dive into building things, workshop-style. Every lecture, _come prepared to make something_. So bring your laptop and thinking hat.
+Each class will start with a brief lecture, covering a chapter or two from this online textbook. After that, we'll dive into studio where we'll build our magical CSS potions. Every lecture, _come prepared to make something_. So bring your laptop and thinking hat.
 
 ### Textbook
 

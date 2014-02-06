@@ -1,7 +1,19 @@
 app = {}
 
 app.init = ->
-    $('body').addClass('trigger-pageload-animations')
+    document.body.className += ' trigger-pageload-animations'
+
+    firedMouseMove = false
+    window.addEventListener 'mousemove', ->
+        return if firedMouseMove
+        firedMouseMove = true
+        document.body.className += ' mouse-has-moved'
+
+    firedScroll = false
+    document.querySelector('.page-scroll').addEventListener 'scroll', ->
+        return if firedScroll
+        firedScroll = true
+        document.body.className += ' window-has-been-scrolled'
 
 window.app = app
-$ app.init
+setTimeout app.init
