@@ -303,8 +303,9 @@
             <p>
                 But when it comes to positioning, basically what you need to know is that
                 floated elements behave kind of like <code>inline-block</code> elements,
-                regardless of what their <code>display</code> property value actually is.
+                regardless of what their <code>display</code> property value actually is. 
             </p>
+        
 
             <p>
                 The truth is, these days, since <code>inline-block</code> is supported
@@ -336,7 +337,7 @@
 
             <p>
                 This means not only do these properties reposition (or move) elements, they also can resize elements.
-                Set both a <code>top</code> and <code>bottom</code> (or both a <code>left</code> and <code>right</code>),
+                For example, with <code>position</code> <code>absolute</code> or <code>fixed</code>, you can set both a <code>top</code> and <code>bottom</code> (or both a <code>left</code> and <code>right</code>),
                 and your instruction will enforce a size on the element. The precedence here can get pretty complicated here, but as a general rule,
                 if you set <code>top</code>, <code>bottom</code>, <em>and</em> <code>height</code> simultaneously for a positioned element, the <code>height</code> value will be ignored.
             </p>
@@ -345,22 +346,24 @@
 
             <dl>
                 <dt><code>static</code></dt>
-                    <dl><em>The default</em>. The element is layed out as described above.</dl>
-                <dt><code>relative</code></dt>
-                    <dl>The element is layed out as described above, but additionally, it's position is adjusted by the positioning properties.</dl>
+                    <dl><em>The default</em>. Any <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> properties are ignored.</dl>
                 <dt><code>absolute</code></dt>
                     <dl>The element will be removed from its original layout position and positioned relative to its nearest positioned parent by the positioning properties.</dl>
                 <dt><code>fixed</code></dt>
                     <dl>The element will be removed from its original layout position and positioned relative to the window. (Mobile devices with zoom may have indeterminant behavior.)</dl>
+                <dt><code>relative</code></dt>
+                    <dl>Unlike absolute or fixed, the element stays in its original layout position and the <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> properties only <em>nudge</em> it from that original position (eg. <code>10px</code> down and <code>1em</code> to the right).</dl>
+                                    
             </dl>
 
             <p>This stuff can be confusing, so we'll highlight some important takeaways from these descriptions:</p>
 
             <ul>
-                <li><code>static</code> and <code>relative</code> elements are part of the layout. When their layout changes, so do their document neighbors.</li>
                 <li><code>absolute</code> and <code>fixed</code> elements are not part of normal document layout. When their layouts change, only their child elements are affected.</li>
-                <li><code>relative</code> is so-named not because it's child elements will be positioned "relative" to it. That is simply a consequence of it being positioned at all
-                    (and so the same could be said about <code>absolute</code> and <code>fixed</code> elements as well).</li>
+                <li><code>static</code> and <code>relative</code> elements are part of the layout. When their layout changes, so do their document neighbors.</li>
+                <li>When <em>nudged</em> via <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code>, <code>relative</code> elements do not affect their document neighbors. Instead, those neighbors act like the element was never <em>nudged</em> from its original position.</li>
+                <li>Confusingly, <code>relative</code> is not so-named because it's child elements will be positioned "relative" to it. That is simply a consequence of it being positioned at all
+                    (and so the same could be said about <code>absolute</code> and <code>fixed</code> elements as well). Rather, it is so-named to describe how you can "relatively" <em>nudge</em> it based on its original position.</li>
             </ul>
 
             <p>Now again, for a little magic:</p>
