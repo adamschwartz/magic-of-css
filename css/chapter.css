@@ -33,7 +33,7 @@ img {
 
 .chapter {
   max-width: 40em;
-  padding: 0 12px;
+  padding: 0 12px 1em;
   margin: 0 auto; }
 
 .example.side-by-side {
@@ -170,3 +170,42 @@ h3.magic {
     color: white;
     margin-top: 20px;
     margin-right: 1px; }
+
+dl {
+  *zoom: 1;
+  margin: 1.5em auto; }
+  dl:after {
+    content: "";
+    display: table;
+    clear: both; }
+  dl dt {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    line-height: 2em;
+    border-left: 4px solid; }
+    dl dt:nth-of-type(5n + 1) {
+      border-left-color: #ff4136; }
+    dl dt:nth-of-type(5n + 2) {
+      border-left-color: #ff851b; }
+    dl dt:nth-of-type(5n + 3) {
+      border-left-color: #ffdc00; }
+    dl dt:nth-of-type(5n + 4) {
+      border-left-color: #2ecc40; }
+    dl dt:nth-of-type(5n + 5) {
+      border-left-color: #0074d9; }
+    dl dt:nth-of-type(5n + 6) {
+      border-left-color: #b10dc9; }
+  @media (min-width: 769px) {
+    dl dt, dl dd {
+      float: left; }
+    dl dt {
+      width: 30%;
+      padding-right: 5%;
+      clear: left; }
+    dl dd {
+      width: 70%;
+      margin: 0 0 1.5em; } }

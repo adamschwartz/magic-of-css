@@ -40,7 +40,7 @@ img
 
 .chapter
     max-width: 40em
-    padding: 0 12px
+    padding: 0 12px 1em
     margin: 0 auto
 
 .example
@@ -171,3 +171,44 @@ h3.magic
         color: #fff
         margin-top: 20px
         margin-right: 1px
+
+dl
+    +pie-clearfix
+    margin: 1.5em auto
+
+    dt
+        +inline-block
+        line-height: 2em
+        border-left: 4px solid
+
+        &:nth-of-type(5n + 1)
+            border-left-color: $red
+
+        &:nth-of-type(5n + 2)
+            border-left-color: $orange
+
+        &:nth-of-type(5n + 3)
+            border-left-color: $yellow
+
+        &:nth-of-type(5n + 4)
+            border-left-color: $green
+
+        &:nth-of-type(5n + 5)
+            border-left-color: $blue
+
+        &:nth-of-type(5n + 6)
+            border-left-color: $purple
+
+    @media (min-width: 769px)
+
+        dt, dd
+            float: left
+
+        dt
+            width: 30%
+            padding-right: 5%
+            clear: left
+
+        dd
+            width: 70%
+            margin: 0 0 1.5em
