@@ -1,0 +1,22 @@
+body {
+  font-family: "proxima-nova", sans-serif; }
+
+.overflow-ellipsis-simple {
+  font-size: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 20em;
+  background: #eeeeee; }
+
+table {
+  background: #eeeeee;
+  font-size: 1.5em;
+  border-spacing: 0.5em;
+  border-collapse: separate; }
+
+.overflow-ellipsis-table-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 20em; }

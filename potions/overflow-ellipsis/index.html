@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Overflow Ellipsis — Potion — Magic of CSS — HubSpot — by Adam Schwartz</title>
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="icon" href="http://static.hubspot.com/favicon.ico">
+
+        <script type="text/javascript" src="//use.typekit.net/jbn8qxr.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <link rel="stylesheet" type="text/css" href="../../css/potions.css">
+        <link rel="stylesheet" href="css/overflow-ellipsis.css" />
+    </head>
+    <body>
+        <h1>Text-Overflow Ellipsis</h1>
+
+        <h2>Simple</h2>
+
+        <div class="overflow-ellipsis-simple">This is some text which will overflow. This is some text which will overflow.</div>
+
+        <h2>Line-height: 1</h2>
+
+        <div class="overflow-ellipsis-simple" style="line-height: 1">J and yjg can sometimes be cut off by overflows.</div>
+
+        <h2>Table</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Example Name</td>
+                    <td>
+                        <div class="overflow-ellipsis-table-cell">
+                            This is the description of Example Name. This is the description of Example Name.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Example Name</td>
+                    <td>
+                        <div class="overflow-ellipsis-table-cell">
+                            This is the description of Example Name. This is the description of Example Name.
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

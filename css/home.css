@@ -78,7 +78,8 @@ h2 {
       text-decoration: underline; }
 
 .potion {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 0.5em; }
 
 .logo .the-magic-of {
   -webkit-transition: opacity 800ms ease-in-out;
