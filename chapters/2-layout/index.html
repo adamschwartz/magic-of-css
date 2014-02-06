@@ -61,7 +61,7 @@
 
             <h2>Example</h2>
 
-            <p>In the following example, we have three of each type of element, with the following CSS applied to all of them:</p>
+            <p>In the following example we have elements of each type with the following CSS applied to all of them:</p>
 
             <pre><code>* {
     background: #eee;
@@ -113,10 +113,30 @@
             </div>
 
             <p>
-                The key thing to notice here is the difference between <code>inline</code> and <code>inline-block</code>.
+                <label>
+                    <input class="example-display-fixed-width-checkbox" type="checkbox" /> Set all widths to 20%
+                </label>
+            </p>
+
+            <script>
+                document.querySelector('.example-display-fixed-width-checkbox').addEventListener('change', function(e){
+                    var checked = e.target.checked;
+                    Array.prototype.slice.call(document.querySelectorAll('.example-display .example-content *')).forEach(function(box){
+                        box.style.width = checked ? '20%' : 'auto';
+                    });
+                });
+            </script>
+
+            <p>
+                One thing to notice here is the difference between <code>inline</code> and <code>inline-block</code>.
                 The <code>inline</code> elements display their <code>10px</code> padding and <code>2px</code> border, but only the lefts and rights
                 (and not tops and bottoms) of these actually affect their layout. Whereas the <code>inline-block</code> elements reposition themselves in
                 layout due to their padding and border, just as do the <code>block</code> elements.
+            </p>
+
+            <p>
+                Another important thing to notice is that even with <code>20%</code> width set on all elements, the <code>block</code>
+                elements <em>still don't wrap</em>. Assuming no floats are in the mix, <code>block</code> elements do not allow horizontal neighbors.
             </p>
 
             <h3 class="magic">Horizontal Scrolling with Inline Block</h3>
@@ -293,6 +313,12 @@
                 know how to whip it out. But don't worry about it too much just yet.
             </p>
 
+            <p>
+                In the meantime, you can read up on the
+                <a href="http://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo">relationship between
+                display, position, and float</a> in the w3 CSS2 spec.<sup><a href="#cite-1">[1]</a></sup>
+            </p>
+
             <h2>Positioning</h2>
 
             <p>Ahh, this is where the real fun begins.</p>
@@ -465,7 +491,7 @@ top: -40px;</code></pre>
                 These will definitely get their own chapter. Transforms are where a lot of the real magic lives.
                 But for now, note that unfortunately
                 <a href="http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/">
-                    transformed elements are treated as positioned even if they are <code>position: static</code></a><sup><a href="#cite-1">[1]</a></sup>.
+                    transformed elements are treated as positioned even if they are <code>position: static</code></a><sup><a href="#cite-2">[2]</a></sup>.
                 Commit this to memory or at some point this will probably burn you.
             </p>
 
@@ -482,7 +508,8 @@ top: -40px;</code></pre>
             <h3>Citations</h3>
 
             <ol>
-                <li><a id="cite-1" href="http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/">Un-fixing Fixed Elements with CSS Transforms</a></li>
+                <li><a id="cite-1" href="http://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo">Relationships between display, position, and float</a></li>
+                <li><a id="cite-2" href="http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/">Un-fixing Fixed Elements with CSS Transforms</a></li>
             </ol>
 
             <hr>
