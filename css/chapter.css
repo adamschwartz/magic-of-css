@@ -36,18 +36,22 @@ img {
   padding: 0 12px 1em;
   margin: 0 auto; }
 
-.example.side-by-side {
-  *zoom: 1; }
-  .example.side-by-side:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .example.side-by-side .left {
-    float: left;
-    width: 50%; }
-  .example.side-by-side .right {
-    float: right;
-    width: 50%; }
+.example {
+  max-width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+  .example.side-by-side {
+    *zoom: 1; }
+    .example.side-by-side:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .example.side-by-side .left {
+      float: left;
+      width: 50%; }
+    .example.side-by-side .right {
+      float: right;
+      width: 50%; }
 
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
