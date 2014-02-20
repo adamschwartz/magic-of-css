@@ -48,6 +48,8 @@ h2 {
   margin: 40px 0;
   color: #aaaaaa;
   padding: 0 1rem; }
+  h2 span {
+    margin-right: -0.4em; }
   @media (min-width: 769px) {
     h2 {
       margin: 80px 0; } }
@@ -55,6 +57,7 @@ h2 {
 .chapter, .potion {
   font-weight: 300;
   letter-spacing: 0.01em;
+  margin-right: -0.01em;
   font-size: 32px;
   line-height: 1;
   position: relative;
