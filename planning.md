@@ -1,4 +1,4 @@
-Future planned chapters:
+Planned chapters:
 
 - Units (px, em, rem, %)
 - Media Queries / Responsive Design
