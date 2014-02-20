@@ -1,8 +1,4 @@
-body {
-  font-family: "proxima-nova", sans-serif; }
-
 .overflow-ellipsis-simple {
-  font-size: 2em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -10,13 +6,16 @@ body {
   background: #eeeeee; }
 
 table {
-  background: #eeeeee;
-  font-size: 1.5em;
-  border-spacing: 0.5em;
-  border-collapse: separate; }
+  background: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em; }
+  table td {
+    border: 2px solid #cccccc; }
 
 .overflow-ellipsis-table-cell {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 20em; }
+  width: 25em; }
