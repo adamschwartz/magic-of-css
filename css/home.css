@@ -1,37 +1,16 @@
-html, body {
-  overflow: hidden;
-  height: 100%;
-  width: 100%; }
-
-.page-scroll {
-  position: fixed;
-  margin: auto;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch; }
+body {
+  margin: 0; }
+  @media (min-width: 769px) {
+    body {
+      margin: 8em 0; } }
 
 .page {
-  text-align: center; }
-
-.page-inner {
+  text-align: center;
   padding: 20px 0; }
+  @media (min-width: 769px) {
+    .page {
+      padding: 0; } }
 
-@media (min-width: 769px) {
-  .page-outer {
-    height: 100%;
-    width: 100%;
-    display: table; }
-
-  .page {
-    display: table-cell;
-    vertical-align: middle; }
-
-  .page-inner {
-    padding: 200px 0;
-    position: relative; } }
 .separator {
   height: 40px; }
   @media (min-width: 769px) {

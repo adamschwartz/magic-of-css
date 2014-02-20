@@ -13,7 +13,7 @@
       return document.body.className += ' mouse-has-moved';
     });
     firedScroll = false;
-    return document.querySelector('.page-scroll').addEventListener('scroll', function() {
+    return window.addEventListener('scroll', function() {
       if (firedScroll) {
         return;
       }
