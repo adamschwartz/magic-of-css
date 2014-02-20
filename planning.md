@@ -15,3 +15,4 @@ Planned chapters:
 Planned potions:
 
 - `[data-load-in-random]` and `$('.selector, .other-selector').randomFadeIn()` which explodes to data attrs (builds `<style>` with `:nth-child-of-type([data-load-in-random])` delays)
+- Presentation framework? http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt
