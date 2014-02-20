@@ -190,12 +190,11 @@ h2 {
   opacity: 0; }
   .trigger-pageload-animations .page-inner > *:not(.logo) {
     opacity: 1; }
-
-.window-has-been-scrolled * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important; }
+  .window-has-been-scrolled .page-inner > *:not(.logo) {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; }
 
 .trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-c .rainbow {
   -webkit-transition: -webkit-transform 800ms ease-in-out;
