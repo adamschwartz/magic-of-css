@@ -11,3 +11,7 @@ Planned chapters:
     - http://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo
 - Flex
     - http://css-tricks.com/boxes-fill-height-dont-squish
+
+Planned potions:
+
+- `[data-load-in-random]` and `$('.selector, .other-selector').randomFadeIn()` which explodes to data attrs (builds `<style>` with `:nth-child-of-type([data-load-in-random])` delays)
