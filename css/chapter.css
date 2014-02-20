@@ -90,7 +90,9 @@ hr {
 
 nav.chapter-navigation {
   position: relative;
-  height: 40px; }
+  height: 40px;
+  max-width: 100%;
+  overflow: hidden; }
   nav.chapter-navigation a {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
