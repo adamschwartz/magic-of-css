@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Typography — Chapter 5 — Magic of CSS — HubSpot — by Adam Schwartz</title>
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="icon" href="http://static.hubspot.com/favicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="../../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../../css/logo.css">
+        <link rel="stylesheet" type="text/css" href="../../css/chapter.css">
+
+        <script type="text/javascript" src="//use.typekit.net/jbn8qxr.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body>
+        <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div></div></a>
+
+        <div class="chapter">
+            <h1>
+                <span class="number">Chapter 5</span>
+                <span class="title">Typography: Part I<br/>Inspiration</span>
+            </h1>
+
+            <p><em>There's so much I want to talk about with respect to typography that I decided to break it up into multple chapters. This is the first.</em></p>
+
+            <hr>
+
+            <h2>Typography is hard</h2>
+
+            <p>First off, give yourself a pat on the back. You've made it this far. You're reading about typography!</p>
+
+            <p>Now take a moment to realize that <em>most of the things you look at every day are type</em>. So before discussing typography, let's look at it.</p>
+
+            <p>Take a moment and just fly through some of these beautiful typographically-based design collections:</p>
+
+            <ul>
+                <li><a href="http://www.awwwards.com/websites/typography/">Awwwards: Typography in Web Design</a></li>
+                <li><a href="http://webdesign.tutsplus.com/articles/10-examples-of-inspirational-typography-on-the-web--webdesign-904">Tutsplus: 10 Examples of Inspirational Typography on the Web</a></li>
+                <li><a href="http://webdesignledger.com/inspiration/21-beautiful-examples-of-typography-in-web-design">Web Design Ledger: 21 Beautiful Examples of Typography in Web Design</a></li>
+                <li><a href="http://www.smashingmagazine.com/2013/08/06/beautiful-typography-web-design/">Smashing Magazine: A Journey Through Beautiful Typography In Web Design</a></li>
+                <li><a href="http://web3canvas.com/20-beautifully-designed-typography-website-inspiration-2013/">Web3Canvas: 20 beautifully designed Typography Website Inspiration 2013</a></li>
+            </ul>
+
+            <h2>Seeing</h2>
+
+            <p>
+                As with with <a href="../4-color">color</a>, designing well with typography requires using your eyes. Really <em>see</em> the shape of each glyph. Notice the negative space between glyphs. You have more control over these things than you might think. And over the course of the next few chapters, I'm going to show you how.
+            </p>
+
+            <h2>Basic CSS Typography Tools</h2>
+
+            <p>The basic tools in your toolkit consist of the following:</p>
+
+            <ul>
+                <li>
+                    <p>Font properties</p>
+                    <ul>
+                        <li><code>font-family</code> &mdash; <span style="font-family: inherit">inherit</span>, <span style="font-family: serif">serif</span>, <span style="font-family: monospace">monospace</span></li>
+                        <li><code>font-size</code>&mdash; <span style="font-size: inherit">inherit</span>, <span style="font-size: 18px; line-height: 1em">18px</span>, <span style="font-size: 10px">10px</span></li>
+                        <li><code>font-weight</code>&mdash; <span style="font-weight: inherit">inherit</span>, <span style="font-weight: bold">bold</span>, <span style="font-weight: 100">100</span></li>
+                        <li><code>font-style</code>&mdash; <span style="font-style: inherit">inherit</span>, <span style="font-style: italics">italics</span></li>
+                        <li><code>font-variant</code>&mdash; <span style="font-variant: inherit">inherit</span>, <span style="font-variant: small-caps">small-caps</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Text properties</p>
+                    <ul>
+                        <li><code>text-align</code>&mdash; <span style="text-align: inherit">inherit</span>, <span style="text-align: center; display: inline-block; width: 10em; box-shadow: 0 0 0 1px #ccc">center</span></li>
+                        <li><code>text-decoration</code>&mdash; <span style="text-decoration: inherit">inherit</span>, <span style="text-decoration: underline">underline</span></li>
+                        <li><code>text-indent</code>&mdash; <span style="text-indent: inherit">inherit</span>, <span style="text-indent: 50px; display: inline-block">50px</span></li>
+                        <li><code>text-shadow</code>&mdash; <span style="text-shadow: inherit">inherit</span>, <span style="text-shadow: 0 1px 3px red">0 1px 3px red</span></li>
+                        <li><code>text-transform</code>&mdash; <span style="text-transform: inherit">inherit</span>, <span style="text-transform: uppercase">uppercase</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Miscellaneous</p>
+                    <ul>
+                        <li><code>letter-spacing</code>&mdash; <span style="letter-spacing: inherit">inherit</span>, <span style="letter-spacing: 5px">5px</span></li>
+                        <li><code>white-space</code>&mdash; <span style="white-space: inherit">inherit</span>, <span style="white-space: pre">pre        pre</span></li>
+                        <li><code>line-height</code>&mdash; <span style="line-height: inherit; display: inline-block; box-shadow: 0 0 0 1px #ccc">inherit</span>, <span style="line-height: .75em; display: inline-block; box-shadow: 0 0 0 1px #ccc">.75em</span></li>
+                        <li><code>word-spacing</code>&mdash; <span style="word-spacing: inherit">inherit</span>, <span style="word-spacing: 100px">100px 100px</span></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!--
+            font-style: italic vs oblique
+            http://stackoverflow.com/questions/1680624/css-font-style-italic-vs-oblique
+
+            Troubleshooting CSS
+            http://tympanus.net/codrops/2013/07/17/troubleshooting-css
+            -->
+
+            <p>Now that you have a basic idea of what is possible, let's look at a few combinations of these properties.</p>
+
+            <h2>Examples</h2>
+
+            <style>
+                .typography-example {
+                    margin-bottom: 140px;
+                }
+            </style>
+
+            <style>
+                .typography-example-1 {
+                    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #723362), color-stop(100%, #9d223c));
+                    background-image: -webkit-linear-gradient(top left, #723362 0%, #9d223c 100%);
+                    background-image: -moz-linear-gradient(top left, #723362 0%, #9d223c 100%);
+                    background-image: -o-linear-gradient(top left, #723362 0%, #9d223c 100%);
+                    background-image: linear-gradient(top left, #723362 0%, #9d223c 100%);
+                    background-color: #9d223c;
+                    color: #fff;
+                    padding: 1em 0;
+                    text-align: center;
+                    font-weight: 200;
+                    text-transform: uppercase;
+                    letter-spacing: .4em;
+                    padding-left: .4em;
+                    font-size: 1.8em;
+                    margin-top: 40px;
+                }
+            </style>
+
+            <div class="typography-example typography-example-1">
+                Example One
+            </div>
+
+            <style>
+                .typography-example-2 {
+                    background: #fff;
+                    border: .5em solid #000;
+                    color: #000;
+                    padding: 1em 0;
+                    text-align: center;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 1.5em;
+                }
+
+                .typography-example-2 span {
+                    display: block;
+                    letter-spacing: .4em;
+                    padding-left: .4em;
+                }
+
+                .typography-example-2 div {
+                    font-style: italic;
+                    font-weight: 200;
+                    color: #888;
+                    font-size: .7em;
+                    text-transform: none;
+                    letter-spacing: .12em;
+                    padding-left: .12em;
+                }
+            </style>
+
+            <div class="typography-example typography-example-2">
+                <span>Example</span>
+                <div>by Adam Schwartz</div>
+            </div>
+
+            <style>
+                .typography-example-3 {
+                    border: .2em solid #ff4136;
+                    font-size: 3em;
+                    text-align: center;
+                    padding: .2em;
+                }
+
+                .typography-example-3 span {
+                    display: inline-block;
+                    width: 20%;
+                }
+            </style>
+
+            <div class="typography-example typography-example-3">
+                <span style="outline:none;background-color:#ff4136;color:rgb(255,255,255);display:inline-block;padding:13px">M</span><span style="outline:none;background-color:#ff851b;color:rgb(255,255,255);display:inline-block;padding:13px">A</span><span style="outline:none;background-color:#2ecc40;color:white;display:inline-block;padding:13px">G</span><span style="outline:none;background-color:#0074d9;color:white;display:inline-block;padding:13px">I</span><span style="outline:none;background-color:#b10dc9;color:rgb(255,255,255);display:inline-block;padding:13px">C</span>
+            </div>
+
+            <style>
+                .typography-example-4 {
+                    background: #fff;
+                    border: 2px dashed #ccc;
+                    color: #aaa;
+                    padding: 1em 0;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 1.5em;
+                    margin-bottom: 50px;
+                }
+            </style>
+
+            <div class="typography-example typography-example-4">
+                What will you design?
+            </div>
+
+            <p>In the next chapter we'll go over methodology and ways of thinking about typography which will help you think creatively.</p>
+
+            <p>For now, check out the amazing resources below. In particular, glance over <a href="http://practicaltypography.com">Butterick's Practical Typography</a><sup><a href="#cite-1">[1]</a></sup>. It's a must-read for anyone interest in typography.</p>
+
+            <h3>Further reading</h3>
+
+            <ul>
+                <li><a href="http://practicaltypography.com">Butterick's Practical Typography</a></li>
+                <li><a href="http://www.newnet-soft.com/blog/csstypography">CSS Typography Cheat Sheet</a></li>
+                <li><a href="http://type-scale.com">Type Scale</a></li>
+                <li><a href="http://tympanus.net/codrops/2012/09/26/make-a-statement-with-type/">Codedrops: Make a Statement with Type</a></li>
+            </ul>
+
+            <h3>Citations</h3>
+
+            <ol>
+                <li><a id="cite-1" href="http://practicaltypography.com">Butterick's Practical Typography</a></li>
+            </ol>
+
+            <hr>
+
+            <nav class="chapter-navigation">
+                <a class="previous-chapter" href="../4-color">
+                    <span class="number">4</span>
+                    <span class="title">Color</span>
+                </a>
+                <!--a class="next-chapter" href="../6-">
+                    <span class="number">6</span>
+                    <span class="title">Coming soon...</span>
+                </a-->
+            </nav>
+        </div>
+    </body>
+</html>
