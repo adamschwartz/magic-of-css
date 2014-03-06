@@ -2,7 +2,7 @@ Planned chapters:
 
 - Units (px, em, rem, %)
 - Media Queries / Responsive Design
-- Animations and Transitions
+- Animations
 - Transforms
     - http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms
 - HTML and Body
