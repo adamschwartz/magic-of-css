@@ -404,15 +404,15 @@
 
             <p>Of course, this is just the tip of the iceberg. Colors, gradients, sizes, positions, orientations, etc., can all be transitioned simultaneously. In addition you have delays and custom easing functions right at your fingertips. CSS transitions are so easy to work with. Trust that the browser will do the right thing when you transition a CSS property, because it usually does.</p>
 
-            <h3 class="magic">Radio Button Accordian</h3>
+            <h3 class="magic">Radio Button Accordion</h3>
 
             <style>
-                .accordian-example .accordian input[type="radio"] {
+                .accordion-example .accordion input[type="radio"] {
                     position: absolute;
                     left: -9999px;
                 }
 
-                .accordian-example .accordian label {
+                .accordion-example .accordion label {
                     display: block;
                     background: #4f6f8b;
                     color: #fff;
@@ -429,11 +429,11 @@
                     transition: background 400ms, color 400ms, border-radius 400ms;
                 }
 
-                .accordian-example .accordian label:hover {
+                .accordion-example .accordion label:hover {
                     background: #385670
                 }
 
-                .accordian-example .accordian .baffle {
+                .accordion-example .accordion .baffle {
                     position: relative;
                     height: 50px;
                     overflow: hidden;
@@ -441,7 +441,7 @@
                     -webkit-transform: translateZ(0);
                 }
 
-                .accordian-example .accordian .baffle-inner {
+                .accordion-example .accordion .baffle-inner {
                     padding: 20px;
                     background: #eee;
                     position: absolute;
@@ -453,66 +453,66 @@
                     overflow-x: hidden
                 }
 
-                .accordian-example .accordian .baffle:first-of-type label,
-                .accordian-example .accordian .baffle:first-of-type .baffle-inner {
+                .accordion-example .accordion .baffle:first-of-type label,
+                .accordion-example .accordion .baffle:first-of-type .baffle-inner {
                     border-radius: 4px 4px 0 0
                 }
 
-                .accordian-example .accordian .baffle:last-of-type label,
-                .accordian-example .accordian .baffle:last-of-type .baffle-inner {
+                .accordion-example .accordion .baffle:last-of-type label,
+                .accordion-example .accordion .baffle:last-of-type .baffle-inner {
                     border-radius: 0 0 4px 4px
                 }
 
-                .accordian-example .accordian .baffle-inner :first-child {
+                .accordion-example .accordion .baffle-inner :first-child {
                     margin-top: 0
                 }
 
-                .accordian-example .accordian .baffle-inner :last-child {
+                .accordion-example .accordion .baffle-inner :last-child {
                     margin-bottom: 0
                 }
 
-                .accordian-example .accordian input[type="radio"]:checked + .baffle {
+                .accordion-example .accordion input[type="radio"]:checked + .baffle {
                     height: 250px
                 }
 
-                .accordian-example .accordian input[type="radio"]:checked + .baffle label {
+                .accordion-example .accordion input[type="radio"]:checked + .baffle label {
                     background: #eee;
                     color: inherit;
                     box-shadow: inset 0 -1px rgba(0, 0, 0, .15);
                     font-weight: 300
                 }
 
-                .accordian-example .accordian input[type="radio"]:checked + .baffle:not(:first-of-type) label {
+                .accordion-example .accordion input[type="radio"]:checked + .baffle:not(:first-of-type) label {
                     border-radius: 0
                 }
 
-                .accordian-example .accordian input[type="radio"]:not(:checked) + .baffle + input[type="radio"]:not(:checked) + .baffle label {
+                .accordion-example .accordion input[type="radio"]:not(:checked) + .baffle + input[type="radio"]:not(:checked) + .baffle label {
                     box-shadow: inset 0 1px rgba(0, 0, 0, .15);
                 }
 
-                .accordian-example ::-webkit-scrollbar {
+                .accordion-example ::-webkit-scrollbar {
                     width: 12px
                 }
 
-                .accordian-example ::-webkit-scrollbar-thumb {
+                .accordion-example ::-webkit-scrollbar-thumb {
                     background: #4f6f8b
                 }
 
-                .accordian-example ::-webkit-scrollbar-thumb:window-inactive {
+                .accordion-example ::-webkit-scrollbar-thumb:window-inactive {
                     background: rgba(0, 0, 0, 0.4)
                 }
             </style>
 
-            <div class="accordian-example">
-                <div class="accordian">
-                    <input type="radio" id="radio-option-1" name="accordian-radios" checked>
+            <div class="accordion-example">
+                <div class="accordion">
+                    <input type="radio" id="radio-option-1" name="accordion-radios" checked>
                     <div class="baffle">
-                        <label for="radio-option-1">Accordian</label>
+                        <label for="radio-option-1">Accordion</label>
                         <div class="baffle-inner">
                             Accordions (from 19th century German Akkordion, from Akkord - "musical chord, concord of sounds") are a family of box-shaped musical instruments of the bellows-driven free-reed aerophone type, colloquially referred to as a squeezebox. A person who plays the accordion is called an accordionist. The concertina and bandoneón are related; the harmonium and American reed organ are in the same family.
                         </div>
                     </div>
-                    <input type="radio" id="radio-option-2" name="accordian-radios">
+                    <input type="radio" id="radio-option-2" name="accordion-radios">
                     <div class="baffle">
                         <label for="radio-option-2">Construction</label>
                         <div class="baffle-inner">
@@ -528,7 +528,7 @@
                             </ul>
                         </div>
                     </div>
-                    <input type="radio" id="radio-option-3" name="accordian-radios">
+                    <input type="radio" id="radio-option-3" name="accordion-radios">
                     <div class="baffle">
                         <label for="radio-option-3">History</label>
                         <div class="baffle-inner">
