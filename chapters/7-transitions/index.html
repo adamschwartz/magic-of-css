@@ -400,6 +400,139 @@
 
             <p>Of course, this is just the tip of the iceberg. Colors, gradients, sizes, positions, orientations, etc., can all be transitioned simultaneously. In addition you have delays and custom easing functions right at your fingertips. CSS transitions are so easy to work with. Trust that the browser will do the right thing when you transition a CSS property, because it usually does.</p>
 
+            <h3 class="magic">Radio Button Accordian</h3>
+
+            <style>
+                .accordian-example .accordian input[type="radio"] {
+                    position: absolute;
+                    left: -9999px;
+                }
+
+                .accordian-example .accordian label {
+                    display: block;
+                    background: #4f6f8b;
+                    color: #fff;
+                    text-align: center;
+                    padding: 20px;
+                    font-size: 1.3em;
+                    letter-spacing: .13em;
+                    padding-left: .13em;
+                    padding-right: 0;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    height: 60px;
+                    font-weight: 200;
+                    transition: background 400ms, color 400ms, border-radius 400ms;
+                }
+
+                .accordian-example .accordian label:hover {
+                    background: #385670
+                }
+
+                .accordian-example .accordian .baffle {
+                    position: relative;
+                    height: 60px;
+                    overflow: hidden;
+                    transition: height 400ms;
+                }
+
+                .accordian-example .accordian .baffle-inner {
+                    padding: 20px;
+                    background: #eee;
+                    position: absolute;
+                    top: 60px;
+                    left: 0;
+                    height: 210px;
+                    overflow: scroll;
+                    overflow-y: scroll;
+                    overflow-x: hidden
+                }
+
+                .accordian-example .accordian .baffle:first-of-type label,
+                .accordian-example .accordian .baffle:first-of-type .baffle-inner {
+                    border-radius: 4px 4px 0 0
+                }
+
+                .accordian-example .accordian .baffle:last-of-type label,
+                .accordian-example .accordian .baffle:last-of-type .baffle-inner {
+                    border-radius: 0 0 4px 4px
+                }
+
+                .accordian-example .accordian .baffle-inner :first-child {
+                    margin-top: 0
+                }
+
+                .accordian-example .accordian .baffle-inner :last-child {
+                    margin-bottom: 0
+                }
+
+                .accordian-example .accordian input[type="radio"]:checked + .baffle {
+                    height: 270px
+                }
+
+                .accordian-example .accordian input[type="radio"]:checked + .baffle label {
+                    background: #eee;
+                    color: inherit;
+                    box-shadow: inset 0 -1px rgba(0, 0, 0, .15);
+                }
+
+                .accordian-example .accordian input[type="radio"]:checked + .baffle:not(:first-of-type) label {
+                    border-radius: 0
+                }
+
+                .accordian-example .accordian input[type="radio"]:not(:checked) + .baffle + input[type="radio"]:not(:checked) + .baffle label {
+                    box-shadow: inset 0 1px rgba(0, 0, 0, .15);
+                }
+
+                .accordian-example ::-webkit-scrollbar {
+                    width: 12px
+                }
+
+                .accordian-example ::-webkit-scrollbar-thumb {
+                    background: #4f6f8b
+                }
+
+                .accordian-example ::-webkit-scrollbar-thumb:window-inactive {
+                    background: rgba(0, 0, 0, 0.4)
+                }
+            </style>
+
+            <div class="accordian-example">
+                <div class="accordian">
+                    <input type="radio" id="radio-option-1" name="accordian-radios" checked>
+                    <div class="baffle">
+                        <label for="radio-option-1">Accordian</label>
+                        <div class="baffle-inner">
+                            Accordions (from 19th century German Akkordion, from Akkord - "musical chord, concord of sounds") are a family of box-shaped musical instruments of the bellows-driven free-reed aerophone type, colloquially referred to as a squeezebox. A person who plays the accordion is called an accordionist. The concertina and bandoneón are related; the harmonium and American reed organ are in the same family.
+                        </div>
+                    </div>
+                    <input type="radio" id="radio-option-2" name="accordian-radios">
+                    <div class="baffle">
+                        <label for="radio-option-2">Construction</label>
+                        <div class="baffle-inner">
+                            <p>Accordions have many configurations and types. What may be technically possible to do with one accordion could be impossible with another:</p>
+                            <ul>
+                                <li>Some accordions are bisonoric, producing different pitches depending on the direction of bellows movement</li>
+                                <li>Others are unisonoric and produce the same pitch in both directions</li>
+                                <li>Some use a chromatic buttonboard for the right-hand manual</li>
+                                <li>Others use a diatonic buttonboard for the right-hand manual</li>
+                                <li>Yet others use a piano-style musical keyboard for the right-hand manual</li>
+                                <li>Some can play in different registers</li>
+                                <li>Craftsmen and technicians may tune the same registers differently, "personalizing" the end result, such as an organ technician might voice a particular instrument</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="radio" id="radio-option-3" name="accordian-radios">
+                    <div class="baffle">
+                        <label for="radio-option-3">History</label>
+                        <div class="baffle-inner">
+                            <p>The accordion is a free reed instrument and is in the same family as other instruments such as the sheng and khaen. The sheng and khaen are both much older than the accordion and this type of reed did inspire the kind of free reeds in use in the accordion as we know it today.</p>
+                            <p>The accordion's basic form is believed to have been invented in Berlin in 1822 by Christian Friedrich Ludwig Buschmann, although one instrument has been recently discovered that appears to have been built earlier.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <h3>Transition Inspiration</h3>
 
             <p>If you're looking for more inspiration on what is possible with CSS transitions, check out these amazing demos from Codrops:</p>
