@@ -113,7 +113,7 @@
 
             <pre><code>.ex span {
     opacity: 0;
-    transition: opacity 1300ms;
+    transition: opacity 1300ms
 }
 
 .ex span:nth-child(1)  { transition-delay:  200ms }
@@ -222,22 +222,22 @@
 .ex .author span {
     display: inline-block;
     opacity: 0;
-    transition: -webkit-transform 800ms, opacity 800ms;
+    transition: -webkit-transform 800ms, opacity 800ms
 }
 
 .ex .title span {
-    -webkit-transform: translateZ(0) translateY(-100px);
+    -webkit-transform: translateZ(0) translateY(-100px)
 }
 
 .ex .author span {
-    -webkit-transform: translateZ(0) translateY(100px);
+    -webkit-transform: translateZ(0) translateY(100px)
 }
 
 .ex:hover .title span,
 .ex:hover .author span {
     opacity: 1;
     transition: -webkit-transform 800ms, opacity 1200ms;
-    -webkit-transform: translateZ(0) translateY(0);
+    -webkit-transform: translateZ(0) translateY(0)
 }
 
 .ex .title span:nth-child(1) { transition-delay: 360ms, 300ms }
@@ -265,7 +265,7 @@
 
 .ex:hover .title span,
 .ex:hover .author span {
-    transition-delay: 0;
+    transition-delay: 0
 }</code></pre>
 
             <div class="typography-example typography-example-2">
@@ -352,25 +352,25 @@
             </style>
 
             <pre><code>.ex .letter {
-    -webkit-perspective: 300px;
+    -webkit-perspective: 300px
 }
 
 .ex .front,
 .ex .back {
     -webkit-backface-visibility: hidden;
-    transition: -webkit-transform 800ms;
+    transition: -webkit-transform 800ms
 }
 
 .ex .back {
-    -webkit-transform: translateZ(0) rotateY(-180deg);
+    -webkit-transform: translateZ(0) rotateY(-180deg)
 }
 
 .ex:hover .back {
-    -webkit-transform: translateZ(0) rotateY(0deg);
+    -webkit-transform: translateZ(0) rotateY(0deg)
 }
 
 .ex:hover .front {
-    -webkit-transform: translateZ(0) rotateY(180deg);
+    -webkit-transform: translateZ(0) rotateY(180deg)
 }
 
 .ex .letter:nth-child(1) span { transition-delay:  200ms }
