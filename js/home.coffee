@@ -1,6 +1,6 @@
-app = {}
+home = {}
 
-app.init = ->
+home.init = ->
     document.body.className += ' trigger-pageload-animations'
 
     firedMouseMove = false
@@ -15,5 +15,10 @@ app.init = ->
         firedScroll = true
         document.body.className += ' window-has-been-scrolled'
 
-window.app = app
-setTimeout app.init
+    if localStorage.hasBeenHereBefore
+        document.body.className += ' has-been-here-before'
+    else
+        localStorage.hasBeenHereBefore = true
+
+window.home = home
+setTimeout home.init

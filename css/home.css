@@ -172,7 +172,7 @@ h2 {
   opacity: 0; }
   .trigger-pageload-animations .page-inner > *:not(.logo) {
     opacity: 1; }
-  .window-has-been-scrolled .page-inner > *:not(.logo) {
+  .window-has-been-scrolled .page-inner > *:not(.logo), .has-been-here-before .page-inner > *:not(.logo) {
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
