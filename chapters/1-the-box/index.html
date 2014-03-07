@@ -27,8 +27,7 @@
 
             <h2>Box model</h2>
 
-            <p>In CSS, the <a href="http://www.w3.org/TR/CSS2/box.html">box model</a><sup><a href="#cite-1">[1]</a></sup>
-            describes the rectangular boxes that are generated for elements layed out in the page.</p>
+            <p>In CSS, the <a href="http://www.w3.org/TR/CSS2/box.html">box model</a><sup><a href="#cite-1">[1]</a></sup> describes the rectangular boxes that are generated for elements layed out in the page.</p>
 
             <p>Essentially, everything is a rectangle.</p>
 
@@ -46,9 +45,7 @@
 
             <h2>Box sizing</h2>
 
-            <p>The <code>box-sizing</code> property gives you a little control around
-            how boxes are sized within this model. The two possible values for
-            <code>box-sizing</code> are <code>content-box</code> and <code>border-box</code><sup><a href="#cite-2">[2]</a></sup>.</p>
+            <p>The <code>box-sizing</code> property gives you a little control around how boxes are sized within this model. The two possible values for <code>box-sizing</code> are <code>content-box</code> and <code>border-box</code><sup><a href="#cite-2">[2]</a></sup>.</p>
 
             <dl>
                 <dt><code>content-box</code></dt>
@@ -63,13 +60,6 @@
 
             <p>Both of these boxes have the following CSS:</p>
 
-            <pre><code>.box {
-    height: 20px;
-    width: 20px;
-    padding: 10px;
-    border: 2px solid
-}</code></pre>
-
             <style>
                 .example-box-sizing .box {
                     height: 20px;
@@ -78,6 +68,13 @@
                     border: 2px solid
                 }
             </style>
+
+            <pre><code>.box {
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    border: 2px solid
+}</code></pre>
 
             <div class="example side-by-side example-box-sizing">
                 <div class="left">
@@ -94,22 +91,14 @@
                 </div>
             </div>
 
-            <p>In the <code>border-box</code> case, the width and height
-            of the <code>.box</code> are <code>20px</code>, <em>exactly what we set</em>.
-            In the <code>content-box</code> case, the width and height
-            are <code>44px = 20 + (2 * 10) + (2 * 2)</code>, since we need to include
-            the padding and border on both sides.
-            </p>
+            <p>In the <code>border-box</code> case, the width and height of the <code>.box</code> are <code>20px</code>, <em>exactly what we set</em>. In the <code>content-box</code> case, the width and height are <code>44px = 20 + (2 * 10) + (2 * 2)</code>, since we need to include the padding and border on both sides.</p>
 
             <h3><em>tl;dr</em></h3>
 
-            <p>If you want <code>height</code> and <code>width</code> to behave in the
-            most intuitive way,
-            <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">listen to Paul Irish</a><sup><a href="#cite-3">[3]</a></sup>
-            and put this at the top of your CSS:</p>
+            <p>If you want <code>height</code> and <code>width</code> to behave in the most intuitive way, <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">listen to Paul Irish</a><sup><a href="#cite-3">[3]</a></sup> and put this at the top of your CSS:</p>
 
             <pre><code>*, *:before, *:after {
-    -webkit-box-sizing: border-box; /* Needed for mobile webkit */
+    -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
     -moz-box-sizing: border-box; /* Needed for Firefox */
     box-sizing: border-box
 }</code></pre>
