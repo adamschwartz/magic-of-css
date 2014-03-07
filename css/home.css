@@ -37,7 +37,7 @@ h2 {
   font-weight: 300;
   letter-spacing: 0.01em;
   margin-right: -0.01em;
-  font-size: 32px;
+  font-size: 20px;
   line-height: 1;
   position: relative;
   width: 14em;
@@ -45,6 +45,12 @@ h2 {
   text-align: left;
   margin: 0 auto;
   padding: 0 1rem; }
+  @media (min-width: 769px) {
+    .chapter, .potion {
+      font-size: 28px; } }
+  @media (min-width: 1200px) {
+    .chapter, .potion {
+      font-size: 32px; } }
   .chapter .number, .potion .number {
     margin-bottom: 13px;
     display: inline-block;
