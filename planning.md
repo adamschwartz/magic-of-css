@@ -10,6 +10,8 @@ Planned chapters:
     - http://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo
 - Flex
     - http://css-tricks.com/boxes-fill-height-dont-squish
+- General CSS Troubleshooting
+    - http://tympanus.net/codrops/2013/07/17/troubleshooting-css
 
 Planned potions:
 
