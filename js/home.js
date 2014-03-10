@@ -1,9 +1,10 @@
 (function() {
   var home;
+
   home = {};
+
   home.init = function() {
-    var firedMouseMove, firedScroll;
-    document.body.className += ' trigger-pageload-animations';
+    var firedMouseMove, firedScroll, referrerHostname, _ref;
     firedMouseMove = false;
     window.addEventListener('mousemove', function() {
       if (firedMouseMove) {
@@ -20,12 +21,22 @@
       firedScroll = true;
       return document.body.className += ' window-has-been-scrolled';
     });
-    if (localStorage.hasBeenHereBefore) {
-      return document.body.className += ' has-been-here-before';
+    if (localStorage.hasBeenHereBefore === true) {
+      document.querySelector('.logo').className = 'logo';
+      document.body.className += ' has-been-here-before';
     } else {
-      return localStorage.hasBeenHereBefore = true;
+      localStorage.hasBeenHereBefore = true;
     }
+    referrerHostname = (_ref = document.referrer.match(/:\/\/(.[^/]+)/)) != null ? _ref[1].split(':')[0] : void 0;
+    if (document.location.hostname === referrerHostname || localStorage.hasBeenHereBefore === true) {
+      document.querySelector('.logo').className = 'logo';
+      document.body.className += ' has-been-here-before';
+    }
+    return document.body.className += ' trigger-pageload-animations';
   };
+
   window.home = home;
+
   setTimeout(home.init);
+
 }).call(this);

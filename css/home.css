@@ -69,16 +69,16 @@ h2 {
   text-align: center;
   margin-bottom: 0.5em; }
 
-.logo .the-magic-of {
+.logo.animated .the-magic-of {
   -webkit-transition: opacity 800ms ease-in-out;
   -webkit-transition-delay: 1300ms;
   -moz-transition: opacity 800ms ease-in-out 1300ms;
   -o-transition: opacity 800ms ease-in-out 1300ms;
   transition: opacity 800ms ease-in-out 1300ms forwards;
   opacity: 0; }
-  .trigger-pageload-animations .logo .the-magic-of {
+  .trigger-pageload-animations .logo.animated .the-magic-of {
     opacity: 1; }
-.logo .css-rainbow .css-rainbow-c .rainbow {
+.logo.animated .css-rainbow .css-rainbow-c .rainbow {
   -webkit-transition: -webkit-transform 800ms ease-in-out;
   -webkit-transition-delay: 0ms;
   -moz-transition: -moz-transform 800ms ease-in-out 0ms;
@@ -90,13 +90,13 @@ h2 {
   -o-transform: rotateZ(90deg);
   transform: rotateZ(90deg);
   -webkit-backface-visibility: hidden; }
-  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-c .rainbow {
+  .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-c .rainbow {
     -webkit-transform: rotateZ(-90deg);
     -moz-transform: rotateZ(-90deg);
     -ms-transform: rotateZ(-90deg);
     -o-transform: rotateZ(-90deg);
     transform: rotateZ(-90deg); }
-.logo .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
+.logo.animated .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
   -webkit-transition: -webkit-transform 400ms ease-in;
   -webkit-transition-delay: 600ms;
   -moz-transition: -moz-transform 400ms ease-in 600ms;
@@ -108,13 +108,13 @@ h2 {
   -o-transform: rotateZ(270deg);
   transform: rotateZ(270deg);
   -webkit-backface-visibility: hidden; }
-  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
+  .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
     -webkit-transform: rotateZ(90deg);
     -moz-transform: rotateZ(90deg);
     -ms-transform: rotateZ(90deg);
     -o-transform: rotateZ(90deg);
     transform: rotateZ(90deg); }
-.logo .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
+.logo.animated .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
   -webkit-transition: -webkit-transform 400ms ease-out;
   -webkit-transition-delay: 1000ms;
   -moz-transition: -moz-transform 400ms ease-out 1000ms;
@@ -126,13 +126,13 @@ h2 {
   -o-transform: rotateZ(90deg);
   transform: rotateZ(90deg);
   -webkit-backface-visibility: hidden; }
-  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
+  .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
     -webkit-transform: rotateZ(270deg);
     -moz-transform: rotateZ(270deg);
     -ms-transform: rotateZ(270deg);
     -o-transform: rotateZ(270deg);
     transform: rotateZ(270deg); }
-.logo .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
+.logo.animated .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
   -webkit-transition: -webkit-transform 400ms ease-in;
   -webkit-transition-delay: 800ms;
   -moz-transition: -moz-transform 400ms ease-in 800ms;
@@ -144,13 +144,13 @@ h2 {
   -o-transform: rotateZ(270deg);
   transform: rotateZ(270deg);
   -webkit-backface-visibility: hidden; }
-  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
+  .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
     -webkit-transform: rotateZ(90deg);
     -moz-transform: rotateZ(90deg);
     -ms-transform: rotateZ(90deg);
     -o-transform: rotateZ(90deg);
     transform: rotateZ(90deg); }
-.logo .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
+.logo.animated .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
   -webkit-transition: -webkit-transform 400ms ease-out;
   -webkit-transition-delay: 1200ms;
   -moz-transition: -moz-transform 400ms ease-out 1200ms;
@@ -162,7 +162,7 @@ h2 {
   -o-transform: rotateZ(90deg);
   transform: rotateZ(90deg);
   -webkit-backface-visibility: hidden; }
-  .trigger-pageload-animations .logo .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
+  .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
     -webkit-transform: rotateZ(270deg);
     -moz-transform: rotateZ(270deg);
     -ms-transform: rotateZ(270deg);
@@ -184,7 +184,7 @@ h2 {
     -o-transition: none;
     transition: none; }
 
-.trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-c .rainbow {
+.trigger-pageload-animations .logo.animated:hover .css-rainbow .css-rainbow-c .rainbow {
   -webkit-transition: -webkit-transform 800ms ease-in-out;
   -webkit-transition-delay: 1200ms;
   -moz-transition: -moz-transform 800ms ease-in-out 1200ms;
@@ -195,7 +195,7 @@ h2 {
   -ms-transform: rotateZ(90deg);
   -o-transform: rotateZ(90deg);
   transform: rotateZ(90deg); }
-.trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
+.trigger-pageload-animations .logo.animated:hover .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
   -webkit-transition: -webkit-transform 400ms ease-out;
   -webkit-transition-delay: 1000ms;
   -moz-transition: -moz-transform 400ms ease-out 1000ms;
@@ -206,7 +206,7 @@ h2 {
   -ms-transform: rotateZ(270deg);
   -o-transform: rotateZ(270deg);
   transform: rotateZ(270deg); }
-.trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
+.trigger-pageload-animations .logo.animated:hover .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
   -webkit-transition: -webkit-transform 400ms ease-in;
   -webkit-transition-delay: 600ms;
   -moz-transition: -moz-transform 400ms ease-in 600ms;
@@ -217,7 +217,7 @@ h2 {
   -ms-transform: rotateZ(90deg);
   -o-transform: rotateZ(90deg);
   transform: rotateZ(90deg); }
-.trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
+.trigger-pageload-animations .logo.animated:hover .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
   -webkit-transition: -webkit-transform 400ms ease-out;
   -webkit-transition-delay: 400ms;
   -moz-transition: -moz-transform 400ms ease-out 400ms;
@@ -228,7 +228,7 @@ h2 {
   -ms-transform: rotateZ(270deg);
   -o-transform: rotateZ(270deg);
   transform: rotateZ(270deg); }
-.trigger-pageload-animations .logo:hover .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
+.trigger-pageload-animations .logo.animated:hover .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
   -webkit-transition: -webkit-transform 400ms ease-in;
   -webkit-transition-delay: 0ms;
   -moz-transition: -moz-transform 400ms ease-in 0ms;
