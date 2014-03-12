@@ -11,6 +11,11 @@ body {
     .page {
       padding: 0; } }
 
+.page-inner {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto; }
+
 .separator {
   height: 40px; }
   @media (min-width: 769px) {
@@ -33,7 +38,24 @@ h2 {
     h2 {
       margin: 80px 0; } }
 
-.chapter, .potion {
+ol.chapters {
+  list-style-type: none;
+  margin-left: 0; }
+  ol.chapters > li {
+    counter-increment: chaptersCounter; }
+    ol.chapters > li:before {
+      content: counter(chaptersCounter) " ";
+      margin-bottom: 13px;
+      display: inline-block;
+      color: #aaaaaa;
+      margin-right: 20px;
+      text-align: center;
+      width: 1em;
+      font-weight: 100; }
+  ol.chapters:first-child {
+    counter-reset: chaptersCounter; }
+
+ol.chapters, ul.potions, .preface-link {
   font-weight: 300;
   letter-spacing: 0.01em;
   margin-right: -0.01em;
@@ -46,28 +68,22 @@ h2 {
   margin: 0 auto;
   padding: 0 1rem; }
   @media (min-width: 769px) {
-    .chapter, .potion {
+    ol.chapters, ul.potions, .preface-link {
       font-size: 28px; } }
   @media (min-width: 1200px) {
-    .chapter, .potion {
+    ol.chapters, ul.potions, .preface-link {
       font-size: 32px; } }
-  .chapter .number, .potion .number {
-    margin-bottom: 13px;
-    display: inline-block;
-    color: #aaaaaa;
-    margin-right: 20px;
-    text-align: center;
-    width: 1em;
-    font-weight: 100; }
-  .chapter a, .potion a {
+  ol.chapters a, ul.potions a, .preface-link a {
     color: inherit;
     text-decoration: none; }
-    .chapter a:hover, .potion a:hover {
+    ol.chapters a:hover, ul.potions a:hover, .preface-link a:hover {
       text-decoration: underline; }
 
-.potion {
-  text-align: center;
-  margin-bottom: 0.5em; }
+ul.potions, .preface-link {
+  list-style: none;
+  text-align: center; }
+  ul.potions li, .preface-link li {
+    margin-bottom: 0.5em; }
 
 .logo.animated .the-magic-of {
   -webkit-transition: opacity 800ms ease-in-out;
