@@ -220,3 +220,83 @@ dl {
 
 em > em {
   font-style: normal; }
+
+figure {
+  position: relative;
+  margin: 1em 0;
+  text-align: center; }
+  figure img {
+    margin: 0 auto;
+    display: block; }
+  figure figcaption {
+    padding-top: 1em;
+    color: #888888;
+    font-weight: 300;
+    letter-spacing: 0.03em; }
+  @media (min-width: 568px) {
+    figure figcaption {
+      position: relative;
+      margin-top: 1em;
+      margin-left: 40%;
+      text-align: right; }
+      figure figcaption:after {
+        background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, transparent), color-stop(10%, rgba(0, 0, 0, 0.1)), color-stop(90%, rgba(0, 0, 0, 0.1)));
+        background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%);
+        background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%);
+        background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%);
+        background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%);
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 1px; } }
+  @media (min-width: 1200px) {
+    figure figcaption {
+      position: absolute;
+      right: 100%;
+      top: 0;
+      bottom: 0;
+      padding: 0;
+      width: 300px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: flex-end;
+      -webkit-justify-content: flex-end;
+      -moz-box-pack: flex-end;
+      -ms-flex-pack: flex-end;
+      justify-content: flex-end; }
+      figure figcaption:after {
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(10%, rgba(0, 0, 0, 0.1)), color-stop(90%, rgba(0, 0, 0, 0.1)), color-stop(100%, transparent));
+        background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+        background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+        background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+        background-image: linear-gradient(top, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+        content: "";
+        position: absolute;
+        top: 20%;
+        bottom: 20%;
+        right: 30px;
+        width: 1px;
+        height: auto;
+        left: auto; }
+      figure figcaption .figcaption {
+        text-align: right;
+        padding-right: 60px; } }
+
+figure.cushy {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+@media (min-width: 769px) {
+  figure.cushy {
+    margin-top: 8em;
+    margin-bottom: 8em; } }
