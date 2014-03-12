@@ -14,29 +14,29 @@ html, body {
     box-sizing: border-box; }
   .two-pane-app .top {
     position: absolute;
-    height: 60px;
-    padding: 20px;
-    line-height: 40px;
+    height: 3.75em;
+    padding: 1.25em;
+    line-height: 2.5em;
     width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1); }
   .two-pane-app .bottom {
     position: absolute;
-    top: 60px;
+    top: 3.75em;
     bottom: 0;
     width: 100%; }
     .two-pane-app .bottom .left {
-      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 0.0625em solid rgba(0, 0, 0, 0.1);
       position: absolute;
       width: 30%;
       height: 100%;
       overflow: auto; }
       .two-pane-app .bottom .left .item {
-        height: 64px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        height: 4em;
+        border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1);
         cursor: pointer; }
         .two-pane-app .bottom .left .item:hover {
           background: rgba(0, 0, 0, 0.1);
-          border-bottom: 1px solid rgba(0, 0, 0, 0); }
+          border-bottom: 0.0625em solid rgba(0, 0, 0, 0); }
         .two-pane-app .bottom .left .item:last-child {
           border-bottom: 0; }
     .two-pane-app .bottom .right {
@@ -44,7 +44,7 @@ html, body {
       width: 70%;
       right: 0;
       height: 100%;
-      padding: 20px; }
+      padding: 1.25em; }
   .two-pane-app .title {
     display: -moz-inline-stack;
     display: inline-block;
@@ -53,6 +53,6 @@ html, body {
     zoom: 1;
     *display: inline;
     background: rgba(0, 0, 0, 0.1);
-    width: 150px;
-    height: 15px;
-    margin-bottom: 20px; }
+    width: 10em;
+    height: 1em;
+    margin-bottom: 1.25em; }
