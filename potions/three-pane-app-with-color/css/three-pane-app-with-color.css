@@ -1,73 +1,18 @@
-html, body {
-  height: 100%;
-  overflow: hidden; }
-
-.three-pane-app {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-  .three-pane-app *, .three-pane-app *:after, .three-pane-app *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  .three-pane-app .top {
-    position: absolute;
-    height: 60px;
-    padding: 20px;
-    line-height: 40px;
-    width: 100%;
-    border-bottom: 1px solid rgba(52, 133, 204, 0.2);
-    background: #3485cc; }
-    .three-pane-app .top .title {
-      background: #c5e4ff; }
-  .three-pane-app .bottom {
-    position: absolute;
-    top: 60px;
-    bottom: 0;
-    width: 100%; }
-    .three-pane-app .bottom .left {
-      border-right: 1px solid rgba(52, 133, 204, 0.2);
-      position: absolute;
-      width: 20%;
-      height: 100%;
-      overflow: auto;
-      background: rgba(52, 133, 204, 0.1); }
-    .three-pane-app .bottom .middle {
-      position: absolute;
-      width: 60%;
-      left: 20%; }
-      .three-pane-app .bottom .middle .page {
-        width: 40em;
-        padding: 20px;
-        max-width: 100%;
-        margin: 0 auto; }
-    .three-pane-app .bottom .right {
-      border-left: 1px solid rgba(52, 133, 204, 0.2);
-      position: absolute;
-      width: 20%;
-      right: 0;
-      height: 100%;
-      overflow: auto;
-      background: rgba(52, 133, 204, 0.1); }
-    .three-pane-app .bottom .item {
-      height: 64px;
-      border-bottom: 1px solid rgba(52, 133, 204, 0.2);
-      cursor: pointer; }
-      .three-pane-app .bottom .item:hover {
-        background: rgba(52, 133, 204, 0.2);
-        border-bottom: 1px solid rgba(0, 0, 0, 0); }
-      .three-pane-app .bottom .item:last-child {
-        border-bottom: 0; }
-  .three-pane-app .title {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline;
-    background: #3485cc;
-    width: 150px;
-    height: 15px;
-    margin-bottom: 20px; }
+.three-pane-app.three-pane-app-with-color .top {
+  border-bottom-color: rgba(52, 133, 204, 0.2);
+  background: #3485cc; }
+  .three-pane-app.three-pane-app-with-color .top .title {
+    background: #c5e4ff; }
+.three-pane-app.three-pane-app-with-color .bottom .left {
+  border-right-color: rgba(52, 133, 204, 0.2);
+  background: rgba(52, 133, 204, 0.1); }
+.three-pane-app.three-pane-app-with-color .bottom .right {
+  border-left-color: rgba(52, 133, 204, 0.2);
+  background: rgba(52, 133, 204, 0.1); }
+.three-pane-app.three-pane-app-with-color .bottom .item {
+  border-bottom-color: rgba(52, 133, 204, 0.2); }
+  .three-pane-app.three-pane-app-with-color .bottom .item:hover {
+    background: rgba(52, 133, 204, 0.2);
+    border-bottom-color: rgba(0, 0, 0, 0); }
+.three-pane-app.three-pane-app-with-color .title {
+  background: #3485cc; }
