@@ -6,7 +6,7 @@ table {
     font-weight: bold; }
   table th, table td {
     text-align: left;
-    padding: 10px; }
+    padding: 0.625em; }
     table th[data-numeric], table th[data-month-day-year], table td[data-numeric], table td[data-month-day-year] {
       text-align: right; }
 
@@ -14,6 +14,6 @@ table {
   width: 100%;
   background: #f2f2f2; }
   table tbody td {
-    border-top: 1px solid #e0e0e0; }
+    border-top: 0.0625em solid #e0e0e0; }
   table th[data-sorted="true"] {
     background: #e0e0e0; }
