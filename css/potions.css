@@ -6,13 +6,13 @@
   zoom: 1;
   *display: inline;
   background: rgba(0, 0, 0, 0.1);
-  width: 50px;
-  height: 8px;
-  margin-right: 5px;
-  margin-bottom: 5px; }
+  width: 3.125em;
+  height: 0.5em;
+  margin-right: 0.3125em;
+  margin-bottom: 0.3125em; }
   .mock-paragraph b:nth-last-child(4n+1) {
-    width: 73px; }
+    width: 4.5625em; }
   .mock-paragraph b:nth-last-child(10n+1) {
-    width: 14px; }
+    width: 0.875em; }
   .mock-paragraph b:nth-last-child(9n+1) {
-    width: 80px; }
+    width: 5em; }

@@ -1,6 +1,6 @@
 body {
   margin: 0; }
-  @media (min-width: 769px) {
+  @media (min-width: 48em) {
     body {
       margin: 8em 0; } }
 
@@ -27,13 +27,14 @@ img {
 
 .logo {
   margin: 2em auto; }
-  @media (min-width: 769px) {
+  @media (min-width: 48em) {
     .logo {
       margin: 8em auto; } }
 
 .chapter {
-  max-width: 40em;
-  padding: 0 12px 1em;
+  width: 40em;
+  max-width: 100%;
+  padding: 0 0.66667em 1em;
   margin: 0 auto; }
 
 .example {
@@ -61,17 +62,17 @@ code, pre {
 pre {
   background-color: #eeeeee;
   color: #333333;
-  padding: 8px 12px;
+  padding: 0.5em 0.66667em;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875em;
+  line-height: 1.71em;
   white-space: pre;
   word-wrap: normal; }
 
 code {
   font-size: 0.8em;
-  padding: 2px 4px;
+  padding: 0.15625em 0.3125em;
   background: #eeeeee; }
 
 pre > code {
@@ -85,14 +86,14 @@ hr {
   background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
   background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
   background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
-  height: 1px;
+  height: 0.0625rem;
   width: 100%;
   border: 0;
   margin: 2em auto; }
 
 nav.chapter-navigation {
   position: relative;
-  height: 40px;
+  height: 2.5em;
   max-width: 100%;
   overflow: hidden; }
   nav.chapter-navigation a {
@@ -106,18 +107,18 @@ nav.chapter-navigation {
     zoom: 1;
     *display: inline;
     position: absolute;
-    padding: 6px 15px;
+    padding: 0.43em 0.94em;
+    line-height: 1.7em;
     background: #eeeeee;
     border: 0;
     height: 100%;
-    line-height: 27px;
     color: #777777;
     text-decoration: none; }
     nav.chapter-navigation a .title {
       display: none; }
     nav.chapter-navigation a .number:before {
       content: "Chapter "; }
-    @media (min-width: 769px) {
+    @media (min-width: 48em) {
       nav.chapter-navigation a .title {
         display: inline; }
       nav.chapter-navigation a .number:after {
@@ -128,15 +129,15 @@ nav.chapter-navigation {
       background: transparent;
       height: 0;
       width: 0;
-      border: 20px solid;
+      border: 1.25em solid;
       top: 0; }
     nav.chapter-navigation a.next-chapter {
-      right: 20px; }
+      right: 1.25em; }
       nav.chapter-navigation a.next-chapter:after {
         left: 100%;
         border-color: transparent transparent transparent #eeeeee; }
     nav.chapter-navigation a.previous-chapter {
-      left: 20px; }
+      left: 1.25em; }
       nav.chapter-navigation a.previous-chapter:after {
         right: 100%;
         border-color: transparent #eeeeee transparent transparent; }
@@ -144,23 +145,24 @@ nav.chapter-navigation {
 h3.magic {
   position: relative; }
   h3.magic:before {
-    -webkit-box-shadow: 0 -20px #0074d9, 0 -30px #2ecc40, 0 -40px #ffdc00, 0 -50px #ff851b, 0 -60px #ff4136;
-    -moz-box-shadow: 0 -20px #0074d9, 0 -30px #2ecc40, 0 -40px #ffdc00, 0 -50px #ff851b, 0 -60px #ff4136;
-    box-shadow: 0 -20px #0074d9, 0 -30px #2ecc40, 0 -40px #ffdc00, 0 -50px #ff851b, 0 -60px #ff4136;
+    -webkit-box-shadow: 0 -1.25em #0074d9, 0 -1.875em #2ecc40, 0 -2.5em #ffdc00, 0 -3.125em #ff851b, 0 -3.75em #ff4136;
+    -moz-box-shadow: 0 -1.25em #0074d9, 0 -1.875em #2ecc40, 0 -2.5em #ffdc00, 0 -3.125em #ff851b, 0 -3.75em #ff4136;
+    box-shadow: 0 -1.25em #0074d9, 0 -1.875em #2ecc40, 0 -2.5em #ffdc00, 0 -3.125em #ff851b, 0 -3.75em #ff4136;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
     content: "";
-    height: 15px;
-    width: 15px;
+    font-size: 1rem;
+    height: 0.9375em;
+    width: 0.9375em;
     display: block;
     position: absolute;
     right: 100%;
     margin: auto;
-    margin-right: 20px;
-    margin-top: 60px;
+    margin-right: 1.25em;
+    margin-top: 3.75em;
     top: 0;
     bottom: 0; }
   h3.magic:after {
@@ -172,12 +174,12 @@ h3.magic {
     content: "Magic";
     text-transform: uppercase;
     letter-spacing: 0.4em;
-    font-size: 10px;
+    font-size: 0.625rem;
     right: 100%;
     position: absolute;
     color: white;
-    margin-top: 20px;
-    margin-right: 1px; }
+    margin-top: 1.25rem;
+    margin-right: 0.0625rem; }
 
 dl {
   *zoom: 1;
@@ -194,7 +196,7 @@ dl {
     zoom: 1;
     *display: inline;
     line-height: 2em;
-    border-left: 4px solid; }
+    border-left: 0.25em solid; }
     dl dt:nth-of-type(5n + 1) {
       border-left-color: #ff4136; }
     dl dt:nth-of-type(5n + 2) {
@@ -207,7 +209,7 @@ dl {
       border-left-color: #0074d9; }
     dl dt:nth-of-type(5n + 6) {
       border-left-color: #b10dc9; }
-  @media (min-width: 769px) {
+  @media (min-width: 48em) {
     dl dt, dl dd {
       float: left; }
     dl dt {
@@ -233,7 +235,7 @@ figure {
     color: #888888;
     font-weight: 300;
     letter-spacing: 0.03em; }
-  @media (min-width: 568px) {
+  @media (min-width: 35.5em) {
     figure figcaption {
       position: relative;
       margin-top: 1em;
@@ -250,15 +252,15 @@ figure {
         top: 0;
         right: 0;
         left: 0;
-        height: 1px; } }
-  @media (min-width: 1200px) {
+        height: 0.0625rem; } }
+  @media (min-width: 75em) {
     figure figcaption {
       position: absolute;
       right: 100%;
       top: 0;
       bottom: 0;
       padding: 0;
-      width: 300px;
+      width: 20em;
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-box;
@@ -284,19 +286,19 @@ figure {
         position: absolute;
         top: 20%;
         bottom: 20%;
-        right: 30px;
-        width: 1px;
+        right: 1.875em;
+        width: 0.0625rem;
         height: auto;
         left: auto; }
       figure figcaption .figcaption {
         text-align: right;
-        padding-right: 60px; } }
+        padding-right: 3.75em; } }
 
 figure.cushy {
   margin-top: 2em;
   margin-bottom: 2em; }
 
-@media (min-width: 769px) {
+@media (min-width: 48em) {
   figure.cushy {
     margin-top: 8em;
     margin-bottom: 8em; } }

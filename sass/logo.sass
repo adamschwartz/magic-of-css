@@ -3,11 +3,11 @@
 @import rainbow
 
 .logo
-    +transform(scale(.75))
     display: block
     text-decoration: none
-    height: 174px
-    width: 295px
+    font-size: .75rem
+    height: 10.875em
+    width: 18.4375em
     margin: 0 auto
     max-width: 100%
     text-align: center
@@ -20,17 +20,16 @@
         font-weight: 100
         text-transform: uppercase
         letter-spacing: .4em
-        font-size: 22px
+        font-size: 1.375em
         line-height: 1
         position: relative
         left: .2em
-        margin-bottom: 28px
+        margin-bottom: 1.27272727em
         color: #aaa
 
     .css-rainbow
         max-width: 100%
         white-space: nowrap
-        font-size: 0
 
         .css-letter
             +inline-block
@@ -38,19 +37,19 @@
         .css-rainbow-c
             position: relative
             overflow: hidden
-            width: 62px
-            height: 124px
-            margin-right: 50px
+            width: 3.875em
+            height: 7.75em
+            margin-right: 3.125em
 
             .rainbow
-                +rainbow(124px, 9px)
+                +rainbow(7.75em, .5625em)
                 +transform(rotateZ(-90deg))
                 position: absolute
 
         .css-rainbow-s
             +transform(rotateZ(22.5deg))
-            width: 80px
-            height: 124px
+            width: 5em
+            height: 7.75em
 
             .rainbow
                 position: absolute
@@ -58,31 +57,31 @@
             .top-half
                 position: absolute
                 overflow: hidden
-                width: 40px
-                height: 80px
+                width: 2.5em
+                height: 5em
 
                 .rainbow
-                    +rainbow(80px, 6px)
+                    +rainbow(5em, .375em)
                     +transform(rotateZ(-90deg))
 
             .bottom-half
                 position: absolute
                 overflow: hidden
-                width: 40px
-                height: 80px
-                top: 44px
-                left: 40px
+                width: 2.5em
+                height: 5em
+                top: 2.75em
+                left: 2.5em
 
                 .rainbow
-                    +rainbow(80px, 6px, true)
+                    +rainbow(5em, .375em, true)
                     +transform(rotateZ(90deg))
-                    left: -40px
+                    left: -2.5em
 
             &.css-rainbow-s-1
-                margin-right: 30px
+                margin-right: 1.875em
 
             &.css-rainbow-s-2
-                margin-right: -7px
+                margin-right: -.4375em
 
-    @media (min-width: 769px)
-        +transform(scale(1))
+    @media (min-width: 48em)
+        font-size: 1rem

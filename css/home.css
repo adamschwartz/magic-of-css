@@ -1,42 +1,37 @@
 body {
   margin: 0; }
-  @media (min-width: 769px) {
+  @media (min-width: 48em) {
     body {
       margin: 8em 0; } }
 
 .page {
   text-align: center;
-  padding: 20px 0; }
-  @media (min-width: 769px) {
+  padding: 2em 0; }
+  @media (min-width: 48em) {
     .page {
       padding: 0; } }
 
-.page-inner {
-  width: 600px;
-  max-width: 100%;
-  margin: 0 auto; }
-
 .separator {
-  height: 40px; }
-  @media (min-width: 769px) {
+  height: 2.5em; }
+  @media (min-width: 48em) {
     .separator {
-      height: 160px; } }
+      height: 10em; } }
 
 h2 {
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 0.4em;
-  font-size: 22px;
+  font-size: 1.375em;
   line-height: 1;
   position: relative;
-  margin: 40px 0;
+  margin: 2.5rem 0;
   color: #aaaaaa;
   padding: 0 1rem; }
   h2 span {
     margin-right: -0.4em; }
-  @media (min-width: 769px) {
+  @media (min-width: 48em) {
     h2 {
-      margin: 80px 0; } }
+      margin: 5rem 0; } }
 
 ol.chapters {
   list-style-type: none;
@@ -45,12 +40,12 @@ ol.chapters {
     counter-increment: chaptersCounter; }
     ol.chapters > li:before {
       content: counter(chaptersCounter) " ";
-      margin-bottom: 13px;
+      margin-bottom: 0.875rem;
       display: inline-block;
       color: #aaaaaa;
-      margin-right: 20px;
       text-align: center;
       width: 1em;
+      margin-right: 0.625em;
       font-weight: 100; }
   ol.chapters:first-child {
     counter-reset: chaptersCounter; }
@@ -59,7 +54,7 @@ ol.chapters, ul.potions, .preface-link {
   font-weight: 300;
   letter-spacing: 0.01em;
   margin-right: -0.01em;
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 1;
   position: relative;
   width: 14em;
@@ -67,12 +62,12 @@ ol.chapters, ul.potions, .preface-link {
   text-align: left;
   margin: 0 auto;
   padding: 0 1rem; }
-  @media (min-width: 769px) {
+  @media (min-width: 48em) {
     ol.chapters, ul.potions, .preface-link {
-      font-size: 28px; } }
-  @media (min-width: 1200px) {
+      font-size: 1.75rem; } }
+  @media (min-width: 75em) {
     ol.chapters, ul.potions, .preface-link {
-      font-size: 32px; } }
+      font-size: 2rem; } }
   ol.chapters a, ul.potions a, .preface-link a {
     color: inherit;
     text-decoration: none; }

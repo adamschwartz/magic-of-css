@@ -6,7 +6,7 @@
 body
     margin: 0
 
-    @media (min-width: 769px)
+    @media (min-width: 48em)
         margin: 8em 0
 
 h1
@@ -35,12 +35,13 @@ img
 .logo
     margin: 2em auto
 
-    @media (min-width: 769px)
+    @media (min-width: 48em)
         margin: 8em auto
 
 .chapter
-    max-width: 40em
-    padding: 0 12px 1em
+    width: 40em
+    max-width: 100%
+    padding: 0 .666666em 1em
     margin: 0 auto
 
 .example
@@ -70,17 +71,17 @@ code, pre
 pre
     background-color: #eee
     color: #333
-    padding: 8px 12px
+    padding: .5em .666666em
     overflow-x: auto
     -webkit-overflow-scrolling: touch
-    font-size: 14px
-    line-height: 24px
+    font-size: .875em
+    line-height: 1.71em
     white-space: pre
     word-wrap: normal
 
 code
-    font-size: 0.8em
-    padding: 2px 4px
+    font-size: .8em
+    padding: .15625em .3125em
     background: #eee
 
 pre > code
@@ -89,15 +90,15 @@ pre > code
     padding: 0
 
 hr
-    +background-image(linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent))
-    height: 1px
+    +background-image(linear-gradient(left, transparent, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .1) 90%, transparent))
+    height: .0625rem
     width: 100%
     border: 0
     margin: 2em auto
 
 nav.chapter-navigation
     position: relative
-    height: 40px
+    height: 2.5em
     max-width: 100%
     overflow: hidden
 
@@ -105,11 +106,11 @@ nav.chapter-navigation
         +box-sizing(border-box)
         +inline-block
         position: absolute
-        padding: 6px 15px
+        padding: .43em .94em
+        line-height: 1.7em
         background: #eee
         border: 0
         height: 100%
-        line-height: 27px
         color: #777
         text-decoration: none
 
@@ -119,7 +120,7 @@ nav.chapter-navigation
         .number:before
             content: "Chapter "
 
-        @media (min-width: 769px)
+        @media (min-width: 48em)
 
             .title
                 display: inline
@@ -133,18 +134,18 @@ nav.chapter-navigation
             background: transparent
             height: 0
             width: 0
-            border: 20px solid
+            border: 1.25em solid
             top: 0
 
         &.next-chapter
-            right: 20px
+            right: 1.25em
 
             &:after
                 left: 100%
                 border-color: transparent transparent transparent #eee
 
         &.previous-chapter
-            left: 20px
+            left: 1.25em
 
             &:after
                 right: 100%
@@ -153,20 +154,21 @@ nav.chapter-navigation
 h3.magic
     position: relative
 
-    $bandWidth: -10px
+    $bandWidth: -.625em
 
     &:before
         +box-shadow(0 ($bandWidth * 2) $blue, 0 ($bandWidth * 3) $green, 0 ($bandWidth * 4) $yellow, 0 ($bandWidth * 5) $orange, 0 ($bandWidth * 6) $red)
         +border-radius(50%)
         content: ""
-        height: 15px
-        width: 15px
+        font-size: 1rem
+        height: .9375em
+        width: .9375em
         display: block
         position: absolute
         right: 100%
         margin: auto
-        margin-right: 20px
-        margin-top: 60px
+        margin-right: 1.25em
+        margin-top: 3.75em
         top: 0
         bottom: 0
 
@@ -174,13 +176,13 @@ h3.magic
         +transform(rotateZ(-90deg))
         content: "Magic"
         text-transform: uppercase
-        letter-spacing: 0.4em
-        font-size: 10px
+        letter-spacing: .4em
+        font-size: .625rem
         right: 100%
         position: absolute
         color: #fff
-        margin-top: 20px
-        margin-right: 1px
+        margin-top: 1.25rem
+        margin-right: .0625rem
 
 dl
     +pie-clearfix
@@ -189,7 +191,7 @@ dl
     dt
         +inline-block
         line-height: 2em
-        border-left: 4px solid
+        border-left: .25em solid
 
         &:nth-of-type(5n + 1)
             border-left-color: $red
@@ -209,7 +211,7 @@ dl
         &:nth-of-type(5n + 6)
             border-left-color: $purple
 
-    @media (min-width: 769px)
+    @media (min-width: 48em)
 
         dt, dd
             float: left
@@ -226,7 +228,6 @@ dl
 em > em
     font-style: normal
 
-
 figure
     position: relative
     margin: 1em 0
@@ -242,7 +243,7 @@ figure
         font-weight: 300
         letter-spacing: .03em
 
-    @media (min-width: 568px)
+    @media (min-width: 35.5em)
 
         figcaption
             position: relative
@@ -251,15 +252,15 @@ figure
             text-align: right
 
             &:after
-                +background-image(linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%))
+                +background-image(linear-gradient(left, transparent, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .1) 90%))
                 content: ""
                 position: absolute
                 top: 0
                 right: 0
                 left: 0
-                height: 1px
+                height: .0625rem
 
-    @media (min-width: 1200px)
+    @media (min-width: 75em)
 
         figcaption
             position: absolute
@@ -267,19 +268,20 @@ figure
             top: 0
             bottom: 0
             padding: 0
-
-            width: 300px
+            width: 20em
 
             display: -webkit-box
             display: -webkit-flex
             display: -moz-box
             display: -ms-flexbox
             display: flex
+
             -webkit-box-align: center
             -webkit-align-items: center
             -moz-box-align: center
             -ms-flex-align: center
             align-items: center
+
             -webkit-box-pack: flex-end
             -webkit-justify-content: flex-end
             -moz-box-pack: flex-end
@@ -287,25 +289,25 @@ figure
             justify-content: flex-end
 
             &:after
-                +background-image(linear-gradient(top, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent))
+                +background-image(linear-gradient(top, transparent, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .1) 90%, transparent))
                 content: ""
                 position: absolute
                 top: 20%
                 bottom: 20%
-                right: 30px
-                width: 1px
+                right: 1.875em
+                width: .0625rem
                 height: auto
                 left: auto
 
             .figcaption
                 text-align: right
-                padding-right: 60px
+                padding-right: 3.75em
 
 figure.cushy
     margin-top: 2em
     margin-bottom: 2em
 
-@media (min-width: 769px)
+@media (min-width: 48em)
 
     figure.cushy
         margin-top: 8em
