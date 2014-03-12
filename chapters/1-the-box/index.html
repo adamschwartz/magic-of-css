@@ -97,6 +97,87 @@
 
             <p>In the <code>border-box</code> case, the width and height of the <code>.box</code> are <code>20px</code>, <em>exactly what we set</em>. In the <code>content-box</code> case, the width and height are <code>44px = 20 + (2 * 10) + (2 * 2)</code>, since we need to include the padding and border on both sides.</p>
 
+            <h3 class="magic">Flexible inputs</h3>
+
+            <p>One of the best end results of using <code>border-box</code> is you can use <code>padding</code>s and <code>width</code> of <em>mixed units</em> without worry of creating odd edge cases. One fantastic use for this is creating flexible inputs.</p>
+
+            <p>In the example below, our input has a specific padding in <code>em</code>s and yet we can still specify a width in <code>%</code> (<code>padding: .4em .55em</code> and <code>width: 100%</code>, respectively).</p>
+
+            <style>
+                .example-flexible-input .example-content {
+                    background: #eee
+                }
+
+                .example-flexible-input .box {
+                    background: #ccc;
+                    width: 75%;
+                    padding: 1em
+                }
+
+                .example-flexible-input .box-inner {
+                    overflow: hidden
+                }
+
+                .example-flexible-input .box-inner p:first-child {
+                    margin-top: 0
+                }
+
+                .example-flexible-input input[type="text"] {
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: .4em .55em;
+                    font-size: inherit;
+                    font-family: inherit;
+                    color: inherit;
+                    border: 0;
+                    border-radius: 4px;
+                    outline: none
+                }
+            </style>
+
+            <pre><code>input[type="text"] {
+    /* Flexibility */
+    box-sizing: border-box;
+    width: 100%;
+
+    /* Styling */
+    padding: .4em .55em;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    border: 0;
+    border-radius: 4px;
+    outline: none
+}</code></pre>
+
+            <div class="example example-flexible-input">
+                <div class="example-content">
+                    <div class="box">
+                        <div class="box-inner">
+                            <p>Box</p>
+                            <input type="text" placeholder="Text input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                <input type="range" class="example-flexible-input-slider" min="20" max="100" value="75">
+                <span> &nbsp;&nbsp;<code>width: <span class="example-flexible-input-slider-value">75%</span></code></span>
+            </p>
+
+            <p>Adjust the box width and observe the input adjust its width to match.</p>
+
+            <script>
+                document.querySelector('.example-flexible-input-slider').addEventListener('change', function(e){
+                    var width = e.target.valueAsNumber + '%';
+                    document.querySelector('.example-flexible-input-slider-value').innerHTML = width;
+                    Array.prototype.slice.call(document.querySelectorAll('.example-flexible-input .box')).forEach(function(box){
+                        box.style.width = width;
+                    });
+                });
+            </script>
+
             <h3><em>tl;dr</em></h3>
 
             <p>If you want <code>height</code> and <code>width</code> to behave in the most intuitive way, <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">listen to Paul Irish</a><sup><a href="#cite-3">[3]</a></sup> and put this at the top of your CSS:</p>
