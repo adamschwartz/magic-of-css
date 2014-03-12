@@ -1,0 +1,19 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+  table th {
+    vertical-align: bottom;
+    font-weight: bold; }
+  table th, table td {
+    text-align: left;
+    padding: 10px; }
+    table th[data-numeric], table th[data-month-day-year], table td[data-numeric], table td[data-month-day-year] {
+      text-align: right; }
+
+table {
+  width: 100%;
+  background: #f2f2f2; }
+  table tbody td {
+    border-top: 1px solid #e0e0e0; }
+  table th[data-sorted="true"] {
+    background: #e0e0e0; }

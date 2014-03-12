@@ -1,12 +1,30 @@
 @import compass/css3
 
-table
-    table-layout: fixed
-    background: transparent
-    border-spacing: 0
-    border-collapse: collapse
-    width: 100%
-    margin-bottom: 1em
+// Content
 
-    td
-        border: 2px solid #ccc
+table
+    border-collapse: collapse
+    border-spacing: 0
+
+    th
+        vertical-align: bottom
+        font-weight: bold
+
+    th, td
+        text-align: left
+        padding: 10px
+
+        &[data-numeric], &[data-month-day-year]
+            text-align: right
+
+// Style
+
+table
+    width: 100%
+    background: #f2f2f2
+
+    tbody td
+        border-top: 1px solid #e0e0e0
+
+    th[data-sorted="true"]
+        background: #e0e0e0
