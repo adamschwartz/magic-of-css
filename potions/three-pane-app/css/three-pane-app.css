@@ -14,18 +14,18 @@ html, body {
     box-sizing: border-box; }
   .three-pane-app .top {
     position: absolute;
-    height: 60px;
-    padding: 20px;
-    line-height: 40px;
+    height: 3.75em;
+    padding: 1.25em;
+    line-height: 2.5em;
     width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1); }
   .three-pane-app .bottom {
     position: absolute;
-    top: 60px;
+    top: 3.75em;
     bottom: 0;
     width: 100%; }
     .three-pane-app .bottom .left {
-      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 0.0625em solid rgba(0, 0, 0, 0.1);
       position: absolute;
       width: 20%;
       height: 100%;
@@ -36,23 +36,23 @@ html, body {
       left: 20%; }
       .three-pane-app .bottom .middle .page {
         width: 40em;
-        padding: 20px;
+        padding: 1.25em;
         max-width: 100%;
         margin: 0 auto; }
     .three-pane-app .bottom .right {
-      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-left: 0.0625em solid rgba(0, 0, 0, 0.1);
       position: absolute;
       width: 20%;
       right: 0;
       height: 100%;
       overflow: auto; }
     .three-pane-app .bottom .item {
-      height: 64px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      height: 4em;
+      border-bottom: 0.0625em solid rgba(0, 0, 0, 0.1);
       cursor: pointer; }
       .three-pane-app .bottom .item:hover {
         background: rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(0, 0, 0, 0); }
+        border-bottom: 0.0625em solid rgba(0, 0, 0, 0); }
       .three-pane-app .bottom .item:last-child {
         border-bottom: 0; }
   .three-pane-app .title {
@@ -63,6 +63,6 @@ html, body {
     zoom: 1;
     *display: inline;
     background: rgba(0, 0, 0, 0.1);
-    width: 150px;
-    height: 15px;
-    margin-bottom: 20px; }
+    width: 10em;
+    height: 1em;
+    margin-bottom: 1.25em; }
