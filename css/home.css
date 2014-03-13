@@ -37,7 +37,13 @@ ol.chapters {
   list-style-type: none;
   margin-left: 0; }
   ol.chapters > li {
+    *zoom: 1;
+    clear: left;
     counter-increment: chaptersCounter; }
+    ol.chapters > li:after {
+      content: "";
+      display: table;
+      clear: both; }
     ol.chapters > li:before {
       content: counter(chaptersCounter) " ";
       margin-bottom: 0.875rem;
@@ -46,9 +52,13 @@ ol.chapters {
       text-align: center;
       width: 1em;
       margin-right: 0.625em;
-      font-weight: 100; }
+      font-weight: 100;
+      float: left; }
   ol.chapters:first-child {
     counter-reset: chaptersCounter; }
+  ol.chapters a {
+    display: block;
+    margin-bottom: 1rem; }
 
 ol.chapters, ul.potions, .preface-link {
   font-weight: 300;
