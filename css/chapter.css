@@ -144,6 +144,8 @@ nav.chapter-navigation {
 
 h3.magic {
   position: relative; }
+  h3.magic:before {
+    display: block; }
   @media (min-width: 42em) {
     h3.magic:before {
       -webkit-box-shadow: 0 -1.25em #0074d9, 0 -1.875em #2ecc40, 0 -2.5em #ffdc00, 0 -3.125em #ff851b, 0 -3.75em #ff4136;
@@ -154,12 +156,11 @@ h3.magic {
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
       border-radius: 50%;
+      position: absolute;
       content: "";
       font-size: 1rem;
       height: 0.9375em;
       width: 0.9375em;
-      display: block;
-      position: absolute;
       right: 100%;
       margin: auto;
       margin-right: 1.25em;
@@ -172,30 +173,42 @@ h3.magic {
       -ms-transform: rotateZ(-90deg);
       -o-transform: rotateZ(-90deg);
       transform: rotateZ(-90deg);
+      position: absolute;
       content: "Magic";
       text-transform: uppercase;
       letter-spacing: 0.4em;
       font-size: 0.625rem;
       right: 100%;
-      position: absolute;
       color: white;
       margin-top: 1.25rem;
       margin-right: 0.0625rem; } }
   @media (max-width: 42em) {
     h3.magic:before {
-      content: "Magic";
-      text-transform: uppercase;
-      letter-spacing: 0.4em;
-      font-size: 0.625rem;
-      display: block;
-      color: white;
-      margin: 1rem -0.66667rem;
-      padding: 0.1rem 0.66667rem;
       background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #b10dc9), color-stop(12.5%, #ff4136), color-stop(25%, rgba(255, 133, 27, 0.8)), color-stop(37.5%, rgba(255, 220, 0, 0.6)), color-stop(50%, rgba(46, 204, 64, 0.4)), color-stop(62.5%, rgba(0, 116, 217, 0.2)), color-stop(75%, rgba(177, 13, 201, 0)), color-stop(87.5%, transparent), color-stop(100%, transparent));
       background-image: -webkit-linear-gradient(left, #b10dc9, #ff4136, rgba(255, 133, 27, 0.8), rgba(255, 220, 0, 0.6), rgba(46, 204, 64, 0.4), rgba(0, 116, 217, 0.2), rgba(177, 13, 201, 0), transparent, transparent);
       background-image: -moz-linear-gradient(left, #b10dc9, #ff4136, rgba(255, 133, 27, 0.8), rgba(255, 220, 0, 0.6), rgba(46, 204, 64, 0.4), rgba(0, 116, 217, 0.2), rgba(177, 13, 201, 0), transparent, transparent);
       background-image: -o-linear-gradient(left, #b10dc9, #ff4136, rgba(255, 133, 27, 0.8), rgba(255, 220, 0, 0.6), rgba(46, 204, 64, 0.4), rgba(0, 116, 217, 0.2), rgba(177, 13, 201, 0), transparent, transparent);
-      background-image: linear-gradient(left, #b10dc9, #ff4136, rgba(255, 133, 27, 0.8), rgba(255, 220, 0, 0.6), rgba(46, 204, 64, 0.4), rgba(0, 116, 217, 0.2), rgba(177, 13, 201, 0), transparent, transparent); } }
+      background-image: linear-gradient(left, #b10dc9, #ff4136, rgba(255, 133, 27, 0.8), rgba(255, 220, 0, 0.6), rgba(46, 204, 64, 0.4), rgba(0, 116, 217, 0.2), rgba(177, 13, 201, 0), transparent, transparent);
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      content: "Magic";
+      position: static;
+      height: auto;
+      width: auto;
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      font-size: 0.625rem;
+      color: white;
+      margin: 1rem -0.66667rem;
+      padding: 0.1rem 0.66667rem; }
+    h3.magic:after {
+      display: none; } }
 
 dl {
   *zoom: 1;
