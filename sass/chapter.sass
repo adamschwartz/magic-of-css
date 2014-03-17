@@ -3,6 +3,8 @@
 
 @import colors
 
+$chapterWidth: 40rem
+
 body
     margin: 0
 
@@ -39,7 +41,7 @@ img
         margin: 8em auto
 
 .chapter
-    width: 40rem
+    width: $chapterWidth
     max-width: 100%
     padding: 0 .666666rem 1rem
     margin: 0 auto
@@ -336,3 +338,112 @@ figure.cushy
     figure.cushy
         margin-top: 8em
         margin-bottom: 8em
+
+.contextual-display
+    position: absolute
+    padding-left: 3.75em
+    width: $chapterWidth / 2
+    left: 50%
+    margin-left: $chapterWidth / 2
+    opacity: 0
+    -webkit-transform: translate3d(0, 0, 0)
+
+    &.contextual-transition
+        transition: -webkit-transform .4s, opacity .4s
+
+    &.contextual-open
+        top: 0
+        opacity: 1
+
+        body.contextual-open &
+            -webkit-transform: translate3d(- $chapterWidth / 2, 0, 0)
+
+    &:before
+        +background-image(linear-gradient(top, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .1) 90%, transparent))
+        content: ""
+        position: absolute
+        top: 0
+        bottom: 20%
+        left: 1.875em
+        width: .0625rem
+
+    a[data-contextual-close]
+        position: absolute
+        top: 0
+        right: 0
+        color: inherit
+        cursor: pointer
+
+        &:before
+            content: "×"
+            position: absolute
+            top: -.15em
+            right: 0
+            width: 1em
+            text-align: center
+            line-height: 1.12em
+            overflow: hidden
+            height: 1em
+            border-radius: 4px
+            font-size: 1.75em
+
+        &:hover:before
+            background: #eee
+
+    > *:first-child
+        margin-top: 0
+
+    > *:last-child
+        margin-bottom: 0
+
+.chapter, .logo
+    transition: -webkit-transform .4s
+    -webkit-transform: translate3d(0, 0, 0)
+
+body.contextual-open
+
+    .chapter, .logo
+        -webkit-transform: translate3d(- $chapterWidth / 2, 0, 0)
+
+    *:not(.contextual-open-tree):not(.contextual-display)
+        transition: opacity .4s
+        opacity: 0.4
+        pointer-events: none
+
+    .contextual-display, .contextual-display *
+        opacity: 1 !important
+        pointer-events: auto !important
+
+.contextual-example
+    border-top: .0625em solid #eee
+    padding-top: 2em
+    text-align: center
+
+    .box
+        +inline-block
+        text-align: left
+        min-width: 4em
+        min-height: 4em
+        background: #888
+
+        &.light
+            background: #eee
+
+    .text
+        +inline-block
+
+code.contextual-code-example
+    cursor: pointer
+    position: relative
+
+    &:hover, &.contextual-open-tree
+        background: #e0e0e0
+
+        &:after
+            +background-image(linear-gradient(left, $purple, $red, $orange, $yellow, $green, $blue, $purple))
+            content: ""
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            height: .0625rem

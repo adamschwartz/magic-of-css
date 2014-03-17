@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0; }
   @media (min-width: 48em) {
@@ -331,3 +332,111 @@ figure.cushy {
   figure.cushy {
     margin-top: 8em;
     margin-bottom: 8em; } }
+.contextual-display {
+  position: absolute;
+  padding-left: 3.75em;
+  width: 20rem;
+  left: 50%;
+  margin-left: 20rem;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0); }
+  .contextual-display.contextual-transition {
+    transition: -webkit-transform 0.4s, opacity 0.4s; }
+  .contextual-display.contextual-open {
+    top: 0;
+    opacity: 1; }
+    body.contextual-open .contextual-display.contextual-open {
+      -webkit-transform: translate3d(-20rem, 0, 0); }
+  .contextual-display:before {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(10%, rgba(0, 0, 0, 0.1)), color-stop(90%, rgba(0, 0, 0, 0.1)), color-stop(100%, transparent));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 20%;
+    left: 1.875em;
+    width: 0.0625rem; }
+  .contextual-display a[data-contextual-close] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: inherit;
+    cursor: pointer; }
+    .contextual-display a[data-contextual-close]:before {
+      content: "×";
+      position: absolute;
+      top: -0.15em;
+      right: 0;
+      width: 1em;
+      text-align: center;
+      line-height: 1.12em;
+      overflow: hidden;
+      height: 1em;
+      border-radius: 4px;
+      font-size: 1.75em; }
+    .contextual-display a[data-contextual-close]:hover:before {
+      background: #eeeeee; }
+  .contextual-display > *:first-child {
+    margin-top: 0; }
+  .contextual-display > *:last-child {
+    margin-bottom: 0; }
+
+.chapter, .logo {
+  transition: -webkit-transform 0.4s;
+  -webkit-transform: translate3d(0, 0, 0); }
+
+body.contextual-open .chapter, body.contextual-open .logo {
+  -webkit-transform: translate3d(-20rem, 0, 0); }
+body.contextual-open *:not(.contextual-open-tree):not(.contextual-display) {
+  transition: opacity 0.4s;
+  opacity: 0.4;
+  pointer-events: none; }
+body.contextual-open .contextual-display, body.contextual-open .contextual-display * {
+  opacity: 1 !important;
+  pointer-events: auto !important; }
+
+.contextual-example {
+  border-top: 0.0625em solid #eeeeee;
+  padding-top: 2em;
+  text-align: center; }
+  .contextual-example .box {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    text-align: left;
+    min-width: 4em;
+    min-height: 4em;
+    background: #888888; }
+    .contextual-example .box.light {
+      background: #eeeeee; }
+  .contextual-example .text {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline; }
+
+code.contextual-code-example {
+  cursor: pointer;
+  position: relative; }
+  code.contextual-code-example:hover, code.contextual-code-example.contextual-open-tree {
+    background: #e0e0e0; }
+    code.contextual-code-example:hover:after, code.contextual-code-example.contextual-open-tree:after {
+      background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #b10dc9), color-stop(16.66667%, #ff4136), color-stop(33.33333%, #ff851b), color-stop(50%, #ffdc00), color-stop(66.66667%, #2ecc40), color-stop(83.33333%, #0074d9), color-stop(100%, #b10dc9));
+      background-image: -webkit-linear-gradient(left, #b10dc9, #ff4136, #ff851b, #ffdc00, #2ecc40, #0074d9, #b10dc9);
+      background-image: -moz-linear-gradient(left, #b10dc9, #ff4136, #ff851b, #ffdc00, #2ecc40, #0074d9, #b10dc9);
+      background-image: -o-linear-gradient(left, #b10dc9, #ff4136, #ff851b, #ffdc00, #2ecc40, #0074d9, #b10dc9);
+      background-image: linear-gradient(left, #b10dc9, #ff4136, #ff851b, #ffdc00, #2ecc40, #0074d9, #b10dc9);
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 0.0625rem; }
