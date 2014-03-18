@@ -19,125 +19,126 @@
         <script type="text/javascript" src="../../js/chapters.js"></script>
     </head>
     <body>
-        <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div></div></a>
+        <div class="page">
+            <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div></div></a>
 
-        <div class="chapter">
-            <h1>
-                <span class="number">Chapter 1</span>
-                <span class="title">The Box</span>
-            </h1>
+            <div class="chapter">
+                <h1>
+                    <span class="number">Chapter 1</span>
+                    <span class="title">The Box</span>
+                </h1>
 
-            <h2>Box model</h2>
+                <h2>Box model</h2>
 
-            <p>In CSS, the <a href="http://www.w3.org/TR/CSS2/box.html">box model</a><sup><a href="#cite-1">[1]</a></sup> describes the rectangular boxes that are generated for elements layed out in the page.</p>
+                <p>In CSS, the <a href="http://www.w3.org/TR/CSS2/box.html">box model</a><sup><a href="#cite-1">[1]</a></sup> describes the rectangular boxes that are generated for elements layed out in the page.</p>
 
-            <p>Essentially, everything is a rectangle.</p>
+                <p>Essentially, everything is a rectangle.</p>
 
-            <figure>
-                <img src="images/box-model.png">
-                <figcaption>
-                    <div class="figcaption">
-                        A picture of the box model<sup><a href="#cite-1">[1]</a></sup>
-                    </div>
-                </figcaption>
-            </figure>
+                <figure>
+                    <img src="images/box-model.png">
+                    <figcaption>
+                        <div class="figcaption">
+                            A picture of the box model<sup><a href="#cite-1">[1]</a></sup>
+                        </div>
+                    </figcaption>
+                </figure>
 
-            <p>Some interesting facts:</p>
-            <ul>
-                <li><code>border-radius</code> rounds out the corners of this box</li>
-                <li><code>box-shadow</code> adds a shadow to this box</li>
-                <li><code>outline</code> and <code>box-shadow</code> aren't part of the box, and therefore have no effect on the layout</li>
-            </ul>
+                <p>Some interesting facts:</p>
+                <ul>
+                    <li><code>border-radius</code> rounds out the corners of this box</li>
+                    <li><code>box-shadow</code> adds a shadow to this box</li>
+                    <li><code>outline</code> and <code>box-shadow</code> aren't part of the box, and therefore have no effect on the layout</li>
+                </ul>
 
-            <h2>Box sizing</h2>
+                <h2>Box sizing</h2>
 
-            <p>The <code>box-sizing</code> property gives you a little control around how boxes are sized within this model. The two possible values for <code>box-sizing</code> are <code>content-box</code> and <code>border-box</code><sup><a href="#cite-2">[2]</a></sup>.</p>
+                <p>The <code>box-sizing</code> property gives you a little control around how boxes are sized within this model. The two possible values for <code>box-sizing</code> are <code>content-box</code> and <code>border-box</code><sup><a href="#cite-2">[2]</a></sup>.</p>
 
-            <dl>
-                <dt><code>content-box</code></dt>
-                    <dd><em>The default.</em> When computing the size of a box, padding and border are added.</dd>
-                <dt><code>border-box</code></dt>
-                    <dd>When computing the size of a box, padding and border are folded in.</dd>
-            </dl>
+                <dl>
+                    <dt><code>content-box</code></dt>
+                        <dd><em>The default.</em> When computing the size of a box, padding and border are added.</dd>
+                    <dt><code>border-box</code></dt>
+                        <dd>When computing the size of a box, padding and border are folded in.</dd>
+                </dl>
 
-            <p>For example:</p>
+                <p>For example:</p>
 
-            <h3>Example</h3>
+                <h3>Example</h3>
 
-            <p>Both of these boxes have the following CSS:</p>
+                <p>Both of these boxes have the following CSS:</p>
 
-            <style>
-                .example-box-sizing .box {
-                    height: 20px;
-                    width: 20px;
-                    padding: 10px;
-                    border: 2px solid
-                }
-            </style>
+                <style>
+                    .example-box-sizing .box {
+                        height: 5em;
+                        width: 5em;
+                        padding: 1em;
+                        border: .25em solid
+                    }
+                </style>
 
-            <pre><code>.box {
-    height: 20px;
-    width: 20px;
-    padding: 10px;
-    border: 2px solid
+                <pre><code>.box {
+    height: 5em;
+    width: 5em;
+    padding: 1em;
+    border: .25em solid
 }</code></pre>
 
-            <div class="example side-by-side example-box-sizing">
-                <div class="left">
-                    <p><code>content-box</code></p>
-                    <div class="example-content">
-                        <div class="box" style="box-sizing: content-box"></div>
+                <div class="example side-by-side example-box-sizing">
+                    <div class="left">
+                        <p><code>content-box</code></p>
+                        <div class="example-content">
+                            <div class="box" style="box-sizing: content-box"></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p><code>border-box</code></p>
+                        <div class="example-content">
+                            <div class="box" style="box-sizing: border-box"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="right">
-                    <p><code>border-box</code></p>
-                    <div class="example-content">
-                        <div class="box" style="box-sizing: border-box"></div>
-                    </div>
-                </div>
-            </div>
 
-            <p>In the <code>border-box</code> case, the width and height of the <code>.box</code> are <code>20px</code>, <em>exactly what we set</em>. In the <code>content-box</code> case, the width and height are <code>44px = 20 + (2 * 10) + (2 * 2)</code>, since we need to include the padding and border on both sides.</p>
+                <p>In the <code>border-box</code> case, the width and height of the <code>.box</code> are <code>5em</code>, <em>exactly what we set</em>. In the <code>content-box</code> case, the width and height are <code>7.5em = 5 + (2 * 1) + (2 * .25)</code>, since we need to include the padding and border on both sides.</p>
 
-            <h3 class="magic">Flexible inputs</h3>
+                <h3 class="magic">Flexible inputs</h3>
 
-            <p>One of the best end results of using <code>border-box</code> is you can use <code>padding</code>s and <code>width</code> of <em>mixed units</em> without worry of creating odd edge cases. One fantastic use for this is creating flexible inputs.</p>
+                <p>One of the best end results of using <code>border-box</code> is you can use <code>padding</code>s and <code>width</code> of <em>mixed units</em> without worry of creating odd edge cases. One fantastic use for this is creating flexible inputs.</p>
 
-            <p>In the example below, our input has a specific padding in <code>em</code>s and yet we can still specify a width in <code>%</code> (<code>padding: .4em .55em</code> and <code>width: 100%</code>, respectively).</p>
+                <p>In the example below, our input has a specific padding in <code>em</code>s and yet we can still specify a width in <code>%</code> (<code>padding: .4em .55em</code> and <code>width: 100%</code>, respectively).</p>
 
-            <style>
-                .example-flexible-input .example-content {
-                    background: #eee
-                }
+                <style>
+                    .example-flexible-input .example-content {
+                        background: #eee
+                    }
 
-                .example-flexible-input .box {
-                    background: #ccc;
-                    width: 75%;
-                    padding: 1em
-                }
+                    .example-flexible-input .box {
+                        background: #ccc;
+                        width: 75%;
+                        padding: 1em
+                    }
 
-                .example-flexible-input .box-inner {
-                    overflow: hidden
-                }
+                    .example-flexible-input .box-inner {
+                        overflow: hidden
+                    }
 
-                .example-flexible-input .box-inner p:first-child {
-                    margin-top: 0
-                }
+                    .example-flexible-input .box-inner p:first-child {
+                        margin-top: 0
+                    }
 
-                .example-flexible-input input[type="text"] {
-                    box-sizing: border-box;
-                    width: 100%;
-                    padding: .4em .55em;
-                    font-size: inherit;
-                    font-family: inherit;
-                    color: inherit;
-                    border: 0;
-                    border-radius: 4px;
-                    outline: none
-                }
-            </style>
+                    .example-flexible-input input[type="text"] {
+                        box-sizing: border-box;
+                        width: 100%;
+                        padding: .4em .55em;
+                        font-size: inherit;
+                        font-family: inherit;
+                        color: inherit;
+                        border: 0;
+                        border-radius: .25em;
+                        outline: none
+                    }
+                </style>
 
-            <pre><code>input[type="text"] {
+                <pre><code>input[type="text"] {
     /* Flexibility */
     box-sizing: border-box;
     width: 100%;
@@ -148,76 +149,77 @@
     font-family: inherit;
     color: inherit;
     border: 0;
-    border-radius: 4px;
+    border-radius: .25em;
     outline: none
 }</code></pre>
 
-            <div class="example example-flexible-input">
-                <div class="example-content">
-                    <div class="box">
-                        <div class="box-inner">
-                            <p>Box</p>
-                            <input type="text" placeholder="Text input">
+                <div class="example example-flexible-input">
+                    <div class="example-content">
+                        <div class="box">
+                            <div class="box-inner">
+                                <p>Box</p>
+                                <input type="text" placeholder="Text input">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <p>
-                <input type="range" class="example-flexible-input-slider" min="20" max="100" value="75">
-                <span> &nbsp;&nbsp;<code>width: <span class="example-flexible-input-slider-value">75%</span></code></span>
-            </p>
+                <p>
+                    <input type="range" class="example-flexible-input-slider" min="20" max="100" value="75">
+                    <span> &nbsp;&nbsp;<code>width: <span class="example-flexible-input-slider-value">75%</span></code></span>
+                </p>
 
-            <p>Adjust the box width and observe the input adjust its width to match.</p>
+                <p>Adjust the box width and observe the input adjust its width to match.</p>
 
-            <script>
-                document.querySelector('.example-flexible-input-slider').addEventListener('change', function(e){
-                    var width = e.target.valueAsNumber + '%';
-                    document.querySelector('.example-flexible-input-slider-value').innerHTML = width;
-                    Array.prototype.slice.call(document.querySelectorAll('.example-flexible-input .box')).forEach(function(box){
-                        box.style.width = width;
+                <script>
+                    document.querySelector('.example-flexible-input-slider').addEventListener('change', function(e){
+                        var width = e.target.valueAsNumber + '%';
+                        document.querySelector('.example-flexible-input-slider-value').innerHTML = width;
+                        Array.prototype.slice.call(document.querySelectorAll('.example-flexible-input .box')).forEach(function(box){
+                            box.style.width = width;
+                        });
                     });
-                });
-            </script>
+                </script>
 
-            <h3><em>tl;dr</em></h3>
+                <h3><em>tl;dr</em></h3>
 
-            <p>If you want <code>height</code> and <code>width</code> to behave in the most intuitive way, <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">listen to Paul Irish</a><sup><a href="#cite-3">[3]</a></sup> and put this at the top of your CSS:</p>
+                <p>If you want <code>height</code> and <code>width</code> to behave in the most intuitive way, <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">listen to Paul Irish</a><sup><a href="#cite-3">[3]</a></sup> and put this at the top of your CSS:</p>
 
-            <pre><code>*, *:before, *:after {
+                <pre><code>*, *:before, *:after {
     -webkit-box-sizing: border-box; /* Needed for mobile WebKit */
     -moz-box-sizing: border-box; /* Needed for Firefox */
     box-sizing: border-box
 }</code></pre>
 
-            <hr>
+                <hr>
 
-            <h3>Further reading</h3>
+                <h3>Further reading</h3>
 
-            <ul>
-                <li><a href="http://caniuse.com/css3-boxsizing">Can I Use: CSS3 Box-sizing?</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Boxes">MDN: Boxes</a></li>
-            </ul>
+                <ul>
+                    <li><a href="http://caniuse.com/css3-boxsizing">Can I Use: CSS3 Box-sizing?</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Boxes">MDN: Boxes</a></li>
+                </ul>
 
-            <h3>Citations</h3>
+                <h3>Citations</h3>
 
-            <ol>
-                <li><a id="cite-1" href="http://www.w3.org/TR/CSS2/box.html">w3: Box model</a></li>
-                <li><a id="cite-2" href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">MDN: <code>box-sizing</code></a> — There is also <code>padding-box</code>, but don't worry about that.</li>
-                <li><a id="cite-3" href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">Paul Irish: * { Box-sizing: Border-box } FTW</a></li>
-            </ol>
+                <ol>
+                    <li><a id="cite-1" href="http://www.w3.org/TR/CSS2/box.html">w3: Box model</a></li>
+                    <li><a id="cite-2" href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">MDN: <code>box-sizing</code></a> — There is also <code>padding-box</code>, but don't worry about that.</li>
+                    <li><a id="cite-3" href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">Paul Irish: * { Box-sizing: Border-box } FTW</a></li>
+                </ol>
 
-            <hr>
+                <hr>
 
-            <nav class="chapter-navigation">
-                <a class="previous-chapter" href="../preface">
-                    Preface
-                </a>
-                <a class="next-chapter" href="../2-layout">
-                    <span class="number">2</span>
-                    <span class="title">Layout</span>
-                </a>
-            </nav>
+                <nav class="chapter-navigation">
+                    <a class="previous-chapter" href="../preface">
+                        Preface
+                    </a>
+                    <a class="next-chapter" href="../2-layout">
+                        <span class="number">2</span>
+                        <span class="title">Layout</span>
+                    </a>
+                </nav>
+            </div>
         </div>
     </body>
 </html>

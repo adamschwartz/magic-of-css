@@ -26,13 +26,27 @@ chapters.specialTerms =
 
     'box-sizing':
         description: '<p>Controls how element boxes are sized</p>'
-        exampleCSS: 'box-sizing: border-box;\nwidth: 100%;\npadding-left: 50%'
-        exampleCSSSelector: '.box'
-        exampleHTML: '<div class="box light" style="padding-top: 1.5em">Some text</div>'
+        exampleCSS: 'width: 75%;\npadding-left: 25%'
+        exampleCSSSelector: '.text-box'
+        exampleHTML: '''
+            <style>
+                .contextual-example .text-box {
+                    padding-right: 0;
+                    margin-bottom: 1em
+                }
+                .contextual-example p {
+                    text-align: left
+                }
+            </style>
+            <div class="text-box" style="box-sizing: content-box"><code>content-box</code></div>
+            <p>The content is sized to <code>75%</code> so the padding is added.</p>
+            <div class="text-box" style="box-sizing: border-box"><code>border-box</code></div>
+            <p>The border is sized to <code>75%</code> so the padding is absorbed.</p>
+        '''
 
     'border-box': 'box-sizing'
     'content-box': 'box-sizing'
-    # padding-box ?
+    'padding-box': 'box-sizing'
 
     'outline':
         description: '<p>A line outside the box</p>'
@@ -52,7 +66,8 @@ chapters.specialTerms =
         exampleCSSSelector: '.box'
         exampleHTML: '<div class="box"></div>'
 
-    # padding
+    # 'padding':
+    #     description: '<p>Spacing around the content but inside the border</p>'
     # width
     # height
 
@@ -60,31 +75,38 @@ chapters.init = ->
     chapters.setupContextualCodeExamples()
 
 chapters.setupContextualCodeExamples = ->
-    document.querySelector('.chapter').insertAdjacentHTML('afterend', '<div class="contextual-display"></div>')
+    contextualDisplayWrapper = document.createElement('div')
+    contextualDisplayWrapper.classList.add 'contextual-display-wrapper'
 
-    contextualDisplay = document.querySelector('.contextual-display')
+    contextualDisplay = document.createElement('div')
+    contextualDisplay.classList.add 'contextual-display'
+
+    contextualDisplayWrapper.appendChild contextualDisplay
+
+    document.querySelector('.chapter').appendChild contextualDisplayWrapper
 
     document.body.addEventListener 'click', (event) ->
         closeContextualDisplay()
 
     Array::slice.call(document.querySelectorAll(':not(pre) > code')).forEach (code) ->
-        found = false
-        for specialTerm of chapters.specialTerms
-            if code.textContent is specialTerm
-                code.classList.add 'contextual-code-example'
-                found = true
-        if found is false
-            console.log 'Could not find special term', code.textContent
+        for specialTerm of chapters.specialTerms when code.textContent is specialTerm
+            code.classList.add 'contextual-code-example'
+            return
+
+        console.log 'Could not find special term', code.textContent
 
     closeContextualDisplay = ->
         Array::slice.call(document.querySelectorAll('.contextual-open, .contextual-transition, .contextual-open-tree')).forEach (element) ->
             element.classList.remove 'contextual-open'
-            element.classList.remove 'contextual-transition'
             element.classList.remove 'contextual-open-tree'
 
     Array::slice.call(document.querySelectorAll('.contextual-code-example')).forEach (code) ->
         code.addEventListener 'click', (event) ->
             event.stopPropagation()
+
+            if event.target.classList.contains 'contextual-open-tree'
+                closeContextualDisplay()
+                return
 
             specialTermObj = chapters.specialTerms[event.target.textContent]
             specialTerm = event.target.textContent
@@ -117,12 +139,9 @@ chapters.setupContextualCodeExamples = ->
                     event.stopPropagation()
                     closeContextualDisplay()
 
-                contextualDisplay.classList.add 'contextual-transition'
                 contextualDisplay.clientHeight
 
-                boundingClientRect = code.getBoundingClientRect()
-                contextualDisplay.style.top = (boundingClientRect.top + document.body.scrollTop) + 'px'
-                contextualDisplay.clientHeight
+                positionContextualDisplay code
 
                 contextualDisplay.classList.add 'contextual-open'
                 applyToParents code, (node) -> node.classList.add 'contextual-open-tree'
@@ -130,6 +149,17 @@ chapters.setupContextualCodeExamples = ->
 
             else
                 closeContextualDisplay()
+
+    positionContextualDisplay = (code) ->
+        boundingClientRect = code.getBoundingClientRect()
+        contextualDisplay.style.top = (boundingClientRect.top + document.body.scrollTop) + 'px'
+        contextualDisplay.clientHeight
+
+        contextualDisplayWrapper.style.height = document.body.clientHeight + 'px'
+
+    window.addEventListener 'resize', ->
+        if document.body.classList.contains 'contextual-open'
+            positionContextualDisplay document.querySelector('code.contextual-code-example.contextual-open-tree')
 
 window.chapters = chapters
 setTimeout chapters.init

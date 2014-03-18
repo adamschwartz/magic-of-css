@@ -1,6 +1,8 @@
 (function() {
   var applyToParents, chapters, specialTermTitle;
+
   chapters = {};
+
   applyToParents = function(node, apply, count) {
     if (count == null) {
       count = 0;
@@ -13,11 +15,13 @@
     }
     return apply(node);
   };
+
   specialTermTitle = function(specialTerm) {
     var title;
     title = specialTerm.replace(/\-/g, ' ');
     return title[0].toUpperCase() + title.slice(1);
   };
+
   chapters.specialTerms = {
     'em': {
       description: '<p>A unit of measurement which represents a multiple of the current font-size in pixels</p>',
@@ -33,12 +37,13 @@
     },
     'box-sizing': {
       description: '<p>Controls how element boxes are sized</p>',
-      exampleCSS: 'box-sizing: border-box;\nwidth: 100%;\npadding-left: 50%',
-      exampleCSSSelector: '.box',
-      exampleHTML: '<div class="box light" style="padding-top: 1.5em">Some text</div>'
+      exampleCSS: 'width: 75%;\npadding-left: 25%',
+      exampleCSSSelector: '.text-box',
+      exampleHTML: '<style>\n    .contextual-example .text-box {\n        padding-right: 0;\n        margin-bottom: 1em\n    }\n    .contextual-example p {\n        text-align: left\n    }\n</style>\n<div class="text-box" style="box-sizing: content-box"><code>content-box</code></div>\n<p>The content is sized to <code>75%</code> so the padding is added.</p>\n<div class="text-box" style="box-sizing: border-box"><code>border-box</code></div>\n<p>The border is sized to <code>75%</code> so the padding is absorbed.</p>'
     },
     'border-box': 'box-sizing',
     'content-box': 'box-sizing',
+    'padding-box': 'box-sizing',
     'outline': {
       description: '<p>A line outside the box</p>',
       exampleCSS: 'outline:\n    1.5em double lightgreen',
@@ -58,40 +63,47 @@
       exampleHTML: '<div class="box"></div>'
     }
   };
+
   chapters.init = function() {
     return chapters.setupContextualCodeExamples();
   };
+
   chapters.setupContextualCodeExamples = function() {
-    var closeContextualDisplay, contextualDisplay;
-    document.querySelector('.chapter').insertAdjacentHTML('afterend', '<div class="contextual-display"></div>');
-    contextualDisplay = document.querySelector('.contextual-display');
+    var closeContextualDisplay, contextualDisplay, contextualDisplayWrapper, positionContextualDisplay;
+    contextualDisplayWrapper = document.createElement('div');
+    contextualDisplayWrapper.classList.add('contextual-display-wrapper');
+    contextualDisplay = document.createElement('div');
+    contextualDisplay.classList.add('contextual-display');
+    contextualDisplayWrapper.appendChild(contextualDisplay);
+    document.querySelector('.chapter').appendChild(contextualDisplayWrapper);
     document.body.addEventListener('click', function(event) {
       return closeContextualDisplay();
     });
     Array.prototype.slice.call(document.querySelectorAll(':not(pre) > code')).forEach(function(code) {
-      var found, specialTerm;
-      found = false;
+      var specialTerm;
       for (specialTerm in chapters.specialTerms) {
-        if (code.textContent === specialTerm) {
-          code.classList.add('contextual-code-example');
-          found = true;
+        if (!(code.textContent === specialTerm)) {
+          continue;
         }
+        code.classList.add('contextual-code-example');
+        return;
       }
-      if (found === false) {
-        return console.log('Could not find special term', code.textContent);
-      }
+      return console.log('Could not find special term', code.textContent);
     });
     closeContextualDisplay = function() {
       return Array.prototype.slice.call(document.querySelectorAll('.contextual-open, .contextual-transition, .contextual-open-tree')).forEach(function(element) {
         element.classList.remove('contextual-open');
-        element.classList.remove('contextual-transition');
         return element.classList.remove('contextual-open-tree');
       });
     };
-    return Array.prototype.slice.call(document.querySelectorAll('.contextual-code-example')).forEach(function(code) {
+    Array.prototype.slice.call(document.querySelectorAll('.contextual-code-example')).forEach(function(code) {
       return code.addEventListener('click', function(event) {
-        var boundingClientRect, specialTerm, specialTermObj, _ref;
+        var specialTerm, specialTermObj, _ref;
         event.stopPropagation();
+        if (event.target.classList.contains('contextual-open-tree')) {
+          closeContextualDisplay();
+          return;
+        }
         specialTermObj = chapters.specialTerms[event.target.textContent];
         specialTerm = event.target.textContent;
         if (typeof specialTermObj === 'string') {
@@ -107,11 +119,8 @@
               return closeContextualDisplay();
             });
           }
-          contextualDisplay.classList.add('contextual-transition');
           contextualDisplay.clientHeight;
-          boundingClientRect = code.getBoundingClientRect();
-          contextualDisplay.style.top = (boundingClientRect.top + document.body.scrollTop) + 'px';
-          contextualDisplay.clientHeight;
+          positionContextualDisplay(code);
           contextualDisplay.classList.add('contextual-open');
           applyToParents(code, function(node) {
             return node.classList.add('contextual-open-tree');
@@ -122,7 +131,22 @@
         }
       });
     });
+    positionContextualDisplay = function(code) {
+      var boundingClientRect;
+      boundingClientRect = code.getBoundingClientRect();
+      contextualDisplay.style.top = (boundingClientRect.top + document.body.scrollTop) + 'px';
+      contextualDisplay.clientHeight;
+      return contextualDisplayWrapper.style.height = document.body.clientHeight + 'px';
+    };
+    return window.addEventListener('resize', function() {
+      if (document.body.classList.contains('contextual-open')) {
+        return positionContextualDisplay(document.querySelector('code.contextual-code-example.contextual-open-tree'));
+      }
+    });
   };
+
   window.chapters = chapters;
+
   setTimeout(chapters.init);
+
 }).call(this);
