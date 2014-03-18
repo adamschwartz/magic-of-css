@@ -352,6 +352,7 @@ figure.cushy {
   -webkit-transform: translate3d(0, 0, 0); }
   @media (min-width: 48em) {
     .contextual-display-wrapper {
+      position: fixed;
       left: -100%;
       right: -100%; } }
   body.contextual-open .contextual-display-wrapper {
