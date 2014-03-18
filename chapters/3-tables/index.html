@@ -15,334 +15,338 @@
 
         <script type="text/javascript" src="//use.typekit.net/hlu4jhg.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <script type="text/javascript" src="../../js/chapters.js"></script>
     </head>
     <body>
-        <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div></div></a>
+        <div class="page">
+            <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div></div></a>
 
-        <div class="chapter">
-            <h1>
-                <span class="number">Chapter 3</span>
-                <span class="title">Tables</span>
-            </h1>
+            <div class="chapter">
+                <h1>
+                    <span class="number">Chapter 3</span>
+                    <span class="title">Tables</span>
+                </h1>
 
-            <h2><code>table-layout</code></h2>
+                <h2><code>table-layout</code></h2>
 
-            <p>In the <a href="../2-layout">previous chapter</a> we discussed "Layout". But what we meant by that is the gemoetric construction of your content from a design perspective&mdash;how you structure your app to make sense for your use case. Think the <a href="../../potions/two-pane-app/">Two Pane App</a> potion.</p>
+                <p>In the <a href="../2-layout">previous chapter</a> we discussed "Layout". But what we meant by that is the gemoetric construction of your content from a design perspective&mdash;how you structure your app to make sense for your use case. Think the <a href="../../potions/two-pane-app/">Two Pane App</a> potion.</p>
 
-            <p>But <code>layout</code> has a specific meaning in various contexts. In the context of tables, it means how the browser decides to size columns and rows of a <code>&lt;table&gt;</code> element based on the CSS applied by the user agent and you, and the content within each table cell.</p>
+                <p>But <code>layout</code> has a specific meaning in various contexts. In the context of tables, it means how the browser decides to size columns and rows of a <code>&lt;table&gt;</code> element based on the CSS applied by the user agent and you, and the content within each table cell.</p>
 
-            <p>This process is truly <em>magical</em>.</p>
+                <p>This process is truly <em>magical</em>.</p>
 
-            <p>A complex layout algorithm is used for both the <a href="http://www.w3.org/TR/CSS21/tables.html#width-layout">horizontal</a> and <a href="http://www.w3.org/TR/CSS21/tables.html#height-layout">vertical</a>. And these algorithms fork early based on the <code>table-layout</code> you specify, of which there are two options:</p>
+                <p>A complex layout algorithm is used for both the <a href="http://www.w3.org/TR/CSS21/tables.html#width-layout">horizontal</a> and <a href="http://www.w3.org/TR/CSS21/tables.html#height-layout">vertical</a>. And these algorithms fork early based on the <code>table-layout</code> you specify, of which there are two options:</p>
 
-            <dl>
-                <dt><code>auto</code></dt>
-                    <dd><em>The default</em>. I attempt to size columns relatively to each other by the widest cell in each column, unless you give me specific widths, at which point use the widths you specify to make relative comparisons. (<a href="http://www.w3.org/TR/CSS21/tables.html#auto-table-layout">CSS spec</a>)</dd>
-                <dt><code>fixed</code></dt>
-                    <dd>I attempt to size columns evenly, unless you give me specific widths in <code>px</code>, at which point I attempt to honor your sizing exactly, unless I can't because your math doesn't work out. (<a href="http://www.w3.org/TR/CSS21/tables.html#fixed-table-layout">CSS spec</a>)</dd>
-            </dl>
+                <dl>
+                    <dt><code>auto</code></dt>
+                        <dd><em>The default</em>. I attempt to size columns relatively to each other by the widest cell in each column, unless you give me specific widths, at which point use the widths you specify to make relative comparisons. (<a href="http://www.w3.org/TR/CSS21/tables.html#auto-table-layout">CSS spec</a>)</dd>
+                    <dt><code>fixed</code></dt>
+                        <dd>I attempt to size columns evenly, unless you give me specific widths in <code>px</code>, at which point I attempt to honor your sizing exactly, unless I can't because your math doesn't work out. (<a href="http://www.w3.org/TR/CSS21/tables.html#fixed-table-layout">CSS spec</a>)</dd>
+                </dl>
 
-            <p>These are very rough definitions, and definitely not complete. I highly recommend you <a href="http://www.w3.org/TR/CSS21/tables.html">read through the spec</a> at some point to get a better understanding. But nothing is better than playing with live code, so let's look at some examples to paint a clearer picture.</p>
+                <p>These are very rough definitions, and definitely not complete. I highly recommend you <a href="http://www.w3.org/TR/CSS21/tables.html">read through the spec</a> at some point to get a better understanding. But nothing is better than playing with live code, so let's look at some examples to paint a clearer picture.</p>
 
-            <h3>Example 1: No widths</h3>
+                <h3>Example 1: No widths</h3>
 
-            <style>
-                .example-table-layout table {
-                    background: transparent;
-                    border-spacing: 0;
-                    border-collapse: collapse;
-                    width: 100%;
-                    margin-bottom: 1em
-                }
+                <style>
+                    .example-table-layout table {
+                        background: transparent;
+                        border-spacing: 0;
+                        border-collapse: collapse;
+                        width: 100%;
+                        margin-bottom: 1em
+                    }
 
-                .example-table-layout table td {
-                    border: 2px solid #ccc
-                }
+                    .example-table-layout table td {
+                        border: 2px solid #ccc
+                    }
 
-                .example-table-layout h4 {
-                    margin-top: 0
-                }
-            </style>
+                    .example-table-layout h4 {
+                        margin-top: 0
+                    }
+                </style>
 
-            <div class="example example-table-layout">
-                <div class="example-content">
-                    <h4><code>table-layout: auto</code></h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>This is the title of some object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                            <tr>
-                                <td>This is the title of another object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h4><code>table-layout: fixed</code></h4>
-                    <table style="table-layout: fixed">
-                        <tbody>
-                            <tr>
-                                <td>This is the title of some object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                            <tr>
-                                <td>This is the title of another object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="example example-table-layout">
+                    <div class="example-content">
+                        <h4><code>table-layout: auto</code></h4>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>This is the title of some object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td>This is the title of another object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4><code>table-layout: fixed</code></h4>
+                        <table style="table-layout: fixed">
+                            <tbody>
+                                <tr>
+                                    <td>This is the title of some object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td>This is the title of another object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <p>Notice how in the <code>fixed</code> case, the columns are sized evenly since no widths are specified, but in the <code>auto</code> cased they're sized proportionally by the width of the cell contents.</p>
+                <p>Notice how in the <code>fixed</code> case, the columns are sized evenly since no widths are specified, but in the <code>auto</code> cased they're sized proportionally by the width of the cell contents.</p>
 
-            <h3>Example 2: Percentage widths</h3>
+                <h3>Example 2: Percentage widths</h3>
 
-            <p>Now let's look at the same example with column widths set to <code>20%</code> and <code>50%</code>, respectively.</p>
+                <p>Now let's look at the same example with column widths set to <code>20%</code> and <code>50%</code>, respectively.</p>
 
-            <style>
-                .example-table-layout-sized-percent table tr td:nth-child(1) {
-                    width: 20%
-                }
+                <style>
+                    .example-table-layout-sized-percent table tr td:nth-child(1) {
+                        width: 20%
+                    }
 
-                .example-table-layout-sized-percent table tr td:nth-child(2) {
-                    width: 50%
-                }
-            </style>
+                    .example-table-layout-sized-percent table tr td:nth-child(2) {
+                        width: 50%
+                    }
+                </style>
 
-            <div class="example example-table-layout example-table-layout-sized-percent">
-                <div class="example-content">
-                    <h4><code>table-layout: auto</code></h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>This is the title of some object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                            <tr>
-                                <td>This is the title of another object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h4><code>table-layout: fixed</code></h4>
-                    <table style="table-layout: fixed">
-                        <tbody>
-                            <tr>
-                                <td>This is the title of some object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                            <tr>
-                                <td>This is the title of another object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="example example-table-layout example-table-layout-sized-percent">
+                    <div class="example-content">
+                        <h4><code>table-layout: auto</code></h4>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>This is the title of some object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td>This is the title of another object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4><code>table-layout: fixed</code></h4>
+                        <table style="table-layout: fixed">
+                            <tbody>
+                                <tr>
+                                    <td>This is the title of some object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td>This is the title of another object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <p>
-                <label>
-                    <input type="checkbox" class="example-table-layout-white-space-nowrap-checkbox"> Toggle <code>white-space: nowrap</code>
-                </label>
-            </p>
+                <p>
+                    <label>
+                        <input type="checkbox" class="example-table-layout-white-space-nowrap-checkbox"> Toggle <code>white-space: nowrap</code>
+                    </label>
+                </p>
 
-            <script>
-                document.querySelector('.example-table-layout-white-space-nowrap-checkbox').addEventListener('change', function(e){
-                    var checked = e.target.checked;
-                    Array.prototype.slice.call(document.querySelectorAll('.example-table-layout-sized-percent td')).forEach(function(cell){
-                        cell.style.whiteSpace = checked ? 'nowrap' : 'normal';
+                <script>
+                    document.querySelector('.example-table-layout-white-space-nowrap-checkbox').addEventListener('change', function(e){
+                        var checked = e.target.checked;
+                        Array.prototype.slice.call(document.querySelectorAll('.example-table-layout-sized-percent td')).forEach(function(cell){
+                            cell.style.whiteSpace = checked ? 'nowrap' : 'normal';
+                        });
                     });
-                });
-            </script>
+                </script>
 
-            <p><strong>In both cases</strong>, our widths are being taken into account, but only relatively. This is always true with <code>auto</code> but it's additionally true here with <code>fixed</code> because the widths are specified in percentages. The browser says, "20% is 2/5ths the size of 50%", so when the table is <code>1000px</code> wide, the first column ends up at <code>283px</code> and the second column at <code>711px</code>, roughly a ratio of <code>2:5</code>. (It won't be perfectly 2:5 due to <code>cell-spacing</code>, <code>cell-padding</code>, <code>border</code>, <code>border-spacing</code>, <code>border-collapse</code>, etc., rounding, and other constraints.)</p>
+                <p><strong>In both cases</strong>, our widths are being taken into account, but only relatively. This is always true with <code>auto</code> but it's additionally true here with <code>fixed</code> because the widths are specified in percentages. The browser says, "20% is 2/5ths the size of 50%", so when the table is <code>1000px</code> wide, the first column ends up at <code>283px</code> and the second column at <code>711px</code>, roughly a ratio of <code>2:5</code>. (It won't be perfectly 2:5 due to <code>cell-spacing</code>, <code>cell-padding</code>, <code>border</code>, <code>border-spacing</code>, <code>border-collapse</code>, etc., rounding, and other constraints.)</p>
 
-            <p>Notice that with <code>white-space: nowrap</code> applied to each cell, the auto case compensates but the fixed case lets the text overflow.</p>
+                <p>Notice that with <code>white-space: nowrap</code> applied to each cell, the auto case compensates but the fixed case lets the text overflow.</p>
 
-            <p>Challenge question to think about: <em>why is first column slightly wider in the <code>fixed</code> case?</em></p>
+                <p>Challenge question to think about: <em>why is first column slightly wider in the <code>fixed</code> case?</em></p>
 
-            <h3>Example 3: Mixed unit widths</h3>
+                <h3>Example 3: Mixed unit widths</h3>
 
-            <p>Now let's look at the same example with column widths set to <code>400px</code> and <code>70%</code>, respectively.</p>
+                <p>Now let's look at the same example with column widths set to <code>400px</code> and <code>70%</code>, respectively.</p>
 
-            <style>
-                .example-table-layout-sized table tr td:nth-child(1) {
-                    width: 400px
-                }
+                <style>
+                    .example-table-layout-sized table tr td:nth-child(1) {
+                        width: 400px
+                    }
 
-                .example-table-layout-sized table tr td:nth-child(2) {
-                    width: 70%
-                }
-            </style>
+                    .example-table-layout-sized table tr td:nth-child(2) {
+                        width: 70%
+                    }
+                </style>
 
-            <div class="example example-table-layout example-table-layout-sized">
-                <div class="example-content">
-                    <h4><code>table-layout: auto</code></h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>This is the title of some object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                            <tr>
-                                <td>This is the title of another object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h4><code>table-layout: fixed</code></h4>
-                    <table style="table-layout: fixed">
-                        <tbody>
-                            <tr>
-                                <td>This is the title of some object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                            <tr>
-                                <td>This is the title of another object</td>
-                                <td><a href="javascript:;">Action</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="example example-table-layout example-table-layout-sized">
+                    <div class="example-content">
+                        <h4><code>table-layout: auto</code></h4>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>This is the title of some object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td>This is the title of another object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4><code>table-layout: fixed</code></h4>
+                        <table style="table-layout: fixed">
+                            <tbody>
+                                <tr>
+                                    <td>This is the title of some object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td>This is the title of another object</td>
+                                    <td><a href="javascript:;">Action</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <p><em>Ok...</em>. Since the width of the tables here is <code><span class="example-table-layout-sized-table-widths"></span>px</code>, there's no way for the browser to fit the columns <code>400px</code> and <code>70% &times; <span class="example-table-layout-sized-table-widths"></span>px</code> into a <code><span class="example-table-layout-sized-table-widths"></span>px</code>&ndash;wide table. So it does the best it can.</p>
+                <p><em>Ok...</em>. Since the width of the tables here is <code><span class="example-table-layout-sized-table-widths"></span>px</code>, there's no way for the browser to fit the columns <code>400px</code> and <code>70% &times; <span class="example-table-layout-sized-table-widths"></span>px</code> into a <code><span class="example-table-layout-sized-table-widths"></span>px</code>&ndash;wide table. So it does the best it can.</p>
 
-            <p><strong>In the <code>auto</code> case</strong>, our widths are being taken into account, but only relatively. It compares <code>400px / <span class="example-table-layout-sized-table-widths"></span>px</code> to <code>70% &times; <span class="example-table-layout-sized-table-widths"></span>px</code> and does the best it can. (The behavior here varies from browser to browser.)</p>
+                <p><strong>In the <code>auto</code> case</strong>, our widths are being taken into account, but only relatively. It compares <code>400px / <span class="example-table-layout-sized-table-widths"></span>px</code> to <code>70% &times; <span class="example-table-layout-sized-table-widths"></span>px</code> and does the best it can. (The behavior here varies from browser to browser.)</p>
 
-            <p><strong>In the <code>fixed</code> case</strong>, the <code>400px</code> is honored, since fixed values are prioritized over percentage based values, and so the second column gets the remainder.</p>
+                <p><strong>In the <code>fixed</code> case</strong>, the <code>400px</code> is honored, since fixed values are prioritized over percentage based values, and so the second column gets the remainder.</p>
 
-            <p>In the inspector, adjust the widths of the table cells above for some surprising and interesting results. (We will do this in class.)</p>
+                <p>In the inspector, adjust the widths of the table cells above for some surprising and interesting results. (We will do this in class.)</p>
 
-            <script>
-                Array.prototype.slice.call(document.querySelectorAll('.example-table-layout-sized-table-widths')).forEach(function(item){
-                    item.innerHTML = document.querySelector('.example-table-layout-sized').clientWidth;
-                });
-            </script>
+                <script>
+                    Array.prototype.slice.call(document.querySelectorAll('.example-table-layout-sized-table-widths')).forEach(function(item){
+                        item.innerHTML = document.querySelector('.example-table-layout-sized').clientWidth;
+                    });
+                </script>
 
-            <h2>Tabular data</h2>
+                <h2>Tabular data</h2>
 
-            <p>This is a CSS course, so I won't spend much time here. But the main reason to use tables in an application is to display tabular <em>data</em>. Tabular data means anything you might display in a spreadsheet. A content matrix.</p>
+                <p>This is a CSS course, so I won't spend much time here. But the main reason to use tables in an application is to display tabular <em>data</em>. Tabular data means anything you might display in a spreadsheet. A content matrix.</p>
 
-            <p>When it comes to styling tables with tabular data, there are some good general rules to follow:</p>
+                <p>When it comes to styling tables with tabular data, there are some good general rules to follow:</p>
 
-            <ul>
-                <li>Wide tables should be tiger-striped or use a <code>:hover</code> background color (or similar) to help the eye asssociate cells-of-the-same-row in the left-most column with the right-most column.</li>
-                <li>Columns of numerical data should be right aligned so that units of numbers with different orders of magnitude line up.</li>
-                <li>Right-most columns may need to be right aligned to avoid a ragged right edge (think <code>text-align: justify</code>).</li>
-                <li>When possible, row heights should be identical to make vertical scanning easier. (This general principle is known in the biz as "vertical rhythm", and it's <a href="https://www.google.com/search?q=vertical+rhythm+css">very important</a>.)</li>
-            </ul>
+                <ul>
+                    <li>Wide tables should be tiger-striped or use a <code>:hover</code> background color (or similar) to help the eye asssociate cells-of-the-same-row in the left-most column with the right-most column.</li>
+                    <li>Columns of numerical data should be right aligned so that units of numbers with different orders of magnitude line up.</li>
+                    <li>Right-most columns may need to be right aligned to avoid a ragged right edge (think <code>text-align: justify</code>).</li>
+                    <li>When possible, row heights should be identical to make vertical scanning easier. (This general principle is known in the biz as "vertical rhythm", and it's <a href="https://www.google.com/search?q=vertical+rhythm+css">very important</a>.)</li>
+                </ul>
 
-            <h2>Tables as a layout tool</h2>
+                <h2>Tables as a layout tool</h2>
 
-            <p>In the <a href="../2-layout">previous chapter on layout</a>, we briefly mentioned that tables can be used to center content of arbitrary dimensions vertically. Until <code>flex</code> is widely supported, you should feel comfortable using tables for this. But other than that, if you catch yourself using a <code>&lt;table&gt;</code> to implement layout constructs that don't have to do with tabular data, <em>you're probably doing it wrong</em>.</p>
+                <p>In the <a href="../2-layout">previous chapter on layout</a>, we briefly mentioned that tables can be used to center content of arbitrary dimensions vertically. Until <code>flex</code> is widely supported, you should feel comfortable using tables for this. But other than that, if you catch yourself using a <code>&lt;table&gt;</code> to implement layout constructs that don't have to do with tabular data, <em>you're probably doing it wrong</em>.</p>
 
-            <p>If your <a href="http://caniuse.com/flexbox">browser support is IE10+</a>, then use <code>flex</code><sup><a href="#cite-1">[1]</a></sup>. Phillip Walton has a <a href="http://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/">great tutorial</a><sup><a href="#cite-2">[2]</a></sup> on vertical centering with flexbox.</p>
+                <p>If your <a href="http://caniuse.com/flexbox">browser support is IE10+</a>, then use <code>flex</code><sup><a href="#cite-1">[1]</a></sup>. Phillip Walton has a <a href="http://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/">great tutorial</a><sup><a href="#cite-2">[2]</a></sup> on vertical centering with flexbox.</p>
 
-            <h2>Table gotchas</h2>
+                <h2>Table gotchas</h2>
 
-            <p>There are <em><a href="http://www.hotdesign.com/seybold/everything.html">sooo</a></em><sup><a href="#cite-3">[3]</a></sup> <a href="http://coding.smashingmagazine.com/2009/04/08/from-table-hell-to-div-hell/">many</a><sup><a href="#cite-4">[4]</a></sup> <a href="http://www.vanseodesign.com/css/tables/">reasons</a><sup><a href="#cite-5">[5]</a></sup> why you shouldn't use tables for anything other than tabular data or vertical centering (as discussed). But to drive that point home, here are some extremely common <em>gotchas</em> that make tables frustrating to work with.</p>
+                <p>There are <em><a href="http://www.hotdesign.com/seybold/everything.html">sooo</a></em><sup><a href="#cite-3">[3]</a></sup> <a href="http://coding.smashingmagazine.com/2009/04/08/from-table-hell-to-div-hell/">many</a><sup><a href="#cite-4">[4]</a></sup> <a href="http://www.vanseodesign.com/css/tables/">reasons</a><sup><a href="#cite-5">[5]</a></sup> why you shouldn't use tables for anything other than tabular data or vertical centering (as discussed). But to drive that point home, here are some extremely common <em>gotchas</em> that make tables frustrating to work with.</p>
 
-            <h3>Gotcha 1: Table cells do not respect overflows (<code>table-layout: auto</code>, Firefox, IE)</h3>
+                <h3>Gotcha 1: Table cells do not respect overflows (<code>table-layout: auto</code>, Firefox, IE)</h3>
 
-            <p>This means that even if you use <code>table-layout: fixed</code> and specify a pixel width, <code>overflow: hidden</code> isn't going to actually work on a table cell in every browser. (If you use <code>table-layout: auto</code>, overflows won't be respected in any browser.)</p>
+                <p>This means that even if you use <code>table-layout: fixed</code> and specify a pixel width, <code>overflow: hidden</code> isn't going to actually work on a table cell in every browser. (If you use <code>table-layout: auto</code>, overflows won't be respected in any browser.)</p>
 
-            <style>
-                .example-table-gotcha-1 table tr td:nth-child(1) {
-                    width: 100px;
-                    height: 20px;
-                    overflow: hidden
-                }
-            </style>
+                <style>
+                    .example-table-gotcha-1 table tr td:nth-child(1) {
+                        width: 100px;
+                        height: 20px;
+                        overflow: hidden
+                    }
+                </style>
 
-            <div class="example example-table-layout example-table-gotcha-1">
-                <div class="example-content">
-                    <h4><code>table-layout: auto</code></h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>I'm being told to be <code>100px</code> wide and <code>20px</code> tall, but I ain't listening.</td>
-                                <td>I'm just some text</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="example example-table-layout example-table-gotcha-1">
+                    <div class="example-content">
+                        <h4><code>table-layout: auto</code></h4>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>I'm being told to be <code>100px</code> wide and <code>20px</code> tall, but I ain't listening.</td>
+                                    <td>I'm just some text</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-            <h3>Gotcha 2: Table cells don't respect relative positioning (Firefox)</h3>
+                <h3>Gotcha 2: Table cells don't respect relative positioning (Firefox)</h3>
 
-            <p>Yup. You heard me correctly. You go apply <code>position: relative</code> to a table cell, place a <code>position: absolute</code> element inside, and in Firefox, the absolute element will be positioned relative to the earliest positioned parent of the table instead. Bummer.</p>
+                <p>Yup. You heard me correctly. You go apply <code>position: relative</code> to a table cell, place a <code>position: absolute</code> element inside, and in Firefox, the absolute element will be positioned relative to the earliest positioned parent of the table instead. Bummer.</p>
 
-            <p>The <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=35168">"bug"</a> was reported in 2000.<sup><a href="#cite-6">[6]</a></sup></p>
+                <p>The <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=35168">"bug"</a> was reported in 2000.<sup><a href="#cite-6">[6]</a></sup></p>
 
-            <style>
-                .example-table-gotcha-2 table {
-                    table-layout: fixed;
-                    margin-bottom: 50px
-                }
+                <style>
+                    .example-table-gotcha-2 table {
+                        table-layout: fixed;
+                        margin-bottom: 50px
+                    }
 
-                .example-table-gotcha-2 table tr td {
-                    position: relative
-                }
+                    .example-table-gotcha-2 table tr td {
+                        position: relative
+                    }
 
-                .example-table-gotcha-2 table tr td .box {
-                    border: 2px solid #ff4136;
-                    position: absolute;
-                    right: 40px
-                }
-            </style>
+                    .example-table-gotcha-2 table tr td .box {
+                        border: 2px solid #ff4136;
+                        position: absolute;
+                        right: 40px
+                    }
+                </style>
 
-            <div class="example example-table-layout example-table-gotcha-2">
-                <div class="example-content">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td><div class="box">I am <code>position: absolute</code> with <code>right: 40px</code></div></td>
-                                <td>I'm just some text</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="example example-table-layout example-table-gotcha-2">
+                    <div class="example-content">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><div class="box">I am <code>position: absolute</code> with <code>right: 40px</code></div></td>
+                                    <td>I'm just some text</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+
+                <h3>Gotchas tl;dr</h3>
+
+                <p>If, after evaluating the options, you believe that using a <code>&lt;table&gt;</code> element is the right way to go, just make sure you wrap the contents of every table cell with a <code>&lt;div&gt;</code>. This way you have all of the styling control you need for each cell while still being able to utilize the extremely powerful&mdash;albeit confusing&mdash;table layout engine.</p>
+
+                <hr>
+
+                <h3>Further reading</h3>
+
+                <ul>
+                    <li><a href="http://www.w3.org/TR/CSS21/tables.html">w3: CSS2 Tables specification</a></li>
+                    <li><a href="http://drewish.com/tools/vertical-rhythm/">Drewish: Vertical rhythm tool</a></li>
+                </ul>
+
+                <h3>Citations</h3>
+
+                <ol>
+                    <li><a id="cite-1" href="http://caniuse.com/flexbox">Can I use: flex</a></li>
+                    <li><a id="cite-2" href="http://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/">Solved by Flexbox: Vertical Centering</a></li>
+                    <li><a id="cite-3" href="http://www.hotdesign.com/seybold/everything.html">Seybold Seminars: Why tables for layout is stupid</a></li>
+                    <li><a id="cite-4" href="http://coding.smashingmagazine.com/2009/04/08/from-table-hell-to-div-hell/">Smashing Magazine: Table Layouts vs. Div Layouts: From Hell to… Hell?</a></li>
+                    <li><a id="cite-5" href="http://www.vanseodesign.com/css/tables/">Vaneso Design: Are CSS Tables Better Than HTML Tables?</a></li>
+                    <li><a id="cite-6" href="https://bugzilla.mozilla.org/show_bug.cgi?id=35168">Mozilla Bugzilla: relative positioning of table cells doesn't work</a></li>
+                </ol>
+
+                <hr>
+
+                <nav class="chapter-navigation">
+                    <a class="previous-chapter" href="../2-layout">
+                        <span class="number">2</span>
+                        <span class="title">Layout</span>
+                    </a>
+                    <a class="next-chapter" href="../4-color">
+                        <span class="number">4</span>
+                        <span class="title">Color</span>
+                    </a>
+                </nav>
             </div>
-
-            <h3>Gotchas tl;dr</h3>
-
-            <p>If, after evaluating the options, you believe that using a <code>&lt;table&gt;</code> element is the right way to go, just make sure you wrap the contents of every table cell with a <code>&lt;div&gt;</code>. This way you have all of the styling control you need for each cell while still being able to utilize the extremely powerful&mdash;albeit confusing&mdash;table layout engine.</p>
-
-            <hr>
-
-            <h3>Further reading</h3>
-
-            <ul>
-                <li><a href="http://www.w3.org/TR/CSS21/tables.html">w3: CSS2 Tables specification</a></li>
-                <li><a href="http://drewish.com/tools/vertical-rhythm/">Drewish: Vertical rhythm tool</a></li>
-            </ul>
-
-            <h3>Citations</h3>
-
-            <ol>
-                <li><a id="cite-1" href="http://caniuse.com/flexbox">Can I use: flex</a></li>
-                <li><a id="cite-2" href="http://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/">Solved by Flexbox: Vertical Centering</a></li>
-                <li><a id="cite-3" href="http://www.hotdesign.com/seybold/everything.html">Seybold Seminars: Why tables for layout is stupid</a></li>
-                <li><a id="cite-4" href="http://coding.smashingmagazine.com/2009/04/08/from-table-hell-to-div-hell/">Smashing Magazine: Table Layouts vs. Div Layouts: From Hell to… Hell?</a></li>
-                <li><a id="cite-5" href="http://www.vanseodesign.com/css/tables/">Vaneso Design: Are CSS Tables Better Than HTML Tables?</a></li>
-                <li><a id="cite-6" href="https://bugzilla.mozilla.org/show_bug.cgi?id=35168">Mozilla Bugzilla: relative positioning of table cells doesn't work</a></li>
-            </ol>
-
-            <hr>
-
-            <nav class="chapter-navigation">
-                <a class="previous-chapter" href="../2-layout">
-                    <span class="number">2</span>
-                    <span class="title">Layout</span>
-                </a>
-                <a class="next-chapter" href="../4-color">
-                    <span class="number">4</span>
-                    <span class="title">Color</span>
-                </a>
-            </nav>
         </div>
     </body>
 </html>
