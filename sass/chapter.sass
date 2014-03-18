@@ -346,7 +346,7 @@ figure.cushy
         margin-bottom: 8em
 
 .contextual-display-wrapper
-    position: fixed
+    position: absolute
     top: 0
     left: 0
     right: 0
@@ -399,6 +399,7 @@ figure.cushy
             width: .0625rem
 
     a[data-contextual-close]
+        -webkit-tap-highlight-color: transparent
         position: absolute
         top: 1rem
         right: .6666rem
@@ -455,6 +456,7 @@ figure.cushy
         min-width: 4em
         min-height: 4em
         background: #888
+        margin-bottom: 2em
 
         &.light
             background: #eee

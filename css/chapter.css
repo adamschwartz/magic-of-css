@@ -339,7 +339,7 @@ figure.cushy {
     margin-top: 8em;
     margin-bottom: 8em; } }
 .contextual-display-wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -392,6 +392,7 @@ figure.cushy {
         left: 1.875em;
         width: 0.0625rem; } }
   .contextual-display a[data-contextual-close] {
+    -webkit-tap-highlight-color: transparent;
     position: absolute;
     top: 1rem;
     right: 0.6666rem;
@@ -444,7 +445,8 @@ figure.cushy {
     text-align: left;
     min-width: 4em;
     min-height: 4em;
-    background: #888888; }
+    background: #888888;
+    margin-bottom: 2em; }
     .contextual-example .box.light {
       background: #eeeeee; }
   .contextual-example .text-box {
