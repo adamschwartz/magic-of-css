@@ -48,7 +48,7 @@
       description: '<p>A line outside the box</p>',
       exampleCSS: 'outline:\n    1.5em double lightgreen',
       exampleCSSSelector: '.box',
-      exampleHTML: '<div class="box" style="margin-top: 1.5em"></div>'
+      exampleHTML: '<div class="box" style="margin: 1.5em auto"></div>'
     },
     'border-radius': {
       description: '<p>Rounded corners</p>',
