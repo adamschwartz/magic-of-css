@@ -427,6 +427,9 @@ figure.cushy {
 @media (min-width: 48em) {
   body.contextual-open .page {
     -webkit-transform: translate3d(-20rem, 0, 0); } }
+.contextual-description {
+  margin-bottom: 1em; }
+
 .contextual-example {
   border-top: 0.0625em solid #eeeeee;
   padding-top: 2em;
@@ -447,7 +450,8 @@ figure.cushy {
   .contextual-example .text-box {
     box-shadow: inset 0 0 0 0.1em #888888;
     padding: 0.5em 1em;
-    text-align: left; }
+    text-align: left;
+    margin-bottom: 1em; }
   .contextual-example .text {
     display: -moz-inline-stack;
     display: inline-block;
