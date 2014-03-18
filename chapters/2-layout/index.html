@@ -15,195 +15,198 @@
 
         <script type="text/javascript" src="//use.typekit.net/hlu4jhg.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <script type="text/javascript" src="../../js/chapters.js"></script>
     </head>
     <body>
-        <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div></div></a>
+        <div class="page">
+            <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div></div></a>
 
-        <div class="chapter">
-            <h1>
-                <span class="number">Chapter 2</span>
-                <span class="title">Layout</span>
-            </h1>
+            <div class="chapter">
+                <h1>
+                    <span class="number">Chapter 2</span>
+                    <span class="title">Layout</span>
+                </h1>
 
-            <p><em>In the <a href="../1-the-box">previous chapter</a>, we learned that each element in the page is a rectangular box. In this chapter, we will see how multiple boxes get layed out on a page.</em></p>
+                <p><em>In the <a href="../1-the-box">previous chapter</a>, we learned that each element in the page is a rectangular box. In this chapter, we will see how multiple boxes get layed out on a page.</em></p>
 
-            <hr>
+                <hr>
 
-            <h2>HTML and Body</h2>
+                <h2>HTML and Body</h2>
 
-            <p>The <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> elements are rectangles, just like any other elements on the page. We'll cover them more in depth in a later chapter—but for now, just know that they're both <code>block</code> elements.</p>
+                <p>The <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> elements are rectangles, just like any other elements on the page. We'll cover them more in depth in a later chapter—but for now, just know that they're both <code>block</code> elements.</p>
 
-            <h2>Block, inline, and inline-block</h2>
+                <h2>Block, inline, and inline-block</h2>
 
-            <p>With respect to layout, the <code>display</code> property has three values you should be most concerned with. Here are the main differences between how these three display types get layed out:</p>
+                <p>With respect to layout, the <code>display</code> property has three values you should be most concerned with. Here are the main differences between how these three display types get layed out:</p>
 
-            <dl>
-                <dt><code>block</code></dt>
-                    <dd>My width is sized by my parent and I can have widths and heights set on me. My height is determined by my content.</dd>
-                <dt><code>inline</code></dt>
-                    <dd>My width and height are determined by <em>my contents</em> and widths and heights don't do anything to me. Think of me like a word flowing in a paragraph.</dd>
-                <dt><code>inline-block</code></dt>
-                    <dd>I am the same as <code>block</code> except my width is determined by my contents.</dd>
-            </dl>
+                <dl>
+                    <dt><code>block</code></dt>
+                        <dd>My width is sized by my parent and I can have widths and heights set on me. My height is determined by my content.</dd>
+                    <dt><code>inline</code></dt>
+                        <dd>My width and height are determined by <em>my contents</em> and widths and heights don't do anything to me. Think of me like a word flowing in a paragraph.</dd>
+                    <dt><code>inline-block</code></dt>
+                        <dd>I am the same as <code>block</code> except my width is determined by my contents.</dd>
+                </dl>
 
-            <p>Let's play with an example.</p>
+                <p>Let's play with an example.</p>
 
-            <h2>Example</h2>
+                <h2>Example</h2>
 
-            <p>In the following example we have elements of each of these three display types with the following additional CSS applied to all of them:</p>
+                <p>In the following example we have elements of each of these three display types with the following additional CSS applied to all of them:</p>
 
-            <style>
-                .example-display .example-content * {
-                    background: #eee;
-                    border: 2px solid;
-                    margin-bottom: 4px;
-                    padding: 10px
-                }
+                <style>
+                    .example-display .example-content * {
+                        background: #eee;
+                        border: 2px solid;
+                        margin-bottom: 4px;
+                        padding: 10px
+                    }
 
-                .example-display .example-content .block {
-                    display: block
-                }
+                    .example-display .example-content .block {
+                        display: block
+                    }
 
-                .example-display .example-content .inline {
-                    display: inline
-                }
+                    .example-display .example-content .inline {
+                        display: inline
+                    }
 
-                .example-display .example-content .inline-block {
-                    display: inline-block
-                }
-            </style>
+                    .example-display .example-content .inline-block {
+                        display: inline-block
+                    }
+                </style>
 
-            <pre><code>* {
+                <pre><code>* {
     background: #eee;
     border: 2px solid;
     margin-bottom: 4px;
     padding: 10px
 }</code></pre>
 
-            <div class="example example-display">
-                <div class="example-content">
-                    <div class="block">Block</div>
-                    <div class="block">Block</div>
-                    <span class="inline">Inline</span>
-                    <span class="inline">Inline</span>
-                    <span class="inline">Inline</span>
-                    <span class="inline">Inline</span>
-                    <span class="inline">Inline</span>
-                    <span class="inline">Inline</span>
-                    <span class="inline">Inline</span>
-                    <span class="inline">Inline</span>
-                    <span class="inline">Inline</span>
-                    <div class="block">Block</div>
-                    <div class="block">Block</div>
-                    <div class="inline-block">Inline block</div>
-                    <div class="inline-block">Inline block</div>
-                    <div class="inline-block">Inline block</div>
+                <div class="example example-display">
+                    <div class="example-content">
+                        <div class="block">Block</div>
+                        <div class="block">Block</div>
+                        <span class="inline">Inline</span>
+                        <span class="inline">Inline</span>
+                        <span class="inline">Inline</span>
+                        <span class="inline">Inline</span>
+                        <span class="inline">Inline</span>
+                        <span class="inline">Inline</span>
+                        <span class="inline">Inline</span>
+                        <span class="inline">Inline</span>
+                        <span class="inline">Inline</span>
+                        <div class="block">Block</div>
+                        <div class="block">Block</div>
+                        <div class="inline-block">Inline block</div>
+                        <div class="inline-block">Inline block</div>
+                        <div class="inline-block">Inline block</div>
+                    </div>
                 </div>
-            </div>
 
-            <p>
-                <label>
-                    <input type="checkbox" class="example-display-fixed-width-checkbox"> Set all widths to 20%
-                </label>
-            </p>
+                <p>
+                    <label>
+                        <input type="checkbox" class="example-display-fixed-width-checkbox"> Set all widths to 20%
+                    </label>
+                </p>
 
-            <script>
-                document.querySelector('.example-display-fixed-width-checkbox').addEventListener('change', function(e){
-                    var checked = e.target.checked;
-                    Array.prototype.slice.call(document.querySelectorAll('.example-display .example-content *')).forEach(function(box){
-                        box.style.width = checked ? '20%' : 'auto';
+                <script>
+                    document.querySelector('.example-display-fixed-width-checkbox').addEventListener('change', function(e){
+                        var checked = e.target.checked;
+                        Array.prototype.slice.call(document.querySelectorAll('.example-display .example-content *')).forEach(function(box){
+                            box.style.width = checked ? '20%' : 'auto';
+                        });
                     });
-                });
-            </script>
+                </script>
 
-            <p>One thing to notice here is the difference between <code>inline</code> and <code>inline-block</code>. The <code>inline</code> elements display their <code>10px</code> padding and <code>2px</code> border, but only the lefts and rights (and not tops and bottoms) of these actually affect their layout. Whereas the <code>inline-block</code> elements reposition themselves in layout due to their padding and border, just as do the <code>block</code> elements.</p>
+                <p>One thing to notice here is the difference between <code>inline</code> and <code>inline-block</code>. The <code>inline</code> elements display their <code>10px</code> padding and <code>2px</code> border, but only the lefts and rights (and not tops and bottoms) of these actually affect their layout. Whereas the <code>inline-block</code> elements reposition themselves in layout due to their padding and border, just as do the <code>block</code> elements.</p>
 
-            <p>Another important thing to notice is that even with <code>20%</code> width set on all elements, the <code>block</code> elements <em>still don't wrap</em>. Assuming no floats are in the mix, <code>block</code> elements do not allow horizontal neighbors.</p>
+                <p>Another important thing to notice is that even with <code>20%</code> width set on all elements, the <code>block</code> elements <em>still don't wrap</em>. Assuming no floats are in the mix, <code>block</code> elements do not allow horizontal neighbors.</p>
 
-            <h3 class="magic">Horizontal Scrolling with Inline Block</h3>
+                <h3 class="magic">Horizontal Scrolling with Inline Block</h3>
 
-            <p>Horizontal scrolling sections can be tricky. Fortunately, this is one place where <code>inline-block</code> can get us out of a jam.</p>
+                <p>Horizontal scrolling sections can be tricky. Fortunately, this is one place where <code>inline-block</code> can get us out of a jam.</p>
 
-            <p>Let's say I want to display some code:</p>
+                <p>Let's say I want to display some code:</p>
 
-            <pre><code>body {
+                <pre><code>body {
     background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */
 }</code></pre>
 
-            <p>This looks fine and scrolls fine, but what would happen if we wanted to apply a background color to each row of text on hover.</p>
+                <p>This looks fine and scrolls fine, but what would happen if we wanted to apply a background color to each row of text on hover.</p>
 
-            <style>
-                .example-row-highlight-fail .row:hover {
-                    background: #ccc
-                }
-            </style>
+                <style>
+                    .example-row-highlight-fail .row:hover {
+                        background: #ccc
+                    }
+                </style>
 
-            <pre class="example-row-highlight-fail"><code><div class="row">body {</div><!--
+                <pre class="example-row-highlight-fail"><code><div class="row">body {</div><!--
 --><div class="row">    background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */</div><!--
 --><div class="row">}</div></code></pre>
 
-            <p>Scrolling to the right, you'll see that the row hover color doesn't extend all of the way to the right. This is because each row wrapper is a block element, sizing itself to the width of its parent, not to the scroll width of its parent.</p>
+                <p>Scrolling to the right, you'll see that the row hover color doesn't extend all of the way to the right. This is because each row wrapper is a block element, sizing itself to the width of its parent, not to the scroll width of its parent.</p>
 
-            <p>By adding an <code>inline-block</code> element which wraps all of the rows, we get the scroll we want, and the row elements (still <code>display: block</code>) can fill the width of <em>that</em> element, which is the same as the scroll width of the whole code block, because it is sized by <em>its contents</em>—in this case, the longest row.</p>
+                <p>By adding an <code>inline-block</code> element which wraps all of the rows, we get the scroll we want, and the row elements (still <code>display: block</code>) can fill the width of <em>that</em> element, which is the same as the scroll width of the whole code block, because it is sized by <em>its contents</em>—in this case, the longest row.</p>
 
-            <style>
-                .example-row-highlight-fix .inline-block {
-                    display: inline-block
-                }
+                <style>
+                    .example-row-highlight-fix .inline-block {
+                        display: inline-block
+                    }
 
-                .example-row-highlight-fix .row:hover {
-                    background: #ccc
-                }
-            </style>
+                    .example-row-highlight-fix .row:hover {
+                        background: #ccc
+                    }
+                </style>
 
-            <pre class="example-row-highlight-fix"><code><div class="inline-block"><div class="row">body {</div><!--
+                <pre class="example-row-highlight-fix"><code><div class="inline-block"><div class="row">body {</div><!--
 --><div class="row">    background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */</div><!--
 --><div class="row">}</div></div></code></pre>
 
-            <h2>Tables</h2>
+                <h2>Tables</h2>
 
-            <p>Tables are crazy, and <a href="../3-tables">Chapter 3</a> covers them in more detail. But with respect to layout, think of a <code>&lt;table&gt;</code> like an <code>inline-block</code> element with one special property: its <code>table-cell</code> children can center their contents vertically.</p>
+                <p>Tables are crazy, and <a href="../3-tables">Chapter 3</a> covers them in more detail. But with respect to layout, think of a <code>&lt;table&gt;</code> like an <code>inline-block</code> element with one special property: its <code>table-cell</code> children can center their contents vertically.</p>
 
-            <p>Aside from the relatively new and experimental <code>display</code> property <code>flex</code> (which may be covered in a later chapter), no other element can do this.</p>
+                <p>Aside from the relatively new and experimental <code>display</code> property <code>flex</code> (which may be covered in a later chapter), no other element can do this.</p>
 
-            <p>So with respect to layout, think of tables as a tool which can be used to center arbirtrary content vertically. (Centering something vertically when you know its height is trivial. First position the element, then set a <code>top</code> and <code>bottom</code> to the same value (<code>0</code> works), set your desired <code>height</code>, and then set <code>margin-top</code> and <code>margin-bottom</code> to <code>auto</code>. <em>Done.</em>)</p>
+                <p>So with respect to layout, think of tables as a tool which can be used to center arbirtrary content vertically. (Centering something vertically when you know its height is trivial. First position the element, then set a <code>top</code> and <code>bottom</code> to the same value (<code>0</code> works), set your desired <code>height</code>, and then set <code>margin-top</code> and <code>margin-bottom</code> to <code>auto</code>. <em>Done.</em>)</p>
 
-            <h2>Text align</h2>
+                <h2>Text align</h2>
 
-            <p>Basically, text-align lets you align text, child inline elements, and child inline block elements to the left, right, center, or justified. (You know what these mean if you've ever used a WYSIWYG editor.)</p>
+                <p>Basically, text-align lets you align text, child inline elements, and child inline block elements to the left, right, center, or justified. (You know what these mean if you've ever used a WYSIWYG editor.)</p>
 
-            <p>Now for some magic:</p>
+                <p>Now for some magic:</p>
 
-            <h3 class="magic">Grid with Text-align Justify</h3>
+                <h3 class="magic">Grid with Text-align Justify</h3>
 
-            <p>Since <code>inline-block</code> elements are treated more or less as text, you can use <code>text-align: justify</code> on a list of <code>inline-block</code> elements to create a grid structure.</p>
+                <p>Since <code>inline-block</code> elements are treated more or less as text, you can use <code>text-align: justify</code> on a list of <code>inline-block</code> elements to create a grid structure.</p>
 
-            <style>
-                .example-text-align-justify .grid {
-                    border: 2px solid;
-                    text-align: justify;
-                    font-size: 0px;
-                    padding: 2%
-                }
+                <style>
+                    .example-text-align-justify .grid {
+                        border: 2px solid;
+                        text-align: justify;
+                        font-size: 0px;
+                        padding: 2%
+                    }
 
-                .example-text-align-justify .box {
-                    font-size: 16px;
-                    display: inline-block;
-                    background: #eee;
-                    border: 2px solid;
-                    width: 29%;
-                    padding: 2%;
-                    margin: 2%
-                }
+                    .example-text-align-justify .box {
+                        font-size: 16px;
+                        display: inline-block;
+                        background: #eee;
+                        border: 2px solid;
+                        width: 29%;
+                        padding: 2%;
+                        margin: 2%
+                    }
 
-                .example-text-align-justify .break {
-                    display: inline-block;
-                    width: 30%;
-                    height: 0
-                }
-            </style>
+                    .example-text-align-justify .break {
+                        display: inline-block;
+                        width: 30%;
+                        height: 0
+                    }
+                </style>
 
-            <pre><code>.grid {
+                <pre><code>.grid {
     border: 2px solid;
     text-align: justify
 }
@@ -223,7 +226,7 @@
     height: 0
 }</code></pre>
 
-            <pre><code>&lt;div class="grid"&gt;
+                <pre><code>&lt;div class="grid"&gt;
     &lt;div class="box"&gt;Column&lt;/div&gt;
     &lt;div class="box"&gt;Column&lt;/div&gt;
     &lt;div class="box"&gt;Column&lt;/div&gt;
@@ -233,111 +236,111 @@
     &lt;div class="break"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="example example-text-align-justify">
-                <div class="example-content">
-                    <div class="grid">
-                        <div class="box">Box</div>
-                        <div class="box">Box</div>
-                        <div class="box">Box</div>
-                        <div class="box">Box</div>
-                        <div class="box">Box</div>
-                        <div class="box">Box</div>
-                        <div class="break"></div>
+                <div class="example example-text-align-justify">
+                    <div class="example-content">
+                        <div class="grid">
+                            <div class="box">Box</div>
+                            <div class="box">Box</div>
+                            <div class="box">Box</div>
+                            <div class="box">Box</div>
+                            <div class="box">Box</div>
+                            <div class="box">Box</div>
+                            <div class="break"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <p>
-                <input type="range" class="example-text-align-justify-slider" min="25" max="29" value="29">
-                <span> &nbsp;&nbsp;<code>width: <span class="example-text-align-justify-slider-value">29%</span></code></span>
-            </p>
+                <p>
+                    <input type="range" class="example-text-align-justify-slider" min="25" max="29" value="29">
+                    <span> &nbsp;&nbsp;<code>width: <span class="example-text-align-justify-slider-value">29%</span></code></span>
+                </p>
 
-            <p>Adjust the width of the boxes and note that <code>text-align: justify</code> keeps the grid in tact.</p>
+                <p>Adjust the width of the boxes and note that <code>text-align: justify</code> keeps the grid in tact.</p>
 
-            <script>
-                document.querySelector('.example-text-align-justify-slider').addEventListener('change', function(e){
-                    var width = e.target.valueAsNumber + '%';
-                    document.querySelector('.example-text-align-justify-slider-value').innerHTML = width;
-                    Array.prototype.slice.call(document.querySelectorAll('.example-text-align-justify .box')).forEach(function(box){
-                        box.style.width = width;
+                <script>
+                    document.querySelector('.example-text-align-justify-slider').addEventListener('change', function(e){
+                        var width = e.target.valueAsNumber + '%';
+                        document.querySelector('.example-text-align-justify-slider-value').innerHTML = width;
+                        Array.prototype.slice.call(document.querySelectorAll('.example-text-align-justify .box')).forEach(function(box){
+                            box.style.width = width;
+                        });
                     });
-                });
-            </script>
+                </script>
 
-            <h2>Floats</h2>
+                <h2>Floats</h2>
 
-            <p>Floats are crazy, so crazy that they'll also get their own chapter.</p>
+                <p>Floats are crazy, so crazy that they'll also get their own chapter.</p>
 
-            <p>But when it comes to positioning, basically what you need to know is that floated elements behave kind of like <code>inline-block</code> elements, regardless of what their <code>display</code> property value actually is.</p>
+                <p>But when it comes to positioning, basically what you need to know is that floated elements behave kind of like <code>inline-block</code> elements, regardless of what their <code>display</code> property value actually is.</p>
 
-            <p>The truth is, these days, since <code>inline-block</code> is supported pretty widely, there's not as much use for <code>float</code> anymore. We'll still cover it since it's a card up your sleeve, and you should know how to whip it out. But don't worry about it too much just yet.</p>
+                <p>The truth is, these days, since <code>inline-block</code> is supported pretty widely, there's not as much use for <code>float</code> anymore. We'll still cover it since it's a card up your sleeve, and you should know how to whip it out. But don't worry about it too much just yet.</p>
 
-            <p>In the meantime, you can read up on the <a href="http://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo">relationship between display, position, and float</a> in the w3 CSS2 spec.<sup><a href="#cite-1">[1]</a></sup></p>
+                <p>In the meantime, you can read up on the <a href="http://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo">relationship between display, position, and float</a> in the w3 CSS2 spec.<sup><a href="#cite-1">[1]</a></sup></p>
 
-            <h2>Positioning</h2>
+                <h2>Positioning</h2>
 
-            <p>Ahh, this is where the real fun begins.</p>
+                <p>Ahh, this is where the real fun begins.</p>
 
-            <p>An element is said to be "positioned" if its <code>position</code> property is any value except <code>static</code>.</p>
+                <p>An element is said to be "positioned" if its <code>position</code> property is any value except <code>static</code>.</p>
 
-            <p>When an element is positioned, it is layed out according to whichever positioning properties <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> it has set.</p>
+                <p>When an element is positioned, it is layed out according to whichever positioning properties <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> it has set.</p>
 
-            <p>This means not only do these properties reposition (or move) elements, they also can resize elements. For example, with <code>position</code> <code>absolute</code> or <code>fixed</code>, you can set both a <code>top</code> and <code>bottom</code> (or both a <code>left</code> and <code>right</code>), and your instruction will enforce a size on the element. The precedence here can get pretty complicated, but as a general rule, if you set <code>top</code>, <code>bottom</code>, <em>and</em> <code>height</code> simultaneously for a positioned element, the <code>height</code> value will be ignored.</p>
+                <p>This means not only do these properties reposition (or move) elements, they also can resize elements. For example, with <code>position</code> <code>absolute</code> or <code>fixed</code>, you can set both a <code>top</code> and <code>bottom</code> (or both a <code>left</code> and <code>right</code>), and your instruction will enforce a size on the element. The precedence here can get pretty complicated, but as a general rule, if you set <code>top</code>, <code>bottom</code>, <em>and</em> <code>height</code> simultaneously for a positioned element, the <code>height</code> value will be ignored.</p>
 
-            <p>The <code>position</code> property can take on the following values:</p>
+                <p>The <code>position</code> property can take on the following values:</p>
 
-            <dl>
-                <dt><code>static</code></dt>
-                    <dd><em>The default</em>. Any <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> properties are ignored.</dd>
-                <dt><code>absolute</code></dt>
-                    <dd>The element will be removed from its original layout position and positioned relative to its nearest positioned parent by the positioning properties.</dd>
-                <dt><code>fixed</code></dt>
-                    <dd>The element will be removed from its original layout position and positioned relative to the window. (Mobile devices with zoom may have indeterminant behavior.)</dd>
-                <dt><code>relative</code></dt>
-                    <dd>Unlike absolute or fixed, the element stays in its original layout position and the <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> properties only <em>nudge</em> it from that original position.</dd>
-            </dl>
+                <dl>
+                    <dt><code>static</code></dt>
+                        <dd><em>The default</em>. Any <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> properties are ignored.</dd>
+                    <dt><code>absolute</code></dt>
+                        <dd>The element will be removed from its original layout position and positioned relative to its nearest positioned parent by the positioning properties.</dd>
+                    <dt><code>fixed</code></dt>
+                        <dd>The element will be removed from its original layout position and positioned relative to the window. (Mobile devices with zoom may have indeterminant behavior.)</dd>
+                    <dt><code>relative</code></dt>
+                        <dd>Unlike absolute or fixed, the element stays in its original layout position and the <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> properties only <em>nudge</em> it from that original position.</dd>
+                </dl>
 
-            <p>This stuff can be confusing, so we'll highlight some important takeaways from these descriptions:</p>
+                <p>This stuff can be confusing, so we'll highlight some important takeaways from these descriptions:</p>
 
-            <ul>
-                <li><code>absolute</code> and <code>fixed</code> elements are not part of normal document layout. When their layouts change, only their child elements are affected.</li>
-                <li><code>static</code> and <code>relative</code> elements are part of the layout. When their layout changes, so do their document neighbors.</li>
-                <li>When <em>nudged</em> via <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code>, <code>relative</code> elements do not affect their document neighbors. Instead, those neighbors act like the element was never <em>nudged</em> from its original position.</li>
-                <li>Confusingly, <code>relative</code> is not so-named because its child elements will be positioned "relative" to it. That is simply a consequence of it being positioned at all (and so the same could be said about <code>absolute</code> and <code>fixed</code> elements as well). Rather, it is so-named to describe how you can "relatively" <em>nudge</em> it based on its original position.</li>
-            </ul>
+                <ul>
+                    <li><code>absolute</code> and <code>fixed</code> elements are not part of normal document layout. When their layouts change, only their child elements are affected.</li>
+                    <li><code>static</code> and <code>relative</code> elements are part of the layout. When their layout changes, so do their document neighbors.</li>
+                    <li>When <em>nudged</em> via <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code>, <code>relative</code> elements do not affect their document neighbors. Instead, those neighbors act like the element was never <em>nudged</em> from its original position.</li>
+                    <li>Confusingly, <code>relative</code> is not so-named because its child elements will be positioned "relative" to it. That is simply a consequence of it being positioned at all (and so the same could be said about <code>absolute</code> and <code>fixed</code> elements as well). Rather, it is so-named to describe how you can "relatively" <em>nudge</em> it based on its original position.</li>
+                </ul>
 
-            <p>Now again, for a little magic:</p>
+                <p>Now again, for a little magic:</p>
 
-            <h3 class="magic">100% <code>top</code>, <code>bottom</code>, <code>left</code>, or <code>right</code></h3>
+                <h3 class="magic">100% <code>top</code>, <code>bottom</code>, <code>left</code>, or <code>right</code></h3>
 
-            <p>Positioning a child element abbutted to the outside of its parent is a bit tricky.</p>
+                <p>Positioning a child element abbutted to the outside of its parent is a bit tricky.</p>
 
-            <p>The naive approach is to use a negative positioning property which matches its dimension.</p>
+                <p>The naive approach is to use a negative positioning property which matches its dimension.</p>
 
-            <p>For example:</p>
+                <p>For example:</p>
 
-            <style>
-                .example-position-negative .parent {
-                    position: relative;
-                    text-align: center;
-                    padding: 20px;
-                    background: #eee;
-                    margin-top: 60px
-                }
+                <style>
+                    .example-position-negative .parent {
+                        position: relative;
+                        text-align: center;
+                        padding: 20px;
+                        background: #eee;
+                        margin-top: 60px
+                    }
 
-                .example-position-negative .child {
-                    position: absolute;
-                    height: 40px;
-                    top: -40px;
-                    right: 0;
-                    line-height: 40px;
-                    background: #444;
-                    color: #fff;
-                    padding: 0 10px
-                }
-            </style>
+                    .example-position-negative .child {
+                        position: absolute;
+                        height: 40px;
+                        top: -40px;
+                        right: 0;
+                        line-height: 40px;
+                        background: #444;
+                        color: #fff;
+                        padding: 0 10px
+                    }
+                </style>
 
-            <pre><code>.parent {
+                <pre><code>.parent {
     position: relative;
     text-align: center;
     padding: 20px;
@@ -355,44 +358,44 @@
     padding: 0 10px
 }</code></pre>
 
-            <div class="example example-position-negative">
-                <div class="example-content">
-                    <div class="parent">
-                        Parent
-                        <div class="child">Child</div>
+                <div class="example example-position-negative">
+                    <div class="example-content">
+                        <div class="parent">
+                            Parent
+                            <div class="child">Child</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <pre><code>height: 40px;
+                <pre><code>height: 40px;
 top: -40px;</code></pre>
 
-            <p>This part is unideal because it's not <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a> and because we had to specify a height. <em>When possible, it's better not to specify fixed values in CSS.</em> The more you can let things get sized by content the better, because it means your design is more flexible, supports more use-cases, and is less likely to create future bugs.</p>
+                <p>This part is unideal because it's not <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a> and because we had to specify a height. <em>When possible, it's better not to specify fixed values in CSS.</em> The more you can let things get sized by content the better, because it means your design is more flexible, supports more use-cases, and is less likely to create future bugs.</p>
 
-            <p>So what can we do instead? Use <code>100%</code> values. Instead of thinking moving the child up by a negative <code>top</code>, think of it as moving <code>100%</code> from the bottom.</p>
+                <p>So what can we do instead? Use <code>100%</code> values. Instead of thinking moving the child up by a negative <code>top</code>, think of it as moving <code>100%</code> from the bottom.</p>
 
-            <p>So now our same example can be coded like this instead:</p>
+                <p>So now our same example can be coded like this instead:</p>
 
-            <style>
-                .example-position-100 .parent {
-                    position: relative;
-                    text-align: center;
-                    padding: 20px;
-                    background: #eee;
-                    margin-top: 60px
-                }
+                <style>
+                    .example-position-100 .parent {
+                        position: relative;
+                        text-align: center;
+                        padding: 20px;
+                        background: #eee;
+                        margin-top: 60px
+                    }
 
-                .example-position-100 .child {
-                    position: absolute;
-                    bottom: 100%;
-                    right: 0;
-                    background: #444;
-                    color: #fff;
-                    padding: 10px
-                }
-            </style>
+                    .example-position-100 .child {
+                        position: absolute;
+                        bottom: 100%;
+                        right: 0;
+                        background: #444;
+                        color: #fff;
+                        padding: 10px
+                    }
+                </style>
 
-            <pre><code>.parent {
+                <pre><code>.parent {
     position: relative;
     text-align: center;
     padding: 20px;
@@ -408,50 +411,51 @@ top: -40px;</code></pre>
     padding: 10px
 }</code></pre>
 
-            <div class="example example-position-100">
-                <div class="example-content">
-                    <div class="parent">
-                        Parent
-                        <div class="child">Child</div>
+                <div class="example example-position-100">
+                    <div class="example-content">
+                        <div class="parent">
+                            Parent
+                            <div class="child">Child</div>
+                        </div>
                     </div>
                 </div>
+
+                <p>Notice how in this version we were able to simplify the padding and line-height because the child box is now sizing itself to its contents, rather than the other way around.</p>
+
+                <h2>Transforms</h2>
+
+                <p>These will definitely get their own chapter. Transforms are where a lot of the real magic lives. But for now, note that unfortunately <a href="http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/">transformed elements are treated as positioned even if they are <code>position: static</code></a><sup><a href="#cite-2">[2]</a></sup>. Commit this to memory or at some point it will probably burn you.</p>
+
+                <hr>
+
+                <h3>Further reading</h3>
+
+                <ul>
+                    <li><a href="http://quirksmode.org/css/css2/display.html">Quirksmode: <code>display</code></a> — has some great toys for playing with the different property values</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Layout">MDN: Layout</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">MDN: position</a></li>
+                </ul>
+
+                <h3>Citations</h3>
+
+                <ol>
+                    <li><a id="cite-1" href="http://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo">Relationships between display, position, and float</a></li>
+                    <li><a id="cite-2" href="http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/">Un-fixing Fixed Elements with CSS Transforms</a></li>
+                </ol>
+
+                <hr>
+
+                <nav class="chapter-navigation">
+                    <a class="previous-chapter" href="../1-the-box">
+                        <span class="number">1</span>
+                        <span class="title">The Box</span>
+                    </a>
+                    <a class="next-chapter" href="../3-tables">
+                        <span class="number">3</span>
+                        <span class="title">Tables</span>
+                    </a>
+                </nav>
             </div>
-
-            <p>Notice how in this version we were able to simplify the padding and line-height because the child box is now sizing itself to its contents, rather than the other way around.</p>
-
-            <h2>Transforms</h2>
-
-            <p>These will definitely get their own chapter. Transforms are where a lot of the real magic lives. But for now, note that unfortunately <a href="http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/">transformed elements are treated as positioned even if they are <code>position: static</code></a><sup><a href="#cite-2">[2]</a></sup>. Commit this to memory or at some point it will probably burn you.</p>
-
-            <hr>
-
-            <h3>Further reading</h3>
-
-            <ul>
-                <li><a href="http://quirksmode.org/css/css2/display.html">Quirksmode: <code>display</code></a> — has some great toys for playing with the different property values</li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Layout">MDN: Layout</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">MDN: position</a></li>
-            </ul>
-
-            <h3>Citations</h3>
-
-            <ol>
-                <li><a id="cite-1" href="http://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo">Relationships between display, position, and float</a></li>
-                <li><a id="cite-2" href="http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/">Un-fixing Fixed Elements with CSS Transforms</a></li>
-            </ol>
-
-            <hr>
-
-            <nav class="chapter-navigation">
-                <a class="previous-chapter" href="../1-the-box">
-                    <span class="number">1</span>
-                    <span class="title">The Box</span>
-                </a>
-                <a class="next-chapter" href="../3-tables">
-                    <span class="number">3</span>
-                    <span class="title">Tables</span>
-                </a>
-            </nav>
         </div>
     </body>
 </html>

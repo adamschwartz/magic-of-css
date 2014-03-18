@@ -15,383 +15,387 @@
 
         <script type="text/javascript" src="//use.typekit.net/hlu4jhg.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <script type="text/javascript" src="../../js/chapters.js"></script>
     </head>
     <body>
-        <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div></div></a>
+        <div class="page">
+            <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div></div></a>
 
-        <style>
-            .magic-color {
-                min-height: 4em;
-                border-radius: 3px;
-                margin: 4em -200px
-            }
-
-            @media (max-width: 75em) {
+            <style>
                 .magic-color {
-                    margin: 0 0 1em
-                }
-            }
-
-            .magic-color h2 {
-                padding: 1em 0;
-                text-align: center;
-                color: #fff;
-                font-weight: 200;
-                text-transform: uppercase;
-                letter-spacing: .4em;
-                margin-left: .4em
-            }
-
-            .red-gradient {
-                background-image: linear-gradient(top left, #723362 0%, #9d223c 100%);
-                background-color: #9d223c
-            }
-
-            .green-gradient {
-                background-image: linear-gradient(135deg, #5fa4ee, #56e7ca);
-                background-color: #5fa4ee
-            }
-
-            span.color {
-                display: inline-block;
-                position: relative;
-                padding-left: 10px;
-                border-radius: 3px;
-                width: 1.3em;
-                background-color: #fff;
-                background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
-                background-size: 10px 10px;
-                background-position: 0 0, 5px 5px
-            }
-
-            code + span.color {
-                margin-left: 0
-            }
-
-            code + span.color, code + span.color > span {
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0
-            }
-
-            span.color > span {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                border-radius: 3px
-            }
-
-            span.color:before {
-                content: "\00a0"
-            }
-        </style>
-
-        <div class="chapter">
-            <h1>
-                <span class="number">Chapter 4</span>
-                <span class="title">Color</span>
-            </h1>
-
-            <p><em>I know what you're thinking. <em>A whole chapter on colors?</em> Trust me, one chapter is hardly enough. Color is an entire dimension, and it's incredible powerful.</em></p>
-
-            <hr>
-
-            <style>
-                figure.all-rgb {
-                    width: 1024px;
-                    max-width: 100%;
-                }
-            </style>
-
-            <figure class="cushy all-rgb">
-                <img src="images/all-rgb.png">
-                <figcaption>
-                    <div class="figcaption">
-                        All RGB colors<sup><a href="#cite-1">[1]</a></sup>
-                    </div>
-                </figcaption>
-            </figure>
-
-            <div class="magic-color red-gradient">
-                <h2>Challenges</h2>
-            </div>
-
-            <h2>A color is a color <em>isn't a color</em>...</h2>
-
-            <h3>...not to computers</h3>
-
-            <p>The first myth worth dispelling is that colors are the same everywhere. In fact, the opposite is probably closer to the truth.</p>
-
-            <ul>
-                <li><a href="http://stackoverflow.com/questions/6237455/chrome-renders-colours-differently-from-safari-and-firefox">Colors render differently in different browsers.</a><sup><a href="#cite-2">[2]</a></sup></li>
-                <li><a href="https://discussions.apple.com/thread/1976783?tstart=0">Screenshots don't always capture the same colors.</a><sup><a href="#cite-3">[3]</a></sup></li>
-                <li>Browsers have all sorts of bugs related to color rendering. (<a href="https://code.google.com/p/chromium/issues/detail?id=67230">Example</a><sup><a href="#cite-4">[4]</a></sup>)</li>
-            </ul>
-
-            <h3>...and not to human eye</h3>
-
-            <p>The way a color appears to the human eye is dependant on many other factors as well, including:</p>
-
-            <ul>
-                <li>Type of device (laptop, desktop, mobile phone)</li>
-                <li>Distance and angle the device is from the eye</li>
-                <li>Quality of display (number of colors it can render, accuracy of reproduction, supported viewing angle, maximum contrast, etc.)</li>
-                <li>Lighting conditions (inside vs. outside, day vs. night, near a window or not, etc.)</li>
-                <li>Vision of viewer (corrective lenses, visual impairments, colorblindness)</li>
-            </ul>
-
-            <p>As designers, we need to be aware of these challenges so we can address them. Here are just a few techniques to help:</p>
-
-            <ul>
-                <li>Choosing colors appropriate for type (and backgrounds of type)</li>
-                <li>Using skeumorophism when appropropriate to help the eye recognize objects or concepts at it would in the real world</li>
-                <li>Using contrast to increase readability (nobody can read white on beige)</li>
-                <li>Using patterns as a fallback for colorblind users when necessary (<a href="http://littlebigdetails.com/post/35775193711/trello-color-blind-friendly-mode-makes">Trello example</a><sup><a href="#cite-5">[5]</a></sup>)</li>
-            </ul>
-
-            <p>But remember, <a href="http://www.npr.org/2013/01/18/169708761/edward-tufte-wants-you-to-see-better">nothing is better than <em>seeing</em></a><sup><a href="#cite-6">[6]</a></sup>. Use your eyes (and the eyes of users you test). Test your color choices on a variety of devices and in a variety of lighting conditions until you feel confident that every user will see something desirable.</p>
-
-            <div class="magic-color green-gradient">
-                <h2>Opportunities</h2>
-            </div>
-
-            <h2>Color strategy</h2>
-
-            <p>As noted above, color is an extremely powerful tool. But with great power comes great responsibility. ;) Colors can be used in so many different ways, but using color for one thing may limit your ability to use it for something else. Choosing a particular <code>purple</code><span class="color"><span style="background: purple"></span></span> to represent your brand may limit your ability to use that same purple for something else. And remember, color's power as an aesthetic tool at least matches its power as a functional one. There may be times when you need to make a trade-off between using a color for one versus the other.</p>
-
-            <h2>Color tools</h2>
-
-            <h3>Sentiment</h3>
-
-            <p>Did you know <code>red</code><span class="color"><span style="background: red"></span></span> actually makes people hungry?<sup><a href="#cite-7">[7]</a></sup></p>
-
-            <p>Well, similarly it should be no surprise that colors can affect peoples' moods and opinions in a variety of ways. These effects tend to be subjective and rely heavilly on cultural and contextual cues. But they're very real, so understanding them is crucial.</p>
-
-            <p>Do you want to shock people? Do you want to put them at ease? Do you want people to trust you? Do you want them to be excited? Do you want to motivate people to take action? Answering these questions will help you decide on colors for you app.</p>
-
-            <h3>Branding</h3>
-
-            <p>Colors are so powerful that a single color can suggest a brand.</p>
-
-            <p>Can you guess the brand for each of these colors? (Hover to see the answer.)</p>
-
-            <style>
-                .branding-color {
+                    min-height: 4em;
                     border-radius: 3px;
-                    margin-bottom: 4px;
-                    display: inline-block
+                    margin: 4em -200px
                 }
 
-                .branding-color h2 {
-                    padding: 0 1em;
-                    display: inline-block;
+                @media (max-width: 75em) {
+                    .magic-color {
+                        margin: 0 0 1em
+                    }
+                }
+
+                .magic-color h2 {
+                    padding: 1em 0;
                     text-align: center;
                     color: #fff;
-                    font-weight: normal;
-                    opacity: 0;
-                    transition: opacity .3s;
-                    cursor: default;
-                    font-size: 1.2em
+                    font-weight: 200;
+                    text-transform: uppercase;
+                    letter-spacing: .4em;
+                    margin-left: .4em
                 }
 
-                .branding-color:hover h2 {
-                    opacity: 1
-                }
-            </style>
-
-            <div class="branding-color" style="background: #3b5998">
-                <h2>Facebook</h2>
-            </div>
-            <div class="branding-color" style="background: #55acee">
-                <h2>Twitter</h2>
-            </div>
-            <div class="branding-color" style="background: #ed1c16">
-                <h2>Coca-Cola</h2>
-            </div>
-            <div class="branding-color" style="background: #fe7722">
-                <h2>HubSpot</h2>
-            </div>
-
-            <h3>Status</h3>
-
-            <p><a href="http://getbootstrap.com">Twitter Bootstrap</a><sup><a href="#cite-8">[8]</a></sup> has popularized the use of <a href="http://getbootstrap.com/css/#helper-classes">status classes</a><sup><a href="#cite-9">[9]</a></sup> which map to certain colors.</p>
-
-            <p>Many different apps use this or a similar mapping:</p>
-
-            <li><code>#428bca</code><span class="color"><span style="background: #428bca"></span></span> = <code>primary</code></li>
-            <li><code>#dff0d8</code><span class="color"><span style="background: #dff0d8"></span></span> = <code>success</code></li>
-            <li><code>#d9edf7</code><span class="color"><span style="background: #d9edf7"></span></span> = <code>info</code></li>
-            <li><code>#fcf8e3</code><span class="color"><span style="background: #fcf8e3"></span></span> = <code>warning</code></li>
-            <li><code>#f2dede</code><span class="color"><span style="background: #f2dede"></span></span> = <code>danger</code></li>
-
-            <p>By consistently using <code>#dff0d8</code><span class="color"><span style="background: #dff0d8"></span></span> to indicate success or <code>#f2dede</code><span class="color"><span style="background: #f2dede"></span></span> to indicate danger, you reinfornce certain patterns, making it easier for people to understand these concepts in the future.</p>
-
-            <h3>Motion, Attention</h3>
-
-            <p>Sometimes you want to grab a users' attention. Transitioning a background color or text color (or simply changing it immediately) can be a great way to do so.</p>
-
-            <h3>Just about anything</h3>
-
-            <p>By no means is this meant to be an exhaustive list of the ways in which color can be used as a tool. <em>Use your creativity</em>, and try to think of ways color can be used to <em>reduce the complexity</em> of an existing UI.</p>
-
-            <p>Just make sure you don't go overboard and use too many colors. Using too many colors can cause visual dissonance which makes it hard for a user to focus. When choosing a color scheme, it's very important to think of how colors relate to one another to avoid such issues.</p>
-
-            <h2>Color schemes</h2>
-
-            <p>Picking a color scheme is essential. Some colors go well together and some don't. There are a number of methodologies out there for picking colors. But the best advice is to use your eyes.</p>
-
-            <p>Color schemes can have as few as one non-grayscale color or as many as you want. But I'd caution against using more than three. In the biz, three colors which go well together are known as triads. And there are many great resources out there to help you pick a triad. Here are some great resources on and for picking color schemes:</p>
-
-            <ul>
-                <li><a href="http://tympanus.net/codrops/2012/09/17/build-a-color-scheme-the-fundamentals">Codrops: Build a Color Scheme: The Fundamentals</a> — A great overview on the different types of color combinations (monochromatic, complementary, triadic, tetradic, analogous)<sup><a href="#cite-10">[10]</a></sup></li>
-                <li><a href="http://colorschemedesigner.com">Color Scheme Designer</a> — A great tool for building color schemes with these types of color combinations<sup><a href="#cite-11">[11]</a></sup></li>
-                <li><a href="https://kuler.adobe.com/create/color-wheel">Adobe Kuler: Color Wheel</a> — Another great color scheme chooser<sup><a href="#cite-12">[12]</a></sup></li>
-            </ul>
-
-            <h2>Which color did you mean?</h2>
-
-            <p>One common color mistake I see frontend developers make is using a gray (e.g. <code>#ccc</code><span class="color"><span style="background: #ccc"></span></span>) when they <em>mean to use</em> black with an alpha (e.g. <code>rgba(0, 0, 0, 0.2)</code><span class="color"><span style="background: rgba(0, 0, 0, 0.2)"></span></span>).</p>
-
-            <p><em>But, they look the same!?</em>, you may protest. Well, sure. But only when they're on white!</p>
-
-            <h3>Example</h3>
-
-            <p>Each of the white boxes has a <code>box-shadow: 0 2px 8px [color]</code> applied with the color from the respective column.</p>
-
-            <style>
-                .example-which-color .container {
-                    padding: 20px;
-                    background: #eee;
-                    text-align: center
+                .red-gradient {
+                    background-image: linear-gradient(top left, #723362 0%, #9d223c 100%);
+                    background-color: #9d223c
                 }
 
-                .example-which-color .container-green {
-                    background: #85ddba
+                .green-gradient {
+                    background-image: linear-gradient(135deg, #5fa4ee, #56e7ca);
+                    background-color: #5fa4ee
                 }
 
-                .example-which-color .item {
+                span.color {
                     display: inline-block;
-                    margin: 0 auto;
-                    width: 30%;
-                    height: 4em;
-                    background: #fff;
+                    position: relative;
+                    padding-left: 10px;
+                    border-radius: 3px;
+                    width: 1.3em;
+                    background-color: #fff;
+                    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+                    background-size: 10px 10px;
+                    background-position: 0 0, 5px 5px
+                }
+
+                code + span.color {
+                    margin-left: 0
+                }
+
+                code + span.color, code + span.color > span {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0
+                }
+
+                span.color > span {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
                     border-radius: 3px
                 }
 
-                .example-which-color .item-grey-shadow {
-                    box-shadow: 0 2px 8px #ccc
-                }
-
-                .example-which-color .item-black-alpha-shadow {
-                    box-shadow: 0 2px 8px rgba(0, 0, 0, .2)
+                span.color:before {
+                    content: "\00a0"
                 }
             </style>
 
-            <div class="example side-by-side example-which-color">
-                <div class="left">
-                    <p><code>#ccc</code><span class="color"><span style="background: #ccc"></span></span></p>
-                    <div class="example-content">
-                        <div class="container">
-                            <div class="item item-grey-shadow"></div>
+            <div class="chapter">
+                <h1>
+                    <span class="number">Chapter 4</span>
+                    <span class="title">Color</span>
+                </h1>
+
+                <p><em>I know what you're thinking. <em>A whole chapter on colors?</em> Trust me, one chapter is hardly enough. Color is an entire dimension, and it's incredible powerful.</em></p>
+
+                <hr>
+
+                <style>
+                    figure.all-rgb {
+                        width: 1024px;
+                        max-width: 100%;
+                    }
+                </style>
+
+                <figure class="cushy all-rgb">
+                    <img src="images/all-rgb.png">
+                    <figcaption>
+                        <div class="figcaption">
+                            All RGB colors<sup><a href="#cite-1">[1]</a></sup>
                         </div>
-                        <div class="container container-green">
-                            <div class="item item-grey-shadow"></div>
+                    </figcaption>
+                </figure>
+
+                <div class="magic-color red-gradient">
+                    <h2>Challenges</h2>
+                </div>
+
+                <h2>A color is a color <em>isn't a color</em>...</h2>
+
+                <h3>...not to computers</h3>
+
+                <p>The first myth worth dispelling is that colors are the same everywhere. In fact, the opposite is probably closer to the truth.</p>
+
+                <ul>
+                    <li><a href="http://stackoverflow.com/questions/6237455/chrome-renders-colours-differently-from-safari-and-firefox">Colors render differently in different browsers.</a><sup><a href="#cite-2">[2]</a></sup></li>
+                    <li><a href="https://discussions.apple.com/thread/1976783?tstart=0">Screenshots don't always capture the same colors.</a><sup><a href="#cite-3">[3]</a></sup></li>
+                    <li>Browsers have all sorts of bugs related to color rendering. (<a href="https://code.google.com/p/chromium/issues/detail?id=67230">Example</a><sup><a href="#cite-4">[4]</a></sup>)</li>
+                </ul>
+
+                <h3>...and not to human eye</h3>
+
+                <p>The way a color appears to the human eye is dependant on many other factors as well, including:</p>
+
+                <ul>
+                    <li>Type of device (laptop, desktop, mobile phone)</li>
+                    <li>Distance and angle the device is from the eye</li>
+                    <li>Quality of display (number of colors it can render, accuracy of reproduction, supported viewing angle, maximum contrast, etc.)</li>
+                    <li>Lighting conditions (inside vs. outside, day vs. night, near a window or not, etc.)</li>
+                    <li>Vision of viewer (corrective lenses, visual impairments, colorblindness)</li>
+                </ul>
+
+                <p>As designers, we need to be aware of these challenges so we can address them. Here are just a few techniques to help:</p>
+
+                <ul>
+                    <li>Choosing colors appropriate for type (and backgrounds of type)</li>
+                    <li>Using skeumorophism when appropropriate to help the eye recognize objects or concepts at it would in the real world</li>
+                    <li>Using contrast to increase readability (nobody can read white on beige)</li>
+                    <li>Using patterns as a fallback for colorblind users when necessary (<a href="http://littlebigdetails.com/post/35775193711/trello-color-blind-friendly-mode-makes">Trello example</a><sup><a href="#cite-5">[5]</a></sup>)</li>
+                </ul>
+
+                <p>But remember, <a href="http://www.npr.org/2013/01/18/169708761/edward-tufte-wants-you-to-see-better">nothing is better than <em>seeing</em></a><sup><a href="#cite-6">[6]</a></sup>. Use your eyes (and the eyes of users you test). Test your color choices on a variety of devices and in a variety of lighting conditions until you feel confident that every user will see something desirable.</p>
+
+                <div class="magic-color green-gradient">
+                    <h2>Opportunities</h2>
+                </div>
+
+                <h2>Color strategy</h2>
+
+                <p>As noted above, color is an extremely powerful tool. But with great power comes great responsibility. ;) Colors can be used in so many different ways, but using color for one thing may limit your ability to use it for something else. Choosing a particular <code>purple</code><span class="color"><span style="background: purple"></span></span> to represent your brand may limit your ability to use that same purple for something else. And remember, color's power as an aesthetic tool at least matches its power as a functional one. There may be times when you need to make a trade-off between using a color for one versus the other.</p>
+
+                <h2>Color tools</h2>
+
+                <h3>Sentiment</h3>
+
+                <p>Did you know <code>red</code><span class="color"><span style="background: red"></span></span> actually makes people hungry?<sup><a href="#cite-7">[7]</a></sup></p>
+
+                <p>Well, similarly it should be no surprise that colors can affect peoples' moods and opinions in a variety of ways. These effects tend to be subjective and rely heavilly on cultural and contextual cues. But they're very real, so understanding them is crucial.</p>
+
+                <p>Do you want to shock people? Do you want to put them at ease? Do you want people to trust you? Do you want them to be excited? Do you want to motivate people to take action? Answering these questions will help you decide on colors for you app.</p>
+
+                <h3>Branding</h3>
+
+                <p>Colors are so powerful that a single color can suggest a brand.</p>
+
+                <p>Can you guess the brand for each of these colors? (Hover to see the answer.)</p>
+
+                <style>
+                    .branding-color {
+                        border-radius: 3px;
+                        margin-bottom: 4px;
+                        display: inline-block
+                    }
+
+                    .branding-color h2 {
+                        padding: 0 1em;
+                        display: inline-block;
+                        text-align: center;
+                        color: #fff;
+                        font-weight: normal;
+                        opacity: 0;
+                        transition: opacity .3s;
+                        cursor: default;
+                        font-size: 1.2em
+                    }
+
+                    .branding-color:hover h2 {
+                        opacity: 1
+                    }
+                </style>
+
+                <div class="branding-color" style="background: #3b5998">
+                    <h2>Facebook</h2>
+                </div>
+                <div class="branding-color" style="background: #55acee">
+                    <h2>Twitter</h2>
+                </div>
+                <div class="branding-color" style="background: #ed1c16">
+                    <h2>Coca-Cola</h2>
+                </div>
+                <div class="branding-color" style="background: #fe7722">
+                    <h2>HubSpot</h2>
+                </div>
+
+                <h3>Status</h3>
+
+                <p><a href="http://getbootstrap.com">Twitter Bootstrap</a><sup><a href="#cite-8">[8]</a></sup> has popularized the use of <a href="http://getbootstrap.com/css/#helper-classes">status classes</a><sup><a href="#cite-9">[9]</a></sup> which map to certain colors.</p>
+
+                <p>Many different apps use this or a similar mapping:</p>
+
+                <li><code>#428bca</code><span class="color"><span style="background: #428bca"></span></span> = <code>primary</code></li>
+                <li><code>#dff0d8</code><span class="color"><span style="background: #dff0d8"></span></span> = <code>success</code></li>
+                <li><code>#d9edf7</code><span class="color"><span style="background: #d9edf7"></span></span> = <code>info</code></li>
+                <li><code>#fcf8e3</code><span class="color"><span style="background: #fcf8e3"></span></span> = <code>warning</code></li>
+                <li><code>#f2dede</code><span class="color"><span style="background: #f2dede"></span></span> = <code>danger</code></li>
+
+                <p>By consistently using <code>#dff0d8</code><span class="color"><span style="background: #dff0d8"></span></span> to indicate success or <code>#f2dede</code><span class="color"><span style="background: #f2dede"></span></span> to indicate danger, you reinfornce certain patterns, making it easier for people to understand these concepts in the future.</p>
+
+                <h3>Motion, Attention</h3>
+
+                <p>Sometimes you want to grab a users' attention. Transitioning a background color or text color (or simply changing it immediately) can be a great way to do so.</p>
+
+                <h3>Just about anything</h3>
+
+                <p>By no means is this meant to be an exhaustive list of the ways in which color can be used as a tool. <em>Use your creativity</em>, and try to think of ways color can be used to <em>reduce the complexity</em> of an existing UI.</p>
+
+                <p>Just make sure you don't go overboard and use too many colors. Using too many colors can cause visual dissonance which makes it hard for a user to focus. When choosing a color scheme, it's very important to think of how colors relate to one another to avoid such issues.</p>
+
+                <h2>Color schemes</h2>
+
+                <p>Picking a color scheme is essential. Some colors go well together and some don't. There are a number of methodologies out there for picking colors. But the best advice is to use your eyes.</p>
+
+                <p>Color schemes can have as few as one non-grayscale color or as many as you want. But I'd caution against using more than three. In the biz, three colors which go well together are known as triads. And there are many great resources out there to help you pick a triad. Here are some great resources on and for picking color schemes:</p>
+
+                <ul>
+                    <li><a href="http://tympanus.net/codrops/2012/09/17/build-a-color-scheme-the-fundamentals">Codrops: Build a Color Scheme: The Fundamentals</a> — A great overview on the different types of color combinations (monochromatic, complementary, triadic, tetradic, analogous)<sup><a href="#cite-10">[10]</a></sup></li>
+                    <li><a href="http://colorschemedesigner.com">Color Scheme Designer</a> — A great tool for building color schemes with these types of color combinations<sup><a href="#cite-11">[11]</a></sup></li>
+                    <li><a href="https://kuler.adobe.com/create/color-wheel">Adobe Kuler: Color Wheel</a> — Another great color scheme chooser<sup><a href="#cite-12">[12]</a></sup></li>
+                </ul>
+
+                <h2>Which color did you mean?</h2>
+
+                <p>One common color mistake I see frontend developers make is using a gray (e.g. <code>#ccc</code><span class="color"><span style="background: #ccc"></span></span>) when they <em>mean to use</em> black with an alpha (e.g. <code>rgba(0, 0, 0, 0.2)</code><span class="color"><span style="background: rgba(0, 0, 0, 0.2)"></span></span>).</p>
+
+                <p><em>But, they look the same!?</em>, you may protest. Well, sure. But only when they're on white!</p>
+
+                <h3>Example</h3>
+
+                <p>Each of the white boxes has a <code>box-shadow: 0 2px 8px [color]</code> applied with the color from the respective column.</p>
+
+                <style>
+                    .example-which-color .container {
+                        padding: 20px;
+                        background: #eee;
+                        text-align: center
+                    }
+
+                    .example-which-color .container-green {
+                        background: #85ddba
+                    }
+
+                    .example-which-color .item {
+                        display: inline-block;
+                        margin: 0 auto;
+                        width: 30%;
+                        height: 4em;
+                        background: #fff;
+                        border-radius: 3px
+                    }
+
+                    .example-which-color .item-grey-shadow {
+                        box-shadow: 0 2px 8px #ccc
+                    }
+
+                    .example-which-color .item-black-alpha-shadow {
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, .2)
+                    }
+                </style>
+
+                <div class="example side-by-side example-which-color">
+                    <div class="left">
+                        <p><code>#ccc</code><span class="color"><span style="background: #ccc"></span></span></p>
+                        <div class="example-content">
+                            <div class="container">
+                                <div class="item item-grey-shadow"></div>
+                            </div>
+                            <div class="container container-green">
+                                <div class="item item-grey-shadow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p><code>rgba(0, 0, 0, 0.2)</code><span class="color"><span style="background: rgba(0, 0, 0, 0.2)"></span></span></p>
+                        <div class="example-content">
+                            <div class="container">
+                                <div class="item item-black-alpha-shadow"></div>
+                            </div>
+                            <div class="container container-green">
+                                <div class="item item-black-alpha-shadow"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="right">
-                    <p><code>rgba(0, 0, 0, 0.2)</code><span class="color"><span style="background: rgba(0, 0, 0, 0.2)"></span></span></p>
-                    <div class="example-content">
-                        <div class="container">
-                            <div class="item item-black-alpha-shadow"></div>
-                        </div>
-                        <div class="container container-green">
-                            <div class="item item-black-alpha-shadow"></div>
-                        </div>
-                    </div>
-                </div>
+
+                <p>Both boxes in the first row look fine. But notice how the bottom left white box looks strange. It's <code>#ccc</code><span class="color"><span style="background: #ccc"></span></span> shadow causes visual dissonance with the <code>#85ddba</code><span class="color"><span style="background: #85ddba"></span></span> background. Definitely not desired.</p>
+
+                <h2>Selecting a good default text color</h2>
+
+                <p>The browser default text color is <code>#000</code><span class="color"><span style="background: #000"></span></span>. I think this feels pretty intuitive to most people. Subconciously, one's head does something like this: <em>Ink is black. Documents are printed in ink. The web is a set of digital documents. So digital text should be black.</em></p>
+
+                <p>This is totally reasonable, and many great sites are designed with black. But an alternative to this which is better in many situations is to use a gray (e.g. <code>#333</code><span class="color"><span style="background: #333"></span></span>). This has several advantages.</p>
+
+                <ul>
+                    <li>The sharp contrast of <span style="color: #000">black on white</span> can create visual artifacts or increase eye strain. (The opposite is also true. This is fairly subjective, but still worth noting.)</li>
+                    <li>You get to "save" <code>#000</code><span class="color"><span style="background: #000"></span></span> for emphasis or accents. (This is perhaps the better reason.)</li>
+                </ul>
+
+                <p>You may be thinking: <em>but you just showed an example where you suggested using black with alpha over gray in situations where the background color may change... so why not set the default text color to <em><code>rgba(0, 0, 0, 0.8)</code><span class="color"><span style="background: rgba(0, 0, 0, 0.8)"></span></span></em> instead?</em></p>
+
+                <p>You'd be right, and that's definitely an option. The main advantage this has is that text on non-white backgrounds will not get any grey+color clashing (as seen in the example above with the white box on the green background). But I wouldn't recommend it universally for two reasons:</p>
+
+                <ol>
+                    <li>
+                        <p>When setting a <code>color</code> with an alpha between <code>0</code>and <code>1</code>, the Webkit browser default of <code>-webkit-font-smoothing: subpixel-antialiased</code> will no longer be honored, and you will never get subpixel antialiasing. (It will be as if you'd set that text to <code>-webkit-font-smoothing: antialiased</code> yourself.)</p>
+
+                        <p>Which <code>font-smoothing</code> is "better" is contextual and fairly subjective. But it definitely feels like subpixel antialiasing is a bandage on a larger problem since: 1) Webkit on retina Macs don't use subpixel antialiasing (and so it is likely that future high-resolution displays won't as well), and 2) The popuar blogging platform Medium.com (<a href="http://fontsinuse.com/uses/2575/medium">noted for its beautiful typography</a><sup><a href="#cite-13">[13]</a></sup>) applies <code>-webkit-font-smoothing: antialiased</code> on the entire document.</p>
+                    </li>
+                    <li>Performance may be slightly impacted. Remember, you're now asking the browser to composite the text with whatever was behind it. This may be highly optimized in Webkit, but I wouldn't count on that anywhere else.</li>
+                </ol>
+
+                <h2>tl;dr</h2>
+
+                <p>Color is powerful. Pick a good set of colors and stick to it! Really <em>see</em>. If something looks odd, it probably is.</p>
+
+                <hr>
+
+                <h3>A few sites with bold use of color</h3>
+
+                <ul>
+                    <li><a href="http://www.hugeinc.com">HUGE Design</a></li>
+                    <li><a href="http://doabackflip.com">Do a Back Flip Design</a></li>
+                    <li><a href="http://www.mixd.co.uk">Mixd Design</a></li>
+                    <li><a href="http://andrevv.com">Andrew McCarthy</a></li>
+                </ul>
+
+                <h3>Further reading</h3>
+
+                <ul>
+                    <li><a href="http://www.w3.org/TR/css3-color/">w3: CSS Color Module Level 3</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">MDN: CSS Color</a></li>
+                    <li><a href="http://tympanus.net/codrops/2011/08/03/minimal-contrasty-color-schemes/">Codrops: Minimal and Contrasty Color Schemes in Web Design</a></li>
+                </ul>
+
+                <h3>Citations</h3>
+
+                <ol>
+                    <li><a id="cite-1" href="http://joco.name/2014/03/02/all-rgb-colors-in-one-image">Joco: All RGB colors in one image</a></li>
+                    <li><a id="cite-2" href="http://stackoverflow.com/questions/6237455/chrome-renders-colours-differently-from-safari-and-firefox">StackOverflow: Chrome renders colours differently from Safari and Firefox</a></li>
+                    <li><a id="cite-3" href="https://discussions.apple.com/thread/1976783?tstart=0">Apple Support Communities: Why is a Screenshot a different color when dropped back in to iWeb in Safari</a></li>
+                    <li><a id="cite-4" href="https://code.google.com/p/chromium/issues/detail?id=67230">Chromium Issues: Inaccurate color profile rendering in Chrome for Mac</a></li>
+                    <li><a id="cite-5" href="http://littlebigdetails.com/post/35775193711/trello-color-blind-friendly-mode-makes">Little Big Details: Trello - Color Blind Friendly Mode makes labels distinguishable by pattern.</a></li>
+                    <li><a id="cite-6" href="http://www.npr.org/2013/01/18/169708761/edward-tufte-wants-you-to-see-better">NPR: Edward Tufte Wants You to See Better</a></li>
+                    <li><a id="cite-7" href="https://web.archive.org/web/20070814054750/http://www.colorschemer.com/blog/2007/07/17/why-food-companies-use-red-colors">ColorSchemer (via Archive.org): Why food companies use red colors</a></li>
+                    <li><a id="cite-8" href="http://getbootstrap.com">Twitter Bootstrap</a></li>
+                    <li><a id="cite-9" href="http://getbootstrap.com/css/#helper-classes">Twitter Bootstrap: CSS Helper Classes</a></li>
+                    <li><a id="cite-10" href="http://tympanus.net/codrops/2012/09/17/build-a-color-scheme-the-fundamentals">Codrops: Build a Color Scheme: The Fundamentals</a></li>
+                    <li><a id="cite-11" href="http://colorschemedesigner.com/">Color Scheme Designer</a></li>
+                    <li><a id="cite-12" href="https://kuler.adobe.com/create/color-wheel/">Adobe Kuler: Color Wheel</a></li>
+                    <li><a id="cite-13" href="http://fontsinuse.com/uses/2575/medium">Fonts In Use: Medium</a></li>
+                </ol>
+
+                <hr>
+
+                <nav class="chapter-navigation">
+                    <a class="previous-chapter" href="../3-tables">
+                        <span class="number">3</span>
+                        <span class="title">Tables</span>
+                    </a>
+                    <a class="next-chapter" href="../5-typography-part-i">
+                        <span class="number">5</span>
+                        <span class="title">Typography</span>
+                    </a>
+                </nav>
             </div>
-
-            <p>Both boxes in the first row look fine. But notice how the bottom left white box looks strange. It's <code>#ccc</code><span class="color"><span style="background: #ccc"></span></span> shadow causes visual dissonance with the <code>#85ddba</code><span class="color"><span style="background: #85ddba"></span></span> background. Definitely not desired.</p>
-
-            <h2>Selecting a good default text color</h2>
-
-            <p>The browser default text color is <code>#000</code><span class="color"><span style="background: #000"></span></span>. I think this feels pretty intuitive to most people. Subconciously, one's head does something like this: <em>Ink is black. Documents are printed in ink. The web is a set of digital documents. So digital text should be black.</em></p>
-
-            <p>This is totally reasonable, and many great sites are designed with black. But an alternative to this which is better in many situations is to use a gray (e.g. <code>#333</code><span class="color"><span style="background: #333"></span></span>). This has several advantages.</p>
-
-            <ul>
-                <li>The sharp contrast of <span style="color: #000">black on white</span> can create visual artifacts or increase eye strain. (The opposite is also true. This is fairly subjective, but still worth noting.)</li>
-                <li>You get to "save" <code>#000</code><span class="color"><span style="background: #000"></span></span> for emphasis or accents. (This is perhaps the better reason.)</li>
-            </ul>
-
-            <p>You may be thinking: <em>but you just showed an example where you suggested using black with alpha over gray in situations where the background color may change... so why not set the default text color to <em><code>rgba(0, 0, 0, 0.8)</code><span class="color"><span style="background: rgba(0, 0, 0, 0.8)"></span></span></em> instead?</em></p>
-
-            <p>You'd be right, and that's definitely an option. The main advantage this has is that text on non-white backgrounds will not get any grey+color clashing (as seen in the example above with the white box on the green background). But I wouldn't recommend it universally for two reasons:</p>
-
-            <ol>
-                <li>
-                    <p>When setting a <code>color</code> with an alpha between <code>0</code>and <code>1</code>, the Webkit browser default of <code>-webkit-font-smoothing: subpixel-antialiased</code> will no longer be honored, and you will never get subpixel antialiasing. (It will be as if you'd set that text to <code>-webkit-font-smoothing: antialiased</code> yourself.)</p>
-
-                    <p>Which <code>font-smoothing</code> is "better" is contextual and fairly subjective. But it definitely feels like subpixel antialiasing is a bandage on a larger problem since: 1) Webkit on retina Macs don't use subpixel antialiasing (and so it is likely that future high-resolution displays won't as well), and 2) The popuar blogging platform Medium.com (<a href="http://fontsinuse.com/uses/2575/medium">noted for its beautiful typography</a><sup><a href="#cite-13">[13]</a></sup>) applies <code>-webkit-font-smoothing: antialiased</code> on the entire document.</p>
-                </li>
-                <li>Performance may be slightly impacted. Remember, you're now asking the browser to composite the text with whatever was behind it. This may be highly optimized in Webkit, but I wouldn't count on that anywhere else.</li>
-            </ol>
-
-            <h2>tl;dr</h2>
-
-            <p>Color is powerful. Pick a good set of colors and stick to it! Really <em>see</em>. If something looks odd, it probably is.</p>
-
-            <hr>
-
-            <h3>A few sites with bold use of color</h3>
-
-            <ul>
-                <li><a href="http://www.hugeinc.com">HUGE Design</a></li>
-                <li><a href="http://doabackflip.com">Do a Back Flip Design</a></li>
-                <li><a href="http://www.mixd.co.uk">Mixd Design</a></li>
-                <li><a href="http://andrevv.com">Andrew McCarthy</a></li>
-            </ul>
-
-            <h3>Further reading</h3>
-
-            <ul>
-                <li><a href="http://www.w3.org/TR/css3-color/">w3: CSS Color Module Level 3</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">MDN: CSS Color</a></li>
-                <li><a href="http://tympanus.net/codrops/2011/08/03/minimal-contrasty-color-schemes/">Codrops: Minimal and Contrasty Color Schemes in Web Design</a></li>
-            </ul>
-
-            <h3>Citations</h3>
-
-            <ol>
-                <li><a id="cite-1" href="http://joco.name/2014/03/02/all-rgb-colors-in-one-image">Joco: All RGB colors in one image</a></li>
-                <li><a id="cite-2" href="http://stackoverflow.com/questions/6237455/chrome-renders-colours-differently-from-safari-and-firefox">StackOverflow: Chrome renders colours differently from Safari and Firefox</a></li>
-                <li><a id="cite-3" href="https://discussions.apple.com/thread/1976783?tstart=0">Apple Support Communities: Why is a Screenshot a different color when dropped back in to iWeb in Safari</a></li>
-                <li><a id="cite-4" href="https://code.google.com/p/chromium/issues/detail?id=67230">Chromium Issues: Inaccurate color profile rendering in Chrome for Mac</a></li>
-                <li><a id="cite-5" href="http://littlebigdetails.com/post/35775193711/trello-color-blind-friendly-mode-makes">Little Big Details: Trello - Color Blind Friendly Mode makes labels distinguishable by pattern.</a></li>
-                <li><a id="cite-6" href="http://www.npr.org/2013/01/18/169708761/edward-tufte-wants-you-to-see-better">NPR: Edward Tufte Wants You to See Better</a></li>
-                <li><a id="cite-7" href="https://web.archive.org/web/20070814054750/http://www.colorschemer.com/blog/2007/07/17/why-food-companies-use-red-colors">ColorSchemer (via Archive.org): Why food companies use red colors</a></li>
-                <li><a id="cite-8" href="http://getbootstrap.com">Twitter Bootstrap</a></li>
-                <li><a id="cite-9" href="http://getbootstrap.com/css/#helper-classes">Twitter Bootstrap: CSS Helper Classes</a></li>
-                <li><a id="cite-10" href="http://tympanus.net/codrops/2012/09/17/build-a-color-scheme-the-fundamentals">Codrops: Build a Color Scheme: The Fundamentals</a></li>
-                <li><a id="cite-11" href="http://colorschemedesigner.com/">Color Scheme Designer</a></li>
-                <li><a id="cite-12" href="https://kuler.adobe.com/create/color-wheel/">Adobe Kuler: Color Wheel</a></li>
-                <li><a id="cite-13" href="http://fontsinuse.com/uses/2575/medium">Fonts In Use: Medium</a></li>
-            </ol>
-
-            <hr>
-
-            <nav class="chapter-navigation">
-                <a class="previous-chapter" href="../3-tables">
-                    <span class="number">3</span>
-                    <span class="title">Tables</span>
-                </a>
-                <a class="next-chapter" href="../5-typography-part-i">
-                    <span class="number">5</span>
-                    <span class="title">Typography</span>
-                </a>
-            </nav>
         </div>
     </body>
 </html>
