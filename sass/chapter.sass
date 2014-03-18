@@ -3,11 +3,13 @@
 
 @import colors
 
+$chapterWidth: 40rem
+
 body
     margin: 0
 
     @media (min-width: 48em)
-        margin: 8em 0
+        margin: 0 0 8em
 
 h1
     text-align: center
@@ -33,13 +35,19 @@ img
     max-width: 100%
 
 .logo
-    margin: 2em auto
+    margin: 0 auto 2em auto
 
     @media (min-width: 48em)
-        margin: 8em auto
+        margin: 0 auto 8em auto
+
+.page
+    padding-top: 2em
+
+    @media (min-width: 48em)
+        padding-top: 8em
 
 .chapter
-    width: 40rem
+    width: $chapterWidth
     max-width: 100%
     padding: 0 .666666rem 1rem
     margin: 0 auto
@@ -336,3 +344,150 @@ figure.cushy
     figure.cushy
         margin-top: 8em
         margin-bottom: 8em
+
+.contextual-display-wrapper
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    pointer-events: none
+    overflow: hidden
+    z-index: 25
+    background: rgba(255, 255, 255, .6)
+    opacity: 0
+    transition: opacity .4s
+    -webkit-transform: translate3d(0, 0, 0)
+
+    @media (min-width: 48em)
+        left: -100%
+        right: -100%
+
+    body.contextual-open &
+        opacity: 1
+
+.contextual-display
+    position: absolute
+    padding: 0 .666666rem
+    width: $chapterWidth
+    max-width: 100%
+    left: 0
+    right: 0
+    margin: auto
+    background: #fff
+    padding-top: 1rem
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+    margin-top: 2rem
+
+    body.contextual-open &
+        pointer-events: initial
+
+    @media (min-width: 48em)
+        padding-top: 0
+        box-shadow: none
+        margin-top: 0
+        width: $chapterWidth / 2
+        left: $chapterWidth + ($chapterWidth / 2)
+        padding-left: 3.75em
+
+        &:before
+            +background-image(linear-gradient(top, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .1) 90%, transparent))
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 20%
+            left: 1.875em
+            width: .0625rem
+
+    a[data-contextual-close]
+        position: absolute
+        top: 1rem
+        right: .6666rem
+        color: inherit
+        cursor: pointer
+
+        @media (min-width: 48em)
+            top: 0
+            right: 0
+
+        &:before
+            content: "×"
+            position: absolute
+            top: -.15em
+            right: 0
+            width: 1em
+            text-align: center
+            line-height: 1.12em
+            overflow: hidden
+            height: 1em
+            border-radius: 4px
+            font-size: 1.75em
+
+        &:hover:before
+            background: #eee
+
+    > *:first-child
+        margin-top: 0
+
+    > *:last-child
+        margin-bottom: 0
+
+.page
+    transition: -webkit-transform .4s
+    -webkit-transform: translate3d(0, 0, 0)
+
+@media (min-width: 48em)
+    body.contextual-open
+
+        .page
+            -webkit-transform: translate3d(- $chapterWidth / 2, 0, 0)
+
+.contextual-description
+    margin-bottom: 1em
+
+.contextual-example
+    border-top: .0625em solid #eee
+    padding-top: 2em
+    text-align: center
+
+    .box
+        +inline-block
+        text-align: left
+        min-width: 4em
+        min-height: 4em
+        background: #888
+
+        &.light
+            background: #eee
+
+    .text-box
+        box-shadow: inset 0 0 0 .1em #888
+        padding: .5em 1em
+        text-align: left
+        margin-bottom: 1em
+
+    .text
+        +inline-block
+
+code.contextual-code-example
+    cursor: pointer
+    position: relative
+
+    &:hover, &.contextual-open-tree
+        background: #e0e0e0
+        z-index: 50
+
+        &:after
+            +background-image(linear-gradient(left, $purple, $red, $orange, $yellow, $green, $blue, $purple))
+            content: ""
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            height: .0625rem
+
+@media (min-width: 48em)
+    body.contextual-open
+
+        .contextual-open-tree-parent
+            position: relative
+            z-index: 50
