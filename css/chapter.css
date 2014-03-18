@@ -476,6 +476,6 @@ code.contextual-code-example {
       height: 0.0625rem; }
 
 @media (min-width: 48em) {
-  body.contextual-open p.contextual-open-tree, body.contextual-open dt.contextual-open-tree + dd {
+  body.contextual-open .contextual-open-tree-parent {
     position: relative;
     z-index: 50; } }

@@ -142,6 +142,7 @@ chapters.setupContextualCodeExamples = ->
                 contextualDisplay.clientHeight
 
                 positionContextualDisplay code
+                code.parentNode.classList.add 'contextual-open-tree-parent'
 
                 contextualDisplay.classList.add 'contextual-open'
                 applyToParents code, (node) -> node.classList.add 'contextual-open-tree'
