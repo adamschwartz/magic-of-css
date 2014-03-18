@@ -1,4 +1,5 @@
 @import compass/css3
+@import compass/utilities/general/clearfix
 
 @import rainbow
 
@@ -43,6 +44,8 @@ ol.chapters
     margin-left: 0
 
     > li
+        +pie-clearfix
+        clear: left
         counter-increment: chaptersCounter
 
         &:before
@@ -54,9 +57,14 @@ ol.chapters
             width: 1em
             margin-right: .625em
             font-weight: 100
+            float: left
 
     &:first-child
         counter-reset: chaptersCounter
+
+    a
+        display: block
+        margin-bottom: 1rem
 
 ol.chapters, ul.potions, .preface-link
     font-weight: 300

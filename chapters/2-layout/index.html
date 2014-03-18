@@ -25,7 +25,7 @@
                 <span class="title">Layout</span>
             </h1>
 
-            <p><em>In the <a href="../1-the-box">previous chapter</a>, we learned that each element in the page is a rectangular box. In this chapter, we will see how more than one of these boxes get layed out together on a page.</em></p>
+            <p><em>In the <a href="../1-the-box">previous chapter</a>, we learned that each element in the page is a rectangular box. In this chapter, we will see how multiple boxes get layed out on a page.</em></p>
 
             <hr>
 
@@ -35,7 +35,7 @@
 
             <h2>Block, inline, and inline-block</h2>
 
-            <p>With respect to how they <em>lay out on the page</em>, here's the difference between these elements:</p>
+            <p>With respect to layout, the <code>display</code> property has three values you should be most concerned with. Here are the main differences between how these three display types get layed out:</p>
 
             <dl>
                 <dt><code>block</code></dt>
@@ -50,7 +50,7 @@
 
             <h2>Example</h2>
 
-            <p>In the following example we have elements of each type with the following CSS applied to all of them:</p>
+            <p>In the following example we have elements of each of these three display types with the following additional CSS applied to all of them:</p>
 
             <style>
                 .example-display .example-content * {
@@ -166,7 +166,7 @@
 
             <p>Aside from the relatively new and experimental <code>display</code> property <code>flex</code> (which may be covered in a later chapter), no other element can do this.</p>
 
-            <p>So with respect to layout, think of tables as a tool which can be used to center arbirtrary content vertically. (Centering something vertically when you know its height is trivial. First position the element, then set a <code>top</code> and <code>bottom</code>, then set <code>margin-top</code> and <code>margin-bottom</code> to <code>auto</code>. Done.)</p>
+            <p>So with respect to layout, think of tables as a tool which can be used to center arbirtrary content vertically. (Centering something vertically when you know its height is trivial. First position the element, then set a <code>top</code> and <code>bottom</code> to the same value (<code>0</code> works), set your desired <code>height</code>, and then set <code>margin-top</code> and <code>margin-bottom</code> to <code>auto</code>. <em>Done.</em>)</p>
 
             <h2>Text align</h2>
 
@@ -278,7 +278,7 @@
 
             <p>Ahh, this is where the real fun begins.</p>
 
-            <p>An element is said to be "positioned" if it's <code>position</code> property is any value except <code>static</code>.</p>
+            <p>An element is said to be "positioned" if its <code>position</code> property is any value except <code>static</code>.</p>
 
             <p>When an element is positioned, it is layed out according to whichever positioning properties <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> it has set.</p>
 
@@ -303,7 +303,7 @@
                 <li><code>absolute</code> and <code>fixed</code> elements are not part of normal document layout. When their layouts change, only their child elements are affected.</li>
                 <li><code>static</code> and <code>relative</code> elements are part of the layout. When their layout changes, so do their document neighbors.</li>
                 <li>When <em>nudged</em> via <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code>, <code>relative</code> elements do not affect their document neighbors. Instead, those neighbors act like the element was never <em>nudged</em> from its original position.</li>
-                <li>Confusingly, <code>relative</code> is not so-named because it's child elements will be positioned "relative" to it. That is simply a consequence of it being positioned at all (and so the same could be said about <code>absolute</code> and <code>fixed</code> elements as well). Rather, it is so-named to describe how you can "relatively" <em>nudge</em> it based on its original position.</li>
+                <li>Confusingly, <code>relative</code> is not so-named because its child elements will be positioned "relative" to it. That is simply a consequence of it being positioned at all (and so the same could be said about <code>absolute</code> and <code>fixed</code> elements as well). Rather, it is so-named to describe how you can "relatively" <em>nudge</em> it based on its original position.</li>
             </ul>
 
             <p>Now again, for a little magic:</p>

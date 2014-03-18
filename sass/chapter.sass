@@ -39,9 +39,9 @@ img
         margin: 8em auto
 
 .chapter
-    width: 40em
+    width: 40rem
     max-width: 100%
-    padding: 0 .666666em 1em
+    padding: 0 .666666rem 1rem
     margin: 0 auto
 
 .example
@@ -154,35 +154,59 @@ nav.chapter-navigation
 h3.magic
     position: relative
 
-    $bandWidth: -.625em
-
     &:before
-        +box-shadow(0 ($bandWidth * 2) $blue, 0 ($bandWidth * 3) $green, 0 ($bandWidth * 4) $yellow, 0 ($bandWidth * 5) $orange, 0 ($bandWidth * 6) $red)
-        +border-radius(50%)
-        content: ""
-        font-size: 1rem
-        height: .9375em
-        width: .9375em
         display: block
-        position: absolute
-        right: 100%
-        margin: auto
-        margin-right: 1.25em
-        margin-top: 3.75em
-        top: 0
-        bottom: 0
 
-    &:after
-        +transform(rotateZ(-90deg))
-        content: "Magic"
-        text-transform: uppercase
-        letter-spacing: .4em
-        font-size: .625rem
-        right: 100%
-        position: absolute
-        color: #fff
-        margin-top: 1.25rem
-        margin-right: .0625rem
+    @media (min-width: 42em)
+
+        $bandWidth: -.625em
+
+        &:before
+            +box-shadow(0 ($bandWidth * 2) $blue, 0 ($bandWidth * 3) $green, 0 ($bandWidth * 4) $yellow, 0 ($bandWidth * 5) $orange, 0 ($bandWidth * 6) $red)
+            +border-radius(50%)
+            position: absolute
+            content: ""
+            font-size: 1rem
+            height: .9375em
+            width: .9375em
+            right: 100%
+            margin: auto
+            margin-right: 1.25em
+            margin-top: 3.75em
+            top: 0
+            bottom: 0
+
+        &:after
+            +transform(rotateZ(-90deg))
+            position: absolute
+            content: "Magic"
+            text-transform: uppercase
+            letter-spacing: .4em
+            font-size: .625rem
+            right: 100%
+            color: #fff
+            margin-top: 1.25rem
+            margin-right: .0625rem
+
+    @media (max-width: 42em)
+
+        &:before
+            +background-image(linear-gradient(left, $purple, $red, rgba($orange, .8), rgba($yellow, .6), rgba($green, .4), rgba($blue, .2), rgba($purple, 0), transparent, transparent))
+            +border-radius(0)
+            +box-shadow(none)
+            content: "Magic"
+            position: static
+            height: auto
+            width: auto
+            text-transform: uppercase
+            letter-spacing: .4em
+            font-size: .625rem
+            color: #fff
+            margin: 1rem -.666666rem
+            padding: .1rem .666666rem
+
+        &:after
+            display: none
 
 dl
     +pie-clearfix
