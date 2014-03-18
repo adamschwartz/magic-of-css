@@ -433,7 +433,7 @@ figure.cushy {
 
 .contextual-example {
   border-top: 0.0625em solid #eeeeee;
-  padding-top: 2em;
+  padding: 2em 0;
   text-align: center; }
   .contextual-example .box {
     display: -moz-inline-stack;
