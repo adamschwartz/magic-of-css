@@ -27,7 +27,7 @@ img {
   max-width: 100%; }
 
 .logo {
-  margin: 0 auto 2em auto; }
+  margin: 0 auto 5em auto; }
   @media (min-width: 48em) {
     .logo {
       margin: 0 auto 8em auto; } }
