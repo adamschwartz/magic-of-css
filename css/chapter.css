@@ -1,17 +1,19 @@
 @charset "UTF-8";
 body {
   margin: 0; }
-  @media (min-width: 48em) {
+  @media (min-width: 44rem) {
     body {
       margin: 0 0 8em; } }
 
 h1 {
-  text-align: center; }
+  text-align: center;
+  line-height: normal; }
   h1 .number {
     display: block;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.4em;
+    padding-left: 0.4em;
     font-size: 0.55em;
     line-height: 1;
     position: relative;
@@ -26,23 +28,58 @@ h1 {
 img {
   max-width: 100%; }
 
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.5em;
+  font-size: 0.85em; }
+
 .logo {
   margin: 0 auto 5em auto; }
-  @media (min-width: 48em) {
+  @media (min-width: 44rem) {
     .logo {
       margin: 0 auto 8em auto; } }
 
 .page {
   padding-top: 2em; }
-  @media (min-width: 48em) {
+  @media (min-width: 44rem) {
     .page {
       padding-top: 8em; } }
 
 .chapter {
-  width: 40rem;
+  width: 36rem;
   max-width: 100%;
   padding: 0 0.66667rem 1rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  line-height: 1.5em; }
+  .chapter a {
+    color: inherit;
+    text-decoration: none;
+    background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(#333332, #333332);
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 white, -0.03em 0 white, 0 0.03em white, 0 -0.03em white, 0.06em 0 white, -0.06em 0 white, 0.09em 0 white, -0.09em 0 white, 0.12em 0 white, -0.12em 0 white, 0.15em 0 white, -0.15em 0 white;
+    background-position-y: 86%, 86%, 86%;
+    background-position-x: 0%, 100%, 0%; }
+    .chapter a::selection {
+      text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+      background: #b4d5fe; }
+    .chapter a::-moz-selection {
+      text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+      background: #b4d5fe; }
+    .chapter a:before, .chapter a:after, .chapter a *, .chapter a *:before, .chapter a *:after {
+      text-shadow: none; }
+    .chapter a:visited {
+      color: inherit; }
+  .chapter h2, .chapter h3, .chapter h4, .chapter h5, .chapter h6 {
+    line-height: 1.2em;
+    margin-top: 2rem;
+    margin-bottom: 0.125em; }
+    .chapter h2 + *, .chapter h3 + *, .chapter h4 + *, .chapter h5 + *, .chapter h6 + * {
+      margin-top: 0; }
+  .chapter sup a, .chapter .chapter-navigation a {
+    background-image: none;
+    text-shadow: none; }
 
 .example {
   max-width: 100%;
@@ -63,6 +100,26 @@ img {
     .example.side-by-side .left > p:first-child, .example.side-by-side .right > p:first-child {
       margin-top: 0; }
 
+@media (min-width: 92.66667rem) {
+  .example-wrapper {
+    *zoom: 1;
+    width: 71.33334rem;
+    margin-left: -18.33333rem;
+    margin-top: 1em;
+    margin-bottom: 2em; }
+    .example-wrapper:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .example-wrapper.typography-example-wrapper {
+      margin-bottom: 4em; }
+    .example-wrapper pre, .example-wrapper .example {
+      width: 34.66667rem;
+      margin-top: 0; }
+    .example-wrapper pre {
+      float: left; }
+    .example-wrapper .example {
+      float: right; } }
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
 
@@ -72,7 +129,7 @@ pre {
   padding: 0.5em 0.66667em;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  font-size: 0.875em;
+  font-size: 0.8em;
   line-height: 1.71em;
   white-space: pre;
   word-wrap: normal; }
@@ -81,6 +138,9 @@ code {
   font-size: 0.8em;
   padding: 0.15625em 0.3125em;
   background: #eeeeee; }
+  @media (min-width: 44rem) {
+    code {
+      padding: 3px 6px; } }
 
 pre > code {
   font-size: inherit;
@@ -125,7 +185,7 @@ nav.chapter-navigation {
       display: none; }
     nav.chapter-navigation a .number:before {
       content: "Chapter "; }
-    @media (min-width: 48em) {
+    @media (min-width: 44rem) {
       nav.chapter-navigation a .title {
         display: inline; }
       nav.chapter-navigation a .number:after {
@@ -153,7 +213,7 @@ h3.magic {
   position: relative; }
   h3.magic:before {
     display: block; }
-  @media (min-width: 42em) {
+  @media (min-width: 38rem) {
     h3.magic:before {
       -webkit-box-shadow: 0 -1.25em #0074d9, 0 -1.875em #2ecc40, 0 -2.5em #ffdc00, 0 -3.125em #ff851b, 0 -3.75em #ff4136;
       -moz-box-shadow: 0 -1.25em #0074d9, 0 -1.875em #2ecc40, 0 -2.5em #ffdc00, 0 -3.125em #ff851b, 0 -3.75em #ff4136;
@@ -188,8 +248,9 @@ h3.magic {
       right: 100%;
       color: white;
       margin-top: 1.25rem;
-      margin-right: 0.0625rem; } }
-  @media (max-width: 42em) {
+      margin-right: 0.0625rem;
+      line-height: 1.25em; } }
+  @media (max-width: 38rem) {
     h3.magic:before {
       background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #b10dc9), color-stop(12.5%, #ff4136), color-stop(25%, rgba(255, 133, 27, 0.8)), color-stop(37.5%, rgba(255, 220, 0, 0.6)), color-stop(50%, rgba(46, 204, 64, 0.4)), color-stop(62.5%, rgba(0, 116, 217, 0.2)), color-stop(75%, rgba(177, 13, 201, 0)), color-stop(87.5%, transparent), color-stop(100%, transparent));
       background-image: -webkit-linear-gradient(left, #b10dc9, #ff4136, rgba(255, 133, 27, 0.8), rgba(255, 220, 0, 0.6), rgba(46, 204, 64, 0.4), rgba(0, 116, 217, 0.2), rgba(177, 13, 201, 0), transparent, transparent);
@@ -245,7 +306,7 @@ dl {
       border-left-color: #0074d9; }
     dl dt:nth-of-type(5n + 6) {
       border-left-color: #b10dc9; }
-  @media (min-width: 48em) {
+  @media (min-width: 44rem) {
     dl dt, dl dd {
       float: left; }
     dl dt {
@@ -254,7 +315,9 @@ dl {
       clear: left; }
     dl dd {
       width: 70%;
-      margin: 0 0 1.5em; } }
+      margin: 0 0 1.5em; }
+      dl dd:last-child {
+        margin-bottom: 0; } }
 
 em > em {
   font-style: normal; }
@@ -271,7 +334,7 @@ figure {
     color: #888888;
     font-weight: 300;
     letter-spacing: 0.03em; }
-  @media (min-width: 35.5em) {
+  @media (min-width: 36rem) {
     figure figcaption {
       position: relative;
       margin-top: 1em;
@@ -289,7 +352,7 @@ figure {
         right: 0;
         left: 0;
         height: 0.0625rem; } }
-  @media (min-width: 75em) {
+  @media (min-width: 72rem) {
     figure figcaption {
       position: absolute;
       right: 100%;
@@ -334,10 +397,57 @@ figure.cushy {
   margin-top: 2em;
   margin-bottom: 2em; }
 
-@media (min-width: 48em) {
+@media (min-width: 44rem) {
   figure.cushy {
     margin-top: 8em;
     margin-bottom: 8em; } }
+.magic-color {
+  min-height: 4em;
+  border-radius: 0.1875em;
+  margin: 4em -200px; }
+  @media (max-width: 72rem) {
+    .magic-color {
+      margin: 0 0 1em; } }
+  .magic-color h2 {
+    padding: 1em 0;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    margin-left: 0.4em; }
+  .magic-color.red-gradient {
+    background-image: linear-gradient(top left, #723362 0%, #9d223c 100%);
+    background-color: #9d223c; }
+  .magic-color.green-gradient {
+    background-image: linear-gradient(135deg, #5fa4ee, #56e7ca);
+    background-color: #5fa4ee; }
+
+code + code.color {
+  position: relative;
+  border-radius: 0 0.1875em 0.1875em 0; }
+  code + code.color:after {
+    content: "\00a0"; }
+  code + code.color:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    background-image: linear-gradient(45deg, #cccccc 25%, transparent 25%, transparent 75%, #cccccc 75%, #cccccc), linear-gradient(45deg, #cccccc 25%, transparent 25%, transparent 75%, #cccccc 75%, #cccccc);
+    background-size: 10px 10px;
+    border-radius: 0 0.1875em 0.1875em 0;
+    background-position: 0 0, 5px 5px; }
+  code + code.color > span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0.1875em 0.1875em 0; }
+
 .contextual-display-wrapper {
   position: absolute;
   top: 0;
@@ -350,7 +460,7 @@ figure.cushy {
   opacity: 0;
   transition: opacity 0.4s;
   -webkit-transform: translate3d(0, 0, 0); }
-  @media (min-width: 48em) {
+  @media (min-width: 44rem) {
     .contextual-display-wrapper {
       position: fixed;
       left: -100%;
@@ -361,7 +471,7 @@ figure.cushy {
 .contextual-display {
   position: absolute;
   padding: 0 0.66667rem;
-  width: 40rem;
+  width: 36rem;
   max-width: 100%;
   left: 0;
   right: 0;
@@ -372,13 +482,13 @@ figure.cushy {
   margin-top: 2rem; }
   body.contextual-open .contextual-display {
     pointer-events: initial; }
-  @media (min-width: 48em) {
+  @media (min-width: 44rem) {
     .contextual-display {
       padding-top: 0;
       box-shadow: none;
       margin-top: 0;
-      width: 20rem;
-      left: 60rem;
+      width: 18rem;
+      left: 54rem;
       padding-left: 3.75em; }
       .contextual-display:before {
         background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(10%, rgba(0, 0, 0, 0.1)), color-stop(90%, rgba(0, 0, 0, 0.1)), color-stop(100%, transparent));
@@ -399,7 +509,7 @@ figure.cushy {
     right: 0.6666rem;
     color: inherit;
     cursor: pointer; }
-    @media (min-width: 48em) {
+    @media (min-width: 44rem) {
       .contextual-display a[data-contextual-close] {
         top: 0;
         right: 0; } }
@@ -426,9 +536,9 @@ figure.cushy {
   transition: -webkit-transform 0.4s;
   -webkit-transform: translate3d(0, 0, 0); }
 
-@media (min-width: 48em) {
+@media (min-width: 44rem) {
   body.contextual-open .page {
-    -webkit-transform: translate3d(-20rem, 0, 0); } }
+    -webkit-transform: translate3d(-18rem, 0, 0); } }
 .contextual-description {
   margin-bottom: 1em; }
 
@@ -482,7 +592,7 @@ code.contextual-code-example {
       top: 0;
       height: 0.0625rem; }
 
-@media (min-width: 48em) {
+@media (min-width: 44rem) {
   body.contextual-open .contextual-open-tree-parent {
     position: relative;
     z-index: 50; } }
