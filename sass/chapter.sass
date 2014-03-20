@@ -171,7 +171,7 @@ pre > code
 
 hr
     +background-image(linear-gradient(left, transparent, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .1) 90%, transparent))
-    height: .0625rem
+    height: 1px
     width: 100%
     border: 0
     margin: 2em auto
@@ -366,9 +366,9 @@ figure
                 top: 0
                 right: 0
                 left: 0
-                height: .0625rem
+                height: 1px
 
-    @media (min-width: $chapterBreakPointXLarge)
+    @media (min-width: ($exampleWrapperSideBySideWidth + ($chapterWidthInner / 2) + 4rem))
 
         figcaption
             position: absolute
@@ -403,7 +403,7 @@ figure
                 top: 20%
                 bottom: 20%
                 right: 1.875em
-                width: .0625rem
+                width: 1px
                 height: auto
                 left: auto
 
@@ -424,10 +424,13 @@ figure.cushy
 .magic-color
     min-height: 4em
     border-radius: .1875em
-    margin: 4em -200px
+    margin: 0 0 1em
 
-    @media (max-width: $chapterBreakPointXLarge)
-        margin: 0 0 1em
+    @media (min-width: $chapterBreakPointLarge)
+        margin: 4em -4em
+
+    @media (min-width: $chapterBreakPointXLarge)
+        margin: 4em -8em
 
     h2
         padding: 1em 0
@@ -462,9 +465,9 @@ code + code.color
         right: 0
         background-color: #fff
         background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc)
-        background-size: 10px 10px
-        border-radius: 0 .1875em .1875em 0
-        background-position: 0 0, 5px 5px
+        background-size: .625rem .625rem
+        border-radius: 0 .1875rem .1875rem 0
+        background-position: 0 0, .3125rem .3125rem
 
     > span
         position: absolute
@@ -472,7 +475,7 @@ code + code.color
         bottom: 0
         left: 0
         right: 0
-        border-radius: 0 .1875em .1875em 0
+        border-radius: 0 .1875rem .1875rem 0
 
 .contextual-display-wrapper
     position: absolute
@@ -526,7 +529,7 @@ code + code.color
             top: 0
             bottom: 20%
             left: 1.875em
-            width: .0625rem
+            width: 1px
 
     a[data-contextual-close]
         -webkit-tap-highlight-color: transparent
@@ -615,7 +618,7 @@ code.contextual-code-example
             left: 0
             right: 0
             top: 0
-            height: .0625rem
+            height: 1px
 
 @media (min-width: $chapterBreakPointLarge)
     body.contextual-open
