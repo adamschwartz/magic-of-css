@@ -67,33 +67,35 @@
 
                 <p>Both of these boxes have the following CSS:</p>
 
-                <style>
-                    .example-box-sizing .box {
-                        height: 5em;
-                        width: 5em;
-                        padding: 1em;
-                        border: .25em solid
-                    }
-                </style>
+                <div class="example-wrapper">
+                    <style>
+                        .example-box-sizing .box {
+                            height: 5em;
+                            width: 5em;
+                            padding: 1em;
+                            border: .25em solid
+                        }
+                    </style>
 
-                <pre><code>.box {
+                    <pre><code>.box {
     height: 5em;
     width: 5em;
     padding: 1em;
     border: .25em solid
 }</code></pre>
 
-                <div class="example side-by-side example-box-sizing">
-                    <div class="left">
-                        <p><code>content-box</code></p>
-                        <div class="example-content">
-                            <div class="box" style="box-sizing: content-box"></div>
+                    <div class="example side-by-side example-box-sizing">
+                        <div class="left">
+                            <p><code>content-box</code></p>
+                            <div class="example-content">
+                                <div class="box" style="box-sizing: content-box"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="right">
-                        <p><code>border-box</code></p>
-                        <div class="example-content">
-                            <div class="box" style="box-sizing: border-box"></div>
+                        <div class="right">
+                            <p><code>border-box</code></p>
+                            <div class="example-content">
+                                <div class="box" style="box-sizing: border-box"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -106,39 +108,40 @@
 
                 <p>In the example below, our input has a specific padding in <code>em</code>s and yet we can still specify a width in <code>%</code> (<code>padding: .4em .55em</code> and <code>width: 100%</code>, respectively).</p>
 
-                <style>
-                    .example-flexible-input .example-content {
-                        background: #eee
-                    }
+                <div class="example-wrapper">
+                    <style>
+                        .example-flexible-input .example-content {
+                            background: #eee
+                        }
 
-                    .example-flexible-input .box {
-                        background: #ccc;
-                        width: 75%;
-                        padding: 1em
-                    }
+                        .example-flexible-input .box {
+                            background: #ccc;
+                            width: 75%;
+                            padding: 1em
+                        }
 
-                    .example-flexible-input .box-inner {
-                        overflow: hidden
-                    }
+                        .example-flexible-input .box-inner {
+                            overflow: hidden
+                        }
 
-                    .example-flexible-input .box-inner p:first-child {
-                        margin-top: 0
-                    }
+                        .example-flexible-input .box-inner p:first-child {
+                            margin-top: 0
+                        }
 
-                    .example-flexible-input input[type="text"] {
-                        box-sizing: border-box;
-                        width: 100%;
-                        padding: .4em .55em;
-                        font-size: inherit;
-                        font-family: inherit;
-                        color: inherit;
-                        border: 0;
-                        border-radius: .25em;
-                        outline: none
-                    }
-                </style>
+                        .example-flexible-input input[type="text"] {
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: .4em .55em;
+                            font-size: inherit;
+                            font-family: inherit;
+                            color: inherit;
+                            border: 0;
+                            border-radius: .25em;
+                            outline: none
+                        }
+                    </style>
 
-                <pre><code>input[type="text"] {
+                    <pre><code>input[type="text"] {
     /* Flexibility */
     box-sizing: border-box;
     width: 100%;
@@ -153,23 +156,23 @@
     outline: none
 }</code></pre>
 
-                <div class="example example-flexible-input">
-                    <div class="example-content">
-                        <div class="box">
-                            <div class="box-inner">
-                                <p>Box</p>
-                                <input type="text" placeholder="Text input">
+                    <div class="example example-flexible-input">
+                        <div class="example-content">
+                            <div class="box">
+                                <div class="box-inner">
+                                    <p>Box</p>
+                                    <input type="text" placeholder="Text input">
+                                </div>
                             </div>
                         </div>
+                        <p>
+                            <input type="range" class="example-flexible-input-slider" min="20" max="100" value="75">
+                            <span> &nbsp;&nbsp;<code>width: <span class="example-flexible-input-slider-value">75%</span></code></span>
+                        </p>
+
+                        <p>Adjust the box width and observe the input adjust its width to match.</p>
                     </div>
                 </div>
-
-                <p>
-                    <input type="range" class="example-flexible-input-slider" min="20" max="100" value="75">
-                    <span> &nbsp;&nbsp;<code>width: <span class="example-flexible-input-slider-value">75%</span></code></span>
-                </p>
-
-                <p>Adjust the box width and observe the input adjust its width to match.</p>
 
                 <script>
                     document.querySelector('.example-flexible-input-slider').addEventListener('change', function(e){

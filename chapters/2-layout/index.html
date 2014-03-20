@@ -55,71 +55,73 @@
 
                 <p>In the following example we have elements of each of these three display types with the following additional CSS applied to all of them:</p>
 
-                <style>
-                    .example-display .example-content * {
-                        background: #eee;
-                        border: 2px solid;
-                        margin-bottom: 4px;
-                        padding: 10px
-                    }
+                <div class="example-wrapper">
+                    <style>
+                        .example-display .example-content * {
+                            background: #eee;
+                            border: .125em solid;
+                            margin-bottom: .5em;
+                            padding: .5em
+                        }
 
-                    .example-display .example-content .block {
-                        display: block
-                    }
+                        .example-display .example-content .block {
+                            display: block
+                        }
 
-                    .example-display .example-content .inline {
-                        display: inline
-                    }
+                        .example-display .example-content .inline {
+                            display: inline
+                        }
 
-                    .example-display .example-content .inline-block {
-                        display: inline-block
-                    }
-                </style>
+                        .example-display .example-content .inline-block {
+                            display: inline-block
+                        }
+                    </style>
 
-                <pre><code>* {
+                    <pre><code>* {
     background: #eee;
-    border: 2px solid;
-    margin-bottom: 4px;
-    padding: 10px
+    border: .125em solid;
+    margin-bottom: .5em;
+    padding: .5em
 }</code></pre>
 
-                <div class="example example-display">
-                    <div class="example-content">
-                        <div class="block">Block</div>
-                        <div class="block">Block</div>
-                        <span class="inline">Inline</span>
-                        <span class="inline">Inline</span>
-                        <span class="inline">Inline</span>
-                        <span class="inline">Inline</span>
-                        <span class="inline">Inline</span>
-                        <span class="inline">Inline</span>
-                        <span class="inline">Inline</span>
-                        <span class="inline">Inline</span>
-                        <span class="inline">Inline</span>
-                        <div class="block">Block</div>
-                        <div class="block">Block</div>
-                        <div class="inline-block">Inline block</div>
-                        <div class="inline-block">Inline block</div>
-                        <div class="inline-block">Inline block</div>
+                    <div class="example example-display">
+                        <div class="example-content">
+                            <div class="block">Block</div>
+                            <div class="block">Block</div>
+                            <span class="inline">Inline</span>
+                            <span class="inline">Inline</span>
+                            <span class="inline">Inline</span>
+                            <span class="inline">Inline</span>
+                            <span class="inline">Inline</span>
+                            <span class="inline">Inline</span>
+                            <span class="inline">Inline</span>
+                            <span class="inline">Inline</span>
+                            <span class="inline">Inline</span>
+                            <div class="block">Block</div>
+                            <div class="block">Block</div>
+                            <div class="inline-block">Inline block</div>
+                            <div class="inline-block">Inline block</div>
+                            <div class="inline-block">Inline block</div>
+                        </div>
+
+                        <p>
+                            <label>
+                                <input type="checkbox" class="example-display-fixed-width-checkbox"> Set all widths to 20%
+                            </label>
+                        </p>
+
+                        <script>
+                            document.querySelector('.example-display-fixed-width-checkbox').addEventListener('change', function(e){
+                                var checked = e.target.checked;
+                                Array.prototype.slice.call(document.querySelectorAll('.example-display .example-content *')).forEach(function(box){
+                                    box.style.width = checked ? '20%' : 'auto';
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
 
-                <p>
-                    <label>
-                        <input type="checkbox" class="example-display-fixed-width-checkbox"> Set all widths to 20%
-                    </label>
-                </p>
-
-                <script>
-                    document.querySelector('.example-display-fixed-width-checkbox').addEventListener('change', function(e){
-                        var checked = e.target.checked;
-                        Array.prototype.slice.call(document.querySelectorAll('.example-display .example-content *')).forEach(function(box){
-                            box.style.width = checked ? '20%' : 'auto';
-                        });
-                    });
-                </script>
-
-                <p>One thing to notice here is the difference between <code>inline</code> and <code>inline-block</code>. The <code>inline</code> elements display their <code>10px</code> padding and <code>2px</code> border, but only the lefts and rights (and not tops and bottoms) of these actually affect their layout. Whereas the <code>inline-block</code> elements reposition themselves in layout due to their padding and border, just as do the <code>block</code> elements.</p>
+                <p>One thing to notice here is the difference between <code>inline</code> and <code>inline-block</code>. The <code>inline</code> elements display their <code>.5em</code> padding and <code>.125em</code> border, but only the lefts and rights (and not tops and bottoms) of these actually affect their layout. Whereas the <code>inline-block</code> elements reposition themselves in layout due to their padding and border, just as do the <code>block</code> elements.</p>
 
                 <p>Another important thing to notice is that even with <code>20%</code> width set on all elements, the <code>block</code> elements <em>still don't wrap</em>. Assuming no floats are in the mix, <code>block</code> elements do not allow horizontal neighbors.</p>
 
@@ -181,52 +183,64 @@
 
                 <p>Since <code>inline-block</code> elements are treated more or less as text, you can use <code>text-align: justify</code> on a list of <code>inline-block</code> elements to create a grid structure.</p>
 
-                <style>
-                    .example-text-align-justify .grid {
-                        border: 2px solid;
-                        text-align: justify;
-                        font-size: 0px;
-                        padding: 2%
-                    }
+                <div class="example-wrapper">
+                    <style>
+                        .example-text-align-justify .grid {
+                            border: .125rem solid;
+                            text-align: justify;
+                            font-size: 0;
+                            padding: 4% 4% 0 4%
+                        }
 
-                    .example-text-align-justify .box {
-                        font-size: 16px;
-                        display: inline-block;
-                        background: #eee;
-                        border: 2px solid;
-                        width: 29%;
-                        padding: 2%;
-                        margin: 2%
-                    }
+                        .example-text-align-justify .box {
+                            font-size: 1rem;
+                            display: inline-block;
+                            background: #eee;
+                            border: .125em solid;
+                            width: 30%;
+                            padding: 2%
+                        }
 
-                    .example-text-align-justify .break {
-                        display: inline-block;
-                        width: 30%;
-                        height: 0
-                    }
-                </style>
+                        .example-text-align-justify .box:nth-last-child(n+5) {
+                            margin-bottom: 4%
+                        }
 
-                <pre><code>.grid {
-    border: 2px solid;
-    text-align: justify
-}
+                        .example-text-align-justify .break {
+                            display: inline-block;
+                            width: 30%;
+                            height: 0
+                        }
+                    </style>
 
-.box {
-    display: inline-block;
-    background: #eee;
-    border: 2px solid;
-    width: 30%;
-    padding: 2%;
-    margin-bottom: 2%
-}
+                    <pre><code>&lt;style&gt;
+    .grid {
+        border: .125rem solid;
+        text-align: justify;
+        font-size: 0;
+        padding: 4% 4% 0 4%
+    }
 
-.break {
-    display: inline-block;
-    width: 30%;
-    height: 0
-}</code></pre>
+    .box {
+        font-size: 1rem;
+        display: inline-block;
+        background: #eee;
+        border: .125em solid;
+        width: 30%;
+        padding: 2%
+    }
 
-                <pre><code>&lt;div class="grid"&gt;
+    /* All but the last 3 boxes */
+    .box:nth-last-child(n+5) {
+        margin-bottom: 4%
+    }
+
+    .break {
+        display: inline-block;
+        width: 30%;
+        height: 0
+&lt;/style&gt;
+
+&lt;div class="grid"&gt;
     &lt;div class="box"&gt;Column&lt;/div&gt;
     &lt;div class="box"&gt;Column&lt;/div&gt;
     &lt;div class="box"&gt;Column&lt;/div&gt;
@@ -236,36 +250,37 @@
     &lt;div class="break"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-                <div class="example example-text-align-justify">
-                    <div class="example-content">
-                        <div class="grid">
-                            <div class="box">Box</div>
-                            <div class="box">Box</div>
-                            <div class="box">Box</div>
-                            <div class="box">Box</div>
-                            <div class="box">Box</div>
-                            <div class="box">Box</div>
-                            <div class="break"></div>
+                    <div class="example example-text-align-justify">
+                        <div class="example-content">
+                            <div class="grid">
+                                <div class="box">Box</div>
+                                <div class="box">Box</div>
+                                <div class="box">Box</div>
+                                <div class="box">Box</div>
+                                <div class="box">Box</div>
+                                <div class="box">Box</div>
+                                <div class="break"></div>
+                            </div>
                         </div>
+
+                        <p>
+                            <input type="range" class="example-text-align-justify-slider" min="26" max="30" value="30">
+                            <span> &nbsp;&nbsp;<code>width: <span class="example-text-align-justify-slider-value">30%</span></code></span>
+                        </p>
+
+                        <p>Adjust the width of the boxes and note that <code>text-align: justify</code> keeps the grid in tact.</p>
+
+                        <script>
+                            document.querySelector('.example-text-align-justify-slider').addEventListener('change', function(e){
+                                var width = e.target.valueAsNumber + '%';
+                                document.querySelector('.example-text-align-justify-slider-value').innerHTML = width;
+                                Array.prototype.slice.call(document.querySelectorAll('.example-text-align-justify .box')).forEach(function(box){
+                                    box.style.width = width;
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
-
-                <p>
-                    <input type="range" class="example-text-align-justify-slider" min="25" max="29" value="29">
-                    <span> &nbsp;&nbsp;<code>width: <span class="example-text-align-justify-slider-value">29%</span></code></span>
-                </p>
-
-                <p>Adjust the width of the boxes and note that <code>text-align: justify</code> keeps the grid in tact.</p>
-
-                <script>
-                    document.querySelector('.example-text-align-justify-slider').addEventListener('change', function(e){
-                        var width = e.target.valueAsNumber + '%';
-                        document.querySelector('.example-text-align-justify-slider-value').innerHTML = width;
-                        Array.prototype.slice.call(document.querySelectorAll('.example-text-align-justify .box')).forEach(function(box){
-                            box.style.width = width;
-                        });
-                    });
-                </script>
 
                 <h2>Floats</h2>
 
@@ -319,56 +334,60 @@
 
                 <p>For example:</p>
 
-                <style>
-                    .example-position-negative .parent {
-                        position: relative;
-                        text-align: center;
-                        padding: 20px;
-                        background: #eee;
-                        margin-top: 60px
-                    }
+                <div class="example-wrapper">
+                    <style>
+                        .example-position-negative .parent {
+                            position: relative;
+                            text-align: center;
+                            padding: 1.25em;
+                            background: #eee;
+                            margin-top: 2.5em
+                        }
 
-                    .example-position-negative .child {
-                        position: absolute;
-                        height: 40px;
-                        top: -40px;
-                        right: 0;
-                        line-height: 40px;
-                        background: #444;
-                        color: #fff;
-                        padding: 0 10px
-                    }
-                </style>
+                        .example-position-negative .child {
+                            position: absolute;
+                            height: 2.5em;
+                            top: -2.5em;
+                            right: 0;
+                            line-height: 2.5em;
+                            background: #444;
+                            color: #fff;
+                            padding: 0 .625em
+                        }
+                    </style>
 
-                <pre><code>.parent {
+                    <pre><code>.parent {
     position: relative;
     text-align: center;
-    padding: 20px;
+    padding: 1.25em;
     background: #eee
 }
 
 .child {
     position: absolute;
-    height: 40px;
-    top: -40px;
+    height: 2.5em;
+    top: -2.5em;
     right: 0;
-    line-height: 40px;
+    line-height: 2.5em;
     background: #444;
     color: #fff;
-    padding: 0 10px
+    padding: 0 .625em
 }</code></pre>
 
-                <div class="example example-position-negative">
-                    <div class="example-content">
-                        <div class="parent">
-                            Parent
-                            <div class="child">Child</div>
+                    <div class="example example-position-negative">
+                        <div class="example-content">
+                            <div class="parent">
+                                Parent
+                                <div class="child">Child</div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <pre><code>height: 40px;
-top: -40px;</code></pre>
+                <p>Note the following two lines of CSS:</p>
+
+                <pre><code>height: 2.5em;
+top: -2.5em;</code></pre>
 
                 <p>This part is unideal because it's not <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a> and because we had to specify a height. <em>When possible, it's better not to specify fixed values in CSS.</em> The more you can let things get sized by content the better, because it means your design is more flexible, supports more use-cases, and is less likely to create future bugs.</p>
 
@@ -376,29 +395,30 @@ top: -40px;</code></pre>
 
                 <p>So now our same example can be coded like this instead:</p>
 
-                <style>
-                    .example-position-100 .parent {
-                        position: relative;
-                        text-align: center;
-                        padding: 20px;
-                        background: #eee;
-                        margin-top: 60px
-                    }
+                <div class="example-wrapper">
+                    <style>
+                        .example-position-100 .parent {
+                            position: relative;
+                            text-align: center;
+                            padding: 1.25em;
+                            background: #eee;
+                            margin-top: 2.75em
+                        }
 
-                    .example-position-100 .child {
-                        position: absolute;
-                        bottom: 100%;
-                        right: 0;
-                        background: #444;
-                        color: #fff;
-                        padding: 10px
-                    }
-                </style>
+                        .example-position-100 .child {
+                            position: absolute;
+                            bottom: 100%;
+                            right: 0;
+                            background: #444;
+                            color: #fff;
+                            padding: .625em
+                        }
+                    </style>
 
-                <pre><code>.parent {
+                    <pre><code>.parent {
     position: relative;
     text-align: center;
-    padding: 20px;
+    padding: 1.25em;
     background: #eee
 }
 
@@ -408,14 +428,15 @@ top: -40px;</code></pre>
     right: 0;
     background: #444;
     color: #fff;
-    padding: 10px
+    padding: .625em
 }</code></pre>
 
-                <div class="example example-position-100">
-                    <div class="example-content">
-                        <div class="parent">
-                            Parent
-                            <div class="child">Child</div>
+                    <div class="example example-position-100">
+                        <div class="example-content">
+                            <div class="parent">
+                                Parent
+                                <div class="child">Child</div>
+                            </div>
                         </div>
                     </div>
                 </div>

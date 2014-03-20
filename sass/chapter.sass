@@ -72,6 +72,30 @@ img
             > p:first-child
                 margin-top: 0
 
+$chapterWidthInner: $chapterWidth - (2 * .666666rem)
+$exampleWrapperSideBySideWidth: ($chapterWidthInner * 2) + 2rem
+
+@media (min-width: ($exampleWrapperSideBySideWidth + ($chapterWidthInner / 2) + 4rem))
+    .example-wrapper
+        +pie-clearfix
+        width: $exampleWrapperSideBySideWidth
+        margin-left: - ($exampleWrapperSideBySideWidth - $chapterWidthInner) / 2
+        margin-top: 1em
+        margin-bottom: 2em
+
+        &.typography-example-wrapper
+            margin-bottom: 4em
+
+        pre, .example
+            width: $chapterWidthInner
+            margin-top: 0
+
+        pre
+            float: left
+
+        .example
+            float: right
+
 code, pre
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
 
