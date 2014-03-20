@@ -1,8 +1,19 @@
 @import compass/css3
 @import compass/utilities/general/clearfix
 
+@import colors
+@import variables
+
 *, *:after, *:before
     +box-sizing(border-box)
+
+::-moz-selection
+    text-shadow: none
+    background: $selectionColor
+
+::selection
+    text-shadow: none
+    background: $selectionColor
 
 html
     font-size: 16px

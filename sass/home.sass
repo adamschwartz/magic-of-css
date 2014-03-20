@@ -2,32 +2,26 @@
 @import compass/utilities/general/clearfix
 
 @import rainbow
+@import colors
+@import variables
 
 body
     margin: 0
 
-    @media (min-width: 48em)
+    @media (min-width: $chapterBreakPointLarge)
         margin: 8em 0
-
-::-moz-selection
-    text-shadow: none
-    background: $selectionColor
-
-::selection
-    text-shadow: none
-    background: $selectionColor
 
 .page
     text-align: center
     padding: 2em 0
 
-    @media (min-width: 48em)
+    @media (min-width: $chapterBreakPointLarge)
         padding: 0
 
 .separator
     height: 2.5em
 
-    @media (min-width: 48em)
+    @media (min-width: $chapterBreakPointLarge)
         height: 10em
 
 h2
