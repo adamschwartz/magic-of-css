@@ -175,7 +175,7 @@
       return closeContextualDisplay();
     });
     Array.prototype.slice.call(document.querySelectorAll(':not(pre) > code')).forEach(function(code) {
-      var specialTerm;
+      var specialTerm, _ref, _ref1;
       for (specialTerm in chapters.specialTerms) {
         if (!(code.textContent === specialTerm)) {
           continue;
@@ -183,7 +183,9 @@
         code.classList.add('contextual-code-example');
         return;
       }
-      return console.log('Could not find special term', code.textContent);
+      if (((_ref = location.hostname.match(/localhost/)) != null ? _ref.length : void 0) && (((_ref1 = window.console) != null ? _ref1.log : void 0) != null)) {
+        return console.log('Could not find special term', code.textContent);
+      }
     });
     closeContextualDisplay = function() {
       return Array.prototype.slice.call(document.querySelectorAll('.contextual-open, .contextual-transition, .contextual-open-tree')).forEach(function(element) {

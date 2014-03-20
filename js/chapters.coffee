@@ -229,7 +229,8 @@ chapters.setupContextualCodeExamples = ->
             code.classList.add 'contextual-code-example'
             return
 
-        console.log 'Could not find special term', code.textContent
+        if location.hostname.match(/localhost/)?.length and window.console?.log?
+            console.log 'Could not find special term', code.textContent
 
     closeContextualDisplay = ->
         Array::slice.call(document.querySelectorAll('.contextual-open, .contextual-transition, .contextual-open-tree')).forEach (element) ->
