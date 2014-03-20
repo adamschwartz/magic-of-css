@@ -34,7 +34,7 @@
 
                 <style>
                     figure.all-rgb {
-                        width: 1024px;
+                        width: 64rem;
                         max-width: 100%;
                     }
                 </style>
@@ -113,8 +113,8 @@
 
                 <style>
                     .branding-color {
-                        border-radius: 3px;
-                        margin-bottom: 4px;
+                        border-radius: .1875em;
+                        margin-bottom: .25rem;
                         display: inline-block
                     }
 
@@ -127,7 +127,9 @@
                         opacity: 0;
                         transition: opacity .3s;
                         cursor: default;
-                        font-size: 1.2em
+                        font-size: 1.2em;
+                        margin: 1em 0;
+                        line-height: .8em
                     }
 
                     .branding-color:hover h2 {
@@ -208,20 +210,22 @@
                     }
 
                     .example-which-color .item {
+                        font-size: 1rem;
                         display: inline-block;
                         margin: 0 auto;
                         width: 30%;
+                        min-width: 4em;
                         height: 4em;
                         background: #fff;
-                        border-radius: 3px
+                        border-radius: .1875em
                     }
 
                     .example-which-color .item-grey-shadow {
-                        box-shadow: 0 2px 8px #ccc
+                        box-shadow: 0 .125em .5em #ccc
                     }
 
                     .example-which-color .item-black-alpha-shadow {
-                        box-shadow: 0 2px 8px rgba(0, 0, 0, .2)
+                        box-shadow: 0 .125em .5em rgba(0, 0, 0, .2)
                     }
                 </style>
 
