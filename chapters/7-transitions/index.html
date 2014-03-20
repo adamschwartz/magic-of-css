@@ -44,7 +44,8 @@
 
                 <style>
                     .typography-example {
-                        margin-bottom: 140px
+                        line-height: normal;
+                        margin-bottom: 8rem
                     }
 
                     .typography-example {
@@ -60,9 +61,9 @@
                         content: "Hover to see transition";
                         text-transform: uppercase;
                         position: absolute;
-                        top: 10px;
-                        left: 10px;
-                        font-size: 10px;
+                        top: .625rem;
+                        left: .625rem;
+                        font-size: .625rem;
                         letter-spacing: .1em;
                         transition: opacity 200ms;
                         transition-delay: 2000ms
@@ -228,11 +229,11 @@
 }
 
 .ex .title span {
-    -webkit-transform: translateZ(0) translateY(-100px)
+    -webkit-transform: translateZ(0) translateY(-6rem)
 }
 
 .ex .author span {
-    -webkit-transform: translateZ(0) translateY(100px)
+    -webkit-transform: translateZ(0) translateY(6rem)
 }
 
 .ex:hover .title span,
@@ -414,7 +415,7 @@
                 <style>
                     .accordion-example .accordion input[type="radio"] {
                         position: absolute;
-                        left: -9999px;
+                        left: -9999rem;
                     }
 
                     .accordion-example .accordion label {
@@ -422,14 +423,14 @@
                         background: #4f6f8b;
                         color: #fff;
                         text-align: center;
-                        padding: 18px;
+                        padding: 1rem;
                         font-size: .8em;
                         letter-spacing: .13em;
                         padding-left: .13em;
                         padding-right: 0;
                         text-transform: uppercase;
                         cursor: pointer;
-                        height: 50px;
+                        height: 3.3rem;
                         font-weight: 300;
                         transition: background 400ms, color 400ms, border-radius 400ms;
                     }
@@ -440,19 +441,19 @@
 
                     .accordion-example .accordion .baffle {
                         position: relative;
-                        height: 50px;
+                        height: 3.3rem;
                         overflow: hidden;
                         transition: height 400ms;
                         -webkit-transform: translateZ(0);
                     }
 
                     .accordion-example .accordion .baffle-inner {
-                        padding: 20px;
+                        padding: 1.25rem;
                         background: #eee;
                         position: absolute;
-                        top: 50px;
+                        top: 3.3rem;
                         left: 0;
-                        height: 200px;
+                        height: 13.5rem;
                         overflow: scroll;
                         overflow-y: scroll;
                         overflow-x: hidden
@@ -460,12 +461,12 @@
 
                     .accordion-example .accordion .baffle:first-of-type label,
                     .accordion-example .accordion .baffle:first-of-type .baffle-inner {
-                        border-radius: 4px 4px 0 0
+                        border-radius: .25rem .25rem 0 0
                     }
 
                     .accordion-example .accordion .baffle:last-of-type label,
                     .accordion-example .accordion .baffle:last-of-type .baffle-inner {
-                        border-radius: 0 0 4px 4px
+                        border-radius: 0 0 .25rem .25rem
                     }
 
                     .accordion-example .accordion .baffle-inner :first-child {
@@ -477,7 +478,7 @@
                     }
 
                     .accordion-example .accordion input[type="radio"]:checked + .baffle {
-                        height: 250px
+                        height: 16.8rem
                     }
 
                     .accordion-example .accordion input[type="radio"]:checked + .baffle label {
@@ -496,13 +497,14 @@
                     }
 
                     .accordion-example ::-webkit-scrollbar {
-                        width: 15px
+                        width: .9375rem
                     }
 
                     .accordion-example ::-webkit-scrollbar-thumb {
                         background: #849cb1;
                         border: solid #eee;
-                        border-width: 6px 6px 6px 0
+                        border-width: .375rem .375rem .375rem 0;
+                        border-radius: 0 .375rem .375rem 0
                     }
 
                     .accordion-example ::-webkit-scrollbar-thumb:window-inactive {
