@@ -12,12 +12,14 @@ body
 
 h1
     text-align: center
+    line-height: normal
 
     .number
         display: block
         font-weight: 300
         text-transform: uppercase
         letter-spacing: .4em
+        padding-left: .4em
         font-size: .55em
         line-height: 1
         position: relative
@@ -32,6 +34,12 @@ h1
 
 img
     max-width: 100%
+
+sup
+    vertical-align: baseline
+    position: relative
+    top: -.5em
+    font-size: .85em
 
 .logo
     margin: 0 auto 5em auto
@@ -50,6 +58,7 @@ img
     max-width: 100%
     padding: 0 .666666rem 1rem
     margin: 0 auto
+    line-height: 1.5em
 
     a
         color: inherit
@@ -75,6 +84,14 @@ img
 
         &:visited
             color: inherit
+
+    h2, h3, h4, h5, h6
+        line-height: 1.2em
+        margin-top: 2rem
+        margin-bottom: .125em
+
+        & + *
+            margin-top: 0
 
     sup a, .chapter-navigation a
         background-image: none
@@ -134,7 +151,7 @@ pre
     padding: .5em .666666em
     overflow-x: auto
     -webkit-overflow-scrolling: touch
-    font-size: .875em
+    font-size: .8em
     line-height: 1.71em
     white-space: pre
     word-wrap: normal
@@ -143,6 +160,9 @@ code
     font-size: .8em
     padding: .15625em .3125em
     background: #eee
+
+    @media (min-width: $chapterBreakPointLarge)
+        padding: 3px 6px
 
 pre > code
     font-size: inherit
@@ -247,6 +267,7 @@ h3.magic
             color: #fff
             margin-top: 1.25rem
             margin-right: .0625rem
+            line-height: 1.25em
 
     @media (max-width: $chapterBreakPoint)
 
@@ -308,6 +329,9 @@ dl
         dd
             width: 70%
             margin: 0 0 1.5em
+
+            &:last-child
+                margin-bottom: 0
 
 em > em
     font-style: normal
