@@ -9,6 +9,14 @@ body
     @media (min-width: 48em)
         margin: 8em 0
 
+::-moz-selection
+    text-shadow: none
+    background: $selectionColor
+
+::selection
+    text-shadow: none
+    background: $selectionColor
+
 .page
     text-align: center
     padding: 2em 0
@@ -49,9 +57,9 @@ ol.chapters
         counter-increment: chaptersCounter
 
         &:before
+            +inline-block
             content: counter(chaptersCounter) " "
             margin-bottom: .875rem
-            display: inline-block
             color: #aaa
             text-align: center
             width: 1em
@@ -63,7 +71,7 @@ ol.chapters
         counter-reset: chaptersCounter
 
     a
-        display: block
+        +inline-block
         margin-bottom: 1rem
 
 ol.chapters, ul.potions, .preface-link
@@ -89,8 +97,21 @@ ol.chapters, ul.potions, .preface-link
         color: inherit
         text-decoration: none
 
-        &:hover
-            text-decoration: underline
+        &:hover span
+            background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#464646, #464646)
+            background-size: .05em 1px, .05em 1px, 1px 1px
+            background-repeat: no-repeat, no-repeat, repeat-x
+            text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff
+            background-position-y: 86%, 86%, 86%
+            background-position-x: 0%, 100%, 0%
+
+            &::selection
+                text-shadow: .03em 0 $selectionColor, -.03em 0 $selectionColor, 0 .03em $selectionColor, 0 -.03em $selectionColor, .06em 0 $selectionColor, -.06em 0 $selectionColor, .09em 0 $selectionColor, -.09em 0 $selectionColor
+                background: $selectionColor
+
+            &::-moz-selection
+                text-shadow: .03em 0 $selectionColor, -.03em 0 $selectionColor, 0 .03em $selectionColor, 0 -.03em $selectionColor, .06em 0 $selectionColor, -.06em 0 $selectionColor, .09em 0 $selectionColor, -.09em 0 $selectionColor
+                background: $selectionColor
 
 ul.potions, .preface-link
     list-style: none
