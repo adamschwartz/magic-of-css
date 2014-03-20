@@ -51,6 +51,35 @@ img
     padding: 0 .666666rem 1rem
     margin: 0 auto
 
+    a
+        color: inherit
+        text-decoration: none
+
+        background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#333332, #333332)
+        background-size: .05em 1px, .05em 1px, 1px 1px
+        background-repeat: no-repeat, no-repeat, repeat-x
+        text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff
+        background-position-y: 86%, 86%, 86%
+        background-position-x: 0%, 100%, 0%
+
+        &::selection
+            text-shadow: 0.03em 0 $selectionColor, -0.03em 0 $selectionColor, 0 0.03em $selectionColor, 0 -0.03em $selectionColor, 0.06em 0 $selectionColor, -0.06em 0 $selectionColor, 0.09em 0 $selectionColor, -0.09em 0 $selectionColor, 0.12em 0 $selectionColor, -0.12em 0 $selectionColor, 0.15em 0 $selectionColor, -0.15em 0 $selectionColor
+            background: $selectionColor
+
+        &::-moz-selection
+            text-shadow: 0.03em 0 $selectionColor, -0.03em 0 $selectionColor, 0 0.03em $selectionColor, 0 -0.03em $selectionColor, 0.06em 0 $selectionColor, -0.06em 0 $selectionColor, 0.09em 0 $selectionColor, -0.09em 0 $selectionColor, 0.12em 0 $selectionColor, -0.12em 0 $selectionColor, 0.15em 0 $selectionColor, -0.15em 0 $selectionColor
+            background: $selectionColor
+
+        &:before, &:after, *, *:before, *:after
+            text-shadow: none
+
+        &:visited
+            color: inherit
+
+    sup a, .chapter-navigation a
+        background-image: none
+        text-shadow: none
+
 .example
     max-width: 100%
     overflow: auto
