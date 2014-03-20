@@ -44,7 +44,8 @@
 
                 <style>
                     .typography-example {
-                        margin-bottom: 140px
+                        line-height: normal;
+                        margin-bottom: 8rem
                     }
 
                     .typography-example {
@@ -60,9 +61,9 @@
                         content: "Hover to see transition";
                         text-transform: uppercase;
                         position: absolute;
-                        top: 10px;
-                        left: 10px;
-                        font-size: 10px;
+                        top: .625rem;
+                        left: .625rem;
+                        font-size: .625rem;
                         letter-spacing: .1em;
                         transition: opacity 200ms;
                         transition-delay: 2000ms
@@ -74,43 +75,44 @@
                     }
                 </style>
 
-                <style>
-                    .typography-example-1 {
-                        background-image: linear-gradient(top left, #723362 0%, #9d223c 100%);
-                        background-color: #9d223c;
-                        color: #fff;
-                        padding: 1em 0;
-                        text-align: center;
-                        font-weight: 200;
-                        text-transform: uppercase;
-                        letter-spacing: .4em;
-                        padding-left: .4em;
-                        font-size: 1.8em;
-                        margin-top: 40px
-                    }
+                <div class="example-wrapper typography-example-wrapper">
+                    <style>
+                        .typography-example-1 {
+                            background-image: linear-gradient(top left, #723362 0%, #9d223c 100%);
+                            background-color: #9d223c;
+                            color: #fff;
+                            padding: 1em 0;
+                            text-align: center;
+                            font-weight: 300;
+                            text-transform: uppercase;
+                            letter-spacing: .4em;
+                            padding-left: .4em;
+                            font-size: 1.8em;
+                            margin-top: 2.5rem
+                        }
 
-                    .typography-example-1 span {
-                        opacity: 0;
-                        transition: opacity 1300ms
-                    }
+                        .typography-example-1 span {
+                            opacity: 0;
+                            transition: opacity 1300ms
+                        }
 
-                    .typography-example-1 span:nth-child(1)  { transition-delay:  200ms }
-                    .typography-example-1 span:nth-child(2)  { transition-delay: 1200ms }
-                    .typography-example-1 span:nth-child(3)  { transition-delay:  800ms }
-                    .typography-example-1 span:nth-child(4)  { transition-delay:  300ms }
-                    .typography-example-1 span:nth-child(5)  { transition-delay:  700ms }
-                    .typography-example-1 span:nth-child(6)  { transition-delay:  600ms }
-                    .typography-example-1 span:nth-child(7)  { transition-delay:  400ms }
-                    .typography-example-1 span:nth-child(8)  { transition-delay:  900ms }
-                    .typography-example-1 span:nth-child(9)  { transition-delay:  700ms }
-                    .typography-example-1 span:nth-child(10) { transition-delay:   50ms }
+                        .typography-example-1 span:nth-child(1)  { transition-delay:  200ms }
+                        .typography-example-1 span:nth-child(2)  { transition-delay: 1200ms }
+                        .typography-example-1 span:nth-child(3)  { transition-delay:  800ms }
+                        .typography-example-1 span:nth-child(4)  { transition-delay:  300ms }
+                        .typography-example-1 span:nth-child(5)  { transition-delay:  700ms }
+                        .typography-example-1 span:nth-child(6)  { transition-delay:  600ms }
+                        .typography-example-1 span:nth-child(7)  { transition-delay:  400ms }
+                        .typography-example-1 span:nth-child(8)  { transition-delay:  900ms }
+                        .typography-example-1 span:nth-child(9)  { transition-delay:  700ms }
+                        .typography-example-1 span:nth-child(10) { transition-delay:   50ms }
 
-                    .typography-example-1:hover span {
-                        opacity: 1
-                    }
-                </style>
+                        .typography-example-1:hover span {
+                            opacity: 1
+                        }
+                    </style>
 
-                <pre><code>.ex span {
+                    <pre><code>.ex span {
     opacity: 0;
     transition: opacity 1300ms
 }
@@ -130,94 +132,96 @@
     opacity: 1
 }</code></pre>
 
-                <div class="typography-example typography-example-1">
-                    <span>E</span><span>x</span><span>a</span><span>m</span><span>p</span><span>l</span><span>e</span> <span>O</span><span>n</span><span>e</span>
+                    <div class="example typography-example typography-example-1">
+                        <span>E</span><span>x</span><span>a</span><span>m</span><span>p</span><span>l</span><span>e</span> <span>O</span><span>n</span><span>e</span>
+                    </div>
                 </div>
 
-                <style>
-                    .typography-example-2 {
-                        background: #fff;
-                        border: .5em solid #000;
-                        color: #000;
-                        padding: 1em 0;
-                        text-align: center;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        font-size: 1.5em
-                    }
+                <div class="example-wrapper typography-example-wrapper">
+                    <style>
+                        .typography-example-2 {
+                            background: #fff;
+                            border: .5em solid #000;
+                            color: #000;
+                            padding: 1em 0;
+                            text-align: center;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            font-size: 1.5em
+                        }
 
-                    .typography-example-2 .title {
-                        display: block;
-                        letter-spacing: .4em;
-                        padding-left: .4em
-                    }
+                        .typography-example-2 .title {
+                            display: block;
+                            letter-spacing: .4em;
+                            padding-left: .4em
+                        }
 
-                    .typography-example-2 .author {
-                        font-style: italic;
-                        font-weight: 200;
-                        color: #888;
-                        font-size: .7em;
-                        text-transform: none;
-                        letter-spacing: .12em;
-                        padding-left: .12em
-                    }
+                        .typography-example-2 .author {
+                            font-style: italic;
+                            font-weight: 300;
+                            color: #888;
+                            font-size: .7em;
+                            text-transform: none;
+                            letter-spacing: .12em;
+                            padding-left: .12em
+                        }
 
-                    .typography-example-2 {
-                        overflow: hidden
-                    }
+                        .typography-example-2 {
+                            overflow: hidden
+                        }
 
-                    .typography-example-2 .title span,
-                    .typography-example-2 .author span {
-                        display: inline-block;
-                        opacity: 0;
-                        transition: -webkit-transform 800ms, opacity 800ms
-                    }
+                        .typography-example-2 .title span,
+                        .typography-example-2 .author span {
+                            display: inline-block;
+                            opacity: 0;
+                            transition: -webkit-transform 800ms, opacity 800ms
+                        }
 
-                    .typography-example-2 .title span {
-                        -webkit-transform: translateZ(0) translateY(-100px)
-                    }
+                        .typography-example-2 .title span {
+                            -webkit-transform: translateZ(0) translateY(-6rem)
+                        }
 
-                    .typography-example-2 .author span {
-                        -webkit-transform: translateZ(0) translateY(100px)
-                    }
+                        .typography-example-2 .author span {
+                            -webkit-transform: translateZ(0) translateY(6rem)
+                        }
 
-                    .typography-example-2:hover .title span,
-                    .typography-example-2:hover .author span {
-                        opacity: 1;
-                        transition: -webkit-transform 800ms, opacity 1200ms;
-                        -webkit-transform: translateZ(0) translateY(0)
-                    }
+                        .typography-example-2:hover .title span,
+                        .typography-example-2:hover .author span {
+                            opacity: 1;
+                            transition: -webkit-transform 800ms, opacity 1200ms;
+                            -webkit-transform: translateZ(0) translateY(0)
+                        }
 
-                    .typography-example-2 .title span:nth-child(1) { transition-delay: 360ms, 300ms }
-                    .typography-example-2 .title span:nth-child(2) { transition-delay: 420ms, 300ms }
-                    .typography-example-2 .title span:nth-child(3) { transition-delay: 480ms, 300ms }
-                    .typography-example-2 .title span:nth-child(4) { transition-delay: 540ms, 300ms }
-                    .typography-example-2 .title span:nth-child(5) { transition-delay: 600ms, 300ms }
-                    .typography-example-2 .title span:nth-child(6) { transition-delay: 660ms, 300ms }
-                    .typography-example-2 .title span:nth-child(7) { transition-delay: 720ms, 300ms }
+                        .typography-example-2 .title span:nth-child(1) { transition-delay: 360ms, 300ms }
+                        .typography-example-2 .title span:nth-child(2) { transition-delay: 420ms, 300ms }
+                        .typography-example-2 .title span:nth-child(3) { transition-delay: 480ms, 300ms }
+                        .typography-example-2 .title span:nth-child(4) { transition-delay: 540ms, 300ms }
+                        .typography-example-2 .title span:nth-child(5) { transition-delay: 600ms, 300ms }
+                        .typography-example-2 .title span:nth-child(6) { transition-delay: 660ms, 300ms }
+                        .typography-example-2 .title span:nth-child(7) { transition-delay: 720ms, 300ms }
 
-                    .typography-example-2 .author span:nth-child(1)  { transition-delay: 420ms, 0ms }
-                    .typography-example-2 .author span:nth-child(2)  { transition-delay: 390ms, 0ms }
-                    .typography-example-2 .author span:nth-child(3)  { transition-delay: 360ms, 0ms }
-                    .typography-example-2 .author span:nth-child(4)  { transition-delay: 330ms, 0ms }
-                    .typography-example-2 .author span:nth-child(5)  { transition-delay: 300ms, 0ms }
-                    .typography-example-2 .author span:nth-child(6)  { transition-delay: 270ms, 0ms }
-                    .typography-example-2 .author span:nth-child(7)  { transition-delay: 240ms, 0ms }
-                    .typography-example-2 .author span:nth-child(8)  { transition-delay: 210ms, 0ms }
-                    .typography-example-2 .author span:nth-child(9)  { transition-delay: 180ms, 0ms }
-                    .typography-example-2 .author span:nth-child(10) { transition-delay: 150ms, 0ms }
-                    .typography-example-2 .author span:nth-child(11) { transition-delay: 120ms, 0ms }
-                    .typography-example-2 .author span:nth-child(12) { transition-delay:  90ms, 0ms }
-                    .typography-example-2 .author span:nth-child(13) { transition-delay:  60ms, 0ms }
-                    .typography-example-2 .author span:nth-child(14) { transition-delay:  30ms, 0ms }
+                        .typography-example-2 .author span:nth-child(1)  { transition-delay: 420ms, 0ms }
+                        .typography-example-2 .author span:nth-child(2)  { transition-delay: 390ms, 0ms }
+                        .typography-example-2 .author span:nth-child(3)  { transition-delay: 360ms, 0ms }
+                        .typography-example-2 .author span:nth-child(4)  { transition-delay: 330ms, 0ms }
+                        .typography-example-2 .author span:nth-child(5)  { transition-delay: 300ms, 0ms }
+                        .typography-example-2 .author span:nth-child(6)  { transition-delay: 270ms, 0ms }
+                        .typography-example-2 .author span:nth-child(7)  { transition-delay: 240ms, 0ms }
+                        .typography-example-2 .author span:nth-child(8)  { transition-delay: 210ms, 0ms }
+                        .typography-example-2 .author span:nth-child(9)  { transition-delay: 180ms, 0ms }
+                        .typography-example-2 .author span:nth-child(10) { transition-delay: 150ms, 0ms }
+                        .typography-example-2 .author span:nth-child(11) { transition-delay: 120ms, 0ms }
+                        .typography-example-2 .author span:nth-child(12) { transition-delay:  90ms, 0ms }
+                        .typography-example-2 .author span:nth-child(13) { transition-delay:  60ms, 0ms }
+                        .typography-example-2 .author span:nth-child(14) { transition-delay:  30ms, 0ms }
 
-                    .typography-example-2:hover .title span,
-                    .typography-example-2:hover .author span {
-                        transition-delay: 0;
-                    }
-                </style>
+                        .typography-example-2:hover .title span,
+                        .typography-example-2:hover .author span {
+                            transition-delay: 0;
+                        }
+                    </style>
 
-                <pre><code>.ex .title span,
+                    <pre><code>.ex .title span,
 .ex .author span {
     display: inline-block;
     opacity: 0;
@@ -225,11 +229,11 @@
 }
 
 .ex .title span {
-    -webkit-transform: translateZ(0) translateY(-100px)
+    -webkit-transform: translateZ(0) translateY(-6rem)
 }
 
 .ex .author span {
-    -webkit-transform: translateZ(0) translateY(100px)
+    -webkit-transform: translateZ(0) translateY(6rem)
 }
 
 .ex:hover .title span,
@@ -267,91 +271,93 @@
     transition-delay: 0
 }</code></pre>
 
-                <div class="typography-example typography-example-2">
-                    <span class="title">
-                        <span>E</span><span>x</span><span>a</span><span>m</span><span>p</span><span>l</span><span>e</span>
-                    </span>
-                    <span class="author">
-                        <span>b</span><span>y</span> <span>A</span><span>d</span><span>a</span><span>m</span> <span>S</span><span>c</span><span>h</span><span>w</span><span>a</span><span>r</span><span>t</span><span>z</span>
-                    </span>
+                    <div class="example typography-example typography-example-2">
+                        <span class="title">
+                            <span>E</span><span>x</span><span>a</span><span>m</span><span>p</span><span>l</span><span>e</span>
+                        </span>
+                        <span class="author">
+                            <span>b</span><span>y</span> <span>A</span><span>d</span><span>a</span><span>m</span> <span>S</span><span>c</span><span>h</span><span>w</span><span>a</span><span>r</span><span>t</span><span>z</span>
+                        </span>
+                    </div>
                 </div>
 
-                <style>
-                    .typography-example-3 {
-                        border: .2em solid #ff4136;
-                        font-size: 3em;
-                        text-align: center;
-                        padding: .2em;
-                        color: #fff;
-                    }
+                <div class="example-wrapper typography-example-wrapper">
+                    <style>
+                        .typography-example-3 {
+                            border: .2em solid #ff4136;
+                            font-size: 3em;
+                            text-align: center;
+                            padding: .2em;
+                            color: #fff;
+                        }
 
-                    .typography-example-3 .letter {
-                        display: inline-block;
-                        width: 20%;
-                        padding: 13px;
-                        position: relative;
-                        -webkit-perspective: 300px;
-                    }
+                        .typography-example-3 .letter {
+                            display: inline-block;
+                            width: 20%;
+                            padding: .8125rem;
+                            position: relative;
+                            -webkit-perspective: 20rem;
+                        }
 
-                    .typography-example-3 .letter:before {
-                        content: "\00a0";
-                    }
+                        .typography-example-3 .letter:before {
+                            content: "\00a0";
+                        }
 
-                    .typography-example-3 .front,
-                    .typography-example-3 .back {
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        line-height: 1.85em;
-                        -webkit-backface-visibility: hidden;
-                        transition: -webkit-transform 800ms;
-                    }
+                        .typography-example-3 .front,
+                        .typography-example-3 .back {
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            line-height: 1.75em;
+                            -webkit-backface-visibility: hidden;
+                            transition: -webkit-transform 800ms;
+                        }
 
-                    .typography-example-3 .letter:nth-child(1) .front { background: #ff4136 }
-                    .typography-example-3 .letter:nth-child(2) .front { background: #ff851b }
-                    .typography-example-3 .letter:nth-child(3) .front { background: #2ecc40 }
-                    .typography-example-3 .letter:nth-child(4) .front { background: #0074d9 }
-                    .typography-example-3 .letter:nth-child(5) .front { background: #b10dc9 }
+                        .typography-example-3 .letter:nth-child(1) .front { background: #ff4136 }
+                        .typography-example-3 .letter:nth-child(2) .front { background: #ff851b }
+                        .typography-example-3 .letter:nth-child(3) .front { background: #2ecc40 }
+                        .typography-example-3 .letter:nth-child(4) .front { background: #0074d9 }
+                        .typography-example-3 .letter:nth-child(5) .front { background: #b10dc9 }
 
-                    .typography-example-3 .back {
-                        border: 8px solid;
-                        background: #fff;
-                        color: #000;
-                        -webkit-transform: translateZ(0) rotateY(-180deg);
-                        line-height: 1.5em;
-                    }
+                        .typography-example-3 .back {
+                            border: .5rem solid;
+                            background: #fff;
+                            color: #000;
+                            -webkit-transform: translateZ(0) rotateY(-180deg);
+                            line-height: 1.5em;
+                        }
 
-                    .typography-example-3 .letter:nth-child(1) .back { border-color: #ff4136 }
-                    .typography-example-3 .letter:nth-child(2) .back { border-color: #ff851b }
-                    .typography-example-3 .letter:nth-child(3) .back { border-color: #2ecc40; background: #2ecc40; color: #fff }
-                    .typography-example-3 .letter:nth-child(4) .back { border-color: #0074d9; background: #0074d9; color: #fff }
-                    .typography-example-3 .letter:nth-child(5) .back { border-color: #b10dc9; background: #b10dc9; color: #fff }
+                        .typography-example-3 .letter:nth-child(1) .back { border-color: #ff4136 }
+                        .typography-example-3 .letter:nth-child(2) .back { border-color: #ff851b }
+                        .typography-example-3 .letter:nth-child(3) .back { border-color: #2ecc40; background: #2ecc40; color: #fff }
+                        .typography-example-3 .letter:nth-child(4) .back { border-color: #0074d9; background: #0074d9; color: #fff }
+                        .typography-example-3 .letter:nth-child(5) .back { border-color: #b10dc9; background: #b10dc9; color: #fff }
 
-                    .typography-example-3:hover .back {
-                        -webkit-transform: translateZ(0) rotateY(0deg);
-                    }
+                        .typography-example-3:hover .back {
+                            -webkit-transform: translateZ(0) rotateY(0deg);
+                        }
 
-                    .typography-example-3:hover .front {
-                        -webkit-transform: translateZ(0) rotateY(180deg);
-                    }
+                        .typography-example-3:hover .front {
+                            -webkit-transform: translateZ(0) rotateY(180deg);
+                        }
 
-                    .typography-example-3 .letter:nth-child(1) span { transition-delay:  200ms }
-                    .typography-example-3 .letter:nth-child(2) span { transition-delay:  400ms }
-                    .typography-example-3 .letter:nth-child(3) span { transition-delay:  600ms }
-                    .typography-example-3 .letter:nth-child(4) span { transition-delay:  800ms }
-                    .typography-example-3 .letter:nth-child(5) span { transition-delay: 1000ms }
+                        .typography-example-3 .letter:nth-child(1) span { transition-delay:  200ms }
+                        .typography-example-3 .letter:nth-child(2) span { transition-delay:  400ms }
+                        .typography-example-3 .letter:nth-child(3) span { transition-delay:  600ms }
+                        .typography-example-3 .letter:nth-child(4) span { transition-delay:  800ms }
+                        .typography-example-3 .letter:nth-child(5) span { transition-delay: 1000ms }
 
-                    .typography-example-3:before {
-                        background: #ff4136;
-                        z-index: 1;
-                    }
-                </style>
+                        .typography-example-3:before {
+                            background: #ff4136;
+                            z-index: 1;
+                        }
+                    </style>
 
-                <pre><code>.ex .letter {
-    -webkit-perspective: 300px
+                    <pre><code>.ex .letter {
+    -webkit-perspective: 20rem
 }
 
 .ex .front,
@@ -378,27 +384,28 @@
 .ex .letter:nth-child(4) span { transition-delay:  800ms }
 .ex .letter:nth-child(5) span { transition-delay: 1000ms }</code></pre>
 
-                <div class="typography-example typography-example-3">
-                    <span class="letter">
-                        <span class="back">o</span>
-                        <span class="front">M</span>
-                    </span><!--
-                 --><span class="letter">
-                        <span class="back">f</span>
-                        <span class="front">A</span>
-                    </span><!--
-                 --><span class="letter">
-                        <span class="back">C</span>
-                        <span class="front">G</span>
-                    </span><!--
-                 --><span class="letter">
-                        <span class="back">S</span>
-                        <span class="front">I</span>
-                    </span><!--
-                 --><span class="letter">
-                        <span class="back">S</span>
-                        <span class="front">C</span>
-                    </span>
+                    <div class="example typography-example typography-example-3">
+                        <span class="letter">
+                            <span class="back">o</span>
+                            <span class="front">M</span>
+                        </span><!--
+                     --><span class="letter">
+                            <span class="back">f</span>
+                            <span class="front">A</span>
+                        </span><!--
+                     --><span class="letter">
+                            <span class="back">C</span>
+                            <span class="front">G</span>
+                        </span><!--
+                     --><span class="letter">
+                            <span class="back">S</span>
+                            <span class="front">I</span>
+                        </span><!--
+                     --><span class="letter">
+                            <span class="back">S</span>
+                            <span class="front">C</span>
+                        </span>
+                    </div>
                 </div>
 
                 <p>Of course, this is just the tip of the iceberg. Colors, gradients, sizes, positions, orientations, etc., can all be transitioned simultaneously. In addition you have delays and custom easing functions right at your fingertips. CSS transitions are so easy to work with. Trust that the browser will do the right thing when you transition a CSS property, because it usually does.</p>
@@ -408,7 +415,7 @@
                 <style>
                     .accordion-example .accordion input[type="radio"] {
                         position: absolute;
-                        left: -9999px;
+                        left: -9999rem;
                     }
 
                     .accordion-example .accordion label {
@@ -416,15 +423,15 @@
                         background: #4f6f8b;
                         color: #fff;
                         text-align: center;
-                        padding: 18px;
+                        padding: 1rem;
                         font-size: .8em;
                         letter-spacing: .13em;
                         padding-left: .13em;
                         padding-right: 0;
                         text-transform: uppercase;
                         cursor: pointer;
-                        height: 50px;
-                        font-weight: 200;
+                        height: 3.3rem;
+                        font-weight: 300;
                         transition: background 400ms, color 400ms, border-radius 400ms;
                     }
 
@@ -434,19 +441,19 @@
 
                     .accordion-example .accordion .baffle {
                         position: relative;
-                        height: 50px;
+                        height: 3.3rem;
                         overflow: hidden;
                         transition: height 400ms;
                         -webkit-transform: translateZ(0);
                     }
 
                     .accordion-example .accordion .baffle-inner {
-                        padding: 20px;
+                        padding: 1.25rem;
                         background: #eee;
                         position: absolute;
-                        top: 50px;
+                        top: 3.3rem;
                         left: 0;
-                        height: 200px;
+                        height: 13.5rem;
                         overflow: scroll;
                         overflow-y: scroll;
                         overflow-x: hidden
@@ -454,12 +461,12 @@
 
                     .accordion-example .accordion .baffle:first-of-type label,
                     .accordion-example .accordion .baffle:first-of-type .baffle-inner {
-                        border-radius: 4px 4px 0 0
+                        border-radius: .25rem .25rem 0 0
                     }
 
                     .accordion-example .accordion .baffle:last-of-type label,
                     .accordion-example .accordion .baffle:last-of-type .baffle-inner {
-                        border-radius: 0 0 4px 4px
+                        border-radius: 0 0 .25rem .25rem
                     }
 
                     .accordion-example .accordion .baffle-inner :first-child {
@@ -471,7 +478,7 @@
                     }
 
                     .accordion-example .accordion input[type="radio"]:checked + .baffle {
-                        height: 250px
+                        height: 16.8rem
                     }
 
                     .accordion-example .accordion input[type="radio"]:checked + .baffle label {
@@ -490,13 +497,14 @@
                     }
 
                     .accordion-example ::-webkit-scrollbar {
-                        width: 15px
+                        width: .9375rem
                     }
 
                     .accordion-example ::-webkit-scrollbar-thumb {
                         background: #849cb1;
                         border: solid #eee;
-                        border-width: 6px 6px 6px 0
+                        border-width: .375rem .375rem .375rem 0;
+                        border-radius: 0 .375rem .375rem 0
                     }
 
                     .accordion-example ::-webkit-scrollbar-thumb:window-inactive {

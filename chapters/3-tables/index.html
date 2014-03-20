@@ -59,17 +59,21 @@
                     }
 
                     .example-table-layout table td {
-                        border: 2px solid #ccc
+                        border: .125em solid #ccc
                     }
 
-                    .example-table-layout h4 {
+                    .example-table-layout p {
                         margin-top: 0
+                    }
+
+                    .example-table-layout a {
+                        text-shadow: none
                     }
                 </style>
 
                 <div class="example example-table-layout">
                     <div class="example-content">
-                        <h4><code>table-layout: auto</code></h4>
+                        <p><code>table-layout: auto</code></p>
                         <table>
                             <tbody>
                                 <tr>
@@ -82,7 +86,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <h4><code>table-layout: fixed</code></h4>
+                        <p><code>table-layout: fixed</code></p>
                         <table style="table-layout: fixed">
                             <tbody>
                                 <tr>
@@ -116,7 +120,7 @@
 
                 <div class="example example-table-layout example-table-layout-sized-percent">
                     <div class="example-content">
-                        <h4><code>table-layout: auto</code></h4>
+                        <p><code>table-layout: auto</code></p>
                         <table>
                             <tbody>
                                 <tr>
@@ -129,7 +133,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <h4><code>table-layout: fixed</code></h4>
+                        <p><code>table-layout: fixed</code></p>
                         <table style="table-layout: fixed">
                             <tbody>
                                 <tr>
@@ -182,7 +186,7 @@
 
                 <div class="example example-table-layout example-table-layout-sized">
                     <div class="example-content">
-                        <h4><code>table-layout: auto</code></h4>
+                        <p><code>table-layout: auto</code></p>
                         <table>
                             <tbody>
                                 <tr>
@@ -195,7 +199,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <h4><code>table-layout: fixed</code></h4>
+                        <p><code>table-layout: fixed</code></p>
                         <table style="table-layout: fixed">
                             <tbody>
                                 <tr>
@@ -262,7 +266,7 @@
 
                 <div class="example example-table-layout example-table-gotcha-1">
                     <div class="example-content">
-                        <h4><code>table-layout: auto</code></h4>
+                        <p><code>table-layout: auto</code></p>
                         <table>
                             <tbody>
                                 <tr>
@@ -278,7 +282,7 @@
 
                 <p>Yup. You heard me correctly. You go apply <code>position: relative</code> to a table cell, place a <code>position: absolute</code> element inside, and in Firefox, the absolute element will be positioned relative to the earliest positioned parent of the table instead. Bummer.</p>
 
-                <p>The <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=35168">"bug"</a> was reported in 2000.<sup><a href="#cite-6">[6]</a></sup></p>
+                <p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=35168">The bug</a> was reported in 2000.<sup><a href="#cite-6">[6]</a></sup></p>
 
                 <style>
                     .example-table-gotcha-2 table {

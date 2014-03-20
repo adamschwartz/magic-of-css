@@ -22,74 +22,6 @@
         <div class="page">
             <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"><div class="red"></div><div class="orange"></div><div class="yellow"></div><div class="green"></div><div class="blue"></div><div class="purple"></div></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"><div class="purple"></div><div class="blue"></div><div class="green"></div><div class="yellow"></div><div class="orange"></div><div class="red"></div></div></div></div></div></div></a>
 
-            <style>
-                .magic-color {
-                    min-height: 4em;
-                    border-radius: 3px;
-                    margin: 4em -200px
-                }
-
-                @media (max-width: 75em) {
-                    .magic-color {
-                        margin: 0 0 1em
-                    }
-                }
-
-                .magic-color h2 {
-                    padding: 1em 0;
-                    text-align: center;
-                    color: #fff;
-                    font-weight: 200;
-                    text-transform: uppercase;
-                    letter-spacing: .4em;
-                    margin-left: .4em
-                }
-
-                .red-gradient {
-                    background-image: linear-gradient(top left, #723362 0%, #9d223c 100%);
-                    background-color: #9d223c
-                }
-
-                .green-gradient {
-                    background-image: linear-gradient(135deg, #5fa4ee, #56e7ca);
-                    background-color: #5fa4ee
-                }
-
-                span.color {
-                    display: inline-block;
-                    position: relative;
-                    padding-left: 10px;
-                    border-radius: 3px;
-                    width: 1.3em;
-                    background-color: #fff;
-                    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
-                    background-size: 10px 10px;
-                    background-position: 0 0, 5px 5px
-                }
-
-                code + span.color {
-                    margin-left: 0
-                }
-
-                code + span.color, code + span.color > span {
-                    border-top-left-radius: 0;
-                    border-bottom-left-radius: 0
-                }
-
-                span.color > span {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    border-radius: 3px
-                }
-
-                span.color:before {
-                    content: "\00a0"
-                }
-            </style>
-
             <div class="chapter">
                 <h1>
                     <span class="number">Chapter 4</span>
@@ -102,7 +34,7 @@
 
                 <style>
                     figure.all-rgb {
-                        width: 1024px;
+                        width: 64rem;
                         max-width: 100%;
                     }
                 </style>
@@ -161,13 +93,13 @@
 
                 <h2>Color strategy</h2>
 
-                <p>As noted above, color is an extremely powerful tool. But with great power comes great responsibility. ;) Colors can be used in so many different ways, but using color for one thing may limit your ability to use it for something else. Choosing a particular <code>purple</code><span class="color"><span style="background: purple"></span></span> to represent your brand may limit your ability to use that same purple for something else. And remember, color's power as an aesthetic tool at least matches its power as a functional one. There may be times when you need to make a trade-off between using a color for one versus the other.</p>
+                <p>As noted above, color is an extremely powerful tool. But with great power comes great responsibility. ;) Colors can be used in so many different ways, but using color for one thing may limit your ability to use it for something else. Choosing a particular <code>purple</code><code class="color"><span style="background: purple"></span></code> to represent your brand may limit your ability to use that same purple for something else. And remember, color's power as an aesthetic tool at least matches its power as a functional one. There may be times when you need to make a trade-off between using a color for one versus the other.</p>
 
                 <h2>Color tools</h2>
 
                 <h3>Sentiment</h3>
 
-                <p>Did you know <code>red</code><span class="color"><span style="background: red"></span></span> actually makes people hungry?<sup><a href="#cite-7">[7]</a></sup></p>
+                <p>Did you know <code>red</code><code class="color"><span style="background: red"></span></code> actually makes people hungry?<sup><a href="#cite-7">[7]</a></sup></p>
 
                 <p>Well, similarly it should be no surprise that colors can affect peoples' moods and opinions in a variety of ways. These effects tend to be subjective and rely heavilly on cultural and contextual cues. But they're very real, so understanding them is crucial.</p>
 
@@ -181,8 +113,8 @@
 
                 <style>
                     .branding-color {
-                        border-radius: 3px;
-                        margin-bottom: 4px;
+                        border-radius: .1875em;
+                        margin-bottom: .25rem;
                         display: inline-block
                     }
 
@@ -195,7 +127,9 @@
                         opacity: 0;
                         transition: opacity .3s;
                         cursor: default;
-                        font-size: 1.2em
+                        font-size: 1.2em;
+                        margin: 1em 0;
+                        line-height: .8em
                     }
 
                     .branding-color:hover h2 {
@@ -222,13 +156,13 @@
 
                 <p>Many different apps use this or a similar mapping:</p>
 
-                <li><code>#428bca</code><span class="color"><span style="background: #428bca"></span></span> = <code>primary</code></li>
-                <li><code>#dff0d8</code><span class="color"><span style="background: #dff0d8"></span></span> = <code>success</code></li>
-                <li><code>#d9edf7</code><span class="color"><span style="background: #d9edf7"></span></span> = <code>info</code></li>
-                <li><code>#fcf8e3</code><span class="color"><span style="background: #fcf8e3"></span></span> = <code>warning</code></li>
-                <li><code>#f2dede</code><span class="color"><span style="background: #f2dede"></span></span> = <code>danger</code></li>
+                <li><code>#428bca</code><code class="color"><span style="background: #428bca"></span></code> = <code>primary</code></li>
+                <li><code>#dff0d8</code><code class="color"><span style="background: #dff0d8"></span></code> = <code>success</code></li>
+                <li><code>#d9edf7</code><code class="color"><span style="background: #d9edf7"></span></code> = <code>info</code></li>
+                <li><code>#fcf8e3</code><code class="color"><span style="background: #fcf8e3"></span></code> = <code>warning</code></li>
+                <li><code>#f2dede</code><code class="color"><span style="background: #f2dede"></span></code> = <code>danger</code></li>
 
-                <p>By consistently using <code>#dff0d8</code><span class="color"><span style="background: #dff0d8"></span></span> to indicate success or <code>#f2dede</code><span class="color"><span style="background: #f2dede"></span></span> to indicate danger, you reinfornce certain patterns, making it easier for people to understand these concepts in the future.</p>
+                <p>By consistently using <code>#dff0d8</code><code class="color"><span style="background: #dff0d8"></span></code> to indicate success or <code>#f2dede</code><code class="color"><span style="background: #f2dede"></span></code> to indicate danger, you reinfornce certain patterns, making it easier for people to understand these concepts in the future.</p>
 
                 <h3>Motion, Attention</h3>
 
@@ -254,17 +188,19 @@
 
                 <h2>Which color did you mean?</h2>
 
-                <p>One common color mistake I see frontend developers make is using a gray (e.g. <code>#ccc</code><span class="color"><span style="background: #ccc"></span></span>) when they <em>mean to use</em> black with an alpha (e.g. <code>rgba(0, 0, 0, 0.2)</code><span class="color"><span style="background: rgba(0, 0, 0, 0.2)"></span></span>).</p>
+                <p>One common color mistake I see frontend developers make is using a gray (e.g. <code>#ccc</code><code class="color"><span style="background: #ccc"></span></code>) when they <em>mean to use</em> black with an alpha (e.g. <code>rgba(0, 0, 0, 0.2)</code><code class="color"><span style="background: rgba(0, 0, 0, 0.2)"></span></code>).</p>
 
                 <p><em>But, they look the same!?</em>, you may protest. Well, sure. But only when they're on white!</p>
 
                 <h3>Example</h3>
 
-                <p>Each of the white boxes has a <code>box-shadow: 0 2px 8px [color]</code> applied with the color from the respective column.</p>
+                <p>Each of the white boxes has a <code>box-shadow: 0 .125em .5em [color]</code> applied with the color from the respective column.</p>
 
                 <style>
                     .example-which-color .container {
-                        padding: 20px;
+                        font-size: 0;
+                        padding: 1.25rem;
+                        line-height: normal;
                         background: #eee;
                         text-align: center
                     }
@@ -274,26 +210,28 @@
                     }
 
                     .example-which-color .item {
+                        font-size: 1rem;
                         display: inline-block;
                         margin: 0 auto;
                         width: 30%;
+                        min-width: 4em;
                         height: 4em;
                         background: #fff;
-                        border-radius: 3px
+                        border-radius: .1875em
                     }
 
                     .example-which-color .item-grey-shadow {
-                        box-shadow: 0 2px 8px #ccc
+                        box-shadow: 0 .125em .5em #ccc
                     }
 
                     .example-which-color .item-black-alpha-shadow {
-                        box-shadow: 0 2px 8px rgba(0, 0, 0, .2)
+                        box-shadow: 0 .125em .5em rgba(0, 0, 0, .2)
                     }
                 </style>
 
                 <div class="example side-by-side example-which-color">
                     <div class="left">
-                        <p><code>#ccc</code><span class="color"><span style="background: #ccc"></span></span></p>
+                        <p><code>#ccc</code><code class="color"><span style="background: #ccc"></span></code></p>
                         <div class="example-content">
                             <div class="container">
                                 <div class="item item-grey-shadow"></div>
@@ -304,7 +242,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <p><code>rgba(0, 0, 0, 0.2)</code><span class="color"><span style="background: rgba(0, 0, 0, 0.2)"></span></span></p>
+                        <p><code>rgba(0, 0, 0, 0.2)</code><code class="color"><span style="background: rgba(0, 0, 0, 0.2)"></span></code></p>
                         <div class="example-content">
                             <div class="container">
                                 <div class="item item-black-alpha-shadow"></div>
@@ -316,20 +254,20 @@
                     </div>
                 </div>
 
-                <p>Both boxes in the first row look fine. But notice how the bottom left white box looks strange. It's <code>#ccc</code><span class="color"><span style="background: #ccc"></span></span> shadow causes visual dissonance with the <code>#85ddba</code><span class="color"><span style="background: #85ddba"></span></span> background. Definitely not desired.</p>
+                <p>Both boxes in the first row look fine. But notice how the bottom left white box looks strange. It's <code>#ccc</code><code class="color"><span style="background: #ccc"></span></code> shadow causes visual dissonance with the <code>#85ddba</code><code class="color"><span style="background: #85ddba"></span></code> background. Definitely not desired.</p>
 
                 <h2>Selecting a good default text color</h2>
 
-                <p>The browser default text color is <code>#000</code><span class="color"><span style="background: #000"></span></span>. I think this feels pretty intuitive to most people. Subconciously, one's head does something like this: <em>Ink is black. Documents are printed in ink. The web is a set of digital documents. So digital text should be black.</em></p>
+                <p>The browser default text color is <code>#000</code><code class="color"><span style="background: #000"></span></code>. I think this feels pretty intuitive to most people. Subconciously, one's head does something like this: <em>Ink is black. Documents are printed in ink. The web is a set of digital documents. So digital text should be black.</em></p>
 
-                <p>This is totally reasonable, and many great sites are designed with black. But an alternative to this which is better in many situations is to use a gray (e.g. <code>#333</code><span class="color"><span style="background: #333"></span></span>). This has several advantages.</p>
+                <p>This is totally reasonable, and many great sites are designed with black. But an alternative to this which is better in many situations is to use a gray (e.g. <code>#333</code><code class="color"><span style="background: #333"></span></code>). This has several advantages.</p>
 
                 <ul>
                     <li>The sharp contrast of <span style="color: #000">black on white</span> can create visual artifacts or increase eye strain. (The opposite is also true. This is fairly subjective, but still worth noting.)</li>
-                    <li>You get to "save" <code>#000</code><span class="color"><span style="background: #000"></span></span> for emphasis or accents. (This is perhaps the better reason.)</li>
+                    <li>You get to "save" <code>#000</code><code class="color"><span style="background: #000"></span></code> for emphasis or accents. (This is perhaps the better reason.)</li>
                 </ul>
 
-                <p>You may be thinking: <em>but you just showed an example where you suggested using black with alpha over gray in situations where the background color may change... so why not set the default text color to <em><code>rgba(0, 0, 0, 0.8)</code><span class="color"><span style="background: rgba(0, 0, 0, 0.8)"></span></span></em> instead?</em></p>
+                <p>You may be thinking: <em>but you just showed an example where you suggested using black with alpha over gray in situations where the background color may change... so why not set the default text color to <em><code>rgba(0, 0, 0, 0.8)</code><code class="color"><span style="background: rgba(0, 0, 0, 0.8)"></span></code></em> instead?</em></p>
 
                 <p>You'd be right, and that's definitely an option. The main advantage this has is that text on non-white backgrounds will not get any grey+color clashing (as seen in the example above with the white box on the green background). But I wouldn't recommend it universally for two reasons:</p>
 
