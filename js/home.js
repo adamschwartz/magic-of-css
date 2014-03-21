@@ -32,7 +32,10 @@
       document.querySelector('.logo').className = 'logo';
       document.body.className += ' has-been-here-before';
     }
-    return document.body.className += ' trigger-pageload-animations';
+    document.body.className += ' trigger-pageload-animations';
+    return setTimeout((function() {
+      return document.body.className += ' trigger-pageload-animations-3s';
+    }), 3000);
   };
 
   window.home = home;

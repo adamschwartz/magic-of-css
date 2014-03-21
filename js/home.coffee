@@ -26,6 +26,7 @@ home.init = ->
         document.body.className += ' has-been-here-before'
 
     document.body.className += ' trigger-pageload-animations'
+    setTimeout (-> document.body.className += ' trigger-pageload-animations-3s'), 3000
 
 window.home = home
 setTimeout home.init
