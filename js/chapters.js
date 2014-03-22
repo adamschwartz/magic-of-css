@@ -112,8 +112,8 @@
       exampleHTML: '<span style="font-weight: inherit">inherit</span>, <span style="font-weight: bold">bold</span>, <span style="font-weight: 100">100</span>'
     },
     'font-style': {
-      description: '<p>Used for italics</p>',
-      exampleHTML: '<span style="font-style: inherit">inherit</span>, <span style="font-style: italics">italics</span>'
+      description: '<p>Used for italic</p>',
+      exampleHTML: '<span style="font-style: inherit">inherit</span>, <span style="font-style: italic">italic</span>'
     },
     'font-variant': {
       description: '<p>Used for small capitals</p>',
