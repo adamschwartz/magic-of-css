@@ -106,7 +106,8 @@ sup {
     width: 71.33334rem;
     margin-left: -18.33333rem;
     margin-top: 1em;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    transition: opacity 0.4s; }
     .example-wrapper:after {
       content: "";
       display: table;
@@ -119,7 +120,9 @@ sup {
     .example-wrapper pre {
       float: left; }
     .example-wrapper .example {
-      float: right; } }
+      float: right; }
+    body.contextual-open .example-wrapper {
+      opacity: 0; } }
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
 

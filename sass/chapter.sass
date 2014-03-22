@@ -128,6 +128,7 @@ $exampleWrapperSideBySideWidth: ($chapterWidthInner * 2) + 2rem
         margin-left: - ($exampleWrapperSideBySideWidth - $chapterWidthInner) / 2
         margin-top: 1em
         margin-bottom: 2em
+        transition: opacity .4s
 
         &.typography-example-wrapper
             margin-bottom: 4em
@@ -141,6 +142,9 @@ $exampleWrapperSideBySideWidth: ($chapterWidthInner * 2) + 2rem
 
         .example
             float: right
+
+        body.contextual-open &
+            opacity: 0
 
 code, pre
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
