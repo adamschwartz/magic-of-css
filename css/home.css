@@ -96,7 +96,7 @@ ol.chapters, ul.potions, .preface-link {
       background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
       background-repeat: no-repeat, no-repeat, repeat-x;
       text-shadow: 0.03em 0 white, -0.03em 0 white, 0 0.03em white, 0 -0.03em white, 0.06em 0 white, -0.06em 0 white, 0.09em 0 white, -0.09em 0 white;
-      background-position-y: 86%, 86%, 86%;
+      background-position-y: 87%, 87%, 87%;
       background-position-x: 0%, 100%, 0%; }
       ol.chapters a:hover span::selection, ul.potions a:hover span::selection, .preface-link a:hover span::selection {
         text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe;
