@@ -140,7 +140,8 @@ pre {
 code {
   font-size: 0.8em;
   padding: 0.15625em 0.3125em;
-  background: #eeeeee; }
+  background: #eeeeee;
+  white-space: nowrap; }
   @media (min-width: 44rem) {
     code {
       padding: 3px 6px; } }
@@ -148,7 +149,8 @@ code {
 pre > code {
   font-size: inherit;
   background: transparent;
-  padding: 0; }
+  padding: 0;
+  white-space: inherit; }
 
 hr {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, transparent), color-stop(10%, rgba(0, 0, 0, 0.1)), color-stop(90%, rgba(0, 0, 0, 0.1)), color-stop(100%, transparent));
