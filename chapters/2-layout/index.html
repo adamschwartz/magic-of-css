@@ -32,10 +32,6 @@
 
                 <hr>
 
-                <h2>HTML and Body</h2>
-
-                <p>The <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> elements are rectangles, just like any other elements on the page. We'll cover them more in depth in a later chapter—but for now, just know that they're both <code>block</code> elements.</p>
-
                 <h2>Block, inline, and inline-block</h2>
 
                 <p>With respect to layout, the <code>display</code> property has three values you should be most concerned with. Here are the main differences between how these three display types get layed out:</p>
@@ -121,21 +117,15 @@
                     </div>
                 </div>
 
-                <p>One thing to notice here is the difference between <code>inline</code> and <code>inline-block</code>. The <code>inline</code> elements display their <code>.5em</code> padding and <code>.125em</code> border, but only the lefts and rights (and not tops and bottoms) of these actually affect their layout. Whereas the <code>inline-block</code> elements reposition themselves in layout due to their padding and border, just as do the <code>block</code> elements.</p>
+                <p>One thing to note here is the difference between <code>inline</code> and <code>inline-block</code>. The <code>inline</code> elements display their <code>.5em</code> padding and <code>.125em</code> border, but only the lefts and rights (and not tops and bottoms) of these actually affect their layout. Whereas the <code>inline-block</code> elements reposition themselves in layout due to their padding and border, just as do the <code>block</code> elements.</p>
 
-                <p>Another important thing to notice is that even with <code>20%</code> width set on all elements, the <code>block</code> elements <em>still don't wrap</em>. Assuming no floats are in the mix, <code>block</code> elements do not allow horizontal neighbors.</p>
+                <p>Also note that when setting the width to <code>20%</code> on all elements, the <code>block</code> elements <em>still don't wrap</em>. Assuming no floats are in the mix, <code>block</code> elements do not allow horizontal neighbors.</p>
 
                 <h3 class="magic">Horizontal Scrolling with Inline Block</h3>
 
-                <p>Horizontal scrolling sections can be tricky. Fortunately, this is one place where <code>inline-block</code> can get us out of a jam.</p>
+                <p>Horizontal scrolling sections can be tricky. Fortunately, this is a place where <code>inline-block</code> can help out.</p>
 
-                <p>Let's say I want to display some code:</p>
-
-                <pre><code>body {
-    background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */
-}</code></pre>
-
-                <p>This looks fine and scrolls fine, but what would happen if we wanted to apply a background color to each row of text on hover.</p>
+                <p>Let's say I want to display some code with a background color applied to each row of text on hover:</p>
 
                 <style>
                     .example-row-highlight-fail .row:hover {
@@ -147,7 +137,7 @@
 --><div class="row">    background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */</div><!--
 --><div class="row">}</div></code></pre>
 
-                <p>Scrolling to the right, you'll see that the row hover color doesn't extend all of the way to the right. This is because each row wrapper is a block element, sizing itself to the width of its parent, not to the scroll width of its parent.</p>
+                <p>If you scroll to the right, you'll see that the row hover color doesn't extend all of the way to the right. This is because each row wrapper is a block element, sizing itself to the width of its parent, not to the scroll width of its parent.</p>
 
                 <p>By adding an <code>inline-block</code> element which wraps all of the rows, we get the scroll we want, and the row elements (still <code>display: block</code>) can fill the width of <em>that</em> element, which is the same as the scroll width of the whole code block, because it is sized by <em>its contents</em>—in this case, the longest row.</p>
 
@@ -165,13 +155,73 @@
 --><div class="row">    background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */</div><!--
 --><div class="row">}</div></div></code></pre>
 
+                <h2>HTML and Body</h2>
+
+                <p>The <code>html</code> and <code>body</code> elements are rectangles, just like any other elements on the page. We'll cover them more in depth in a later chapter—but for now, just know that they're both <code>block</code> elements.</p>
+
                 <h2>Tables</h2>
 
-                <p>Tables are crazy, and <a href="../3-tables">Chapter 3</a> covers them in more detail. But with respect to layout, think of a <code>&lt;table&gt;</code> like an <code>inline-block</code> element with one special property: its <code>table-cell</code> children can center their contents vertically.</p>
+                <p>Tables are crazy, and <a href="../3-tables">Chapter 3</a> covers them in more detail. But with respect to layout, think of a <code>table</code> like an <code>inline-block</code> element with one special property: its <code>table-cell</code> children can center their contents vertically.</p>
 
                 <p>Aside from the relatively new and experimental <code>display</code> property <code>flex</code> (which may be covered in a later chapter), no other element can do this.</p>
 
-                <p>So with respect to layout, think of tables as a tool which can be used to center arbirtrary content vertically. (Centering something vertically when you know its height is trivial. First position the element, then set a <code>top</code> and <code>bottom</code> to the same value (<code>0</code> works), set your desired <code>height</code>, and then set <code>margin-top</code> and <code>margin-bottom</code> to <code>auto</code>. <em>Done.</em>)</p>
+                <p>So with respect to layout, think of tables as a tool which can be used to center <em>arbirtrary content</em> vertically.</p>
+
+                <h3 class="magic">Vertical centering content with unknown height</h3>
+
+                <p>Vertical center centering with a table couldn't be simpler.</p>
+
+                <p>But if you're using a table for this purpose (and not to display tabular-data), instead you should use another type of element (<code>div</code>, for example), and set its display property to <code>table</code> to mimick a the table behavior.</p>
+
+                <div class="example-wrapper">
+                    <style>
+                        .example-vertical-centering .vertical-outer {
+                            display: table;
+                            width: 100%;
+                            background: #eee;
+                            height: 10em
+                        }
+
+                        .example-vertical-centering .vertical-inner {
+                            display: table-cell;
+                            padding: 0 4em;
+                            text-align: center;
+                            vertical-align: middle
+                        }
+                    </style>
+
+                    <pre><code>&lt;style&gt;
+    .vertical-outer {
+        display: table;
+        height: 10em
+    }
+
+    .vertical-inner {
+        display: table-cell;
+        vertical-align: middle
+    }
+&lt;/style&gt;
+
+&lt;div class="vertical-outer"&gt;
+    &lt;div class="vertical-inner"&gt;
+        &lt;p&gt;I'm so centered it's not even funny.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                    <div class="example example-vertical-centering">
+                        <div class="example-content">
+                            <div class="vertical-outer">
+                                <div class="vertical-inner">
+                                    <p>I'm so centered it's not even funny.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p><em>And that's it!</em></p>
+
+                <p>As an aside, centering something vertically when you know its height is trivial. First position the element, then set a <code>top</code> and <code>bottom</code> to the same value (<code>0</code> works), set your desired <code>height</code>, and then set <code>margin-top</code> and <code>margin-bottom</code> to <code>auto</code>.</p>
 
                 <h2>Text align</h2>
 
@@ -179,7 +229,7 @@
 
                 <p>Now for some magic:</p>
 
-                <h3 class="magic">Grid with Text-align Justify</h3>
+                <h3 class="magic">Grid with text-align justify</h3>
 
                 <p>Since <code>inline-block</code> elements are treated more or less as text, you can use <code>text-align: justify</code> on a list of <code>inline-block</code> elements to create a grid structure.</p>
 
@@ -238,6 +288,7 @@
         display: inline-block;
         width: 30%;
         height: 0
+    }
 &lt;/style&gt;
 
 &lt;div class="grid"&gt;
@@ -268,8 +319,6 @@
                             <span> &nbsp;&nbsp;<code>width: <span class="example-text-align-justify-slider-value">30%</span></code></span>
                         </p>
 
-                        <p>Adjust the width of the boxes and note that <code>text-align: justify</code> keeps the grid in tact.</p>
-
                         <script>
                             document.querySelector('.example-text-align-justify-slider').addEventListener('change', function(e){
                                 var width = e.target.valueAsNumber + '%';
@@ -279,6 +328,8 @@
                                 });
                             });
                         </script>
+
+                        <p>Adjust the width of the boxes and note that <code>text-align: justify</code> keeps the grid intact.</p>
                     </div>
                 </div>
 
@@ -300,7 +351,7 @@
 
                 <p>When an element is positioned, it is layed out according to whichever positioning properties <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> it has set.</p>
 
-                <p>This means not only do these properties reposition (or move) elements, they also can resize elements. For example, with <code>position</code> <code>absolute</code> or <code>fixed</code>, you can set both a <code>top</code> and <code>bottom</code> (or both a <code>left</code> and <code>right</code>), and your instruction will enforce a size on the element. The precedence here can get pretty complicated, but as a general rule, if you set <code>top</code>, <code>bottom</code>, <em>and</em> <code>height</code> simultaneously for a positioned element, the <code>height</code> value will be ignored.</p>
+                <p>This means not only do these properties reposition (or move) elements, they also can resize elements. For example, with <code>position</code> <code>absolute</code> or <code>fixed</code>, you can set both a <code>top</code> and <code>bottom</code> to essentially impose a fixed height on the element. The precedence here can get pretty complicated, but as a general rule, if you set <code>top</code>, <code>bottom</code>, <em>and</em> <code>height</code> for a positioned element, the <code>height</code> value will be ignored.</p>
 
                 <p>The <code>position</code> property can take on the following values:</p>
 
@@ -318,10 +369,10 @@
                 <p>This stuff can be confusing, so we'll highlight some important takeaways from these descriptions:</p>
 
                 <ul>
-                    <li><code>absolute</code> and <code>fixed</code> elements are not part of normal document layout. When their layouts change, only their child elements are affected.</li>
+                    <li><code>absolute</code> and <code>fixed</code> elements are not part of normal document layout. When their dimensions change, only their child elements are affected. (There is a subtle exception to this which is that <code>absolute</code> positioned elements can cause a scroll bar [in the positive content flow direction: by default, to the right or down] and this can affect the layout of other elements in the page.)</li>
                     <li><code>static</code> and <code>relative</code> elements are part of the layout. When their layout changes, so do their document neighbors.</li>
-                    <li>When <em>nudged</em> via <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code>, <code>relative</code> elements do not affect their document neighbors. Instead, those neighbors act like the element was never <em>nudged</em> from its original position.</li>
-                    <li>Confusingly, <code>relative</code> is not so-named because its child elements will be positioned "relative" to it. That is simply a consequence of it being positioned at all (and so the same could be said about <code>absolute</code> and <code>fixed</code> elements as well). Rather, it is so-named to describe how you can "relatively" <em>nudge</em> it based on its original position.</li>
+                    <li>When <em>nudged</em> via <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code>, <code>relative</code> elements do not affect their document neighbors. Instead, those neighbors act like the element was never <em>nudged</em> from its original position. (The scroll exception applies here as well.)</li>
+                    <li>Confusingly, <code>relative</code> is not so-named because its child elements will be positioned "relative" to it. (That is simply a consequence of it being positioned at all, and so the same could be said about <code>absolute</code> and <code>fixed</code> elements as well.) Rather, it is so-named to describe how you can "relatively" <em>nudge</em> it based on its original position.</li>
                 </ul>
 
                 <p>Now again, for a little magic:</p>
@@ -391,9 +442,9 @@ top: -2.5em;</code></pre>
 
                 <p>This part is unideal because it's not <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY</a> and because we had to specify a height. <em>When possible, it's better not to specify fixed values in CSS.</em> The more you can let things get sized by content the better, because it means your design is more flexible, supports more use-cases, and is less likely to create future bugs.</p>
 
-                <p>So what can we do instead? Use <code>100%</code> values. Instead of thinking moving the child up by a negative <code>top</code>, think of it as moving <code>100%</code> from the bottom.</p>
+                <p>So what can we do instead? Use <code>100%</code> values.</p>
 
-                <p>So now our same example can be coded like this instead:</p>
+                <p>Instead of thinking moving the child up by a negative <code>top</code>, think of it as moving <code>100%</code> from the bottom. Now our same example can be written like this instead:</p>
 
                 <div class="example-wrapper">
                     <style>
@@ -452,7 +503,7 @@ top: -2.5em;</code></pre>
                 <h3>Further reading</h3>
 
                 <ul>
-                    <li><a href="http://quirksmode.org/css/css2/display.html">Quirksmode: display</a> — has some great toys for playing with the different property values</li>
+                    <li><a href="http://quirksmode.org/css/css2/display.html">Quirksmode: display</a> — has a great toy for playing with the different property values.</li>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Layout">MDN: Layout</a></li>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">MDN: position</a></li>
                 </ul>
