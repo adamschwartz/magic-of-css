@@ -604,3 +604,15 @@ code.contextual-code-example {
   body.contextual-open .contextual-open-tree-parent {
     position: relative;
     z-index: 50; } }
+.meta {
+  background: rgba(177, 13, 201, 0.05);
+  padding: 1em;
+  border-left: 0.2em solid #b10dc9; }
+  .meta > *:first-child {
+    margin-top: 0; }
+  .meta > *:last-child {
+    margin-bottom: 0; }
+  .meta code {
+    background: rgba(177, 13, 201, 0.15); }
+    .meta code.contextual-code-example:hover, .meta code.contextual-code-example.contextual-open-tree {
+      background: rgba(177, 13, 201, 0.21); }
