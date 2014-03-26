@@ -605,6 +605,7 @@ code.contextual-code-example {
     position: relative;
     z-index: 50; } }
 .meta {
+  margin: 1em 0;
   background: rgba(177, 13, 201, 0.05);
   padding: 1em;
   border-left: 0.2em solid #b10dc9; }
