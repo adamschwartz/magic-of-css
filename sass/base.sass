@@ -4,6 +4,8 @@
 @import colors
 @import variables
 
+@import social
+
 *, *:after, *:before
     +box-sizing(border-box)
 
@@ -41,35 +43,59 @@ a
 .clearfix
     +pie-clearfix
 
-footer.social
+header.social
+    z-index: 3
+    -webkit-transform: translate3d(0, 0, 0)
     margin: auto
-    text-align: center
-    width: 36rem
-    max-width: 100%
-    color: #aaa
+    top: 0
+    left: 0
+    right: 0
+    height: 4em
+
+    @media (min-width: $chapterBreakPointLarge)
+        position: absolute
 
     p
-        margin-bottom: 2em
+        position: absolute
+        top: 0
+        left: 0
+        margin: 0
+        padding: 1.4em 1.8em
+        opacity: .5
 
-    a, &:visited
+        a, a:visited
+            color: $purple
+            text-decoration: none
+
+    a.twitter
+        position: absolute
+        display: block
+        height: 3.5em
+        width: 11.5em
+        top: 0
+        right: 0
         text-decoration: none
-        color: #888
-        border-bottom: 1px solid
+        opacity: .5
+        background: none
+        text-shadow: none
 
-    .share
-        +pie-clearfix
-        margin: 2em auto
+        &, &:visited
+            color: $blue
 
-    iframe
-        border: 0
-        width: 100%
-        height: 2em
-        max-width: 20em
-        margin-bottom: 0 auto 1em auto
+        &:before
+            position: absolute
+            top: 1.5em
+            right: 3.4em
+            content: "@adamfschwartz"
+            opacity: 0
 
-        @media (min-width: 800px)
-            width: 48%
-            float: left
+        &:hover:before
+            opacity: 1
 
-            &:first-child
-                margin-right: 4%
+        &:after
+            position: absolute
+            top: 1.5em
+            right: 2em
+            font-family: "social-icons"
+            content: '\e800'
+            line-height: 1.4em

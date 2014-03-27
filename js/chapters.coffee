@@ -311,18 +311,14 @@ chapters.setupContextualCodeExamples = ->
             positionContextualDisplay document.querySelector('code.contextual-code-example.contextual-open-tree')
 
 chapters.setupSocialFooter = ->
-    chapter = document.querySelector('.chapter')
-    return unless chapter
+    page = document.querySelector('.page')
+    return unless page
 
-    chapter.insertAdjacentHTML 'afterend', """
-        <footer class="social">
-            <hr>
-            <p><a href="http://github.com/adamschwartz/magic-of-css">Magic of CSS</a> was created by <a href="http://adamschwartz.co">Adam Schwartz</a></p>
-            <div class="share">
-                <iframe src="http://hubstar.io/github/spin/adamschwartz/magic-of-css?name=Magic of CSS"></iframe>
-                <iframe src="http://hubstar.io/twitter/spin?via=adamfschwartz&name=Magic of CSS&text=#{ encodeURIComponent document.title }&url=http://adamschwartz.co/magic-of-css"></iframe>
-            </div>
-        </footer>
+    page.insertAdjacentHTML 'beforebegin', """
+        <header class="social">
+            <p><a href="http://github.com/adamschwartz/magic-of-css">Code on GitHub</a></p>
+            <a class="twitter" href="https://twitter.com/adamfschwartz"></a>
+        </header>
     """
 
 chapters.setupGlobalNavigation = ->
