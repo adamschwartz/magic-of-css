@@ -318,8 +318,10 @@ chapters.setupSocialFooter = ->
         <footer class="social">
             <hr>
             <p><a href="http://github.com/adamschwartz/magic-of-css">Magic of CSS</a> was created by <a href="http://adamschwartz.co">Adam Schwartz</a></p>
-            <iframe src="http://hubstar.io/github/spin/adamschwartz/magic-of-css?name=Magic of CSS"></iframe>
-            <iframe src="http://hubstar.io/twitter/spin?via=adamfschwartz&name=Magic of CSS&text=#{ encodeURIComponent document.title }&url=#{ encodeURIComponent location.href }"></iframe>
+            <div class="share">
+                <iframe src="http://hubstar.io/github/spin/adamschwartz/magic-of-css?name=Magic of CSS"></iframe>
+                <iframe src="http://hubstar.io/twitter/spin?via=adamfschwartz&name=Magic of CSS&text=#{ encodeURIComponent document.title }&url=http://adamschwartz.co/magic-of-css"></iframe>
+            </div>
         </footer>
     """
 
