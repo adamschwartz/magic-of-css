@@ -21,7 +21,6 @@ Each class will start with a brief lecture, covering a chapter or two from this 
     - [Chapter 2: Layout](http://adamschwartz.co/magic-of-css/chapters/2-layout)
     - [Chapter 3: Tables](http://adamschwartz.co/magic-of-css/chapters/3-tables)
     - [Chapter 4: Color](http://adamschwartz.co/magic-of-css/chapters/4-color/)
-    - [Chapter 5: Typography Part I](http://adamschwartz.co/magic-of-css/chapters/5-typography-part-i/)
-    - [Chapter 6: Typography Part II](http://adamschwartz.co/magic-of-css/chapters/6-typography-part-ii/) (*Coming soon...*)
-    - [Chapter 7: Transitions](http://adamschwartz.co/magic-of-css/chapters/7-transitions/)
-    - *...*
+    - [Chapter 5: Typography](http://adamschwartz.co/magic-of-css/chapters/5-typography)
+    - [Chapter 6: Transitions](http://adamschwartz.co/magic-of-css/chapters/6-transitions/)
+    - See [planning.md](https://github.com/adamschwartz/magic-of-css/blob/gh-pages/planning.md) for what's next...

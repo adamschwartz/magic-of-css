@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Typography: Part I — Chapter 5 — Magic of CSS — Adam Schwartz</title>
+        <title>Typography — Chapter 5 — Magic of CSS — Adam Schwartz</title>
 
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -25,12 +25,8 @@
             <div class="chapter">
                 <h1>
                     <span class="number">Chapter 5</span>
-                    <span class="title">Typography: Part I<br>Inspiration</span>
+                    <span class="title">Typography</span>
                 </h1>
-
-                <p><em>There's so much I want to talk about with respect to typography that I decided to break it up into multple chapters. This is the first.</em></p>
-
-                <hr>
 
                 <h2>Typography is hard</h2>
 
@@ -90,88 +86,190 @@
 
                 <p>Now that you have a basic idea of what is possible, let's look at a few combinations of these properties.</p>
 
-                <h2>Examples</h2>
-
                 <style>
                     .typography-example {
-                        line-height: normal;
-                        margin-bottom: 8rem
+                        line-height: normal
                     }
                 </style>
 
-                <style>
-                    .typography-example-1 {
-                        background-image: linear-gradient(135deg, #723362, #9d223c);
-                        background-color: #9d223c;
-                        color: #fff;
-                        padding: 1em 0;
-                        text-align: center;
-                        font-weight: 300;
-                        text-transform: uppercase;
-                        letter-spacing: .4em;
-                        padding-left: .4em;
-                        font-size: 1.8em;
-                        margin-top: 2.5em
-                    }
-                </style>
+                <h2>Examples</h2>
 
-                <div class="typography-example typography-example-1">
-                    Example One
+                <span><!-- prevent h2 + h3 selector from applying --></span>
+
+                <h3>Example 1: Light, uppercase, with spacing</h3>
+
+                <p>Light text colors on dark backgrounds tend to feel as if they have a heavier weight. So with this example of <code style="background-image: linear-gradient(135deg, #723362, #9d223c); color: #fff; background-color: #9d223c; border-radius: .1875rem; margin: 0 .05rem 0 .13rem; font-family: inherit">white on purple</code>, we went with a <code>font-weight: 300</code>.</p>
+
+                <p>Using all uppercased letters can be a powerful effect, but you'll want to use it sparingly. One thing that can happen with uppercased words is <span style="text-transform: uppercase">the letters can feel jammed together</span>. This is because the default kerning and letter-spacing is meant for mostly-lowercased words. To compensate, and also to add a little more gravitas, we added a generous <code>letter-spacing: .4em</code>.</p>
+
+                <p>As can be seen in the <a href="../../potions/letter-spacing/">letter spacing potion</a>, <code>letter-spacing</code> and <code>text-align</code> don't play so nicely together because the spacing is added to the right of each letter. To compensate for this, when using these two properties together, we add a <code>padding-left</code> to match the chosen letter-spacing (in this case <code>.4em</code>.</p>
+
+                <div class="example-wrapper typography-example-wrapper">
+                    <style>
+                        .typography-example-1 {
+                            background-image: linear-gradient(135deg, #723362, #9d223c);
+                            background-color: #9d223c;
+                            color: #fff;
+                            padding: 1em 0;
+                            font-weight: 300;
+                            font-size: 1.8em;
+                            text-transform: uppercase;
+                            text-align: center;
+                            letter-spacing: .4em;
+                            padding-left: .4em
+                        }
+                    </style>
+
+                    <pre><code>.typography-example-1 {
+    background-image: linear-gradient(135deg, #723362, #9d223c);
+    background-color: #9d223c;
+    color: #fff;
+    padding: 1em 0;
+    font-weight: 300;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .4em;
+    padding-left: .4em
+}</code></pre>
+
+                    <div class="example typography-example typography-example-1">
+                        Example One
+                    </div>
+                </div>
+
+                <h3>Example 2: Contrasting weights and styles</h3>
+
+                <p>In this next example, we show how two lines of text interact with eachother.</p>
+
+                <p>The first line is given a similar treatment as Example 1, but with a heavier weight of <code>700</code>. To contrast this, the second line is given a thinner weight, <code>300</code>, an <code>italic</code> font style, and a lighter color, <code>#888</code><code class="color"><span style="background: #ccc"></span></code>.</p>
+
+                <div class="example-wrapper typography-example-wrapper">
+                    <style>
+                        .typography-example-2 {
+                            background: #fff;
+                            color: #000;
+                            border: .5em solid;
+                            font-size: 1.5em;
+                            padding: 1em 0;
+                            text-align: center
+                        }
+
+                        .typography-example-2 .title {
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            letter-spacing: .4em;
+                            padding-left: .4em
+                        }
+
+                        .typography-example-2 .author {
+                            color: #888;
+                            font-size: .7em;
+                            font-weight: 300;
+                            font-style: italic;
+                            letter-spacing: .12em;
+                            padding-left: .12em
+                        }
+                    </style>
+
+                    <pre><code>.typography-example-2 {
+    background: #fff;
+    color: #000;
+    border: .5em solid;
+    font-size: 1.5em;
+    padding: 1em 0;
+    text-align: center
+}
+
+.typography-example-2 .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    padding-left: .4em
+}
+
+.typography-example-2 .author {
+    color: #888;
+    font-size: .7em;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: .12em;
+    padding-left: .12em
+}</code></pre>
+
+                    <div class="example typography-example typography-example-2">
+                        <div class="title">Example</div>
+                        <div class="author">by Adam Schwartz</div>
+                    </div>
                 </div>
 
                 <style>
-                    .typography-example-2 {
-                        background: #fff;
-                        border: .5em solid #000;
-                        color: #000;
-                        padding: 1em 0;
-                        text-align: center;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        font-size: 1.5em
-                    }
-
-                    .typography-example-2 span {
-                        display: block;
-                        letter-spacing: .4em;
-                        padding-left: .4em
-                    }
-
-                    .typography-example-2 div {
-                        font-style: italic;
-                        font-weight: 300;
-                        color: #888;
-                        font-size: .7em;
-                        text-transform: none;
-                        letter-spacing: .12em;
-                        padding-left: .12em
-                    }
-                </style>
-
-                <div class="typography-example typography-example-2">
-                    <span>Example</span>
-                    <div>by Adam Schwartz</div>
-                </div>
-
-                <style>
-                    .typography-example-3 {
-                        border: .2em solid #ff4136;
-                        font-size: 3em;
-                        text-align: center;
-                        padding: .2em;
-                        color: #fff
-                    }
-
-                    .typography-example-3 span {
+                    .a-little-fun span {
                         display: inline-block;
-                        width: 20%;
-                        padding: .8125rem
+                        -webkit-animation: a-little-fun-wiggle 1s linear infinite alternate;
+                    }
+
+                    @-webkit-keyframes a-little-fun-wiggle {
+                        from { -webkit-transform: rotateZ(-20deg) }
+                        to   { -webkit-transform:  rotateZ(20deg) }
                     }
                 </style>
 
-                <div class="typography-example typography-example-3">
-                    <span style="background: #ff4136">M</span><span style="background: #ff851b">A</span><span style="background: #2ecc40">G</span><span style="background: #0074d9">I</span><span style="background: #b10dc9">C</span>
+                <h3>Example 3: Individual letter treatment</h3>
+
+                <p>Sometimes you want to <span class="a-little-fun"><span>h</span><span>a</span><span>v</span><span>e</span><span>&nbsp;</span><span>a</span><span>&nbsp;</span><span>l</span><span>i</span><span>t</span><span>t</span><span>l</span><span>e</span><span>&nbsp;</span><span>f</span><span>u</span><span>n</span></span> with type. <a href="http://letteringjs.com">Lettering.js</a> is a great little tool for doing just that. But if you're willing to <a href="https://www.youtube.com/watch?v=WXuBgSpLpK4">type out a bunch</a> of <code>span</code> wrappers for every letter yourself, you can do the same sort of thing without javascript!</p>
+
+                <div class="example-wrapper typography-example-wrapper">
+                    <style>
+                        .typography-example-3 {
+                            border: .2em solid #ff4136;
+                            font-size: 3em;
+                            text-align: center;
+                            padding: .2em;
+                            color: #fff
+                        }
+
+                        .typography-example-3 span {
+                            display: inline-block;
+                            width: 20%;
+                            padding: .8125rem
+                        }
+
+                        .typography-example-3 span:nth-child(1) { background: #ff4136 }
+                        .typography-example-3 span:nth-child(2) { background: #ff851b }
+                        .typography-example-3 span:nth-child(3) { background: #2ecc40 }
+                        .typography-example-3 span:nth-child(4) { background: #0074d9 }
+                        .typography-example-3 span:nth-child(5) { background: #b10dc9 }
+                    </style>
+
+                    <pre><code>.typography-example-3 {
+    border: .2em solid #ff4136;
+    font-size: 3em;
+    text-align: center;
+    padding: .2em;
+    color: #fff
+}
+
+.typography-example-3 span {
+    display: inline-block;
+    width: 20%;
+    padding: .8125rem
+}
+
+.typography-example-3 span:nth-child(1) { background: #ff4136 }
+.typography-example-3 span:nth-child(2) { background: #ff851b }
+.typography-example-3 span:nth-child(3) { background: #2ecc40 }
+.typography-example-3 span:nth-child(4) { background: #0074d9 }
+.typography-example-3 span:nth-child(5) { background: #b10dc9 }</code></pre>
+
+                    <div class="example typography-example typography-example-3">
+                        <span>M</span><span>A</span><span>G</span><span>I</span><span>C</span>
+                    </div>
                 </div>
+
+                <h3>Typography lives everywhere</h3>
+
+                <p>Hopefully these few examples have given you an idea of what's possible with the various typographical CSS properties. Typography is such a crucial part of design that a lot of typographical thinking and concepts are embedded in the other chapters. We'll continue to explore typography as we go.</p>
 
                 <style>
                     .typography-example-4 {
@@ -181,18 +279,17 @@
                         padding: 1em 0;
                         text-align: center;
                         font-weight: 400;
-                        font-size: 1.5em;
-                        margin-bottom: 2.5rem
+                        font-size: 1.5em
                     }
                 </style>
 
-                <div class="typography-example typography-example-4">
+                <div class="example typography-example typography-example-4">
                     What will you design?
                 </div>
 
-                <p>In the next chapter we'll go over methodology and ways of thinking about typography which will help you think creatively.</p>
+                <h3>Butterick's Practical Typography</h3>
 
-                <p>For now, check out the amazing resources below. In particular, glance over <a href="http://practicaltypography.com">Butterick's Practical Typography</a><sup><a href="#cite-1">[1]</a></sup>. It's a must-read for anyone interest in typography.</p>
+                <p>For more fun with typography, check out the amazing resources below. In particular, glance over <a href="http://practicaltypography.com">Butterick's Practical Typography</a><sup><a href="#cite-1">[1]</a></sup>. It's a must-read for anyone with an interest in typography.</p>
 
                 <h3>Further reading</h3>
 
@@ -216,9 +313,9 @@
                         <span class="number">4</span>
                         <span class="title">Color</span>
                     </a>
-                    <a class="next-chapter" href="../6-typography-part-ii">
+                    <a class="next-chapter" href="../6-transitions">
                         <span class="number">6</span>
-                        <span class="title">Typography: Part II</span>
+                        <span class="title">Transitions</span>
                     </a>
                 </nav>
             </div>
