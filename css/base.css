@@ -39,3 +39,18 @@ a {
     content: "";
     display: table;
     clear: both; }
+
+footer.social {
+  margin: auto;
+  text-align: center;
+  width: 36rem;
+  max-width: 100%;
+  color: #aaaaaa; }
+  footer.social a, footer.social:visited {
+    text-decoration: none;
+    color: #888888;
+    border-bottom: 1px solid; }
+  footer.social iframe {
+    border: 0;
+    width: 100%;
+    height: 2em; }

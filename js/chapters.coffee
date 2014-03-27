@@ -209,6 +209,7 @@ chapters.specialTerms =
 
 chapters.init = ->
     chapters.setupContextualCodeExamples()
+    chapters.setupSocialFooter()
     chapters.setupGlobalNavigation()
 
 chapters.setupContextualCodeExamples = ->
@@ -308,6 +309,18 @@ chapters.setupContextualCodeExamples = ->
     window.addEventListener 'resize', ->
         if document.body.classList.contains 'contextual-open'
             positionContextualDisplay document.querySelector('code.contextual-code-example.contextual-open-tree')
+
+chapters.setupSocialFooter = ->
+    chapter = document.querySelector('.chapter')
+    return unless chapter
+
+    chapter.insertAdjacentHTML 'afterend', """
+        <footer class="social">
+            <hr>
+            <p><a href="http://github.com/adamschwartz/magic-of-css">Magic of CSS</a> was created by <a href="http://adamschwartz.co">Adam Schwartz</a></p>
+            <iframe href="http://hubstar.io/github/spin/adamschwartz/magic-of-css"></iframe>
+        </footer>
+    """
 
 chapters.setupGlobalNavigation = ->
     nav = document.querySelector('nav.chapter-navigation')
