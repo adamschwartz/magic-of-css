@@ -187,8 +187,9 @@ nav.chapter-navigation {
     background: #eeeeee;
     border: 0;
     height: 100%;
-    color: #777777;
     text-decoration: none; }
+    nav.chapter-navigation a, nav.chapter-navigation a:visited {
+      color: #777777; }
     nav.chapter-navigation a .title {
       display: none; }
     nav.chapter-navigation a .number:before {
@@ -209,12 +210,12 @@ nav.chapter-navigation {
     nav.chapter-navigation a.next-chapter {
       right: 1.25em; }
       nav.chapter-navigation a.next-chapter:after {
-        left: 100%;
+        left: 99.9%;
         border-color: transparent transparent transparent #eeeeee; }
     nav.chapter-navigation a.previous-chapter {
       left: 1.25em; }
       nav.chapter-navigation a.previous-chapter:after {
-        right: 100%;
+        right: 99.9%;
         border-color: transparent #eeeeee transparent transparent; }
 
 h3.magic {
