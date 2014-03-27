@@ -20,7 +20,8 @@ body {
 p.author {
   font-size: 1.4rem;
   margin-top: 2em;
-  padding-left: 0.3em;
+  letter-spacing: 0.05em;
+  padding-left: 0.43em;
   color: #888888;
   font-weight: 300; }
   p.author a {
