@@ -189,7 +189,7 @@ nav.chapter-navigation {
     height: 100%;
     text-decoration: none; }
     nav.chapter-navigation a, nav.chapter-navigation a:visited {
-      color: #777777; }
+      color: inherit; }
     nav.chapter-navigation a .title {
       display: none; }
     nav.chapter-navigation a .number:before {
