@@ -243,7 +243,8 @@ nav.chapter-navigation-fullpage a {
     line-height: 2em;
     margin: auto;
     opacity: 0;
-    pointer-events: none; }
+    pointer-events: none;
+    white-space: nowrap; }
   nav.chapter-navigation-fullpage a:hover .title {
     opacity: 1; }
   nav.chapter-navigation-fullpage a:before {
