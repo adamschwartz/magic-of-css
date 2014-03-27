@@ -232,6 +232,13 @@ nav.chapter-navigation
             border: 1.25em solid
             top: 0
 
+        &.previous-chapter
+            left: 1.25em
+
+            &:after
+                right: 99.9%
+                border-color: transparent #eee transparent transparent
+
         &.next-chapter
             right: 1.25em
 
@@ -239,12 +246,95 @@ nav.chapter-navigation
                 left: 99.9%
                 border-color: transparent transparent transparent #eee
 
-        &.previous-chapter
-            left: 1.25em
+nav.chapter-navigation-fullpage
 
-            &:after
-                right: 99.9%
-                border-color: transparent #eee transparent transparent
+    a
+        +box-sizing(content-box)
+        position: fixed
+        -webkit-transform: translate3d(0, 0, 0)
+        top: 0
+        height: 100%
+        width: 4rem
+        background-image: linear-gradient($red, $purple)
+        background-size: 1rem 100%
+        background-repeat: no-repeat
+        color: inherit
+        text-decoration: none
+        transition: background-position .4s
+
+        .title
+            position: absolute
+            top: 0
+            bottom: 0
+            height: 2em
+            line-height: 2em
+            margin: auto
+            opacity: 0
+            pointer-events: none
+
+        &:hover .title
+            opacity: 1
+
+        &:before
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            margin: auto
+            height: 1em
+            width: 1em
+            border: 1px solid
+            opacity: 0
+            -webkit-transform: rotateZ(45deg)
+
+        &:hover:before
+            opacity: 1
+
+    .previous-chapter
+        left: 0
+        background-position: -1rem top
+
+        &:before
+            left: 1rem
+            border-right: 0
+            border-top: 0
+            transition: opacity .4s, left .4s
+
+        .title
+            left: 1rem
+            transition: opacity .4s, left .4s
+
+        &:hover
+            background-position: left top
+
+            &:before
+                left: 1.75rem
+
+            .title
+                left: 3rem
+
+    .next-chapter
+        right: 0
+        background-position: 5rem top
+
+        &:before
+            right: 1rem
+            border-left: 0
+            border-bottom: 0
+            transition: opacity .4s, right .4s
+
+        .title
+            right: 1rem
+            transition: opacity .4s, right .4s
+
+        &:hover
+            background-position: right top
+
+            &:before
+                right: 1.75rem
+
+            .title
+                right: 3rem
 
 h3.magic
     position: relative

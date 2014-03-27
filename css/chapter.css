@@ -209,16 +209,90 @@ nav.chapter-navigation {
       width: 0;
       border: 1.25em solid;
       top: 0; }
-    nav.chapter-navigation a.next-chapter {
-      right: 1.25em; }
-      nav.chapter-navigation a.next-chapter:after {
-        left: 99.9%;
-        border-color: transparent transparent transparent #eeeeee; }
     nav.chapter-navigation a.previous-chapter {
       left: 1.25em; }
       nav.chapter-navigation a.previous-chapter:after {
         right: 99.9%;
         border-color: transparent #eeeeee transparent transparent; }
+    nav.chapter-navigation a.next-chapter {
+      right: 1.25em; }
+      nav.chapter-navigation a.next-chapter:after {
+        left: 99.9%;
+        border-color: transparent transparent transparent #eeeeee; }
+
+nav.chapter-navigation-fullpage a {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
+  top: 0;
+  height: 100%;
+  width: 4rem;
+  background-image: linear-gradient(#ff4136, #b10dc9);
+  background-size: 1rem 100%;
+  background-repeat: no-repeat;
+  color: inherit;
+  text-decoration: none;
+  transition: background-position 0.4s; }
+  nav.chapter-navigation-fullpage a .title {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 2em;
+    line-height: 2em;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none; }
+  nav.chapter-navigation-fullpage a:hover .title {
+    opacity: 1; }
+  nav.chapter-navigation-fullpage a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 1em;
+    width: 1em;
+    border: 1px solid;
+    opacity: 0;
+    -webkit-transform: rotateZ(45deg); }
+  nav.chapter-navigation-fullpage a:hover:before {
+    opacity: 1; }
+nav.chapter-navigation-fullpage .previous-chapter {
+  left: 0;
+  background-position: -1rem top; }
+  nav.chapter-navigation-fullpage .previous-chapter:before {
+    left: 1rem;
+    border-right: 0;
+    border-top: 0;
+    transition: opacity 0.4s, left 0.4s; }
+  nav.chapter-navigation-fullpage .previous-chapter .title {
+    left: 1rem;
+    transition: opacity 0.4s, left 0.4s; }
+  nav.chapter-navigation-fullpage .previous-chapter:hover {
+    background-position: left top; }
+    nav.chapter-navigation-fullpage .previous-chapter:hover:before {
+      left: 1.75rem; }
+    nav.chapter-navigation-fullpage .previous-chapter:hover .title {
+      left: 3rem; }
+nav.chapter-navigation-fullpage .next-chapter {
+  right: 0;
+  background-position: 5rem top; }
+  nav.chapter-navigation-fullpage .next-chapter:before {
+    right: 1rem;
+    border-left: 0;
+    border-bottom: 0;
+    transition: opacity 0.4s, right 0.4s; }
+  nav.chapter-navigation-fullpage .next-chapter .title {
+    right: 1rem;
+    transition: opacity 0.4s, right 0.4s; }
+  nav.chapter-navigation-fullpage .next-chapter:hover {
+    background-position: right top; }
+    nav.chapter-navigation-fullpage .next-chapter:hover:before {
+      right: 1.75rem; }
+    nav.chapter-navigation-fullpage .next-chapter:hover .title {
+      right: 3rem; }
 
 h3.magic {
   position: relative; }

@@ -209,6 +209,7 @@ chapters.specialTerms =
 
 chapters.init = ->
     chapters.setupContextualCodeExamples()
+    chapters.setupGlobalNavigation()
 
 chapters.setupContextualCodeExamples = ->
     contextualDisplayWrapper = document.createElement('div')
@@ -307,6 +308,34 @@ chapters.setupContextualCodeExamples = ->
     window.addEventListener 'resize', ->
         if document.body.classList.contains 'contextual-open'
             positionContextualDisplay document.querySelector('code.contextual-code-example.contextual-open-tree')
+
+chapters.setupGlobalNavigation = ->
+    nav = document.querySelector('nav.chapter-navigation')
+    page = document.querySelector('.page')
+    return unless nav and page
+
+    previousLink = nav.querySelector('.previous-chapter')
+    nextLink = nav.querySelector('.next-chapter')
+
+    html = '<nav class="chapter-navigation-fullpage">'
+
+    if previousLink
+        html += """
+            <a class="previous-chapter" href="#{ previousLink.getAttribute('href') }">
+                <span class="title">#{ previousLink.querySelector('.title').textContent }</span>
+            </a>
+        """
+
+    if nextLink
+        html += """
+            <a class="next-chapter" href="#{ nextLink.getAttribute('href') }">
+                <span class="title">#{ nextLink.querySelector('.title').textContent }</span>
+            </a>
+        """
+
+    html += '</nav>'
+
+    page.insertAdjacentHTML 'afterend', html
 
 window.chapters = chapters
 setTimeout chapters.init

@@ -160,7 +160,8 @@
   };
 
   chapters.init = function() {
-    return chapters.setupContextualCodeExamples();
+    chapters.setupContextualCodeExamples();
+    return chapters.setupGlobalNavigation();
   };
 
   chapters.setupContextualCodeExamples = function() {
@@ -244,6 +245,26 @@
         return positionContextualDisplay(document.querySelector('code.contextual-code-example.contextual-open-tree'));
       }
     });
+  };
+
+  chapters.setupGlobalNavigation = function() {
+    var html, nav, nextLink, page, previousLink;
+    nav = document.querySelector('nav.chapter-navigation');
+    page = document.querySelector('.page');
+    if (!(nav && page)) {
+      return;
+    }
+    previousLink = nav.querySelector('.previous-chapter');
+    nextLink = nav.querySelector('.next-chapter');
+    html = '<nav class="chapter-navigation-fullpage">';
+    if (previousLink) {
+      html += "<a class=\"previous-chapter\" href=\"" + (previousLink.getAttribute('href')) + "\">\n    <span class=\"title\">" + (previousLink.querySelector('.title').textContent) + "</span>\n</a>";
+    }
+    if (nextLink) {
+      html += "<a class=\"next-chapter\" href=\"" + (nextLink.getAttribute('href')) + "\">\n    <span class=\"title\">" + (nextLink.querySelector('.title').textContent) + "</span>\n</a>";
+    }
+    html += '</nav>';
+    return page.insertAdjacentHTML('afterend', html);
   };
 
   window.chapters = chapters;
