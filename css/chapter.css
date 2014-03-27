@@ -220,6 +220,9 @@ nav.chapter-navigation {
         left: 99.9%;
         border-color: transparent transparent transparent #eeeeee; }
 
+@media (max-width: 72rem) {
+  nav.chapter-navigation-fullpage {
+    display: none; } }
 nav.chapter-navigation-fullpage a {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
