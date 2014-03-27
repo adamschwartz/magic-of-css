@@ -4,7 +4,10 @@
   home = {};
 
   home.init = function() {
-    var firedMouseMove, firedScroll, referrerHostname, _ref;
+    var firedMouseMove, firedScroll, referrerHostname, _base, _ref;
+    if (typeof (_base = document.documentElement).setAttribute === "function") {
+      _base.setAttribute('data-user-agent', navigator.userAgent);
+    }
     firedMouseMove = false;
     window.addEventListener('mousemove', function() {
       if (firedMouseMove) {

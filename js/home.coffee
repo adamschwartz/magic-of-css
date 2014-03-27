@@ -1,6 +1,8 @@
 home = {}
 
 home.init = ->
+    document.documentElement.setAttribute? 'data-user-agent', navigator.userAgent
+
     firedMouseMove = false
     window.addEventListener 'mousemove', ->
         return if firedMouseMove
