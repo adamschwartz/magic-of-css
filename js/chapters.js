@@ -254,7 +254,7 @@
     if (!chapter) {
       return;
     }
-    return chapter.insertAdjacentHTML('afterend', "<footer class=\"social\">\n    <hr>\n    <p><a href=\"http://github.com/adamschwartz/magic-of-css\">Magic of CSS</a> was created by <a href=\"http://adamschwartz.co\">Adam Schwartz</a></p>\n    <iframe href=\"http://hubstar.io/github/spin/adamschwartz/magic-of-css\"></iframe>\n</footer>");
+    return chapter.insertAdjacentHTML('afterend', "<footer class=\"social\">\n    <hr>\n    <p><a href=\"http://github.com/adamschwartz/magic-of-css\">Magic of CSS</a> was created by <a href=\"http://adamschwartz.co\">Adam Schwartz</a></p>\n    <iframe src=\"http://hubstar.io/github/spin/adamschwartz/magic-of-css\"></iframe>\n</footer>");
   };
 
   chapters.setupGlobalNavigation = function() {

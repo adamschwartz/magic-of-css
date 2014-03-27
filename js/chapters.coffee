@@ -318,7 +318,7 @@ chapters.setupSocialFooter = ->
         <footer class="social">
             <hr>
             <p><a href="http://github.com/adamschwartz/magic-of-css">Magic of CSS</a> was created by <a href="http://adamschwartz.co">Adam Schwartz</a></p>
-            <iframe href="http://hubstar.io/github/spin/adamschwartz/magic-of-css"></iframe>
+            <iframe src="http://hubstar.io/github/spin/adamschwartz/magic-of-css"></iframe>
         </footer>
     """
 
