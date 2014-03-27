@@ -192,6 +192,8 @@ nav.chapter-navigation {
       color: inherit; }
     nav.chapter-navigation a .title {
       display: none; }
+      nav.chapter-navigation a .title.preface-title {
+        display: inline; }
     nav.chapter-navigation a .number:before {
       content: "Chapter "; }
     @media (min-width: 44rem) {
