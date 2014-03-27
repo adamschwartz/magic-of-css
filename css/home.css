@@ -17,6 +17,16 @@ body {
     .separator {
       height: 10em; } }
 
+p.author {
+  font-size: 1.4rem;
+  margin-top: 2em;
+  padding-left: 0.3em;
+  color: #888888;
+  font-weight: 300; }
+  p.author a {
+    text-decoration: none;
+    color: inherit; }
+
 h2 {
   font-weight: 300;
   text-transform: uppercase;
