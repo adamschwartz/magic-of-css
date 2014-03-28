@@ -44,6 +44,7 @@ a
     +pie-clearfix
 
 header.social
+    position: absolute
     z-index: 3
     -webkit-transform: translate3d(0, 0, 0)
     margin: auto
@@ -52,8 +53,8 @@ header.social
     right: 0
     height: 4em
 
-    @media (min-width: $chapterBreakPointLarge)
-        position: absolute
+    @media (max-width: $chapterBreakPointLarge)
+        display: none
 
     p
         position: absolute

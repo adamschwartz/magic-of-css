@@ -47,6 +47,7 @@ a {
     clear: both; }
 
 header.social {
+  position: absolute;
   z-index: 3;
   -webkit-transform: translate3d(0, 0, 0);
   margin: auto;
@@ -54,9 +55,9 @@ header.social {
   left: 0;
   right: 0;
   height: 4em; }
-  @media (min-width: 44rem) {
+  @media (max-width: 44rem) {
     header.social {
-      position: absolute; } }
+      display: none; } }
   header.social p {
     position: absolute;
     top: 0;
