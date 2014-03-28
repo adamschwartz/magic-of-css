@@ -105,16 +105,16 @@
                                 <input type="checkbox" class="example-display-fixed-width-checkbox"> Set all widths to 20%
                             </label>
                         </p>
-
-                        <script>
-                            document.querySelector('.example-display-fixed-width-checkbox').addEventListener('change', function(e){
-                                var checked = e.target.checked;
-                                Array.prototype.slice.call(document.querySelectorAll('.example-display .example-content *')).forEach(function(box){
-                                    box.style.width = checked ? '20%' : 'auto';
-                                });
-                            });
-                        </script>
                     </div>
+
+                    <script>
+                        document.querySelector('.example-display-fixed-width-checkbox').addEventListener('change', function(e){
+                            var checked = e.target.checked;
+                            Array.prototype.slice.call(document.querySelectorAll('.example-display .example-content *')).forEach(function(box){
+                                box.style.width = checked ? '20%' : 'auto';
+                            });
+                        });
+                    </script>
                 </div>
 
                 <p>One thing to note here is the difference between <code>inline</code> and <code>inline-block</code>. The <code>inline</code> elements display their <code>.5em</code> padding and <code>.125em</code> border, but only the lefts and rights (and not tops and bottoms) of these actually affect their layout. Whereas the <code>inline-block</code> elements reposition themselves in layout due to their padding and border, just as do the <code>block</code> elements.</p>
@@ -319,18 +319,18 @@
                             <span> &nbsp;&nbsp;<code>width: <span class="example-text-align-justify-slider-value">30%</span></code></span>
                         </p>
 
-                        <script>
-                            document.querySelector('.example-text-align-justify-slider').addEventListener('change', function(e){
-                                var width = e.target.valueAsNumber + '%';
-                                document.querySelector('.example-text-align-justify-slider-value').innerHTML = width;
-                                Array.prototype.slice.call(document.querySelectorAll('.example-text-align-justify .box')).forEach(function(box){
-                                    box.style.width = width;
-                                });
-                            });
-                        </script>
-
                         <p>Adjust the width of the boxes and note that <code>text-align: justify</code> keeps the grid intact.</p>
                     </div>
+
+                    <script>
+                        document.querySelector('.example-text-align-justify-slider').addEventListener('change', function(e){
+                            var width = e.target.valueAsNumber + '%';
+                            document.querySelector('.example-text-align-justify-slider-value').innerHTML = width;
+                            Array.prototype.slice.call(document.querySelectorAll('.example-text-align-justify .box')).forEach(function(box){
+                                box.style.width = width;
+                            });
+                        });
+                    </script>
                 </div>
 
                 <h2>Floats</h2>
