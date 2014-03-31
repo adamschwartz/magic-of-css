@@ -23,7 +23,7 @@ home.init = ->
 
     referrerHostname = document.referrer.match(/:\/\/(.[^/]+)/)?[1].split(':')[0]
 
-    if document.location.hostname is referrerHostname or localStorage.hasBeenHereBefore is true
+    if document.location.hostname is referrerHostname or localStorage.hasBeenHereBefore is true or location.search.match(/fast/)?
         document.querySelector('.logo').className = 'logo'
         document.body.className += ' has-been-here-before'
 

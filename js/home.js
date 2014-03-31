@@ -31,7 +31,7 @@
       localStorage.hasBeenHereBefore = true;
     }
     referrerHostname = (_ref = document.referrer.match(/:\/\/(.[^/]+)/)) != null ? _ref[1].split(':')[0] : void 0;
-    if (document.location.hostname === referrerHostname || localStorage.hasBeenHereBefore === true) {
+    if (document.location.hostname === referrerHostname || localStorage.hasBeenHereBefore === true || (location.search.match(/fast/) != null)) {
       document.querySelector('.logo').className = 'logo';
       document.body.className += ' has-been-here-before';
     }
