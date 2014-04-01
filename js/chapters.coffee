@@ -208,9 +208,13 @@ chapters.specialTerms =
         '''
 
 chapters.init = ->
+    chapters.setupUserAgentDataAttribute()
     chapters.setupContextualCodeExamples()
     chapters.setupSocialFooter()
     chapters.setupGlobalNavigation()
+
+chapters.setupUserAgentDataAttribute = ->
+    document.documentElement.setAttribute? 'data-user-agent', navigator.userAgent
 
 chapters.setupContextualCodeExamples = ->
     return unless /(Chrome|iPad|iPhone|iPod)/g.test navigator.userAgent

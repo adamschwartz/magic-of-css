@@ -160,9 +160,15 @@
   };
 
   chapters.init = function() {
+    chapters.setupUserAgentDataAttribute();
     chapters.setupContextualCodeExamples();
     chapters.setupSocialFooter();
     return chapters.setupGlobalNavigation();
+  };
+
+  chapters.setupUserAgentDataAttribute = function() {
+    var _base;
+    return typeof (_base = document.documentElement).setAttribute === "function" ? _base.setAttribute('data-user-agent', navigator.userAgent) : void 0;
   };
 
   chapters.setupContextualCodeExamples = function() {
