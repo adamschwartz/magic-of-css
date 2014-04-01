@@ -73,6 +73,13 @@
                         transition-delay: 0ms;
                         opacity: 0
                     }
+
+                    /* Workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=990340 */
+                    @-moz-document url-prefix() {
+                        .typography-example {
+                            overflow: hidden
+                        }
+                    }
                 </style>
 
                 <div class="example-wrapper typography-example-wrapper">
@@ -219,6 +226,29 @@
                         .typography-example-2:hover .author span {
                             transition-delay: 0;
                         }
+
+                        /* Firefox styles */
+
+                        @-moz-document url-prefix() {
+                            .typography-example-2 .title span,
+                            .typography-example-2 .author span {
+                                transition: -moz-transform 800ms, opacity 800ms
+                            }
+
+                            .typography-example-2 .title span {
+                                -moz-transform: translateZ(0) translateY(-6rem)
+                            }
+
+                            .typography-example-2 .author span {
+                                -moz-transform: translateZ(0) translateY(6rem)
+                            }
+
+                            .typography-example-2:hover .title span,
+                            .typography-example-2:hover .author span {
+                                transition: -moz-transform 800ms, opacity 1200ms;
+                                -moz-transform: translateZ(0) translateY(0)
+                            }
+                        }
                     </style>
 
                     <pre><code>.ex .title span,
@@ -353,6 +383,32 @@
                         .typography-example-3:before {
                             background: #ff4136;
                             z-index: 1;
+                        }
+
+                        /* Firefox styles */
+
+                        @-moz-document url-prefix() {
+                            .typography-example-3 .letter {
+                                -moz-perspective: 320px
+                            }
+
+                            .typography-example-3 .front,
+                            .typography-example-3 .back {
+                                -moz-backface-visibility: hidden;
+                                transition: -moz-transform 800ms
+                            }
+
+                            .typography-example-3 .back {
+                                -moz-transform: translateZ(0) rotateY(-180deg)
+                            }
+
+                            .typography-example-3:hover .back {
+                                -moz-transform: translateZ(0) rotateY(0deg)
+                            }
+
+                            .typography-example-3:hover .front {
+                                -moz-transform: translateZ(0) rotateY(180deg)
+                            }
                         }
                     </style>
 
