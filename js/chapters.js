@@ -167,6 +167,9 @@
 
   chapters.setupContextualCodeExamples = function() {
     var closeContextualDisplay, contextualDisplay, contextualDisplayWrapper, positionContextualDisplay;
+    if (!/(Chrome|iPad|iPhone|iPod)/g.test(navigator.userAgent)) {
+      return;
+    }
     contextualDisplayWrapper = document.createElement('div');
     contextualDisplayWrapper.classList.add('contextual-display-wrapper');
     contextualDisplay = document.createElement('div');

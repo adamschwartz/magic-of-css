@@ -213,6 +213,8 @@ chapters.init = ->
     chapters.setupGlobalNavigation()
 
 chapters.setupContextualCodeExamples = ->
+    return unless /(Chrome|iPad|iPhone|iPod)/g.test navigator.userAgent
+
     contextualDisplayWrapper = document.createElement('div')
     contextualDisplayWrapper.classList.add 'contextual-display-wrapper'
 

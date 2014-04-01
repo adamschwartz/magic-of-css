@@ -50,7 +50,20 @@
                     <li><code>outline</code> and <code>box-shadow</code> aren't part of the box, and therefore have no effect on the layout</li>
                 </ul>
 
-                <div class="meta">
+                <style>
+                    .meta-contextual-display {
+                        display: none
+                    }
+
+                    html[data-user-agent*="Chrome"] .meta-contextual-display,
+                    html[data-user-agent*="iPad"] .meta-contextual-display,
+                    html[data-user-agent*="iPhone"] .meta-contextual-display,
+                    html[data-user-agent*="iPod"] .meta-contextual-display {
+                        display: block
+                    }
+                </style>
+
+                <div class="meta meta-contextual-display">
                     <p>Quick note: most css properties in this textbook can be clicked to obtain contextual information. Try clicking <code>box-shadow</code>, for example.</p>
                 </div>
 
