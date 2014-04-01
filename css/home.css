@@ -70,6 +70,12 @@ ol.chapters {
       margin-right: 0.625em;
       font-weight: 300;
       float: left; }
+    ol.chapters > li.coming-soon:before {
+      opacity: 0; }
+    ol.chapters > li.coming-soon a {
+      font-size: 0.8em;
+      margin-top: 0.2em;
+      opacity: 0.4; }
   ol.chapters:first-child {
     counter-reset: chaptersCounter; }
   ol.chapters a {
