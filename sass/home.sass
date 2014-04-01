@@ -142,10 +142,12 @@ ul.potions, .preface-link
 
     .css-rainbow
 
+        .rainbow
+            -webkit-backface-visibility: hidden
+
         .css-rainbow-c .rainbow
             +transition(transform 800ms ease-in-out 0ms forwards)
             +transform(rotateZ(90deg))
-            -webkit-backface-visibility: hidden
 
             .trigger-pageload-animations &
                 +transform(rotateZ(-90deg))
@@ -155,7 +157,6 @@ ul.potions, .preface-link
             .bottom-half .rainbow
                 +transition(transform 400ms ease-in 600ms forwards)
                 +transform(rotateZ(270deg))
-                -webkit-backface-visibility: hidden
 
                 .trigger-pageload-animations &
                     +transform(rotateZ(90deg))
@@ -163,7 +164,6 @@ ul.potions, .preface-link
             .top-half .rainbow
                 +transition(transform 400ms ease-out 1000ms forwards)
                 +transform(rotateZ(90deg))
-                -webkit-backface-visibility: hidden
 
                 .trigger-pageload-animations &
                     +transform(rotateZ(270deg))
@@ -173,7 +173,6 @@ ul.potions, .preface-link
             .bottom-half .rainbow
                 +transition(transform 400ms ease-in 800ms forwards)
                 +transform(rotateZ(270deg))
-                -webkit-backface-visibility: hidden
 
                 .trigger-pageload-animations &
                     +transform(rotateZ(90deg))
@@ -181,7 +180,6 @@ ul.potions, .preface-link
             .top-half .rainbow
                 +transition(transform 400ms ease-out 1200ms forwards)
                 +transform(rotateZ(90deg))
-                -webkit-backface-visibility: hidden
 
                 .trigger-pageload-animations &
                     +transform(rotateZ(270deg))
