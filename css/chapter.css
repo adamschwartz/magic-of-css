@@ -266,7 +266,11 @@ nav.chapter-navigation-fullpage a {
     width: 1em;
     border: 1px solid;
     opacity: 0;
-    -webkit-transform: rotateZ(45deg); }
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    transform: rotateZ(45deg); }
   nav.chapter-navigation-fullpage a:hover:before {
     opacity: 1; }
 nav.chapter-navigation-fullpage .previous-chapter {
