@@ -4,7 +4,7 @@ applyToParents = (node, apply, count = 0) ->
     if count is 10
         return
     if node.parentNode and node.parentNode.tagName isnt 'BODY'
-        applyToParents node.parentNode, apply, count+1
+        applyToParents node.parentNode, apply, count + 1
     apply node
 
 specialTermTitle = (specialTerm) ->
