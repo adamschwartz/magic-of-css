@@ -9,6 +9,8 @@ Planned chapters:
     - http://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo
 - Flex
     - http://css-tricks.com/boxes-fill-height-dont-squish
+    - http://www.planningforaliens.com/blog/2014/03/11/real-world-flexbox/
+    - http://jakearchibald.com/2014/dont-use-flexbox-for-page-layout/
 - General CSS Troubleshooting
     - http://tympanus.net/codrops/2013/07/17/troubleshooting-css
 
@@ -19,5 +21,8 @@ Additions:
 
 - Typoraphy
     - https://bugsnag.com/blog/responsive-typography-with-modular-scale
+    - http://typogui.de/
 - Presentation framework
     - http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt
+- Color
+    - https://twitter.com/elisabethirg/status/445896785962479616
