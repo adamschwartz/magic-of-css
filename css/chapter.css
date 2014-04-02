@@ -724,16 +724,18 @@ header.social {
   @media (max-width: 44rem) {
     header.social {
       display: none; } }
-  header.social p {
+  header.social a.github {
     position: absolute;
     top: 0;
     left: 0;
     margin: 0;
     padding: 1.4em 1.8em;
     opacity: 0.5; }
-    header.social p a, header.social p a:visited {
-      color: #b10dc9;
+    header.social a.github, header.social a.github:visited {
+      color: #777777;
       text-decoration: none; }
+      header.social a.github:hover, header.social a.github:visited:hover {
+        color: #b10dc9; }
   header.social a.twitter {
     position: absolute;
     display: block;
@@ -746,7 +748,10 @@ header.social {
     background: none;
     text-shadow: none; }
     header.social a.twitter, header.social a.twitter:visited {
-      color: #0074d9; }
+      color: #777777;
+      text-decoration: none; }
+      header.social a.twitter:hover, header.social a.twitter:visited:hover {
+        color: #0074d9; }
     header.social a.twitter:before {
       position: absolute;
       top: 1.5em;

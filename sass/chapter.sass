@@ -773,7 +773,7 @@ header.social
     @media (max-width: $chapterBreakPointLarge)
         display: none
 
-    p
+    a.github
         position: absolute
         top: 0
         left: 0
@@ -781,9 +781,12 @@ header.social
         padding: 1.4em 1.8em
         opacity: .5
 
-        a, a:visited
-            color: $purple
+        &, &:visited
+            color: #777
             text-decoration: none
+
+            &:hover
+                color: $purple
 
     a.twitter
         position: absolute
@@ -798,7 +801,11 @@ header.social
         text-shadow: none
 
         &, &:visited
-            color: $blue
+            color: #777
+            text-decoration: none
+
+            &:hover
+                color: $blue
 
         &:before
             position: absolute

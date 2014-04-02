@@ -263,7 +263,7 @@
     if (!page) {
       return;
     }
-    return page.insertAdjacentHTML('beforebegin', "<header class=\"social\">\n    <p><a href=\"http://github.com/adamschwartz/magic-of-css\">Code on GitHub</a></p>\n    <a class=\"twitter\" href=\"https://twitter.com/adamfschwartz\"></a>\n</header>");
+    return page.insertAdjacentHTML('beforebegin', "<header class=\"social\">\n    <a class=\"github\"  target=\"_blank\" href=\"http://github.com/adamschwartz/magic-of-css/blob/gh-pages/" + (location.href.split(location.host)[1].replace('/magic-of-css/', '')) + "index.html\">Code on GitHub</a>\n    <a class=\"twitter\" target=\"_blank\" href=\"https://twitter.com/adamfschwartz\"></a>\n</header>");
   };
 
   chapters.setupGlobalNavigation = function() {

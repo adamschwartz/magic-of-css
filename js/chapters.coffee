@@ -322,8 +322,8 @@ chapters.setupSocialFooter = ->
 
     page.insertAdjacentHTML 'beforebegin', """
         <header class="social">
-            <p><a href="http://github.com/adamschwartz/magic-of-css">Code on GitHub</a></p>
-            <a class="twitter" href="https://twitter.com/adamfschwartz"></a>
+            <a class="github"  target="_blank" href="http://github.com/adamschwartz/magic-of-css/blob/gh-pages/#{ location.href.split(location.host)[1].replace('/magic-of-css/', '') }index.html">Code on GitHub</a>
+            <a class="twitter" target="_blank" href="https://twitter.com/adamfschwartz"></a>
         </header>
     """
 
