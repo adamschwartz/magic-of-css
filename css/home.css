@@ -28,18 +28,16 @@ p.author {
     text-decoration: none;
     color: inherit; }
 
-.share {
-  overflow: hidden; }
-  .share iframe {
-    display: block;
-    margin: 0 auto 0.7em;
-    overflow: hidden;
-    opacity: 0.5;
-    border: 0;
-    height: 2.2rem;
-    width: 10.7rem;
-    -webkit-filter: invert(1);
-    -webkit-transform: traslateZ(0); }
+.share iframe {
+  display: block;
+  margin: -1em auto 0.7em;
+  opacity: 0.5;
+  border: 0;
+  height: 2.4rem;
+  width: 13.6rem;
+  padding-left: 0.6rem;
+  -webkit-filter: invert(1);
+  -webkit-transform: traslateZ(0); }
 
 h2 {
   font-weight: 300;
