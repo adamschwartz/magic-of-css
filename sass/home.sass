@@ -37,17 +37,32 @@ p.author
         color: inherit
 
 .share
+    margin-top: -.7rem
+    margin-bottom: .7rem
+    padding-left: .6rem
+    font-size: 0
 
     iframe
-        display: block
-        margin: -1em auto 0.7em
-        opacity: 0.5
+        +inline-block
+        background: #eee
+        border-radius: 5px
+        margin-left: auto
+        margin-right: auto
         border: 0
         height: 2.4rem
         width: 13.6rem
-        padding-left: .6rem
-        -webkit-filter: invert(1)
-        -webkit-transform: traslateZ(0)
+        height: 1.6rem
+        opacity: .8
+
+        &:hover
+            opacity: 1
+
+        &.github
+            width: 8rem
+            margin-right: .7rem
+
+        &.twitter
+            width: 5.5rem
 
 h2
     font-weight: 300

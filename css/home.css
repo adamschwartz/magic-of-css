@@ -28,16 +28,34 @@ p.author {
     text-decoration: none;
     color: inherit; }
 
-.share iframe {
-  display: block;
-  margin: -1em auto 0.7em;
-  opacity: 0.5;
-  border: 0;
-  height: 2.4rem;
-  width: 13.6rem;
+.share {
+  margin-top: -0.7rem;
+  margin-bottom: 0.7rem;
   padding-left: 0.6rem;
-  -webkit-filter: invert(1);
-  -webkit-transform: traslateZ(0); }
+  font-size: 0; }
+  .share iframe {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    background: #eeeeee;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    height: 2.4rem;
+    width: 13.6rem;
+    height: 1.6rem;
+    opacity: 0.8; }
+    .share iframe:hover {
+      opacity: 1; }
+    .share iframe.github {
+      width: 8rem;
+      margin-right: 0.7rem; }
+    .share iframe.twitter {
+      width: 5.5rem; }
 
 h2 {
   font-weight: 300;
