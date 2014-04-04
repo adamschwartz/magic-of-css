@@ -63,7 +63,7 @@
       exampleHTML: '<div class="box"></div>'
     },
     'inline-block': {
-      description: '<p>A value for the <code>display</code> property.</p>\n<p>The inside of me is formatted as <code>block</code>, but the element myself is layed into the page as an <code>inline</code> element.</p>',
+      description: '<p>A value for the <code>display</code> property.</p>\n<p>The inside of me is formatted as <code>block</code>, but the element myself is laid into the page as an <code>inline</code> element.</p>',
       exampleCSS: 'display: inline-block',
       exampleCSSSelector: '.text-box',
       exampleHTML: 'Text <div class="text-box">Inline block</div> more text...'
