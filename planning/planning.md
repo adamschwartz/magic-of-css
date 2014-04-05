@@ -27,3 +27,4 @@ Additions:
 - Color
     - https://twitter.com/elisabethirg/status/445896785962479616
 - Use this somehow: http://i.imgur.com/obbWKlH.gif
+- Mention -webkit-appearance (http://trentwalton.com/2010/07/14/css-webkit-appearance/)
