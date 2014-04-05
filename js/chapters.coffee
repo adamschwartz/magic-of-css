@@ -69,7 +69,7 @@ chapters.specialTerms =
     'inline-block':
         description: '''
             <p>A value for the <code>display</code> property.</p>
-            <p>The inside of me is formatted as <code>block</code>, but the element myself is layed into the page as an <code>inline</code> element.</p>
+            <p>The inside of me is formatted as <code>block</code>, but the element myself is laid into the page as an <code>inline</code> element.</p>
         '''
         exampleCSS: 'display: inline-block'
         exampleCSSSelector: '.text-box'
