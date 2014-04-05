@@ -729,7 +729,7 @@ header.social {
     top: 0;
     left: 0;
     margin: 0;
-    padding: 1.4em 1.8em;
+    padding: 2em;
     opacity: 0.5; }
     header.social a.github, header.social a.github:visited {
       color: #777777;
@@ -754,7 +754,7 @@ header.social {
         color: #0074d9; }
     header.social a.twitter:before {
       position: absolute;
-      top: 1.5em;
+      top: 2em;
       right: 3.4em;
       content: "@adamfschwartz";
       opacity: 0; }
@@ -762,7 +762,7 @@ header.social {
       opacity: 1; }
     header.social a.twitter:after {
       position: absolute;
-      top: 1.5em;
+      top: 2em;
       right: 2em;
       font-family: "social-icons";
       content: "\e800";
