@@ -133,6 +133,7 @@ sup {
     body.contextual-open .example-wrapper {
       opacity: 0; } }
 style[contenteditable] {
+  margin: 1em 0;
   display: block; }
 
 code, pre, style[contenteditable] {
