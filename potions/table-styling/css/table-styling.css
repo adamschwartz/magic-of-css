@@ -2,18 +2,34 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
   table th {
-    vertical-align: bottom;
-    font-weight: bold; }
+    vertical-align: bottom; }
   table th, table td {
-    text-align: left;
-    padding: 0.625em; }
+    text-align: left; }
     table th[data-numeric], table th[data-month-day-year], table td[data-numeric], table td[data-month-day-year] {
       text-align: right; }
 
-table {
+table.light-grid {
   width: 100%;
   background: #f2f2f2; }
-  table tbody td {
+  table.light-grid th, table.light-grid td {
+    padding: 0.625em; }
+  table.light-grid th {
+    font-weight: bold; }
+  table.light-grid tbody td {
     border-top: 0.0625em solid #e0e0e0; }
-  table th[data-sorted="true"] {
-    background: #e0e0e0; }
+
+table.content-only {
+  width: 100%; }
+  table.content-only th {
+    font-weight: normal;
+    border-bottom: 0.0625em solid #e0e0e0; }
+  table.content-only th, table.content-only td {
+    padding: 0.625em; }
+  table.content-only tr > td:first-child, table.content-only tr > th:first-child {
+    padding-left: 0; }
+  table.content-only tr > td:last-child, table.content-only tr > th:last-child {
+    padding-right: 0; }
+  table.content-only tr:not(:first-child) > td, table.content-only tr:not(:first-child) > th {
+    padding-top: 0; }
+  table.content-only tr:last-child > td {
+    padding-bottom: 0; }

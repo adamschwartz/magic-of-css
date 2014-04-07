@@ -8,23 +8,56 @@ table
 
     th
         vertical-align: bottom
-        font-weight: bold
 
     th, td
         text-align: left
-        padding: .625em
 
         &[data-numeric], &[data-month-day-year]
             text-align: right
 
-// Style
+// Light grid style
 
-table
+table.light-grid
     width: 100%
     background: #f2f2f2
+
+    th, td
+        padding: .625em
+
+    th
+        font-weight: bold
 
     tbody td
         border-top: .0625em solid #e0e0e0
 
-    th[data-sorted="true"]
-        background: #e0e0e0
+// Content-only style
+
+table.content-only
+    width: 100%
+
+    th
+        font-weight: normal
+        border-bottom: .0625em solid #e0e0e0
+
+    th, td
+        padding: .625em
+
+    tr
+
+        > td, > th
+
+            &:first-child
+                padding-left: 0
+
+            &:last-child
+                padding-right: 0
+
+        &:not(:first-child)
+
+            > td, > th
+                padding-top: 0
+
+        &:last-child
+
+            > td
+                padding-bottom: 0
