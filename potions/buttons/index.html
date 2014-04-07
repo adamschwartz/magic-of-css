@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Buttons — Magic of CSS — Adam Schwartz</title>
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="icon" href="/magic-of-css/favicon.ico">
+
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/logo.css">
+        <link rel="stylesheet" href="../../css/chapter.css">
+
+        <script src="//use.typekit.net/hlu4jhg.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+
+        <script src="../../js/chapters.js"></script>
+    </head>
+    <body>
+        <div class="page">
+            <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div></div></a>
+
+            <div class="chapter">
+                <h1>
+                    <span class="title">Buttons</span>
+                </h1>
+
+                <style>
+                    h4.button-example-header {
+                        text-align: center;
+                        font-weight: normal;
+                        font-size: 1.5em;
+                        margin-top: 15rem;
+                        margin-bottom: 2rem
+                    }
+
+                    .example-wrapper {
+                        margin-bottom: 15rem
+                    }
+
+                    .large-button-example {
+                        font-size: 2em;
+                        margin-top: 1rem
+                    }
+
+                    @media (max-width: 44rem) {
+                        .large-button-example button:not(:first-child) {
+                            display: none
+                        }
+                    }
+
+                    .extra-large-button-example {
+                        font-size: 4em;
+                        margin-top: 2rem
+                    }
+
+                    .example {
+                        overflow: visible
+                    }
+
+                    @media (min-width: 92.66667rem) {
+                        style[contenteditable] {
+                            font-size: 1em;
+                        }
+                    }
+                </style>
+
+                <h4 class="button-example-header">The OS/browser default</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">button.demo {
+
+}
+
+button.demo:hover,
+button.demo.hover {
+
+}
+
+button.demo:active,
+button.demo.active {
+
+}</style>
+
+                    <div class="example">
+                        <button class="demo">Button</button>
+                        <button class="demo hover">:hover</button>
+                        <button class="demo active">:active</button>
+
+                        <div class="large-button-example">
+                            <button class="demo">Button</button>
+                            <button class="demo hover">:hover</button>
+                            <button class="demo active">:active</button>
+                        </div>
+
+                        <div class="extra-large-button-example">
+                            <button class="demo">Button</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="button-example-header">The "I'm so flat you can barely tell I'm a button"</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">button.flat {
+    outline: none;
+    margin: 0;
+    background: #e0e0e0;
+    cursor: pointer;
+    border: 0;
+    padding: .4em .8em;
+    text-rendering: optimizeLegibility;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 300;
+    color: inherit
+}
+
+button.flat:hover,
+button.flat.hover {
+    background: #e6e6e6
+}
+
+button.flat:active,
+button.flat.active {
+    background: #d6d6d6
+}</style>
+
+                    <div class="example">
+                        <button class="flat">Button</button>
+                        <button class="flat hover">:hover</button>
+                        <button class="flat active">:active</button>
+
+                        <div class="large-button-example">
+                            <button class="flat">Button</button>
+                            <button class="flat hover">:hover</button>
+                            <button class="flat active">:active</button>
+                        </div>
+
+                        <div class="extra-large-button-example">
+                            <button class="flat">Button</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="button-example-header">The skeuomorph</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">button.skeuomorph {
+    outline: none;
+    margin: 0;
+    background: linear-gradient(#eee, #c0c0c0);
+    border-radius: .25em;
+    cursor: pointer;
+    border: 0;
+    padding: .4em .8em;
+    text-rendering: optimizeLegibility;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 300;
+    color: inherit;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5)
+}
+
+button.skeuomorph:hover,
+button.skeuomorph.hover {
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+        0 .08em .24em rgba(0, 0, 0, 0.3)
+}
+
+button.skeuomorph:active,
+button.skeuomorph.active {
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+        inset 0 .08em .24em rgba(0, 0, 0, 0.3)
+}</style>
+
+                    <div class="example">
+                        <button class="skeuomorph">Button</button>
+                        <button class="skeuomorph hover">:hover</button>
+                        <button class="skeuomorph active">:active</button>
+
+                        <div class="large-button-example">
+                            <button class="skeuomorph">Button</button>
+                            <button class="skeuomorph hover">:hover</button>
+                            <button class="skeuomorph active">:active</button>
+                        </div>
+
+                        <div class="extra-large-button-example">
+                            <button class="skeuomorph">Button</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="button-example-header">Skeuomorph-lite<sup>TM<sup></h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">button.skeuomorph-lite {
+    outline: none;
+    margin: 0;
+    background: #e0e0e0;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    cursor: pointer;
+    padding: .4em .8em;
+    text-rendering: optimizeLegibility;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 300;
+    color: inherit
+}
+
+button.skeuomorph-lite:hover,
+button.skeuomorph-lite.hover {
+    background: #e6e6e6
+}
+
+button.skeuomorph-lite:active,
+button.skeuomorph-lite.active {
+    background: #e0e0e0;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-top: 1px solid rgba(0, 0, 0, .3);
+}</style>
+
+                    <div class="example">
+                        <button class="skeuomorph-lite">Button</button>
+                        <button class="skeuomorph-lite hover">:hover</button>
+                        <button class="skeuomorph-lite active">:active</button>
+
+                        <div class="large-button-example">
+                            <button class="skeuomorph-lite">Button</button>
+                            <button class="skeuomorph-lite hover">:hover</button>
+                            <button class="skeuomorph-lite active">:active</button>
+                        </div>
+
+                        <div class="extra-large-button-example">
+                            <button class="skeuomorph-lite">Button</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="button-example-header">The "I pretend I'm flat when really I'm just a different skeuomorph"</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">button.skeuomorph-flat {
+    outline: none;
+    margin: 0;
+    border: 0;
+    border-radius: .25em;
+    background: #e0e0e0;
+    cursor: pointer;
+    padding: .4em .8em;
+    text-rendering: optimizeLegibility;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 300;
+    color: inherit;
+    box-shadow: 0 .2em #888;
+    -webkit-transform: translateY(-.2em);
+    -moz-transform: translateY(-.2em);
+    transform: translateY(-.2em)
+}
+
+button.skeuomorph-flat:hover,
+button.skeuomorph-flat.hover {
+    background: #e6e6e6
+}
+
+button.skeuomorph-flat:active,
+button.skeuomorph-flat.active {
+    box-shadow: none;
+    background: #e0e0e0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0)
+}</style>
+                    <div class="example">
+                        <button class="skeuomorph-flat">Button</button>
+                        <button class="skeuomorph-flat hover">:hover</button>
+                        <button class="skeuomorph-flat active">:active</button>
+
+                        <div class="large-button-example">
+                            <button class="skeuomorph-flat">Button</button>
+                            <button class="skeuomorph-flat hover">:hover</button>
+                            <button class="skeuomorph-flat active">:active</button>
+                        </div>
+
+                        <div class="extra-large-button-example">
+                            <button class="skeuomorph-flat">Button</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="button-example-header">The "HubSpot Primary"</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">button.hubspot-primary {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: .8em;
+    font-weight: bold;
+    outline: none;
+    margin: 0;
+    background: linear-gradient(#7ec8f4, #3574e3);
+    border-radius: .25em;
+    cursor: pointer;
+    border: 0;
+    padding: .5em 1.5em .65em;
+    text-rendering: optimizeLegibility;
+    color: #fff;
+    text-shadow: 0 -1px rgba(0, 0, 0, .3);
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+        inset 0 1px #6f9ae7,
+        inset 0 2px rgba(255, 255, 255, 0.5)
+}
+
+button.hubspot-primary:hover,
+button.hubspot-primary.hover {
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+        inset 0 1px #6f9ae7,
+        inset 0 2px rgba(255, 255, 255, 0.5),
+        0 0 .3em #3574e3
+}
+
+button.hubspot-primary:active,
+button.hubspot-primary.active {
+    background: linear-gradient(#3574e3, #7ec8f4);
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+        inset 0 0 .4em rgba(0, 0, 0, 0.6)
+}</style>
+                    <div class="example">
+                        <button class="hubspot-primary">Button</button>
+                        <button class="hubspot-primary hover">:hover</button>
+                        <button class="hubspot-primary active">:active</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
