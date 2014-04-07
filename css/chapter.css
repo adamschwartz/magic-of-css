@@ -122,19 +122,24 @@ sup {
       clear: both; }
     .example-wrapper.typography-example-wrapper {
       margin-bottom: 4em; }
-    .example-wrapper pre, .example-wrapper .example {
+    .example-wrapper style[contenteditable], .example-wrapper pre, .example-wrapper .example {
       width: 34.66667rem;
       margin-top: 0; }
-    .example-wrapper pre {
+    .example-wrapper pre, .example-wrapper style[contenteditable] {
       float: left; }
     .example-wrapper .example {
-      float: right; }
+      float: right;
+      overflow: visible; }
     body.contextual-open .example-wrapper {
       opacity: 0; } }
-code, pre {
+style[contenteditable] {
+  margin: 1em 0;
+  display: block; }
+
+code, pre, style[contenteditable] {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
 
-pre {
+pre, style[contenteditable] {
   background-color: #eeeeee;
   color: #333333;
   padding: 0.5em 0.66667em;
@@ -144,6 +149,21 @@ pre {
   line-height: 1.71em;
   white-space: pre;
   word-wrap: normal; }
+
+style[contenteditable] {
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  -webkit-box-shadow: 0 0 #cccccc;
+  -moz-box-shadow: 0 0 #cccccc;
+  box-shadow: 0 0 #cccccc;
+  padding: 0.66667em 1em; }
+  style[contenteditable]:focus {
+    -webkit-box-shadow: -0.5em 0 #cccccc;
+    -moz-box-shadow: -0.5em 0 #cccccc;
+    box-shadow: -0.5em 0 #cccccc;
+    outline: none; }
 
 code {
   font-size: 0.8em;

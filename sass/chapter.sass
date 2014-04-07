@@ -138,23 +138,28 @@ $exampleWrapperSideBySideWidth: ($chapterWidthInner * 2) + 2rem
         &.typography-example-wrapper
             margin-bottom: 4em
 
-        pre, .example
+        style[contenteditable], pre, .example
             width: $chapterWidthInner
             margin-top: 0
 
-        pre
+        pre, style[contenteditable]
             float: left
 
         .example
             float: right
+            overflow: visible
 
         body.contextual-open &
             opacity: 0
 
-code, pre
+style[contenteditable]
+    margin: 1em 0
+    display: block
+
+code, pre, style[contenteditable]
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
 
-pre
+pre, style[contenteditable]
     background-color: #eee
     color: #333
     padding: .5em .666666em
@@ -164,6 +169,15 @@ pre
     line-height: 1.71em
     white-space: pre
     word-wrap: normal
+
+style[contenteditable]
+    +transition(box-shadow .2s)
+    +box-shadow(0 0 #ccc)
+    padding: .666666em 1em
+
+    &:focus
+        +box-shadow(-.5em 0 #ccc)
+        outline: none
 
 code
     font-size: .8em
