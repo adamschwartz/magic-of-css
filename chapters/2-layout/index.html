@@ -127,14 +127,18 @@
                 <p>Let's say I want to display some code with a background color applied to each row of text on hover:</p>
 
                 <style>
+                    .example-row-highlight-fail .row {
+                        display: block
+                    }
+
                     .example-row-highlight-fail .row:hover {
                         background: #ccc
                     }
                 </style>
 
-                <pre class="example-row-highlight-fail"><code><div class="row">body {</div><!--
---><div class="row">    background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */</div><!--
---><div class="row">}</div></code></pre>
+                <pre class="example-row-highlight-fail"><code><span class="row">body {</span><!--
+--><span class="row">    background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */</span><!--
+--><span class="row">}</span></code></pre>
 
                 <p>If you scroll to the right, you'll see that the row hover color doesn't extend all of the way to the right. This is because each row wrapper is a block element, sizing itself to the width of its parent, not to the scroll width of its parent.</p>
 
@@ -145,14 +149,18 @@
                         display: inline-block
                     }
 
+                    .example-row-highlight-fix .row {
+                        display: block
+                    }
+
                     .example-row-highlight-fix .row:hover {
                         background: #ccc
                     }
                 </style>
 
-                <pre class="example-row-highlight-fix"><code><div class="inline-block"><div class="row">body {</div><!--
---><div class="row">    background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */</div><!--
---><div class="row">}</div></div></code></pre>
+                <pre class="example-row-highlight-fix"><code><span class="inline-block"><span class="row">body {</span><!--
+--><span class="row">    background: red /* I know it's weird to make the whole page red, but sometimes it's just what you have to do.... */</span><!--
+--><span class="row">}</span></span></code></pre>
 
                 <h2>HTML and body</h2>
 
