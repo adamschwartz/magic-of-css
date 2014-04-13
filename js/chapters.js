@@ -75,7 +75,7 @@
       exampleHTML: 'Text <div class="text-box">Block</div> more text...'
     },
     'inline': {
-      description: '<p>A value for the <code>display</code> property.</p>\n<p>My width and height are determined by <em>my contents</em> and widths and heights don\'t do anything to me. Think of me like a word flowing in a paragraph..</p>',
+      description: '<p>A value for the <code>display</code> property.</p>\n<p>My width and height are determined by <em>my contents</em> and widths and heights don’t do anything to me. Think of me like a word flowing in a paragraph..</p>',
       exampleCSS: 'display: inline',
       exampleCSSSelector: '.text-box',
       exampleHTML: 'Text <div class="text-box">Inline</div> more text...'
