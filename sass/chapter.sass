@@ -135,9 +135,6 @@ $exampleWrapperSideBySideWidth: ($chapterWidthInner * 2) + 2rem
         margin-bottom: 2em
         transition: opacity .4s
 
-        &.typography-example-wrapper
-            margin-bottom: 4em
-
         style[contenteditable], pre, .example
             width: $chapterWidthInner
             margin-top: 0
@@ -148,6 +145,12 @@ $exampleWrapperSideBySideWidth: ($chapterWidthInner * 2) + 2rem
         .example
             float: right
             overflow: visible
+
+        &.typography-example-wrapper
+            margin-bottom: 4em
+
+            .example
+                overflow: hidden
 
         body.contextual-open &
             opacity: 0
