@@ -120,8 +120,6 @@ sup {
       content: "";
       display: table;
       clear: both; }
-    .example-wrapper.typography-example-wrapper {
-      margin-bottom: 4em; }
     .example-wrapper style[contenteditable], .example-wrapper pre, .example-wrapper .example {
       width: 34.66667rem;
       margin-top: 0; }
@@ -130,6 +128,10 @@ sup {
     .example-wrapper .example {
       float: right;
       overflow: visible; }
+    .example-wrapper.typography-example-wrapper {
+      margin-bottom: 4em; }
+      .example-wrapper.typography-example-wrapper .example {
+        overflow: hidden; }
     body.contextual-open .example-wrapper {
       opacity: 0; } }
 style[contenteditable] {

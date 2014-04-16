@@ -89,7 +89,9 @@
       -o-transform: rotateZ(22.5deg);
       transform: rotateZ(22.5deg);
       width: 5em;
-      height: 7.75em; }
+      height: 7.75em;
+      position: relative;
+      top: 0.15em; }
       .logo .css-rainbow .css-rainbow-s .rainbow {
         position: absolute; }
       .logo .css-rainbow .css-rainbow-s .top-half {
@@ -148,7 +150,9 @@
         width: 2.5em;
         height: 5em;
         top: 2.75em;
-        left: 2.5em; }
+        left: 2.5em;
+        top: 2.725em;
+        left: 2.45em; }
         .logo .css-rainbow .css-rainbow-s .bottom-half .rainbow {
           -webkit-transform: rotateZ(90deg);
           -moz-transform: rotateZ(90deg);

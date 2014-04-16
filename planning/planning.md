@@ -16,6 +16,7 @@ Planned chapters:
 
 Planned potions:
 - Compare `> * selector` with `> :not(fake)`
+- `visibility: visible` inside a `visibility: hidden`
 
 Additions:
 

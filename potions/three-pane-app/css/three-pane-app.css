@@ -33,7 +33,9 @@ html, body {
     .three-pane-app .bottom .middle {
       position: absolute;
       width: 60%;
-      left: 20%; }
+      left: 20%;
+      height: 100%;
+      overflow: auto; }
       .three-pane-app .bottom .middle .page {
         width: 40em;
         padding: 1.25em;
