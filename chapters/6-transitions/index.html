@@ -35,11 +35,9 @@
 
                 <h2>Transitions</h2>
 
-                <p>To summarize, CSS transitions are the ideal solution for transitioning a CSS property (or set of properties) from one value to another value along some easing path.</p>
+                <p>CSS transitions are the ideal solution for transitioning a CSS property (or set of properties) from one value to another value along some easing path.</p>
 
-                <p>Now, together, let’s combine this knowledge with what we’ve learned in the previous chapters on Color and Typography.</p>
-
-                <h3>Examples</h3>
+                <p>Now, together, let’s combine this knowledge with what we’ve learned in the previous chapters on <a href="../4-color">Color</a> and <a href="../5-typography">Typography</a>.</p>
 
                 <style>
                     .typography-example {
@@ -80,6 +78,14 @@
                         }
                     }
                 </style>
+
+                <h2>Examples</h2>
+
+                <span><!-- prevent h2 + h3 selector from applying --></span>
+
+                <h3>Example 1: Random individual letter fade</h3>
+
+                <p>One extremely powerful tool at your disposal is <code>transition-delay</code>. Transition delays allow you to delay the start of when a transition occurs. In this first example, we set pseudo-random delays for the <code>opacity</code> transitions on each letter, creating a reveal effect that is both subtle and attractive.</p>
 
                 <div class="example-wrapper typography-example-wrapper">
                     <style>
@@ -142,6 +148,26 @@
                         <span>E</span><span>x</span><span>a</span><span>m</span><span>p</span><span>l</span><span>e</span> <span>O</span><span>n</span><span>e</span>
                     </div>
                 </div>
+
+                <h3>Example 2: Multiple transitions and delays</h3>
+
+                <p>CSS transitions really shine when they’re combined. In this example, we specify two transitions, one for <code>-webkit-transform</code> and one for <code>opacity</code>. They are written as part of the same <code>transition</code> declaration, separated with commas.</p>
+
+                <pre><code>.ex .title span,
+.ex .author span {
+    /* ... */
+    transition: -webkit-transform 800ms, opacity 800ms
+}</code></pre>
+
+                <p>Since we specified two transitions, we also must specify two transition delays. They are written similarly.</p>
+
+                <pre><code>.ex .title span:nth-child(1) { transition-delay: 360ms, 300ms }
+.ex .title span:nth-child(2) { transition-delay: 420ms, 300ms }
+.ex .title span:nth-child(3) { transition-delay: 480ms, 300ms }
+/* ... */
+</code></pre>
+
+                <p>Together, these transitions and their delays allow us to create a beautiful wave effect with the letters in this example.</p>
 
                 <div class="example-wrapper typography-example-wrapper">
                     <style>
@@ -310,6 +336,10 @@
                     </div>
                 </div>
 
+                <h3>Example 3D</h3>
+
+                <p>And just in case you were wondering: transitions work on 3D transforms too.</p>
+
                 <div class="example-wrapper typography-example-wrapper">
                     <style>
                         .typography-example-3 {
@@ -465,7 +495,23 @@
 
                 <p>Of course, this is just the tip of the iceberg. Colors, gradients, sizes, positions, orientations, etc., can all be transitioned simultaneously. In addition you have delays and custom easing functions right at your fingertips. CSS transitions are so easy to work with. Trust that the browser will do the right thing when you transition a CSS property, because it usually does.</p>
 
-                <h3 class="magic">Radio Button Accordion</h3>
+                <h3 class="magic">Radio button accordion</h3>
+
+                <p>Combining HTML state with CSS transitions can make for rich interactions. Here we use the <code>:checked</code> pseudo-selector on radio buttons to style elements which follow them. This technique is often referred to as “<a href="https://www.google.com/search?q=%22checkbox+hack%22">The Checkbox Hack</a>”, but it could work with just about any element which can hold state via some psuedo-selector (<code>:checked</code>, <code>:focus</code>, etc.).</p>
+
+                <p>There’s a lot of subtlety in this example, but the main idea is this: each accordion baffle has a <code>label</code> whose <code>for</code> attribute matches the <code>id</code> of a radio button. So, three baffles, three radio buttons. These radio buttons are placed in the document just before the baffle contents, so that we can use the adjacent selector <code>&nbsp;+&nbsp;</code> to style differently baffles which appear after <code>:checked</code> radios.</p>
+
+                <pre><code>.accordion .baffle {
+    height: 0
+}
+
+.accordion input[type="radio"]:checked + .baffle {
+    height: 10em
+}</code></pre>
+
+                <p>Clicking the baffle label checks the radio button (and unchecks whichever radio button was previously checked) triggering the opening/closing of the appropriate baffle.</p>
+
+                <p>And voilà. An accordion with only HTML and CSS.</p>
 
                 <style>
                     .accordion-example .accordion input[type="radio"] {
