@@ -25,217 +25,30 @@
             <div class="chapter">
                 <h1>
                     <span class="number">Chapter 7</span>
-                    <span class="title">Skeuomorphism</span>
+                    <span class="title">Realism</span>
                 </h1>
-
-                <h2>Reality</h2>
 
                 <p>Like it or not, we live in a physical world.</p>
 
-                <p>We observe and interact through our senses. We read books, magazines, and newspapers. We twist door knobs, open and close cabinets, organize shelves, tie knots. We sleep, we sit, we walk, we eat.</p>
+                <p>We observe and interact through our senses. We read books, magazines, and newspapers. We open doors, turn on faucets, open and close cabinets, tie knots. We interact with each real-world object through its interface.</p>
 
-                <p>In each of these examples, we're interacting with an object through its interface. While many of us spend eight or more hours a day facing a screen, we all grew up in the physical world, and interact with it regularly. The sum of these interactions make up our sense of reality.</p>
+                <p><em>Screens</em> are objects in the real world, but they present to us a separate universe of metaphorical objects. Why is this any different? Because—at least for the moment—software is displayed on screens which are literally flat</em>.</p>
 
-                <h3>Screens</h3>
+                <h2>The cost of realism</h2>
 
-                <p>Until we invent a better interface for presenting software, screens are our canvas. A typical screen is flat, emits light, and sits on a surface. Whether they're big or small, backlit or projected, curved or flat, screens are screens.</p>
+                <p>CSS finally has the power to do almost everything realism-proponents have wanted for years.</p>
 
-                <p>They exist in reality, but they cannot provide a one-to-one mapping for each interaction reality has to offer.</p>
+                <img src="https://s3.amazonaws.com/uploads.hipchat.com/10819/42395/y3oGgiWFwLuL4gv/Screen%20Shot%202014-04-10%20at%209.03.35%20PM.png">
 
-                <h3>Real-world metaphors</h3>
+                <p><center>etc.</center></p>
 
-                <p>The principle of least astonishment <sup><a href="https://en.wikipedia.org/wiki/Principle_of_least_astonishment">[#]</a></sup> tells us that when designing an interface, we should borrow from functionally similar interfaces to minimize the learning curve.</p>
+                <p>We have shadows, gradients, masks, opacity, layers, rotations, skew, etc. etc., transitions, easing functions. These tools can be used to simulate real world lighting and geometries, real-world physics such as accelerations, gravity, spring forces, waves, etc. etc. And if you have a need for such tools, by all means.</p>
 
-                <p>Sometimes this means borrowing patterns from other software. But since humans and the world and all of our learned behavior came before computers, usually this means borrwing from the <em>real world</em>.</p>
+                <p>But the true cost of realism comes in one of two forms (two sides of the same coin really): 1) the moment you can't do something in the screen world that you have to to complete a metaphor you've started, or 2) the moment you wish to break the metaphor for the purpose of achieving someting in the screen world which is trivial, but to accept it means you must lose the metaphor.</p>
 
-                <hr>
+                <p>Let's look at examples of each of these two costs.</p>
 
-                <h1>Enter <em>skeuomorphism</em>.</h1>
 
-                <hr>
-
-                <p>Now, by no means is this chapter meant to be a commentary on the merits of flat design versus realism. There are about a billon wonderful posts on the subject. If you're curious, here are a few of my favorites:</p>
-
-                <ul>
-                    <li>http://www.flatvsrealism.com/ (music + http://open.spotify.com/track/0XIR6NgMKekKW4nsGLTRIE)</li>
-                    <li>http://sachagreif.com/flat-pixels/</li>
-                    <li>http://netdna.webdesignerdepot.com/uploads/2013/11/flat-vs-skeuomorphism.jpg</li>
-                    <li>http://dmierzdesignblog.com/post/51586050423/skeuomorphism-vs-flat-design</li>
-                    <li>http://webdesign.tutsplus.com/articles/flat-design-ios-7-skeuomorphism-and-all-that--webdesign-14335</li>
-                </ul>
-
-                <p>No, instead I'm going to side-step the topic of <em>why</em>, and get straight to the <em>what</em> and <em>how</em>.
-
-                <hr>
-
-                <p><em>Throughout this chapter I'm going to present a number of approaches to using realism in your designs. I'm not choosing sides. I'm simply saying: if you want something which looks like this, code your CSS like this. Within each style, there are better and worse implementations. This is, after all, a CSS textbook.</em></p>
-
-                <h2>Touchables</h2>
-
-                <p>If you came in contact with this object in the real world, how would your hands interact with it.</p>
-
-                <h3>Buttons</h3>
-
-                <style>
-                    .large-button-example {
-                        font-size: 2em;
-                        margin-top: 1rem;
-                        margin-bottom: 1rem
-                    }
-                </style>
-
-                <p>Ah, the classic skeuomorph. Nearly every interface has buttons—and there are lots of them.</p>
-
-                <h4>The OS/browser default</h4>
-
-                <button>Button</button>
-
-                <h4>The "I'm so flat you can barely tell I'm a button"</h4>
-
-                <style>
-                    button.flat {
-                        outline: none;
-                        background: #e0e0e0;
-                        cursor: pointer;
-                        border: 0;
-                        padding: .4em .8em;
-                        text-rendering: optimizeLegibility;
-                        font-size: inherit;
-                        font-family: inherit;
-                        font-weight: 300;
-                        color: inherit
-                    }
-
-                    button.flat:hover, button.flat.hover {
-                        background: #e6e6e6
-                    }
-
-                    button.flat:active, button.flat.active {
-                        background: #d6d6d6
-                    }
-                </style>
-
-                <button class="flat">Button</button>
-                <button class="flat hover">:hover</button>
-                <button class="flat active">:active</button>
-
-                <div class="large-button-example">
-                    <button class="flat">Button</button>
-                </div>
-
-                <h4>The skeuomorph</h4>
-
-                <style>
-                    button.skeuomorph {
-                        outline: none;
-                        background: linear-gradient(#eee, #c0c0c0);
-                        border-radius: .25em;
-                        cursor: pointer;
-                        border: 0;
-                        padding: .4em .8em;
-                        text-rendering: optimizeLegibility;
-                        font-size: inherit;
-                        font-family: inherit;
-                        font-weight: 300;
-                        color: inherit;
-                        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-                        text-shadow: 0 1px rgba(255, 255, 255, 0.5)
-                    }
-
-                    button.skeuomorph:hover, button.skeuomorph.hover {
-                        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 .08em .24em rgba(0, 0, 0, 0.3)
-                    }
-
-                    button.skeuomorph:active, button.skeuomorph.active {
-                        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 .08em .24em rgba(0, 0, 0, 0.3)
-                    }
-                </style>
-
-                <button class="skeuomorph">Button</button>
-                <button class="skeuomorph hover">:hover</button>
-                <button class="skeuomorph active">:active</button>
-
-                <div class="large-button-example">
-                    <button class="skeuomorph">Button</button>
-                </div>
-
-                <h4>Skeuomorph-lite<sup>TM<sup></h4>
-
-                <style>
-                    button.skeuomorph-lite {
-                        outline: none;
-                        background: #e0e0e0;
-                        border: 1px solid rgba(0, 0, 0, .15);
-                        border-bottom: 1px solid rgba(0, 0, 0, .3);
-                        cursor: pointer;
-                        padding: .4em .8em;
-                        text-rendering: optimizeLegibility;
-                        font-size: inherit;
-                        font-family: inherit;
-                        font-weight: 300;
-                        color: inherit
-                    }
-
-                    button.skeuomorph-lite:hover, button.skeuomorph-lite.hover {
-                        background: #e6e6e6
-                    }
-
-                    button.skeuomorph-lite:active, button.skeuomorph-lite.active {
-                        background: #e0e0e0;
-                        border: 1px solid rgba(0, 0, 0, .15);
-                        border-top: 1px solid rgba(0, 0, 0, .3);
-                    }
-                </style>
-
-                <button class="skeuomorph-lite">Button</button>
-                <button class="skeuomorph-lite hover">:hover</button>
-                <button class="skeuomorph-lite active">:active</button>
-
-                <div class="large-button-example">
-                    <button class="skeuomorph-lite">Button</button>
-                </div>
-
-                <h4>The "I pretend I'm flat when really I'm just a different skeuomorph"</h4>
-
-                <style>
-                    button.skeuomorph-flat {
-                        outline: none;
-                        border: 0;
-                        border-radius: .25em;
-                        background: #e0e0e0;
-                        cursor: pointer;
-                        padding: .4em .8em;
-                        text-rendering: optimizeLegibility;
-                        font-size: inherit;
-                        font-family: inherit;
-                        font-weight: 300;
-                        color: inherit;
-                        box-shadow: 0 .2em #888;
-                        -webkit-transform: translateY(-.2em);
-                        -moz-transform: translateY(-.2em);
-                        transform: translateY(-.2em)
-                    }
-
-                    button.skeuomorph-flat:hover, button.skeuomorph-flat.hover {
-                        background: #e6e6e6
-                    }
-
-                    button.skeuomorph-flat:active, button.skeuomorph-flat.active {
-                        box-shadow: none;
-                        background: #e0e0e0;
-                        -webkit-transform: translateY(0);
-                        -moz-transform: translateY(0);
-                        transform: translateY(0)
-                    }
-                </style>
-
-                <button class="skeuomorph-flat">Button</button>
-                <button class="skeuomorph-flat hover">:hover</button>
-                <button class="skeuomorph-flat active">:active</button>
-
-                <div class="large-button-example">
-                    <button class="skeuomorph-flat">Button</button>
-                </div>
 
                 <hr>
 
