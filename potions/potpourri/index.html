@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Potpourri — Magic of CSS — Adam Schwartz</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="icon" href="/magic-of-css/favicon.ico">
+
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/logo.css">
+        <link rel="stylesheet" href="../../css/chapter.css">
+
+        <script src="//use.typekit.net/hlu4jhg.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+
+        <script src="../../js/chapters.js"></script>
+    </head>
+    <body>
+        <div class="page">
+            <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div></div></a>
+
+            <div class="chapter">
+                <h1>
+                    <span class="number">Potion</span>
+                    <span class="title">Potpourri</span>
+                </h1>
+
+                <style>
+                    h4.example-header {
+                        text-align: center;
+                        font-weight: normal;
+                        font-size: 1.5em;
+                        margin-top: 15rem;
+                        margin-bottom: 2rem
+                    }
+
+                    .example-wrapper {
+                        margin-bottom: 15rem
+                    }
+
+                    .example {
+                        font-size: 2em;
+                        line-height: normal
+                    }
+
+                    @media (min-width: 92.66667rem) {
+                        style[contenteditable] {
+                            font-size: 1em;
+                        }
+                    }
+                </style>
+
+                <h4 class="example-header">Modern clearfix</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">.modern-clearfix:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.floated-box-paragraph {
+    box-shadow: 0 0 0 1px red
+}
+
+.floated-box-paragraph .box {
+    display: block;
+    width: 5em;
+    height: 5em;
+    margin-right: .25em;
+    background: pink;
+    float: left
+}</style>
+
+                    <div class="example">
+                        <p class="floated-box-paragraph modern-clearfix">
+                            <span class="box"></span>
+                            I am a paragraph of text with a floated box inside me.
+                        </p>
+                    </div>
+                </div>
+
+                <h4 class="example-header">Background grid for checking alignment</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">.background-grid {
+    background: linear-gradient(pink 1px, rgba(0, 0, 0, 0) 1px);
+    background-size: 1px 10px;
+    background-position: 0 -1px;
+    box-shadow: 0 0 0 1px pink;
+    display: block
+}
+
+.varying-font-sizes {
+    -font-size: 1.5em
+}</style>
+
+                    <div class="example">
+                        <p class="background-grid">When working on something with <span class="varying-font-sizes">varying font sizes</span>, it can be helpful to have a grid behind you.</p>
+                    </div>
+                </div>
+
+                <h4 class="example-header">Equal negative margin and padding</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">.link-with-big-hit-target {
+    cursor: pointer;
+    -box-shadow: 0 0 0 1px red;
+    -background: pink
+}
+
+.link-with-big-hit-target:active {
+    box-shadow: 0 0 0 1px green;
+    background: lightgreen
+}
+
+/
+.link-with-big-hit-target {
+    margin: -.5em;
+    padding: .5em;
+}</style>
+
+                    <div class="example">
+                        <p><span class="link-with-big-hit-target" href>Click me!</span></p>
+                    </div>
+                </div>
+
+                <h4 class="example-header">Equal negative margin and padding <em>gotcha</em></h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">.hit-target {
+    cursor: pointer;
+    -box-shadow: 0 0 0 1px red;
+    -margin: -1em;
+    -padding: 1em
+}</style>
+
+                    <div class="example">
+                        <p>Sometimes you want to increase the size of a hit target without changing its position. Depending on the situation, there may be a number of ways to accomplish this. But a simple and often effective one is to apply a <span class="hit-target">negative margin and padding</span> of the same value. They sort of cancel eachother out while allowing you to increase the hit target region by the size you choose.</p>
+                    </div>
+                </div>
+
+                <h4 class="example-header">Aligning floated elements of different font sizes</h4>
+
+                <!-- http://css-tricks.com/what-is-vertical-align/ -->
+                <!-- http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/ -->
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">.title-author-block .title {
+    float: left;
+    font-size: 2em;
+    line-height: 2.2rem
+}
+
+.title-author-block .author {
+    float: right;
+    font-size: 1.5em;
+    line-height: 2.2rem
+}
+
+.title-author-block .author-psuedo {
+    -position: relative;
+    -font-size: inherit;
+}
+
+.title-author-block .author-psuedo:before {
+    -position: absolute;
+    -right: 0;
+    content: "Author";
+}
+
+.title-author-block {
+    -background: none;
+    -box-shadow: none
+}</style>
+
+                    <div class="example">
+                        <span class="title-author-block background-grid modern-clearfix">
+                            <span class="title">Title</span>
+                            <span class="author">Author</span>
+                        </span>
+
+                        <br>
+
+                        <span class="title-author-block background-grid modern-clearfix">
+                            <span class="title">Title</span>
+                            <span class="author author-psuedo"></span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <h4 class="example-header">Gradient shadows</h4>
+
+                <div class="example-wrapper">
+                    <style>
+                        .gradient-shadows {
+                            height: 300px;
+                            width: 200px;
+                            position: relative;
+                            margin: 100px auto
+                        }
+
+                        .gradient-shadows .top-bar {
+                            position: absolute;
+                            top: 0;
+                            height: 10px;
+                            width: 100%;
+                            border-radius: 3px 3px 0 0;
+                            background:
+                                linear-gradient(
+                                    135deg,
+                                    #ffaf2a,
+                                    #ff670f
+                                )
+                        }
+                    </style>
+
+                    <style contenteditable="plaintext-only" spellcheck="false">.gradient-shadows:before, .gradient-shadows:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 8px;
+    -webkit-mask-box-image:
+        -webkit-linear-gradient(
+            top,
+            transparent 0%,
+            #000 5%,
+            rgba(0, 0, 0, .8) 26%,
+            transparent 100%
+        )
+    ;
+}
+
+.gradient-shadows:before {
+    right: 100%;
+    background-image:
+        -webkit-linear-gradient(
+            right,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0)
+        )
+}
+
+.gradient-shadows:after {
+    left: 100%;
+    background-image:
+        -webkit-linear-gradient(
+            left,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0)
+        )
+}</style>
+
+                    <div class="example">
+                        <div class="gradient-shadows">
+                            <div class="top-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="example-header">Inline SVG (checkmark)</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">.checkmark {
+    height: 5em;
+    width: 5em
+}
+
+.checkmark:before {
+    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 22 17'><rect fill='red' stroke='none' transform='rotate(45 4.0033 8.87436)' height='5' width='6.32304' y='6.37436' x='0.84178'></rect><rect fill='red' stroke='none' transform='rotate(45 11.1776 7.7066)' width='5' height='16.79756' y='-0.69218' x='8.67764'></rect></svg>");
+}</style>
+
+                    <div class="example">
+                        <div class="checkmark"></div>
+                    </div>
+                </div>
+
+                <h4 class="example-header">Greyscale</h4>
+
+                <div class="example-wrapper">
+                    <style contenteditable="plaintext-only" spellcheck="false">.grayscale {
+     /* Firefox 10+, Firefox on Android */
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+
+    /* IE6-9 */
+    filter: gray;
+
+     /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    -webkit-filter: grayscale(100%);
+}</style>
+
+                    <div class="example">
+                        <span class="logo grayscale" href="/magic-of-css"><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div></div></span>
+                    </div>
+                </div>
+
+                <pre style="margin: -18.3333em -18.3333em 0; font-size: 1em"><code>&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;
+    &lt;filter id=\'grayscale\'&gt;
+        &lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;
+    &lt;/filter&gt;
+&lt;/svg&gt;
+</code></pre>
+
+                <h4 class="example-header"><em>That's all folks!</em></h4>
+
+                <!--
+                TODO
+                <script>
+                    Array.prototype.slice.call(document.querySelectorAll('style[contenteditable="plaintext-only"]')).forEach(function(style){
+                        style.addEventListener('keydown', function(event){
+                            console.log(style);
+                            window.stylez = style;
+                            console.log(style.setSelectionRange)
+                            if (event.keyCode === 9 && !event.shiftKey && !event.ctrlKey && !event.altKey) {
+                                event.preventDefault();
+                            }
+                        })
+                    });
+
+
+                    function insertNodeAtCursor(node) {
+                        var range, html;
+                        if (window.getSelection && window.getSelection().getRangeAt) {
+                            range = window.getSelection().getRangeAt(0);
+                            range.insertNode(node);
+                        } else if (document.selection && document.selection.createRange) {
+                            range = document.selection.createRange();
+                            html = (node.nodeType == 3) ? node.data : node.outerHTML;
+                            range.pasteHTML(html);
+                        }
+                    }
+                </script>
+                -->
+            </div>
+        </div>
+    </body>
+</html>

@@ -105,6 +105,8 @@ sup {
       width: 50%; }
     .example.side-by-side .left > p:first-child, .example.side-by-side .right > p:first-child {
       margin-top: 0; }
+  .example > p:first-child {
+    margin-top: 0; }
   .example > p:last-child {
     margin-bottom: 0; }
 
