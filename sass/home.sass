@@ -146,10 +146,10 @@ ol.chapters, ul.potions, .preface-link
 
             &:hover span
                 background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#464646, #464646)
-                background-size: .05em 1px, .05em 1px, 1px 1px
+                background-size: .05em 2px, .05em 2px, 2px 2px
                 background-repeat: no-repeat, no-repeat, repeat-x
                 text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff
-                background-position-y: 87%, 87%, 87%
+                background-position-y: 88%, 88%, 88%
                 background-position-x: 0%, 100%, 0%
 
                 &::selection
@@ -159,6 +159,9 @@ ol.chapters, ul.potions, .preface-link
                 &::-moz-selection
                     text-shadow: .03em 0 $selectionColor, -.03em 0 $selectionColor, 0 .03em $selectionColor, 0 -.03em $selectionColor, .06em 0 $selectionColor, -.06em 0 $selectionColor, .09em 0 $selectionColor, -.09em 0 $selectionColor
                     background: $selectionColor
+
+                &[data-starts-with="T"]
+                    background-size: .15em 2px, .05em 2px, 2px 2px
 
 ul.potions, .preface-link
     list-style: none

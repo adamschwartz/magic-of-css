@@ -140,10 +140,10 @@ ol.chapters, ul.potions, .preface-link {
     white-space: nowrap; }
     html[data-user-agent*="Chrome"] ol.chapters a:hover span, html[data-user-agent*="Chrome"] ul.potions a:hover span, html[data-user-agent*="Chrome"] .preface-link a:hover span {
       background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(#464646, #464646);
-      background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
       background-repeat: no-repeat, no-repeat, repeat-x;
       text-shadow: 0.03em 0 white, -0.03em 0 white, 0 0.03em white, 0 -0.03em white, 0.06em 0 white, -0.06em 0 white, 0.09em 0 white, -0.09em 0 white;
-      background-position-y: 87%, 87%, 87%;
+      background-position-y: 88%, 88%, 88%;
       background-position-x: 0%, 100%, 0%; }
       html[data-user-agent*="Chrome"] ol.chapters a:hover span::selection, html[data-user-agent*="Chrome"] ul.potions a:hover span::selection, html[data-user-agent*="Chrome"] .preface-link a:hover span::selection {
         text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe;
@@ -151,6 +151,8 @@ ol.chapters, ul.potions, .preface-link {
       html[data-user-agent*="Chrome"] ol.chapters a:hover span::-moz-selection, html[data-user-agent*="Chrome"] ul.potions a:hover span::-moz-selection, html[data-user-agent*="Chrome"] .preface-link a:hover span::-moz-selection {
         text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe;
         background: #b4d5fe; }
+      html[data-user-agent*="Chrome"] ol.chapters a:hover span[data-starts-with="T"], html[data-user-agent*="Chrome"] ul.potions a:hover span[data-starts-with="T"], html[data-user-agent*="Chrome"] .preface-link a:hover span[data-starts-with="T"] {
+        background-size: 0.15em 2px, 0.05em 2px, 2px 2px; }
 
 ul.potions, .preface-link {
   list-style: none;
