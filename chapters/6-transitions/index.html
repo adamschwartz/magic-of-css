@@ -497,7 +497,7 @@
 
                 <h3 class="magic">Radio button accordion</h3>
 
-                <p>Combining HTML state with CSS transitions can make for rich interactions. Here we use the <code>:checked</code> pseudo-selector on radio buttons to style elements which follow them. This technique is often referred to as “<a href="https://www.google.com/search?q=%22checkbox+hack%22">The Checkbox Hack</a>”, but it could work with just about any element which can hold state via some psuedo-selector (<code>:checked</code>, <code>:focus</code>, etc.).</p>
+                <p>Combining HTML state with CSS transitions can make for rich interactions. Here we use the <code>:checked</code> pseudo-selector on radio buttons to style elements which follow them. This technique is often referred to as “<a href="https://www.google.com/search?q=%22checkbox+hack%22">The Checkbox Hack</a>”, but it could work with just about any element which can hold state via some pseudo-selector (<code>:checked</code>, <code>:focus</code>, etc.).</p>
 
                 <p>There’s a lot of subtlety in this example, but the main idea is this: each accordion baffle has a <code>label</code> whose <code>for</code> attribute matches the <code>id</code> of a radio button. So, three baffles, three radio buttons. These radio buttons are placed in the document just before the baffle contents, so that we can use the adjacent selector <code>&nbsp;+&nbsp;</code> to style differently baffles which appear after <code>:checked</code> radios.</p>
 
