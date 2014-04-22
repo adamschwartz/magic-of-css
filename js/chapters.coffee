@@ -87,7 +87,7 @@ chapters.specialTerms =
     'inline':
         description: '''
             <p>A value for the <code>display</code> property.</p>
-            <p>My width and height are determined by <em>my contents</em> and widths and heights don’t do anything to me. Think of me like a word flowing in a paragraph..</p>
+            <p>My width and height are determined by <em>my contents</em> and widths and heights don’t do anything to me. Think of me like a word flowing in a paragraph.</p>
         '''
         exampleCSS: 'display: inline'
         exampleCSSSelector: '.text-box'
