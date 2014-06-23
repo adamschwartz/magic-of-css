@@ -72,7 +72,7 @@
                     <span class="title">Content Reordering</span>
                 </h1>
 
-                <p>When designing a single app to serve as both the mobile and desktop experience, responsive design techniques are used. CSS media queries are used to style content differently based on the screen dimensions, density, and other queryable properties. A common problem—considered a limitation of responsive design—is reordering the content.</p>
+                <p>When designing a single app to serve as both a mobile and desktop experience, responsive design techniques are used. CSS media queries are used to style content differently based on the screen dimensions, density, and other queryable properties. A common problem—considered a limitation of responsive design—is reordering the content.</p>
 
                 <p>There are a number of ways to reorder content using CSS, but most of them come with gotchas and caveats. Here is a quick reminder of two common techniques.</p>
 
@@ -170,9 +170,7 @@
 
                 <h4>Technique 2: Floats<br>(“The Grid Framework”)</h4>
 
-                <p>Grid layouts which come with frameworks like Bootstrap and Fluid are a commonly used tool for handling reponsive desing, but they only sort of let you reorder contnet. They use <code>float</code> to align blocks side-by-side on large screens and remove the floats to stack them small screens.</p>
-
-                <p>The only way this sort-of constitutes content “reordering” is when the <code>float</code> is used in the opposite of the language direction (so right-to-left for English).</p>
+                <p>Grid layouts which come with frameworks like Bootstrap and Fluid are a commonly used tool for handling reponsive design, but they only <em>sort-of</em> reorder content. They use <code>float</code> to align blocks side-by-side on large screens and stack them vertically on small ones. When the <code>float</code> is used in the opposite of the language-direction (so right-to-left for English), a reordering of sorts can be achieved.</p>
 
                 <div class="example-wrapper-iframed">
                     <style>
