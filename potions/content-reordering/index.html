@@ -72,6 +72,32 @@
                     <span class="title">Content Reordering</span>
                 </h1>
 
+                <style>
+                    .solution-outer {
+                        text-align: center;
+                        margin-bottom: 4em
+                    }
+
+                    .solution-inner {
+                        display: inline-block;
+                        border-radius: .25em;
+                        padding: .5em 1.5em 1.5em 1.5em;
+                        background: #eee
+                    }
+
+                    .solution-inner iframe {
+                        min-height: 0px;
+                        height: 500px;
+                        background: #fff
+                    }
+                </style>
+
+                <div class="solution-outer">
+                    <div class="solution-inner">
+                        <div id="solution-copy" class="example-wrapper-iframed"></div>
+                    </div>
+                </div>
+
                 <p>When designing a single app to serve as both a mobile and desktop experience, responsive design techniques are used. CSS media queries are used to style content differently based on the screen dimensions, density, and other queryable properties. A common problem—considered a limitation of responsive design—is reordering the content.</p>
 
                 <p>There are a number of ways to reorder content using CSS, but most of them come with gotchas and caveats. Here is a quick reminder of two common techniques.</p>
@@ -281,7 +307,7 @@
 
                 <p>Use it in a media query at the desired break point.</p>
 
-                <div class="example-wrapper-iframed">
+                <div id="solution" class="example-wrapper-iframed">
                     <style>
                         .example-ruby ruby {
                             margin: .5em 0;
@@ -348,6 +374,8 @@
                             '<body></body>' +
                         '</html>'
                     ;
+
+                    document.getElementById('solution-copy').innerHTML = document.getElementById('solution').innerHTML;
 
                     Array.prototype.slice.call(document.querySelectorAll('.example-wrapper-iframed')).forEach(function(example){
                         var input, iframe, doc, content;
