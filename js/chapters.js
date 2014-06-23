@@ -86,6 +86,8 @@
       exampleCSSSelector: '.box .box',
       exampleHTML: '<div class="box" style="position: relative">\n    <div class="box" style="background: lightgreen"></div>\n</div>'
     },
+    'position': 'top, left, right, bottom',
+    'position: absolute': 'top, left, right, bottom',
     'top': 'top, left, right, bottom',
     'left': 'top, left, right, bottom',
     'right': 'top, left, right, bottom',

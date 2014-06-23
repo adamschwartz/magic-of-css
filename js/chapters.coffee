@@ -103,6 +103,9 @@ chapters.specialTerms =
             </div>
         '''
 
+    'position': 'top, left, right, bottom'
+    'position: absolute': 'top, left, right, bottom'
+
     'top': 'top, left, right, bottom'
     'left': 'top, left, right, bottom'
     'right': 'top, left, right, bottom'
