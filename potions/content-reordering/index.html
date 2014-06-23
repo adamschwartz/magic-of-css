@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Content Reordering — Magic of CSS — Adam Schwartz</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="icon" href="/magic-of-css/favicon.ico">
+
+        <link rel="stylesheet" href="../../css/base.css">
+        <link rel="stylesheet" href="../../css/logo.css">
+        <link rel="stylesheet" href="../../css/chapter.css">
+
+        <script src="//use.typekit.net/hlu4jhg.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+
+        <script src="../../js/chapters.js"></script>
+    </head>
+    <body>
+        <div class="page">
+            <a class="logo" href="/magic-of-css"><h1>The Magic of CSS</h1><div class="the-magic-of">The Magic Of</div><div class="css-rainbow"><div class="css-letter css-rainbow-c"><div class="rainbow"><div class="bands"></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-1"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div><div class="css-letter css-rainbow-s css-rainbow-s-2"><div class="top-half"><div class="rainbow"><div class="bands"></div></div></div><div class="bottom-half"><div class="rainbow"><div class="bands"></div></div></div></div></div></a>
+
+            <style>
+                h4 {
+                    text-align: center;
+                    font-weight: normal;
+                    font-size: 1.5em;
+                    margin-top: 4rem;
+                    margin-bottom: 2rem
+                }
+
+                .slider-instructions {
+                    text-align: center;
+                    font-size: .8em
+                }
+
+                .example-wrapper-iframed > input[type="range"] {
+                    display: block;
+                    max-width: 100%;
+                    margin-bottom: 1rem;
+                    margin-left: auto;
+                    margin-right: auto
+                }
+
+                .example-wrapper-iframed iframe {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border: 1px solid #ccc;
+                    resize: both;
+                    min-height: 16em;
+                    max-height: ;
+                    max-width: 100%;
+                    overflow: auto
+                }
+
+                .example {
+                    overflow: visible
+                }
+
+                @media (min-width: 92.66667rem) {
+                    style[contenteditable] {
+                        font-size: 1em;
+                    }
+                }
+            </style>
+
+            <div class="chapter">
+                <h1>
+                    <span class="number">Potion</span>
+                    <span class="title">Content Reordering</span>
+                </h1>
+
+                <p>When designing a single app to serve as both the mobile and desktop experience, responsive design techniques are used. CSS media queries are used to style content differently based on the screen dimensions, density, and other queryable properties. A common problem—considered a limitation of responsive design—is reordering the content.</p>
+
+                <p>There are a number of ways to reorder content using CSS, but most of them come with gotchas and caveats. Here is a quick reminder of two common techniques.</p>
+
+                <h4>Technique 1: Positioning<br>(“The Throw It in the Corner”)</h4>
+
+                <p>Using <code>position</code> is one way to go, but it only works when you know how large your content will be or you can afford to be specific about where you place it. An example of when this might be appropriate is when moving the position of your navigation.</p>
+
+                <div class="example-wrapper-iframed">
+                    <style>
+                        .example-position a {
+                            cursor: pointer
+                        }
+
+                        .example-position section {
+                            padding: 1em
+                        }
+
+                        .example-position nav ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0
+                        }
+
+                        .example-position nav ul li {
+                            display: inline
+                        }
+
+                        .example-position nav ul li a {
+                            display: inline-block;
+                            padding: .5em 1em
+                        }
+
+                        @media (min-width: 361px) {
+                            .example-position nav > a {
+                                display: none
+                            }
+                        }
+
+                        @media (max-width: 360px) {
+                            .example-position nav {
+                                position: absolute;
+                                top: 0;
+                                right: 0
+                            }
+
+                            .example-position nav > a {
+                                display: block;
+                                padding: 1em;
+                                background: #444;
+                                color: #fff
+                            }
+
+                            .example-position nav ul {
+                                display: none
+                            }
+
+                            .example-position nav > a:hover + ul, .example-position nav > ul:hover {
+                                display: block
+                            }
+
+                            .example-position nav ul {
+                                position: absolute;
+                                right: 0;
+                                background: #fff;
+                                box-shadow: 0 0 0 1px rgba(0, 0, 0, .2)
+                            }
+
+                            .example-position nav ul li a {
+                                display: block
+                            }
+
+                            .example-position nav ul li a:hover {
+                                background: #0074d9;
+                                color: #fff
+                            }
+                        }
+                    </style>
+
+                    <div class="example example-position">
+                        <section>
+                            <h1>About</h1>
+
+                            <p>This example uses <code>position: absolute</code> to move the nav on mobile devices.</p>
+                        </section>
+                        <nav>
+                            <a>Menu</a>
+                            <ul>
+                                <li><a>Home</a></li>
+                                <li><a class="active">About</a></li>
+                                <li><a>Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <h4>Technique 2: Floats<br>(“The Grid Framework”)</h4>
+
+                <p>Grid layouts which come with frameworks like Bootstrap and Fluid are a commonly used tool for handling reponsive desing, but they only sort of let you reorder contnet. They use <code>float</code> to align blocks side-by-side on large screens and remove the floats to stack them small screens.</p>
+
+                <p>The only way this sort-of constitutes content “reordering” is when the <code>float</code> is used in the opposite of the language direction (so right-to-left for English).</p>
+
+                <div class="example-wrapper-iframed">
+                    <style>
+                        .example-float .row {
+                            *zoom: 1
+                        }
+
+                        .example-float p {
+                            margin: 0;
+                            padding: 1em
+                        }
+
+                        .example-float .row {
+                            content: "";
+                            display: table;
+                            clear: both
+                        }
+
+                        .example-float .row .column {
+                            float: right;
+                            width: 50%;
+                            text-align: left
+                        }
+
+                        .column:nth-child(1) {
+                            color: #453b8d
+                        }
+
+                        .column:nth-child(2) {
+                            color: #ba0d83
+                        }
+
+                        @media (max-width: 360px) {
+                            .example-float .row .column {
+                                width: 100%;
+                                float: none
+                            }
+                        }
+                    </style>
+
+                    <div class="example example-float">
+                        <div class="row">
+                            <div class="column">
+                                <p>This paragraph will appear on the <em>right</em> on small screens, but on <en>top</em> on large screens.</p>
+                            </div>
+                            <div class="column">
+                                <p>This paragraph will appear on the <em>left</em> on small screens, but on <em>bottom</em> on large screens.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <p>As you can see, neither of these techniques allow you to <em>reorder arbitrary content</em>. For that, we’ll need to dive deep into the chasms that are the w3c specs.</p>
+
+                <h4>A General Solution</h4>
+
+                <p>The solution involves a not-so-well-known element called <code>&lt;ruby&gt;</code>. Introduced <a href="http://www.w3.org/TR/2001/WD-css3-ruby-20010216/">way back in 2001</a> this little element <a href="http://caniuse.com/ruby">works in IE5+, Chrome, Safari, and Opera</a>, but unfortunately not in Firefox (although there is a reasonable workaround—keep reading).</p>
+
+                <p>So what is a <code>&lt;ruby&gt;</code> element?</p>
+
+                <p>From <a href="http://www.w3.org/TR/css3-ruby/#ruby-def">the current spec</a>:</p>
+
+                <blockquote>
+                    Ruby is the commonly-used name for a run of text that appears alongside another run of text (referred to as the “base”) and serves as an annotation or a pronunciation guide associated with that run of text.
+                </blockquote>
+
+                <figure>
+                    <img src="http://www.w3.org/TR/css3-ruby/images/licence.png">
+                    <figcaption>
+                        <div class="figcaption">
+                            Example of ruby used in Japanese (simple case)
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <p>(Hopefully you're starting to see where we’re going with this.)</p>
+
+                <p>So the technique works as follows:</p>
+
+                <p>First, place one section in an <code>&lt;rb&gt;</code> element and the other in a <code>&lt;rt&gt;</code>. For example:</p>
+
+<pre><code>&lt;ruby&gt;
+    &lt;rb&gt;
+        &lt;section class="a"&gt;
+            Section A content...
+        &lt;/section&gt;
+    &lt;/rb&gt;
+    &lt;rt&gt;
+        &lt;section class="b"&gt;
+            Section B content...
+        &lt;/section&gt;
+    &lt;/rt&gt;
+&lt;ruby&gt;</code></pre>
+
+                <p>Without any CSS applied, Section B will appear <em>above</em> Section A. By default, the <code>font-size</code> of Section B will be smaller (since it’s inside an <code>&lt;rt&gt;</code> block), so you may want to sort of reset it with something like this:</p>
+
+<pre><code>rt {
+    font-size: inherit
+}</code></pre>
+
+                <p>Finally, to “flip” the content order such that Section B appears last, simply set the following CSS on <code>&lt;rt&gt;</code>.
+
+<pre><code>rt {
+    display: inline
+}</code></pre>
+
+                <p>Use it in a media query at the desired break point.</p>
+
+                <p>Here’s an example which uses this technique:</p>
+
+                <div class="example-wrapper-iframed">
+                    <style>
+                        .example-ruby ruby {
+                            margin: .5em 0;
+                            display: block
+                        }
+
+                        .example-ruby rt {
+                            font-size: inherit
+                        }
+
+                        @media (max-width: 360px) {
+                            .example-ruby rt {
+                                display: inline
+                            }
+                        }
+
+                        .example-ruby section > div {
+                            padding: .5em 1em
+                        }
+
+                        .example-ruby section p {
+                            padding: 1em;
+                            margin: 0
+                        }
+
+                        .example-ruby .a p {
+                            border: .25em solid #453b8d
+                        }
+
+                        .example-ruby .b p {
+                            border: .25em solid #ba0d83
+                        }
+                    </style>
+
+                    <div class="example example-ruby">
+                        <ruby>
+                            <rb>
+                                <section class="a">
+                                    <div>
+                                        <p>This is the content of Section A, the one which appears in the DOM first. But the DOM’s got nothin’ on these mad CSS skills.</p>
+                                    </div>
+                                </section>
+                            </rb>
+                            <rt>
+                                <section class="b">
+                                    <div>
+                                        <p>This is the content of Section B, the one which appears in the DOM last. But the DOM’s got nothin’ on these mad CSS skills.</p>
+                                    </div>
+                                </section>
+                            </rt>
+                        </ruby>
+                    </div>
+                </div>
+
+                <p>It really is a <em>gem</em> of an idea.</p>
+
+                <script>
+                    var iframeTemplate = '' +
+                        '<!DOCTYPE html>' +
+                        '<html>' +
+                            '<head>' +
+                                '<meta http-equiv="content-type" content="text/html; charset=UTF-8">' +
+                            '</head>  ' +
+                            '<body></body>' +
+                        '</html>'
+                    ;
+
+                    Array.prototype.slice.call(document.querySelectorAll('.example-wrapper-iframed')).forEach(function(example){
+                        var input, iframe, doc, content;
+
+                        content = example.innerHTML;
+                        example.innerHTML = '<p class="slider-instructions"><em>Use the slider to adjust the size of the example frame.</em></p>';
+
+                        input = document.createElement('input');
+                        input.setAttribute('type', 'range');
+                        input.setAttribute('min', 0);
+                        input.setAttribute('max', 100);
+                        input.setAttribute('value', 50);
+                        input.addEventListener('input', function(e){
+                            var width = e.target.valueAsNumber + '%';
+                            iframe.style.width = width
+                        });
+                        example.appendChild(input);
+
+                        iframe = document.createElement('iframe');
+                        iframe.style.width = '50%';
+                        example.appendChild(iframe);
+
+                        doc = iframe.contentDocument || iframe.contentWindow.document;
+                        doc.open();
+                        doc.write(iframeTemplate);
+                        doc.close();
+
+                        iframe.contentDocument.head.innerHTML = '<link rel="stylesheet" href="../../css/base.css">';
+                        iframe.contentDocument.body.innerHTML = content
+                    });
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
