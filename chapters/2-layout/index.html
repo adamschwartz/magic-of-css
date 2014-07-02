@@ -330,13 +330,19 @@
                     </div>
 
                     <script>
-                        document.querySelector('.example-text-align-justify-slider').addEventListener('change', function(e){
-                            var width = e.target.valueAsNumber + '%';
-                            document.querySelector('.example-text-align-justify-slider-value').innerHTML = width;
-                            Array.prototype.slice.call(document.querySelectorAll('.example-text-align-justify .box')).forEach(function(box){
-                                box.style.width = width;
-                            });
-                        });
+                        (function(){
+                            var handler, slider;
+                            handler = function(e) {
+                                var width = e.target.valueAsNumber + '%';
+                                document.querySelector('.example-text-align-justify-slider-value').innerHTML = width;
+                                Array.prototype.slice.call(document.querySelectorAll('.example-text-align-justify .box')).forEach(function(box){
+                                    box.style.width = width;
+                                });
+                            };
+                            slider = document.querySelector('.example-text-align-justify-slider');
+                            slider.addEventListener('change', handler);
+                            slider.addEventListener('input', handler);
+                        })();
                     </script>
                 </div>
 

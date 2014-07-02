@@ -191,13 +191,19 @@
                 </div>
 
                 <script>
-                    document.querySelector('.example-flexible-input-slider').addEventListener('change', function(e){
-                        var width = e.target.valueAsNumber + '%';
-                        document.querySelector('.example-flexible-input-slider-value').innerHTML = width;
-                        Array.prototype.slice.call(document.querySelectorAll('.example-flexible-input .box')).forEach(function(box){
-                            box.style.width = width;
-                        });
-                    });
+                    (function(){
+                        var handler, slider;
+                        handler = function(e) {
+                            var width = e.target.valueAsNumber + '%';
+                            document.querySelector('.example-flexible-input-slider-value').innerHTML = width;
+                            Array.prototype.slice.call(document.querySelectorAll('.example-flexible-input .box')).forEach(function(box){
+                                box.style.width = width;
+                            });
+                        };
+                        slider = document.querySelector('.example-flexible-input-slider');
+                        slider.addEventListener('change', handler);
+                        slider.addEventListener('input', handler);
+                    })();
                 </script>
 
                 <h3>tl;dr</h3>
