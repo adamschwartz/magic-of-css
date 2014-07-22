@@ -282,14 +282,14 @@
 
 <pre><code>&lt;ruby&gt;
     &lt;rb&gt;
-        &lt;section class="a"&gt;
+        &lt;span class="section-a"&gt;
             Section A content...
-        &lt;/section&gt;
+        &lt;/span&gt;
     &lt;/rb&gt;
     &lt;rt&gt;
-        &lt;section class="b"&gt;
+        &lt;span class="section-b"&gt;
             Section B content...
-        &lt;/section&gt;
+        &lt;/span&gt;
     &lt;/rt&gt;
 &lt;ruby&gt;</code></pre>
 
@@ -324,20 +324,26 @@
                             }
                         }
 
-                        .example-ruby section > div {
+                        .example-ruby .simulate-section {
+                            display: block
+                        }
+
+                        .example-ruby .simulate-section .simulate-div {
+                            display: block;
                             padding: .5em 1em
                         }
 
-                        .example-ruby section p {
+                        .example-ruby .simulate-section .simulate-p {
+                            display: block;
                             padding: 1em;
                             margin: 0
                         }
 
-                        .example-ruby .a p {
+                        .example-ruby .a .simulate-p {
                             border: .25em solid #453b8d
                         }
 
-                        .example-ruby .b p {
+                        .example-ruby .b .simulate-p {
                             border: .25em solid #ba0d83
                         }
                     </style>
@@ -345,18 +351,18 @@
                     <div class="example example-ruby">
                         <ruby>
                             <rb>
-                                <section class="a">
-                                    <div>
-                                        <p>This is the content of Section A, the one which appears in the DOM first. But the DOM’s got nothin’ on these mad CSS skills.</p>
-                                    </div>
-                                </section>
+                                <span class="simulate-section a">
+                                    <span class="simulate-div">
+                                        <span class="simulate-p">This is the content of Section A, the one which appears in the DOM first. But the DOM’s got nothin’ on these mad CSS skills.</span>
+                                    </span>
+                                </span>
                             </rb>
                             <rt>
-                                <section class="b">
-                                    <div>
-                                        <p>This is the content of Section B, the one which appears in the DOM last. But the DOM’s got nothin’ on these mad CSS skills.</p>
-                                    </div>
-                                </section>
+                                <span class="simulate-section b">
+                                    <span class="simulate-div">
+                                        <span class="simulate-p">This is the content of Section B, the one which appears in the DOM last. But the DOM’s got nothin’ on these mad CSS skills.</span>
+                                    </span>
+                                </span>
                             </rt>
                         </ruby>
                     </div>
