@@ -1,0 +1,66 @@
+@import compass/css3
+@import compass/utilities/general/clearfix
+
+@import colors
+
+.eager
+    display: block
+    text-align: center
+    padding-left: 1em
+    padding-right: 1em
+
+    .eager-outer
+        +border-radius(.3125em)
+        padding: 4px
+        background-color: $red
+        background-image: linear-gradient(90deg, $red 0%, $red 15%, $orange 15%, $orange 30%, $yellow 30%, $yellow 45%, $green 45%, $green 60%, $blue 60%, $blue 75%, $purple 75%, $purple 100%)
+        display: inline-block
+        max-width: 100%
+        width: 26em
+
+    .eager-inner
+        +border-radius(.1875em)
+        background-color: #fff
+        background: linear-gradient(rgba(255, 255, 255, 0.91), #fff)
+        padding: 1.125em
+
+    .smart-underlined
+        color: inherit
+        text-decoration: none
+        background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#333332, #333332)
+        background-size: .05em 1px, .05em 1px, 1px 1px
+        background-repeat: no-repeat, no-repeat, repeat-x
+        text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff
+        background-position-y: 87%, 87%, 87%
+        background-position-x: 0%, 100%, 0%
+
+        &::selection
+            text-shadow: 0.03em 0 $selectionColor, -0.03em 0 $selectionColor, 0 0.03em $selectionColor, 0 -0.03em $selectionColor, 0.06em 0 $selectionColor, -0.06em 0 $selectionColor, 0.09em 0 $selectionColor, -0.09em 0 $selectionColor, 0.12em 0 $selectionColor, -0.12em 0 $selectionColor, 0.15em 0 $selectionColor, -0.15em 0 $selectionColor
+            background: $selectionColor
+
+        &::-moz-selection
+            text-shadow: 0.03em 0 $selectionColor, -0.03em 0 $selectionColor, 0 0.03em $selectionColor, 0 -0.03em $selectionColor, 0.06em 0 $selectionColor, -0.06em 0 $selectionColor, 0.09em 0 $selectionColor, -0.09em 0 $selectionColor, 0.12em 0 $selectionColor, -0.12em 0 $selectionColor, 0.15em 0 $selectionColor, -0.15em 0 $selectionColor
+            background: $selectionColor
+
+    h1
+        font-size: 1em
+        margin: 0 0 1em
+
+    p
+        margin: 1em 0 0
+
+        &.small
+            font-size: .8em
+            padding: 0 2em
+            line-height: 1.33em
+            margin-bottom: -.2em
+
+    a.eager-button
+        text-decoration: none
+        display: block
+        cursor: pointer
+        +border-radius(10em)
+        font-weight: bold
+        padding: .7em 1.2em
+        background: #4039a5
+        color: #fff
