@@ -30,11 +30,11 @@
                     <span class="title">Letter Spacing</span>
                 </h1>
 
-                <p>When adding <code>letter-spacing</code> to some text, take note of the fact that the spacing is <em>added to the right of each letter, not just between letters</em>.</p>
+                <p>When adding <code>letter-spacing</code> to some text, take note of the fact that the spacing is <em>added to the right of each letter, not between each letter</em>.</p>
 
-                <p>This means that if you <code>text-align: center</code> text which has been letter-spaced, you may want to add add a negative right margin to remove the letter spacing added there, such that the text stays centered. Another similar option is to add a left padding.</p>
+                <p>This means that if you <code>text-align: center</code> text which has been letter-spaced, the letters won’t be centered unless you make a correction. There are a number of ways to do this, including applying a negative left margin, a left padding, or using text indent.</p>
 
-                <p>This is a subtle thing, but it’s extremely good to know.</p>
+                <p>Text indent is perhaps the best method when you can guarantee your text doesn’t wrap. Otherwise, a padding or margin is probably your best bet.</p>
 
                 <style>
                     .example {
