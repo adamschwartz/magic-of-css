@@ -73,7 +73,7 @@ sup {
     .chapter a::-moz-selection {
       text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
       background: #b4d5fe; }
-    .chapter a:before, .chapter a:after, .chapter a *, .chapter a *:before, .chapter a *:after {
+    .chapter a:before, .chapter a:after, .chapter a *:before, .chapter a *:after, .chapter a *:not(em) {
       text-shadow: none; }
     .chapter a:visited {
       color: inherit; }
