@@ -368,7 +368,7 @@ chapters.setupEager = ->
         <div class="eager">
             <div class="eager-outer">
                 <div class="eager-inner">
-                    <h1>Like the <span class="smart-underlined">underline styles</span> used in <i>The <span class="magic-word"><span>M</span><span>a</span><span>g</span><span>i</span><span>c</span></span> of <span class="css-word"><span>C</span><span>C</span><span>S</span></span></i>?</h1>
+                    <h1>Like the <span class="smart-underlined">underline styles</span> used in <i>The Magic of CSS</i>?</h1>
                     <p><a class="eager-button" href="https://eager.io/app/eA9ULux0UOJP/install?utm_source=magic_of_css" target="_blank">Add <span class="smartunderline-word">SmartUnderline</span> to your site in seconds!</a></p>
                     <p class="small">SmartUnderline beautifully and magically crops underlines around descenders like “j”, “g”, and “y”.</p>
                 </div>
