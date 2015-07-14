@@ -11,7 +11,7 @@
     border-radius: 0.3125em;
     padding: 4px;
     background-color: #ff4136;
-    background-image: linear-gradient(90deg, #ff4136 0%, #ff4136 15%, #ff851b 15%, #ff851b 30%, #ffdc00 30%, #ffdc00 45%, #2ecc40 45%, #2ecc40 60%, #0074d9 60%, #0074d9 75%, #b10dc9 75%, #b10dc9 100%);
+    background-image: linear-gradient(90deg, #ff4136 0%, #ff4136 17%, #ff851b 17%, #ff851b 34%, #ffdc00 34%, #ffdc00 51%, #2ecc40 51%, #2ecc40 67%, #0074d9 67%, #0074d9 83%, #b10dc9 81%, #b10dc9 100%);
     display: inline-block;
     max-width: 100%;
     width: 26em; }
