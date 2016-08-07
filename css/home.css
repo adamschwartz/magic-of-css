@@ -52,10 +52,7 @@ p.author {
     .share iframe:hover {
       opacity: 1; }
     .share iframe.github {
-      width: 8rem;
-      margin-right: 0.7rem; }
-    .share iframe.twitter {
-      width: 5.5rem; }
+      width: 8rem }
 
 h2 {
   font-weight: 300;
