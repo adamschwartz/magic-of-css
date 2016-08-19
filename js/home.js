@@ -4,9 +4,9 @@
   home = {};
 
   home.init = function() {
-    var firedMouseMove, firedScroll, referrerHostname, _base, _ref;
-    if (typeof (_base = document.documentElement).setAttribute === "function") {
-      _base.setAttribute('data-user-agent', navigator.userAgent);
+    var base, firedMouseMove, firedScroll, ref, referrerHostname;
+    if (typeof (base = document.documentElement).setAttribute === "function") {
+      base.setAttribute('data-user-agent', navigator.userAgent);
     }
     firedMouseMove = false;
     window.addEventListener('mousemove', function() {
@@ -30,7 +30,7 @@
     } else {
       localStorage.hasBeenHereBefore = true;
     }
-    referrerHostname = (_ref = document.referrer.match(/:\/\/(.[^/]+)/)) != null ? _ref[1].split(':')[0] : void 0;
+    referrerHostname = (ref = document.referrer.match(/:\/\/(.[^\/]+)/)) != null ? ref[1].split(':')[0] : void 0;
     if (document.location.hostname === referrerHostname || localStorage.hasBeenHereBefore === true || (location.search.match(/fast/) != null)) {
       document.querySelector('.logo').className = 'logo';
       document.body.className += ' has-been-here-before';

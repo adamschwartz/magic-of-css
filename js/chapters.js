@@ -170,8 +170,8 @@
   };
 
   chapters.setupUserAgentDataAttribute = function() {
-    var _base;
-    return typeof (_base = document.documentElement).setAttribute === "function" ? _base.setAttribute('data-user-agent', navigator.userAgent) : void 0;
+    var base;
+    return typeof (base = document.documentElement).setAttribute === "function" ? base.setAttribute('data-user-agent', navigator.userAgent) : void 0;
   };
 
   chapters.setupContextualCodeExamples = function() {
@@ -189,7 +189,7 @@
       return closeContextualDisplay();
     });
     Array.prototype.slice.call(document.querySelectorAll(':not(pre) > code')).forEach(function(code) {
-      var specialTerm, _ref, _ref1;
+      var ref, ref1, specialTerm;
       for (specialTerm in chapters.specialTerms) {
         if (!(code.textContent === specialTerm)) {
           continue;
@@ -197,7 +197,7 @@
         code.classList.add('contextual-code-example');
         return;
       }
-      if (((_ref = location.hostname.match(/localhost/)) != null ? _ref.length : void 0) && (((_ref1 = window.console) != null ? _ref1.log : void 0) != null)) {
+      if (((ref = location.hostname.match(/localhost/)) != null ? ref.length : void 0) && (((ref1 = window.console) != null ? ref1.log : void 0) != null)) {
         return console.log('Could not find special term', code.textContent);
       }
     });
@@ -210,7 +210,7 @@
     };
     Array.prototype.slice.call(document.querySelectorAll('.contextual-code-example')).forEach(function(code) {
       return code.addEventListener('click', function(event) {
-        var exampleCSS, exampleHTML, specialTerm, specialTermObj, _ref;
+        var exampleCSS, exampleHTML, ref, specialTerm, specialTermObj;
         event.stopPropagation();
         if (event.target.classList.contains('contextual-open-tree')) {
           closeContextualDisplay();
@@ -227,8 +227,8 @@
           exampleCSS = specialTermObj.exampleCSS ? "<pre><code>" + specialTermObj.exampleCSS + "</code></pre>\n<style>\n    .contextual-example " + specialTermObj.exampleCSSSelector + " {\n        " + specialTermObj.exampleCSS + "\n    }\n</style>" : '';
           exampleHTML = specialTermObj.exampleHTML ? "<div class=\"contextual-example\">\n    " + specialTermObj.exampleHTML + "\n</div>" : '';
           contextualDisplay.innerHTML = "<h3>" + (specialTermTitle(specialTerm)) + "</h3>\n<div class=\"contextual-description\">\n    " + specialTermObj.description + "\n</div>\n" + exampleCSS + "\n" + exampleHTML + "\n<a data-contextual-close></a>";
-          if ((_ref = contextualDisplay.querySelector('[data-contextual-close]')) != null) {
-            _ref.addEventListener('click', function(event) {
+          if ((ref = contextualDisplay.querySelector('[data-contextual-close]')) != null) {
+            ref.addEventListener('click', function(event) {
               event.stopPropagation();
               return closeContextualDisplay();
             });
