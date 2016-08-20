@@ -12,6 +12,7 @@ setupCarbonAds = ->
                 top: 0;
                 left: 0;
                 background: #eee;
+                z-index: 4;
             }
 
             #carbonads {
@@ -32,9 +33,19 @@ setupCarbonAds = ->
                 overflow: hidden;
             }
 
-            .carbon-img img {
+            .carbon-img, .carbon-img img {
                 display: block;
+                width: 130px;
+                height: 100px;
+            }
+
+            .carbon-img {
                 margin-bottom: 7px;
+                background: #ccc;
+            }
+
+            .carbon-img img {
+                background: #fff;
             }
 
             .carbon-text {
