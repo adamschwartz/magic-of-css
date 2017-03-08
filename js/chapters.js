@@ -165,8 +165,7 @@
     chapters.setupUserAgentDataAttribute();
     chapters.setupContextualCodeExamples();
     chapters.setupSocialFooter();
-    chapters.setupGlobalNavigation();
-    return chapters.setupEager();
+    return chapters.setupGlobalNavigation();
   };
 
   chapters.setupUserAgentDataAttribute = function() {
@@ -287,16 +286,6 @@
     }
     html += '</nav>';
     return page.insertAdjacentHTML('afterend', html);
-  };
-
-  chapters.setupEager = function() {
-    var nav, page;
-    nav = document.querySelector('nav.chapter-navigation');
-    page = document.querySelector('.page');
-    if (!(nav && page)) {
-      return;
-    }
-    return page.insertAdjacentHTML('afterend', '<div class="eager">\n    <div class="eager-outer">\n        <div class="eager-inner">\n            <h1>Like the <span class="smart-underlined">underline styles</span> used in <i>The Magic of CSS</i>?</h1>\n            <p><a class="eager-button" href="https://eager.io/app/eA9ULux0UOJP/install?utm_source=magic_of_css" target="_blank">Add <span class="smartunderline-word">SmartUnderline</span> to your site in seconds!</a></p>\n            <p class="small">SmartUnderline beautifully and magically crops underlines around descenders like “j”, “g”, and “y”.</p>\n        </div>\n    </div>\n</div>');
   };
 
   window.chapters = chapters;

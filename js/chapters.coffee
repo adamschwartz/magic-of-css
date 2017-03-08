@@ -215,7 +215,6 @@ chapters.init = ->
     chapters.setupContextualCodeExamples()
     chapters.setupSocialFooter()
     chapters.setupGlobalNavigation()
-    chapters.setupEager()
 
 chapters.setupUserAgentDataAttribute = ->
     document.documentElement.setAttribute? 'data-user-agent', navigator.userAgent
@@ -358,23 +357,6 @@ chapters.setupGlobalNavigation = ->
     html += '</nav>'
 
     page.insertAdjacentHTML 'afterend', html
-
-chapters.setupEager = ->
-    nav = document.querySelector('nav.chapter-navigation')
-    page = document.querySelector('.page')
-    return unless nav and page
-
-    page.insertAdjacentHTML 'afterend', '''
-        <div class="eager">
-            <div class="eager-outer">
-                <div class="eager-inner">
-                    <h1>Like the <span class="smart-underlined">underline styles</span> used in <i>The Magic of CSS</i>?</h1>
-                    <p><a class="eager-button" href="https://eager.io/app/eA9ULux0UOJP/install?utm_source=magic_of_css" target="_blank">Add <span class="smartunderline-word">SmartUnderline</span> to your site in seconds!</a></p>
-                    <p class="small">SmartUnderline beautifully and magically crops underlines around descenders like “j”, “g”, and “y”.</p>
-                </div>
-            </div>
-        </div>
-    '''
 
 window.chapters = chapters
 setTimeout chapters.init
