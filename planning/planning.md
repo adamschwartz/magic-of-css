@@ -20,7 +20,7 @@ Planned potions:
 
 Additions:
 
-- Typoraphy
+- Typography
     - https://bugsnag.com/blog/responsive-typography-with-modular-scale
     - http://typogui.de/
 - Presentation framework
