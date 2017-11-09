@@ -310,7 +310,7 @@ chapters.setupContextualCodeExamples = ->
 
     positionContextualDisplay = (code) ->
         boundingClientRect = code.getBoundingClientRect()
-        contextualDisplay.style.top = (boundingClientRect.top + document.body.scrollTop) + 'px'
+        contextualDisplay.style.top = (boundingClientRect.top + (document.body.scrollTop || document.documentElement.scrollTop)) + 'px'
         contextualDisplay.clientHeight
 
         contextualDisplayWrapper.style.height = document.body.clientHeight + 'px'
