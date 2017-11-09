@@ -248,7 +248,7 @@
     positionContextualDisplay = function(code) {
       var boundingClientRect;
       boundingClientRect = code.getBoundingClientRect();
-      contextualDisplay.style.top = (boundingClientRect.top + document.body.scrollTop) + 'px';
+      contextualDisplay.style.top = (boundingClientRect.top + (document.body.scrollTop || document.documentElement.scrollTop)) + 'px';
       contextualDisplay.clientHeight;
       return contextualDisplayWrapper.style.height = document.body.clientHeight + 'px';
     };
