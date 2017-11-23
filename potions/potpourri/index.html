@@ -52,7 +52,7 @@
                 <h4 class="example-header">Modern clearfix</h4>
 
                 <div class="example-wrapper">
-                    <style contenteditable="plaintext-only" spellcheck="false">.modern-clearfix:after {
+                    <style contenteditable="plaintext-only" spellcheck="false">.modern-clearfix::after {
     content: "";
     display: table;
     clear: both
@@ -162,7 +162,7 @@
     -font-size: inherit;
 }
 
-.title-author-block .author-pseudo:before {
+.title-author-block .author-pseudo::before {
     -position: absolute;
     -right: 0;
     content: "Author";
@@ -215,7 +215,7 @@
                         }
                     </style>
 
-                    <style contenteditable="plaintext-only" spellcheck="false">.gradient-shadows:before, .gradient-shadows:after {
+                    <style contenteditable="plaintext-only" spellcheck="false">.gradient-shadows::before, .gradient-shadows::after {
     content: "";
     display: block;
     position: absolute;
@@ -232,7 +232,7 @@
     ;
 }
 
-.gradient-shadows:before {
+.gradient-shadows::before {
     right: 100%;
     background-image:
         -webkit-linear-gradient(
@@ -242,7 +242,7 @@
         )
 }
 
-.gradient-shadows:after {
+.gradient-shadows::after {
     left: 100%;
     background-image:
         -webkit-linear-gradient(
@@ -267,7 +267,7 @@
     width: 5em
 }
 
-.checkmark:before {
+.checkmark::before {
     content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 22 17'><rect fill='red' stroke='none' transform='rotate(45 4.0033 8.87436)' height='5' width='6.32304' y='6.37436' x='0.84178'></rect><rect fill='red' stroke='none' transform='rotate(45 11.1776 7.7066)' width='5' height='16.79756' y='-0.69218' x='8.67764'></rect></svg>");
 }</style>
 

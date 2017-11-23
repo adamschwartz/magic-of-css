@@ -86,7 +86,7 @@ ol.chapters
         clear: left
         counter-increment: chaptersCounter
 
-        &:before
+        &::before
             +inline-block
             content: counter(chaptersCounter) " "
             margin-bottom: .875rem
@@ -99,7 +99,7 @@ ol.chapters
 
         &.coming-soon
 
-            &:before
+            &::before
                 opacity: 0
 
             a

@@ -64,7 +64,7 @@
           height: 3.875em;
           width: 7.75em;
           overflow: hidden; }
-          .logo .css-rainbow .css-rainbow-c .rainbow .bands:before {
+          .logo .css-rainbow .css-rainbow-c .rainbow .bands::before {
             -webkit-box-shadow: 0 0 0 0.5625em #b10dc9, 0 0 0 1.125em #0074d9, 0 0 0 1.6875em #2ecc40, 0 0 0 2.25em #ffdc00, 0 0 0 2.8125em #ff851b, 0 0 0 3.375em #ff4136;
             -moz-box-shadow: 0 0 0 0.5625em #b10dc9, 0 0 0 1.125em #0074d9, 0 0 0 1.6875em #2ecc40, 0 0 0 2.25em #ffdc00, 0 0 0 2.8125em #ff851b, 0 0 0 3.375em #ff4136;
             box-shadow: 0 0 0 0.5625em #b10dc9, 0 0 0 1.125em #0074d9, 0 0 0 1.6875em #2ecc40, 0 0 0 2.25em #ffdc00, 0 0 0 2.8125em #ff851b, 0 0 0 3.375em #ff4136;
@@ -126,7 +126,7 @@
             height: 2.5em;
             width: 5em;
             overflow: hidden; }
-            .logo .css-rainbow .css-rainbow-s .top-half .rainbow .bands:before {
+            .logo .css-rainbow .css-rainbow-s .top-half .rainbow .bands::before {
               -webkit-box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
               -moz-box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
               box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
@@ -181,7 +181,7 @@
             height: 2.5em;
             width: 5em;
             overflow: hidden; }
-            .logo .css-rainbow .css-rainbow-s .bottom-half .rainbow .bands:before {
+            .logo .css-rainbow .css-rainbow-s .bottom-half .rainbow .bands::before {
               -webkit-box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
               -moz-box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
               box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;

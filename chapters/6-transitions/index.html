@@ -51,7 +51,7 @@
                         cursor: default
                     }
 
-                    .typography-example:before {
+                    .typography-example::before {
                         content: "Hover to see transition";
                         text-transform: uppercase;
                         position: absolute;
@@ -63,7 +63,7 @@
                         transition-delay: 2000ms
                     }
 
-                    .typography-example:hover:before {
+                    .typography-example:hover::before {
                         transition-delay: 0ms;
                         opacity: 0
                     }
@@ -355,7 +355,7 @@
                             -webkit-perspective: 20rem
                         }
 
-                        .typography-example-3 .letter:before {
+                        .typography-example-3 .letter::before {
                             content: "\00a0"
                         }
 
@@ -406,7 +406,7 @@
                         .typography-example-3 .letter:nth-child(4) span { transition-delay:  800ms }
                         .typography-example-3 .letter:nth-child(5) span { transition-delay: 1000ms }
 
-                        .typography-example-3:before {
+                        .typography-example-3::before {
                             background: #ff4136;
                             z-index: 1
                         }

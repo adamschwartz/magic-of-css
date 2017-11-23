@@ -8,7 +8,7 @@ html, body {
   left: 0;
   bottom: 0;
   right: 0; }
-  .three-pane-app *, .three-pane-app *:after, .three-pane-app *:before {
+  .three-pane-app *, .three-pane-app *::after, .three-pane-app *::before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
