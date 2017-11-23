@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal; }
 
-*, *:after, *:before {
+*, *::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -41,7 +41,7 @@ a {
 
 .clearfix {
   *zoom: 1; }
-  .clearfix:after {
+  .clearfix::after {
     content: "";
     display: table;
     clear: both; }

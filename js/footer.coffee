@@ -91,7 +91,7 @@ setupCarbonAds = ->
                 transition: none;
             }
 
-            html header.social a.twitter:before {
+            html header.social a.twitter::before {
                 opacity: 1;
             }
 

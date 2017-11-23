@@ -22,7 +22,7 @@
         width: $rainbowSize
         overflow: hidden
 
-        &:before
+        &::before
             +box-shadow(0 0 0 ($bandWidth * 1) $purple, 0 0 0 ($bandWidth * 2) $blue, 0 0 0 ($bandWidth * 3) $green, 0 0 0 ($bandWidth * 4) $yellow, 0 0 0 ($bandWidth * 5) $orange, 0 0 0 ($bandWidth * 6) $red)
             @if $reverse
                 +box-shadow(0 0 0 ($bandWidth * 1) $red, 0 0 0 ($bandWidth * 2) $orange, 0 0 0 ($bandWidth * 3) $yellow, 0 0 0 ($bandWidth * 4) $green, 0 0 0 ($bandWidth * 5) $blue, 0 0 0 ($bandWidth * 6) $purple)

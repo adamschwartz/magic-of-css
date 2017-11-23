@@ -73,7 +73,7 @@ sup {
     .chapter a::-moz-selection {
       text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
       background: #b4d5fe; }
-    .chapter a:before, .chapter a:after, .chapter a *:before, .chapter a *:after, .chapter a *:not(em) {
+    .chapter a::before, .chapter a::after, .chapter a *::before, .chapter a *::after, .chapter a *:not(em) {
       text-shadow: none; }
     .chapter a:visited {
       color: inherit; }
@@ -93,7 +93,7 @@ sup {
   -webkit-overflow-scrolling: touch; }
   .example.side-by-side {
     *zoom: 1; }
-    .example.side-by-side:after {
+    .example.side-by-side::after {
       content: "";
       display: table;
       clear: both; }
@@ -118,7 +118,7 @@ sup {
     margin-top: 1em;
     margin-bottom: 2em;
     transition: opacity 0.4s; }
-    .example-wrapper:after {
+    .example-wrapper::after {
       content: "";
       display: table;
       clear: both; }
@@ -224,14 +224,14 @@ nav.chapter-navigation {
       display: none; }
       nav.chapter-navigation a .title.preface-title {
         display: inline; }
-    nav.chapter-navigation a .number:before {
+    nav.chapter-navigation a .number::before {
       content: "Chapter "; }
     @media (min-width: 44rem) {
       nav.chapter-navigation a .title {
         display: inline; }
-      nav.chapter-navigation a .number:after {
+      nav.chapter-navigation a .number::after {
         content: ": "; } }
-    nav.chapter-navigation a:after {
+    nav.chapter-navigation a::after {
       content: "";
       position: absolute;
       background: transparent;
@@ -241,12 +241,12 @@ nav.chapter-navigation {
       top: 0; }
     nav.chapter-navigation a.previous-chapter {
       left: 1.25em; }
-      nav.chapter-navigation a.previous-chapter:after {
+      nav.chapter-navigation a.previous-chapter::after {
         right: 99.9%;
         border-color: transparent #eeeeee transparent transparent; }
     nav.chapter-navigation a.next-chapter {
       right: 1.25em; }
-      nav.chapter-navigation a.next-chapter:after {
+      nav.chapter-navigation a.next-chapter::after {
         left: 99.9%;
         border-color: transparent transparent transparent #eeeeee; }
 
@@ -280,7 +280,7 @@ nav.chapter-navigation-fullpage a {
     white-space: nowrap; }
   nav.chapter-navigation-fullpage a:hover .title {
     opacity: 1; }
-  nav.chapter-navigation-fullpage a:before {
+  nav.chapter-navigation-fullpage a::before {
     content: "";
     position: absolute;
     top: 0;
@@ -295,12 +295,12 @@ nav.chapter-navigation-fullpage a {
     -ms-transform: rotateZ(45deg);
     -o-transform: rotateZ(45deg);
     transform: rotateZ(45deg); }
-  nav.chapter-navigation-fullpage a:hover:before {
+  nav.chapter-navigation-fullpage a:hover::before {
     opacity: 1; }
 nav.chapter-navigation-fullpage .previous-chapter {
   left: 0;
   background-position: -1rem top; }
-  nav.chapter-navigation-fullpage .previous-chapter:before {
+  nav.chapter-navigation-fullpage .previous-chapter::before {
     left: 1rem;
     border-right: 0;
     border-top: 0;
@@ -310,14 +310,14 @@ nav.chapter-navigation-fullpage .previous-chapter {
     transition: opacity 0.4s, left 0.4s; }
   nav.chapter-navigation-fullpage .previous-chapter:hover {
     background-position: left top; }
-    nav.chapter-navigation-fullpage .previous-chapter:hover:before {
+    nav.chapter-navigation-fullpage .previous-chapter:hover::before {
       left: 1.75rem; }
     nav.chapter-navigation-fullpage .previous-chapter:hover .title {
       left: 3rem; }
 nav.chapter-navigation-fullpage .next-chapter {
   right: 0;
   background-position: 5rem top; }
-  nav.chapter-navigation-fullpage .next-chapter:before {
+  nav.chapter-navigation-fullpage .next-chapter::before {
     right: 1rem;
     border-left: 0;
     border-bottom: 0;
@@ -327,17 +327,17 @@ nav.chapter-navigation-fullpage .next-chapter {
     transition: opacity 0.4s, right 0.4s; }
   nav.chapter-navigation-fullpage .next-chapter:hover {
     background-position: right top; }
-    nav.chapter-navigation-fullpage .next-chapter:hover:before {
+    nav.chapter-navigation-fullpage .next-chapter:hover::before {
       right: 1.75rem; }
     nav.chapter-navigation-fullpage .next-chapter:hover .title {
       right: 3rem; }
 
 h3.magic {
   position: relative; }
-  h3.magic:before {
+  h3.magic::before {
     display: block; }
   @media (min-width: 38rem) {
-    h3.magic:before {
+    h3.magic::before {
       -webkit-box-shadow: 0 -1.25em #0074d9, 0 -1.875em #2ecc40, 0 -2.5em #ffdc00, 0 -3.125em #ff851b, 0 -3.75em #ff4136;
       -moz-box-shadow: 0 -1.25em #0074d9, 0 -1.875em #2ecc40, 0 -2.5em #ffdc00, 0 -3.125em #ff851b, 0 -3.75em #ff4136;
       box-shadow: 0 -1.25em #0074d9, 0 -1.875em #2ecc40, 0 -2.5em #ffdc00, 0 -3.125em #ff851b, 0 -3.75em #ff4136;
@@ -357,7 +357,7 @@ h3.magic {
       margin-top: 3.75em;
       top: 0;
       bottom: 0; }
-    h3.magic:after {
+    h3.magic::after {
       -webkit-transform: rotateZ(-90deg);
       -moz-transform: rotateZ(-90deg);
       -ms-transform: rotateZ(-90deg);
@@ -374,7 +374,7 @@ h3.magic {
       margin-right: 0.0625rem;
       line-height: 1.25em; } }
   @media (max-width: 38rem) {
-    h3.magic:before {
+    h3.magic::before {
       background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #b10dc9), color-stop(12.5%, #ff4136), color-stop(25%, rgba(255, 133, 27, 0.8)), color-stop(37.5%, rgba(255, 220, 0, 0.6)), color-stop(50%, rgba(46, 204, 64, 0.4)), color-stop(62.5%, rgba(0, 116, 217, 0.2)), color-stop(75%, rgba(177, 13, 201, 0)), color-stop(87.5%, transparent), color-stop(100%, transparent));
       background-image: -webkit-linear-gradient(left, #b10dc9, #ff4136, rgba(255, 133, 27, 0.8), rgba(255, 220, 0, 0.6), rgba(46, 204, 64, 0.4), rgba(0, 116, 217, 0.2), rgba(177, 13, 201, 0), transparent, transparent);
       background-image: -moz-linear-gradient(left, #b10dc9, #ff4136, rgba(255, 133, 27, 0.8), rgba(255, 220, 0, 0.6), rgba(46, 204, 64, 0.4), rgba(0, 116, 217, 0.2), rgba(177, 13, 201, 0), transparent, transparent);
@@ -398,13 +398,13 @@ h3.magic {
       color: white;
       margin: 1rem -0.66667rem;
       padding: 0.1rem 0.66667rem; }
-    h3.magic:after {
+    h3.magic::after {
       display: none; } }
 
 dl {
   *zoom: 1;
   margin: 1.5em auto; }
-  dl:after {
+  dl::after {
     content: "";
     display: table;
     clear: both; }
@@ -463,7 +463,7 @@ figure {
       margin-top: 1em;
       margin-left: 40%;
       text-align: right; }
-      figure figcaption:after {
+      figure figcaption::after {
         background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, transparent), color-stop(10%, rgba(0, 0, 0, 0.1)), color-stop(90%, rgba(0, 0, 0, 0.1)));
         background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%);
         background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%);
@@ -498,7 +498,7 @@ figure {
       -moz-box-pack: flex-end;
       -ms-flex-pack: flex-end;
       justify-content: flex-end; }
-      figure figcaption:after {
+      figure figcaption::after {
         background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(10%, rgba(0, 0, 0, 0.1)), color-stop(90%, rgba(0, 0, 0, 0.1)), color-stop(100%, transparent));
         background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
         background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
@@ -552,9 +552,9 @@ figure.cushy {
 code + code.color {
   position: relative;
   border-radius: 0 0.1875em 0.1875em 0; }
-  code + code.color:after {
+  code + code.color::after {
     content: "\00a0"; }
-  code + code.color:before {
+  code + code.color::before {
     content: "";
     position: absolute;
     top: 0;
@@ -616,7 +616,7 @@ code + code.color {
       width: 18rem;
       left: 54rem;
       padding-left: 3.75em; }
-      .contextual-display:before {
+      .contextual-display::before {
         background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(10%, rgba(0, 0, 0, 0.1)), color-stop(90%, rgba(0, 0, 0, 0.1)), color-stop(100%, transparent));
         background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
         background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 90%, transparent);
@@ -639,7 +639,7 @@ code + code.color {
       .contextual-display a[data-contextual-close] {
         top: 0;
         right: 0; } }
-    .contextual-display a[data-contextual-close]:before {
+    .contextual-display a[data-contextual-close]::before {
       content: "×";
       position: absolute;
       top: -0.15em;
@@ -651,7 +651,7 @@ code + code.color {
       height: 1em;
       border-radius: 4px;
       font-size: 1.75em; }
-    .contextual-display a[data-contextual-close]:hover:before {
+    .contextual-display a[data-contextual-close]:hover::before {
       background: #eeeeee; }
   .contextual-display > *:first-child {
     margin-top: 0; }
@@ -705,7 +705,7 @@ code.contextual-code-example {
   code.contextual-code-example:hover, code.contextual-code-example.contextual-open-tree {
     background: #e0e0e0;
     z-index: 50; }
-    code.contextual-code-example:hover:after, code.contextual-code-example.contextual-open-tree:after {
+    code.contextual-code-example:hover::after, code.contextual-code-example.contextual-open-tree::after {
       background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #b10dc9), color-stop(16.66667%, #ff4136), color-stop(33.33333%, #ff851b), color-stop(50%, #ffdc00), color-stop(66.66667%, #2ecc40), color-stop(83.33333%, #0074d9), color-stop(100%, #b10dc9));
       background-image: -webkit-linear-gradient(left, #b10dc9, #ff4136, #ff851b, #ffdc00, #2ecc40, #0074d9, #b10dc9);
       background-image: -moz-linear-gradient(left, #b10dc9, #ff4136, #ff851b, #ffdc00, #2ecc40, #0074d9, #b10dc9);
@@ -776,15 +776,15 @@ header.social {
       text-decoration: none; }
       header.social a.twitter:hover, header.social a.twitter:visited:hover {
         color: #0074d9; }
-    header.social a.twitter:before {
+    header.social a.twitter::before {
       position: absolute;
       top: 2em;
       right: 3.4em;
       content: "@adamfschwartz";
       opacity: 0; }
-    header.social a.twitter:hover:before {
+    header.social a.twitter:hover::before {
       opacity: 1; }
-    header.social a.twitter:after {
+    header.social a.twitter::after {
       position: absolute;
       top: 2em;
       right: 2em;

@@ -81,7 +81,7 @@ sup
             text-shadow: 0.03em 0 $selectionColor, -0.03em 0 $selectionColor, 0 0.03em $selectionColor, 0 -0.03em $selectionColor, 0.06em 0 $selectionColor, -0.06em 0 $selectionColor, 0.09em 0 $selectionColor, -0.09em 0 $selectionColor, 0.12em 0 $selectionColor, -0.12em 0 $selectionColor, 0.15em 0 $selectionColor, -0.15em 0 $selectionColor
             background: $selectionColor
 
-        &:before, &:after, *:before, *:after, *:not(em)
+        &::before, &::after, *::before, *::after, *:not(em)
             text-shadow: none
 
         &:visited
@@ -234,7 +234,7 @@ nav.chapter-navigation
             &.preface-title
                 display: inline
 
-        .number:before
+        .number::before
             content: "Chapter "
 
         @media (min-width: $chapterBreakPointLarge)
@@ -242,10 +242,10 @@ nav.chapter-navigation
             .title
                 display: inline
 
-            .number:after
+            .number::after
                 content: ": "
 
-        &:after
+        &::after
             content: ""
             position: absolute
             background: transparent
@@ -257,14 +257,14 @@ nav.chapter-navigation
         &.previous-chapter
             left: 1.25em
 
-            &:after
+            &::after
                 right: 99.9%
                 border-color: transparent #eee transparent transparent
 
         &.next-chapter
             right: 1.25em
 
-            &:after
+            &::after
                 left: 99.9%
                 border-color: transparent transparent transparent #eee
 
@@ -301,7 +301,7 @@ nav.chapter-navigation-fullpage
         &:hover .title
             opacity: 1
 
-        &:before
+        &::before
             content: ""
             position: absolute
             top: 0
@@ -313,14 +313,14 @@ nav.chapter-navigation-fullpage
             opacity: 0
             +transform(rotateZ(45deg))
 
-        &:hover:before
+        &:hover::before
             opacity: 1
 
     .previous-chapter
         left: 0
         background-position: -1rem top
 
-        &:before
+        &::before
             left: 1rem
             border-right: 0
             border-top: 0
@@ -333,7 +333,7 @@ nav.chapter-navigation-fullpage
         &:hover
             background-position: left top
 
-            &:before
+            &::before
                 left: 1.75rem
 
             .title
@@ -343,7 +343,7 @@ nav.chapter-navigation-fullpage
         right: 0
         background-position: 5rem top
 
-        &:before
+        &::before
             right: 1rem
             border-left: 0
             border-bottom: 0
@@ -356,7 +356,7 @@ nav.chapter-navigation-fullpage
         &:hover
             background-position: right top
 
-            &:before
+            &::before
                 right: 1.75rem
 
             .title
@@ -365,14 +365,14 @@ nav.chapter-navigation-fullpage
 h3.magic
     position: relative
 
-    &:before
+    &::before
         display: block
 
     @media (min-width: $chapterBreakPoint)
 
         $bandWidth: -.625em
 
-        &:before
+        &::before
             +box-shadow(0 ($bandWidth * 2) $blue, 0 ($bandWidth * 3) $green, 0 ($bandWidth * 4) $yellow, 0 ($bandWidth * 5) $orange, 0 ($bandWidth * 6) $red)
             +border-radius(50%)
             position: absolute
@@ -387,7 +387,7 @@ h3.magic
             top: 0
             bottom: 0
 
-        &:after
+        &::after
             +transform(rotateZ(-90deg))
             position: absolute
             content: "Magic"
@@ -402,7 +402,7 @@ h3.magic
 
     @media (max-width: $chapterBreakPoint)
 
-        &:before
+        &::before
             +background-image(linear-gradient(left, $purple, $red, rgba($orange, .8), rgba($yellow, .6), rgba($green, .4), rgba($blue, .2), rgba($purple, 0), transparent, transparent))
             +border-radius(0)
             +box-shadow(none)
@@ -417,7 +417,7 @@ h3.magic
             margin: 1rem -.666666rem
             padding: .1rem .666666rem
 
-        &:after
+        &::after
             display: none
 
 dl
@@ -490,7 +490,7 @@ figure
             margin-left: 40%
             text-align: right
 
-            &:after
+            &::after
                 +background-image(linear-gradient(left, transparent, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .1) 90%))
                 content: ""
                 position: absolute
@@ -527,7 +527,7 @@ figure
             -ms-flex-pack: flex-end
             justify-content: flex-end
 
-            &:after
+            &::after
                 +background-image(linear-gradient(top, transparent, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .1) 90%, transparent))
                 content: ""
                 position: absolute
@@ -584,10 +584,10 @@ code + code.color
     position: relative
     border-radius: 0 .1875em .1875em 0
 
-    &:after
+    &::after
         content: "\00a0"
 
-    &:before
+    &::before
         content: ""
         position: absolute
         top: 0
@@ -653,7 +653,7 @@ code + code.color
         left: $chapterWidth + ($chapterWidth / 2)
         padding-left: 3.75em
 
-        &:before
+        &::before
             +background-image(linear-gradient(top, rgba(0, 0, 0, .1) 10%, rgba(0, 0, 0, .1) 90%, transparent))
             content: ""
             position: absolute
@@ -674,7 +674,7 @@ code + code.color
             top: 0
             right: 0
 
-        &:before
+        &::before
             content: "×"
             position: absolute
             top: -.15em
@@ -687,7 +687,7 @@ code + code.color
             border-radius: 4px
             font-size: 1.75em
 
-        &:hover:before
+        &:hover::before
             background: #eee
 
     > *:first-child
@@ -742,7 +742,7 @@ code.contextual-code-example
         background: #e0e0e0
         z-index: 50
 
-        &:after
+        &::after
             +background-image(linear-gradient(left, $purple, $red, $orange, $yellow, $green, $blue, $purple))
             content: ""
             position: absolute
@@ -827,17 +827,17 @@ header.social
             &:hover
                 color: $blue
 
-        &:before
+        &::before
             position: absolute
             top: 2em
             right: 3.4em
             content: "@adamfschwartz"
             opacity: 0
 
-        &:hover:before
+        &:hover::before
             opacity: 1
 
-        &:after
+        &::after
             position: absolute
             top: 2em
             right: 2em

@@ -77,11 +77,11 @@ ol.chapters {
     *zoom: 1;
     clear: left;
     counter-increment: chaptersCounter; }
-    ol.chapters > li:after {
+    ol.chapters > li::after {
       content: "";
       display: table;
       clear: both; }
-    ol.chapters > li:before {
+    ol.chapters > li::before {
       display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
@@ -96,7 +96,7 @@ ol.chapters {
       margin-right: 0.625em;
       font-weight: 300;
       float: left; }
-    ol.chapters > li.coming-soon:before {
+    ol.chapters > li.coming-soon::before {
       opacity: 0; }
     ol.chapters > li.coming-soon a {
       font-size: 0.8em;
