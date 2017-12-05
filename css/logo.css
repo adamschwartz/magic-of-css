@@ -8,14 +8,15 @@
   max-width: 100%;
   text-align: center;
   overflow: hidden; }
-  .logo h1 {
-    display: none; }
   .logo .the-magic-of {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.4em;
     font-size: 1.375em;
+    height: 1em;
     line-height: 1;
+    margin: 0 0 1em;
+    overflow: hidden; 
     position: relative;
     left: 0.2em;
     margin-bottom: 1.27273em;
