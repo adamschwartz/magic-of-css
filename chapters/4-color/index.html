@@ -44,6 +44,14 @@
                     </figcaption>
                 </figure>
 
+                <style>
+                    @media (max-width: 400px) {
+                        .magic-color {
+                            font-size: 12px;
+                        }
+                    }
+                </style>
+
                 <div class="magic-color red-gradient">
                     <h2>Challenges</h2>
                 </div>
@@ -194,6 +202,10 @@
                 <p>Each of the white boxes below has <code>box-shadow: 0 .125em .5em [color]</code> applied with the color from the respective column.</p>
 
                 <style>
+                    .example-which-color {
+                        position: relative;
+                    }
+
                     .example-which-color .container {
                         font-size: 0;
                         padding: 1.25rem;
@@ -223,6 +235,24 @@
 
                     .example-which-color .item-black-alpha-shadow {
                         box-shadow: 0 .125em .5em rgba(0, 0, 0, .2)
+                    }
+
+                    @media (max-width: 420px) {
+                        .example-which-color > div > p:first-child {
+                            position: absolute;
+                        }
+
+                        .example-which-color .left > p:first-child {
+                            left: 0;
+                        }
+
+                        .example-which-color .right > p:first-child {
+                            right: 0;
+                        }
+
+                        .example-which-color > div > .example-content {
+                            margin-top: 2.5em;
+                        }
                     }
                 </style>
 
@@ -270,9 +300,9 @@
 
                 <ol>
                     <li>
-                        <p>When setting a <code>color</code> with an alpha between <code>0</code>and <code>1</code>, the WebKit browser default of <code>-webkit-font-smoothing: subpixel-antialiased</code> will no longer be honored, and you will never get subpixel antialiasing. (It will be as if you’d set that text to <code>-webkit-font-smoothing: antialiased</code> yourself.)</p>
+                        <p>When setting a <code>color</code> with an alpha between <code>0</code>and <code>1</code>, the WebKit browser default of <code>-webkit-font-smoothing: <wbr/>subpixel-antialiased</code> will no longer be honored, and you will never get subpixel antialiasing. (It will be as if you’d set that text to <code>-webkit-font-smoothing: <wbr/>antialiased</code> yourself.)</p>
 
-                        <p>Which <code>font-smoothing</code> is “better” is contextual and fairly subjective. But it definitely feels like subpixel antialiasing is a bandage on a larger problem since: 1) WebKit on retina Macs don’t use subpixel antialiasing (and so it is likely that future high-resolution displays won’t as well), and 2) The popular blogging platform Medium.com (<a href="http://fontsinuse.com/uses/2575/medium">noted for its beautiful typography</a><sup><a href="#cite-13">[13]</a></sup>) applies <code>-webkit-font-smoothing: antialiased</code> on the entire document.</p>
+                        <p>Which <code>font-smoothing</code> is “better” is contextual and fairly subjective. But it definitely feels like subpixel antialiasing is a bandage on a larger problem since: 1) WebKit on retina Macs don’t use subpixel antialiasing (and so it is likely that future high-resolution displays won’t as well), and 2) The popular blogging platform Medium.com (<a href="http://fontsinuse.com/uses/2575/medium">noted for its beautiful typography</a><sup><a href="#cite-13">[13]</a></sup>) applies <code>-webkit-font-smoothing: <wbr/>antialiased</code> on the entire document.</p>
                     </li>
                     <li>Performance may be slightly impacted. Remember, you’re now asking the browser to composite the text with whatever was behind it. This may be highly optimized in WebKit, but I wouldn’t count on that anywhere else.</li>
                 </ol>
