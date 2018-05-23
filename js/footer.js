@@ -13,7 +13,7 @@
     script = document.createElement('script');
     script.async = true;
     script.id = '_carbonads_js';
-    script.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=adamschwartzco';
+    script.src = '//cdn.carbonads.com/carbon.js?serve=CKYILKQE&placement=adamschwartzco';
     return document.querySelector('.carbonads-wrapper').appendChild(script);
   };
 
