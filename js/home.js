@@ -25,14 +25,12 @@
       return document.body.className += ' window-has-been-scrolled';
     });
     if (localStorage.hasBeenHereBefore === true) {
-      document.querySelector('.logo').className = 'logo';
       document.body.className += ' has-been-here-before';
     } else {
       localStorage.hasBeenHereBefore = true;
     }
     referrerHostname = (ref = document.referrer.match(/:\/\/(.[^\/]+)/)) != null ? ref[1].split(':')[0] : void 0;
     if (document.location.hostname === referrerHostname || localStorage.hasBeenHereBefore === true || (location.search.match(/fast/) != null)) {
-      document.querySelector('.logo').className = 'logo';
       document.body.className += ' has-been-here-before';
     }
     document.body.className += ' trigger-pageload-animations';
@@ -42,7 +40,5 @@
   };
 
   window.home = home;
-
-  setTimeout(home.init);
 
 }).call(this);
