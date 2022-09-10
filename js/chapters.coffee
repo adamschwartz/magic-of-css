@@ -359,4 +359,4 @@ chapters.setupGlobalNavigation = ->
     page.insertAdjacentHTML 'afterend', html
 
 window.chapters = chapters
-setTimeout chapters.init
+addEventListener 'DOMContentLoaded', -> chapters.init()

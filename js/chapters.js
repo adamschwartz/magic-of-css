@@ -290,6 +290,6 @@
 
   window.chapters = chapters;
 
-  setTimeout(chapters.init);
+  addEventListener('DOMContentLoaded', _ => chapters.init());
 
 }).call(this);
