@@ -141,7 +141,7 @@ ol.chapters, ul.potions, .preface-link
         html[data-user-agent*="Chrome"] &
 
             &:hover span
-                background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#464646, #464646)
+                background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#464646, #464646)
                 background-size: .05em 2px, .05em 2px, 2px 2px
                 background-repeat: no-repeat, no-repeat, repeat-x
                 text-shadow: .03em 0 #fff, -.03em 0 #fff, 0 .03em #fff, 0 -.03em #fff, .06em 0 #fff, -.06em 0 #fff, .09em 0 #fff, -.09em 0 #fff
@@ -171,7 +171,7 @@ ul.potions, .preface-link
 .logo.animated
 
     .the-magic-of
-        +transition(opacity 800ms ease-in-out 1300ms forwards)
+        transition: opacity 800ms 1300ms ease-in-out
         opacity: 0
 
         .trigger-pageload-animations &
@@ -183,78 +183,78 @@ ul.potions, .preface-link
             -webkit-backface-visibility: hidden
 
         .css-rainbow-c .rainbow
-            +transition(transform 800ms ease-in-out 0ms forwards)
-            +transform(rotateZ(90deg))
+            transition: transform 800ms 0ms ease-in-out
+            transform: rotateZ(90deg)
 
             .trigger-pageload-animations &
-                +transform(rotateZ(-90deg))
+                transform: rotateZ(-90deg)
 
         .css-rainbow-s-1
 
             .bottom-half .rainbow
-                +transition(transform 400ms ease-in 600ms forwards)
-                +transform(rotateZ(270deg))
+                transition: transform 400ms 600ms ease-in
+                transform: rotateZ(270deg)
 
                 .trigger-pageload-animations &
-                    +transform(rotateZ(90deg))
+                    transform: rotateZ(90deg)
 
             .top-half .rainbow
-                +transition(transform 400ms ease-out 1000ms forwards)
-                +transform(rotateZ(90deg))
+                transition: transform 400ms 1000ms ease-out
+                transform: rotateZ(90deg)
 
                 .trigger-pageload-animations &
-                    +transform(rotateZ(270deg))
+                    transform: rotateZ(270deg)
 
         .css-rainbow-s-2
 
             .bottom-half .rainbow
-                +transition(transform 400ms ease-in 800ms forwards)
-                +transform(rotateZ(270deg))
+                transition: transform 400ms 800ms ease-in
+                transform: rotateZ(270deg)
 
                 .trigger-pageload-animations &
-                    +transform(rotateZ(90deg))
+                    transform: rotateZ(90deg)
 
             .top-half .rainbow
-                +transition(transform 400ms ease-out 1200ms forwards)
-                +transform(rotateZ(90deg))
+                transition: transform 400ms 1200ms ease-out
+                transform: rotateZ(90deg)
 
                 .trigger-pageload-animations &
-                    +transform(rotateZ(270deg))
+                    transform: rotateZ(270deg)
 
 .page-inner > *:not(.logo)
-    +transition(opacity 800ms ease-in-out 1300ms forwards)
+    transition: opacity 800ms 1300ms ease-in-out
     opacity: 0
 
     .trigger-pageload-animations &
         opacity: 1
 
     .window-has-been-scrolled &, .has-been-here-before &
-        +transition(none)
+        transition: none
 
 .trigger-pageload-animations.trigger-pageload-animations-3s .logo.animated:hover
 
     .css-rainbow
 
         .css-rainbow-c .rainbow
-            +transition(transform 800ms ease-in-out 1200ms forwards)
-            +transform(rotateZ(90deg))
+            transition: transform 800ms 1200ms ease-in-out
+            transform: rotateZ(90deg)
 
         .css-rainbow-s-1
 
             .bottom-half .rainbow
-                +transition(transform 400ms ease-out 1000ms forwards)
-                +transform(rotateZ(270deg))
+                transition: transform 400ms 1000ms ease-out
+                transform: rotateZ(270deg)
 
             .top-half .rainbow
-                +transition(transform 400ms ease-in 600ms forwards)
-                +transform(rotateZ(90deg))
+                transition: transform 400ms 600ms ease-in
+                transform: rotateZ(90deg)
 
         .css-rainbow-s-2
 
             .bottom-half .rainbow
-                +transition(transform 400ms ease-out 400ms forwards)
-                +transform(rotateZ(270deg))
+                transition: transform 400ms 400ms ease-out
+                transform: rotateZ(270deg)
 
             .top-half .rainbow
-                +transition(transform 400ms ease-in 0ms forwards)
-                +transform(rotateZ(90deg))
+                transition: transform 400ms 0ms ease-in
+                transform: rotateZ(90deg)

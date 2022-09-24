@@ -66,7 +66,7 @@ sup
         color: inherit
         text-decoration: none
 
-        background: -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#fff, #fff), -webkit-linear-gradient(#333332, #333332)
+        background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#333332, #333332)
         background-size: .05em 1px, .05em 1px, 1px 1px
         background-repeat: no-repeat, no-repeat, repeat-x
         text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff
@@ -215,7 +215,7 @@ nav.chapter-navigation
     overflow: hidden
 
     a
-        +box-sizing(border-box)
+        box-sizing: border-box
         +inline-block
         position: absolute
         padding: .43em .94em
@@ -274,7 +274,7 @@ nav.chapter-navigation-fullpage
         display: none
 
     a
-        +box-sizing(content-box)
+        box-sizing: content-box
         position: fixed
         -webkit-transform: translate3d(0, 0, 0)
         top: 0
@@ -311,7 +311,7 @@ nav.chapter-navigation-fullpage
             width: 1em
             border: 1px solid
             opacity: 0
-            +transform(rotateZ(45deg))
+            transform: rotateZ(45deg)
 
         &:hover::before
             opacity: 1
@@ -388,7 +388,7 @@ h3.magic
             bottom: 0
 
         &::after
-            +transform(rotateZ(-90deg))
+            transform: rotateZ(-90deg)
             position: absolute
             content: "Magic"
             text-transform: uppercase
