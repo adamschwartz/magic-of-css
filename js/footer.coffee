@@ -122,4 +122,4 @@ setupCarbonAds = ->
     script.src = '//cdn.carbonads.com/carbon.js?serve=CKYILKQE&placement=adamschwartzco'
     document.querySelector('.carbonads-wrapper').appendChild script
 
-setupCarbonAds()
+setupCarbonAds() unless location.hostname is 'localhost'

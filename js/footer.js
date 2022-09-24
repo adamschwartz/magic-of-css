@@ -17,6 +17,8 @@
     return document.querySelector('.carbonads-wrapper').appendChild(script);
   };
 
-  setupCarbonAds();
+  if (location.hostname !== 'localhost') {
+    setupCarbonAds();
+  }
 
 }).call(this);
