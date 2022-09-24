@@ -6,7 +6,7 @@
   width: 18.4375em;
   margin: 0 auto;
   max-width: 100%;
-  text-align: center;}
+  text-align: center; }
   .logo .the-magic-of {
     font-weight: 300;
     text-transform: uppercase;
@@ -15,21 +15,17 @@
     height: 1em;
     line-height: 1;
     margin: 0 0 1em;
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
     left: 0.2em;
     margin-bottom: 1.27273em;
-    color: #aaaaaa; }
+    color: #aaa; }
   .logo .css-rainbow {
     max-width: 100%;
     white-space: nowrap; }
     .logo .css-rainbow .css-letter {
-      display: -moz-inline-stack;
       display: inline-block;
-      vertical-align: middle;
-      *vertical-align: auto;
-      zoom: 1;
-      *display: inline; }
+      vertical-align: middle; }
     .logo .css-rainbow .css-rainbow-c {
       position: relative;
       overflow: hidden;
@@ -37,24 +33,12 @@
       height: 7.75em;
       margin-right: 3.175em; }
       .logo .css-rainbow .css-rainbow-c .rainbow {
-        -webkit-transform: rotateZ(90deg);
-        -moz-transform: rotateZ(90deg);
-        -ms-transform: rotateZ(90deg);
-        -o-transform: rotateZ(90deg);
         transform: rotateZ(90deg);
-        -webkit-transform-origin: 50% 100%;
-        -moz-transform-origin: 50% 100%;
-        -ms-transform-origin: 50% 100%;
-        -o-transform-origin: 50% 100%;
         transform-origin: 50% 100%;
         height: 3.875em;
         width: 7.75em;
         overflow: hidden;
         position: relative;
-        -webkit-transform: rotateZ(-90deg);
-        -moz-transform: rotateZ(-90deg);
-        -ms-transform: rotateZ(-90deg);
-        -o-transform: rotateZ(-90deg);
         transform: rotateZ(-90deg);
         position: absolute; }
         .logo .css-rainbow .css-rainbow-c .rainbow .bands {
@@ -65,13 +49,8 @@
           width: 7.75em;
           overflow: hidden; }
           .logo .css-rainbow .css-rainbow-c .rainbow .bands::before {
-            -webkit-box-shadow: 0 0 0 0.5625em #b10dc9, 0 0 0 1.125em #0074d9, 0 0 0 1.6875em #2ecc40, 0 0 0 2.25em #ffdc00, 0 0 0 2.8125em #ff851b, 0 0 0 3.375em #ff4136;
-            -moz-box-shadow: 0 0 0 0.5625em #b10dc9, 0 0 0 1.125em #0074d9, 0 0 0 1.6875em #2ecc40, 0 0 0 2.25em #ffdc00, 0 0 0 2.8125em #ff851b, 0 0 0 3.375em #ff4136;
-            box-shadow: 0 0 0 0.5625em #b10dc9, 0 0 0 1.125em #0074d9, 0 0 0 1.6875em #2ecc40, 0 0 0 2.25em #ffdc00, 0 0 0 2.8125em #ff851b, 0 0 0 3.375em #ff4136;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
+            box-shadow: inset 0 0 0 3.375em #6335e6, inset 0 0 0 2.8125em #0085ae, inset 0 0 0 2.25em #8ebd14, inset 0 0 0 1.6875em #ffc359, inset 0 0 0 1.125em #ff716a, inset 0 0 0 0.5625em #ff3283;
+            box-shadow: inset 0 0 0 0.5625em #ff3283, inset 0 0 0 1.125em #ff716a, inset 0 0 0 1.6875em #ffc359, inset 0 0 0 2.25em #8ebd14, inset 0 0 0 2.8125em #0085ae, inset 0 0 0 3.375em #6335e6;
             border-radius: 50%;
             content: "";
             display: block;
@@ -79,15 +58,11 @@
             margin: auto;
             left: 0;
             right: 0;
-            bottom: -0.5em;
-            height: 1em;
-            width: 1em; }
+            bottom: -3.875em;
+            height: 7.75em;
+            width: 7.75em; }
     .logo .css-rainbow .css-rainbow-s {
-      -webkit-transform: rotateZ(22.5deg);
-      -moz-transform: rotateZ(22.5deg);
-      -ms-transform: rotateZ(22.5deg);
-      -o-transform: rotateZ(22.5deg);
-      transform: rotateZ(22.5deg);
+      transform: translate3d(0, 0, 0) rotateZ(22.5deg);
       width: 5em;
       height: 7.75em;
       position: relative;
@@ -100,24 +75,12 @@
         width: 2.5em;
         height: 5em; }
         .logo .css-rainbow .css-rainbow-s .top-half .rainbow {
-          -webkit-transform: rotateZ(90deg);
-          -moz-transform: rotateZ(90deg);
-          -ms-transform: rotateZ(90deg);
-          -o-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
-          -webkit-transform-origin: 50% 100%;
-          -moz-transform-origin: 50% 100%;
-          -ms-transform-origin: 50% 100%;
-          -o-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
           height: 2.5em;
           width: 5em;
           overflow: hidden;
           position: relative;
-          -webkit-transform: rotateZ(-90deg);
-          -moz-transform: rotateZ(-90deg);
-          -ms-transform: rotateZ(-90deg);
-          -o-transform: rotateZ(-90deg);
           transform: rotateZ(-90deg); }
           .logo .css-rainbow .css-rainbow-s .top-half .rainbow .bands {
             position: absolute;
@@ -127,13 +90,8 @@
             width: 5em;
             overflow: hidden; }
             .logo .css-rainbow .css-rainbow-s .top-half .rainbow .bands::before {
-              -webkit-box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
-              -moz-box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
-              box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
-              -webkit-border-radius: 50%;
-              -moz-border-radius: 50%;
-              -ms-border-radius: 50%;
-              -o-border-radius: 50%;
+              box-shadow: inset 0 0 0 2.25em #6335e6, inset 0 0 0 1.875em #0085ae, inset 0 0 0 1.5em #8ebd14, inset 0 0 0 1.125em #ffc359, inset 0 0 0 0.75em #ff716a, inset 0 0 0 0.375em #ff3283;
+              box-shadow: inset 0 0 0 0.375em #ff3283, inset 0 0 0 0.75em #ff716a, inset 0 0 0 1.125em #ffc359, inset 0 0 0 1.5em #8ebd14, inset 0 0 0 1.875em #0085ae, inset 0 0 0 2.25em #6335e6;
               border-radius: 50%;
               content: "";
               display: block;
@@ -141,9 +99,9 @@
               margin: auto;
               left: 0;
               right: 0;
-              bottom: -0.25em;
-              height: 0.5em;
-              width: 0.5em; }
+              bottom: -2.5em;
+              height: 5em;
+              width: 5em; }
       .logo .css-rainbow .css-rainbow-s .bottom-half {
         position: absolute;
         overflow: hidden;
@@ -151,27 +109,14 @@
         height: 5em;
         top: 2.75em;
         left: 2.5em;
-        top: 2.725em;
         left: 2.45em; }
         .logo .css-rainbow .css-rainbow-s .bottom-half .rainbow {
-          -webkit-transform: rotateZ(90deg);
-          -moz-transform: rotateZ(90deg);
-          -ms-transform: rotateZ(90deg);
-          -o-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
-          -webkit-transform-origin: 50% 100%;
-          -moz-transform-origin: 50% 100%;
-          -ms-transform-origin: 50% 100%;
-          -o-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
           height: 2.5em;
           width: 5em;
           overflow: hidden;
           position: relative;
-          -webkit-transform: rotateZ(90deg);
-          -moz-transform: rotateZ(90deg);
-          -ms-transform: rotateZ(90deg);
-          -o-transform: rotateZ(90deg);
           transform: rotateZ(90deg);
           left: -2.5em; }
           .logo .css-rainbow .css-rainbow-s .bottom-half .rainbow .bands {
@@ -182,16 +127,10 @@
             width: 5em;
             overflow: hidden; }
             .logo .css-rainbow .css-rainbow-s .bottom-half .rainbow .bands::before {
-              -webkit-box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
-              -moz-box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
-              box-shadow: 0 0 0 0.375em #b10dc9, 0 0 0 0.75em #0074d9, 0 0 0 1.125em #2ecc40, 0 0 0 1.5em #ffdc00, 0 0 0 1.875em #ff851b, 0 0 0 2.25em #ff4136;
-              -webkit-box-shadow: 0 0 0 0.375em #ff4136, 0 0 0 0.75em #ff851b, 0 0 0 1.125em #ffdc00, 0 0 0 1.5em #2ecc40, 0 0 0 1.875em #0074d9, 0 0 0 2.25em #b10dc9;
-              -moz-box-shadow: 0 0 0 0.375em #ff4136, 0 0 0 0.75em #ff851b, 0 0 0 1.125em #ffdc00, 0 0 0 1.5em #2ecc40, 0 0 0 1.875em #0074d9, 0 0 0 2.25em #b10dc9;
-              box-shadow: 0 0 0 0.375em #ff4136, 0 0 0 0.75em #ff851b, 0 0 0 1.125em #ffdc00, 0 0 0 1.5em #2ecc40, 0 0 0 1.875em #0074d9, 0 0 0 2.25em #b10dc9;
-              -webkit-border-radius: 50%;
-              -moz-border-radius: 50%;
-              -ms-border-radius: 50%;
-              -o-border-radius: 50%;
+              box-shadow: inset 0 0 0 2.25em #6335e6, inset 0 0 0 1.875em #0085ae, inset 0 0 0 1.5em #8ebd14, inset 0 0 0 1.125em #ffc359, inset 0 0 0 0.75em #ff716a, inset 0 0 0 0.375em #ff3283;
+              box-shadow: inset 0 0 0 2.25em #ff3283, inset 0 0 0 1.875em #ff716a, inset 0 0 0 1.5em #ffc359, inset 0 0 0 1.125em #8ebd14, inset 0 0 0 0.75em #0085ae, inset 0 0 0 0.375em #6335e6;
+              box-shadow: inset 0 0 0 0.375em #ff3283, inset 0 0 0 0.75em #ff716a, inset 0 0 0 1.125em #ffc359, inset 0 0 0 1.5em #8ebd14, inset 0 0 0 1.875em #0085ae, inset 0 0 0 2.25em #6335e6;
+              box-shadow: inset 0 0 0 0.375em #6335e6, inset 0 0 0 0.75em #0085ae, inset 0 0 0 1.125em #8ebd14, inset 0 0 0 1.5em #ffc359, inset 0 0 0 1.875em #ff716a, inset 0 0 0 2.25em #ff3283;
               border-radius: 50%;
               content: "";
               display: block;
@@ -199,9 +138,9 @@
               margin: auto;
               left: 0;
               right: 0;
-              bottom: -0.25em;
-              height: 0.5em;
-              width: 0.5em; }
+              bottom: -2.5em;
+              height: 5em;
+              width: 5em; }
       .logo .css-rainbow .css-rainbow-s.css-rainbow-s-1 {
         margin-right: 1.875em; }
       .logo .css-rainbow .css-rainbow-s.css-rainbow-s-2 {

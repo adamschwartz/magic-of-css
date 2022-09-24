@@ -1,9 +1,8 @@
 .mock-paragraph b {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
   background: rgba(0, 0, 0, 0.1);
   width: 3.125em;

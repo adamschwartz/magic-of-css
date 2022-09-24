@@ -22,7 +22,7 @@ p.author {
   margin-top: 2em;
   letter-spacing: 0.05em;
   padding-left: 0.43em;
-  color: #888888;
+  color: #888;
   font-weight: 300; }
   p.author a {
     text-decoration: none;
@@ -34,13 +34,9 @@ p.author {
   padding-left: 0.6rem;
   font-size: 0; }
   .share iframe {
-    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline;
-    background: #eeeeee;
+    background: #eee;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -52,7 +48,7 @@ p.author {
     .share iframe:hover {
       opacity: 1; }
     .share iframe.github {
-      width: 8rem }
+      width: 8rem; }
 
 h2 {
   font-weight: 300;
@@ -62,7 +58,7 @@ h2 {
   line-height: 1;
   position: relative;
   margin: 2.5rem 0;
-  color: #aaaaaa;
+  color: #aaa;
   padding: 0 1rem; }
   h2 span {
     margin-right: -0.4em; }
@@ -74,23 +70,18 @@ ol.chapters {
   list-style-type: none;
   margin-left: 0; }
   ol.chapters > li {
-    *zoom: 1;
     clear: left;
     counter-increment: chaptersCounter; }
-    ol.chapters > li::after {
+    ol.chapters > li:after {
       content: "";
       display: table;
       clear: both; }
     ol.chapters > li::before {
-      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
-      *vertical-align: auto;
-      zoom: 1;
-      *display: inline;
       content: counter(chaptersCounter) " ";
       margin-bottom: 0.875rem;
-      color: #aaaaaa;
+      color: #aaa;
       text-align: center;
       width: 1em;
       margin-right: 0.625em;
@@ -105,12 +96,8 @@ ol.chapters {
   ol.chapters:first-child {
     counter-reset: chaptersCounter; }
   ol.chapters a {
-    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline;
     margin-bottom: 1rem; }
 
 ol.chapters, ul.potions, .preface-link {
@@ -136,18 +123,18 @@ ol.chapters, ul.potions, .preface-link {
     text-decoration: none;
     white-space: nowrap; }
     html[data-user-agent*="Chrome"] ol.chapters a:hover span, html[data-user-agent*="Chrome"] ul.potions a:hover span, html[data-user-agent*="Chrome"] .preface-link a:hover span {
-      background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(#464646, #464646);
+      background: linear-gradient(#ffffff, #ffffff), linear-gradient(#ffffff, #ffffff), linear-gradient(#464646, #464646);
       background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
       background-repeat: no-repeat, no-repeat, repeat-x;
-      text-shadow: 0.03em 0 white, -0.03em 0 white, 0 0.03em white, 0 -0.03em white, 0.06em 0 white, -0.06em 0 white, 0.09em 0 white, -0.09em 0 white;
+      text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff;
       background-position-y: 88%, 88%, 88%;
       background-position-x: 0%, 100%, 0%; }
       html[data-user-agent*="Chrome"] ol.chapters a:hover span::selection, html[data-user-agent*="Chrome"] ul.potions a:hover span::selection, html[data-user-agent*="Chrome"] .preface-link a:hover span::selection {
-        text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe;
-        background: #b4d5fe; }
+        text-shadow: 0.03em 0 currentColor, -0.03em 0 currentColor, 0 0.03em currentColor, 0 -0.03em currentColor, 0.06em 0 currentColor, -0.06em 0 currentColor, 0.09em 0 currentColor, -0.09em 0 currentColor;
+        background: currentColor; }
       html[data-user-agent*="Chrome"] ol.chapters a:hover span::-moz-selection, html[data-user-agent*="Chrome"] ul.potions a:hover span::-moz-selection, html[data-user-agent*="Chrome"] .preface-link a:hover span::-moz-selection {
-        text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe;
-        background: #b4d5fe; }
+        text-shadow: 0.03em 0 currentColor, -0.03em 0 currentColor, 0 0.03em currentColor, 0 -0.03em currentColor, 0.06em 0 currentColor, -0.06em 0 currentColor, 0.09em 0 currentColor, -0.09em 0 currentColor;
+        background: currentColor; }
       html[data-user-agent*="Chrome"] ol.chapters a:hover span[data-starts-with="T"], html[data-user-agent*="Chrome"] ul.potions a:hover span[data-starts-with="T"], html[data-user-agent*="Chrome"] .preface-link a:hover span[data-starts-with="T"] {
         background-size: 0.15em 2px, 0.05em 2px, 2px 2px; }
 
@@ -158,169 +145,58 @@ ul.potions, .preface-link {
     margin-bottom: 0.5em; }
 
 .logo.animated .the-magic-of {
-  -webkit-transition: opacity 800ms ease-in-out;
-  -webkit-transition-delay: 1300ms;
-  -moz-transition: opacity 800ms ease-in-out 1300ms;
-  -o-transition: opacity 800ms ease-in-out 1300ms;
-  transition: opacity 800ms ease-in-out 1300ms forwards;
+  transition: opacity 800ms 1300ms ease-in-out;
   opacity: 0; }
   .trigger-pageload-animations .logo.animated .the-magic-of {
     opacity: 1; }
 .logo.animated .css-rainbow .rainbow {
   -webkit-backface-visibility: hidden; }
 .logo.animated .css-rainbow .css-rainbow-c .rainbow {
-  -webkit-transition: -webkit-transform 800ms ease-in-out;
-  -webkit-transition-delay: 0ms;
-  -moz-transition: -moz-transform 800ms ease-in-out 0ms;
-  -o-transition: -o-transform 800ms ease-in-out 0ms;
-  transition: transform 800ms ease-in-out 0ms forwards;
-  -webkit-transform: rotateZ(90deg);
-  -moz-transform: rotateZ(90deg);
-  -ms-transform: rotateZ(90deg);
-  -o-transform: rotateZ(90deg);
+  transition: transform 800ms 0ms ease-in-out;
   transform: rotateZ(90deg); }
   .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-c .rainbow {
-    -webkit-transform: rotateZ(-90deg);
-    -moz-transform: rotateZ(-90deg);
-    -ms-transform: rotateZ(-90deg);
-    -o-transform: rotateZ(-90deg);
     transform: rotateZ(-90deg); }
 .logo.animated .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
-  -webkit-transition: -webkit-transform 400ms ease-in;
-  -webkit-transition-delay: 600ms;
-  -moz-transition: -moz-transform 400ms ease-in 600ms;
-  -o-transition: -o-transform 400ms ease-in 600ms;
-  transition: transform 400ms ease-in 600ms forwards;
-  -webkit-transform: rotateZ(270deg);
-  -moz-transform: rotateZ(270deg);
-  -ms-transform: rotateZ(270deg);
-  -o-transform: rotateZ(270deg);
+  transition: transform 400ms 600ms ease-in;
   transform: rotateZ(270deg); }
   .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
-    -webkit-transform: rotateZ(90deg);
-    -moz-transform: rotateZ(90deg);
-    -ms-transform: rotateZ(90deg);
-    -o-transform: rotateZ(90deg);
     transform: rotateZ(90deg); }
 .logo.animated .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
-  -webkit-transition: -webkit-transform 400ms ease-out;
-  -webkit-transition-delay: 1000ms;
-  -moz-transition: -moz-transform 400ms ease-out 1000ms;
-  -o-transition: -o-transform 400ms ease-out 1000ms;
-  transition: transform 400ms ease-out 1000ms forwards;
-  -webkit-transform: rotateZ(90deg);
-  -moz-transform: rotateZ(90deg);
-  -ms-transform: rotateZ(90deg);
-  -o-transform: rotateZ(90deg);
+  transition: transform 400ms 1000ms ease-out;
   transform: rotateZ(90deg); }
   .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
-    -webkit-transform: rotateZ(270deg);
-    -moz-transform: rotateZ(270deg);
-    -ms-transform: rotateZ(270deg);
-    -o-transform: rotateZ(270deg);
     transform: rotateZ(270deg); }
 .logo.animated .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
-  -webkit-transition: -webkit-transform 400ms ease-in;
-  -webkit-transition-delay: 800ms;
-  -moz-transition: -moz-transform 400ms ease-in 800ms;
-  -o-transition: -o-transform 400ms ease-in 800ms;
-  transition: transform 400ms ease-in 800ms forwards;
-  -webkit-transform: rotateZ(270deg);
-  -moz-transform: rotateZ(270deg);
-  -ms-transform: rotateZ(270deg);
-  -o-transform: rotateZ(270deg);
+  transition: transform 400ms 800ms ease-in;
   transform: rotateZ(270deg); }
   .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
-    -webkit-transform: rotateZ(90deg);
-    -moz-transform: rotateZ(90deg);
-    -ms-transform: rotateZ(90deg);
-    -o-transform: rotateZ(90deg);
     transform: rotateZ(90deg); }
 .logo.animated .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
-  -webkit-transition: -webkit-transform 400ms ease-out;
-  -webkit-transition-delay: 1200ms;
-  -moz-transition: -moz-transform 400ms ease-out 1200ms;
-  -o-transition: -o-transform 400ms ease-out 1200ms;
-  transition: transform 400ms ease-out 1200ms forwards;
-  -webkit-transform: rotateZ(90deg);
-  -moz-transform: rotateZ(90deg);
-  -ms-transform: rotateZ(90deg);
-  -o-transform: rotateZ(90deg);
+  transition: transform 400ms 1200ms ease-out;
   transform: rotateZ(90deg); }
   .trigger-pageload-animations .logo.animated .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
-    -webkit-transform: rotateZ(270deg);
-    -moz-transform: rotateZ(270deg);
-    -ms-transform: rotateZ(270deg);
-    -o-transform: rotateZ(270deg);
     transform: rotateZ(270deg); }
 
 .page-inner > *:not(.logo) {
-  -webkit-transition: opacity 800ms ease-in-out;
-  -webkit-transition-delay: 1300ms;
-  -moz-transition: opacity 800ms ease-in-out 1300ms;
-  -o-transition: opacity 800ms ease-in-out 1300ms;
-  transition: opacity 800ms ease-in-out 1300ms forwards;
+  transition: opacity 800ms 1300ms ease-in-out;
   opacity: 0; }
   .trigger-pageload-animations .page-inner > *:not(.logo) {
     opacity: 1; }
   .window-has-been-scrolled .page-inner > *:not(.logo), .has-been-here-before .page-inner > *:not(.logo) {
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
     transition: none; }
 
 .trigger-pageload-animations.trigger-pageload-animations-3s .logo.animated:hover .css-rainbow .css-rainbow-c .rainbow {
-  -webkit-transition: -webkit-transform 800ms ease-in-out;
-  -webkit-transition-delay: 1200ms;
-  -moz-transition: -moz-transform 800ms ease-in-out 1200ms;
-  -o-transition: -o-transform 800ms ease-in-out 1200ms;
-  transition: transform 800ms ease-in-out 1200ms forwards;
-  -webkit-transform: rotateZ(90deg);
-  -moz-transform: rotateZ(90deg);
-  -ms-transform: rotateZ(90deg);
-  -o-transform: rotateZ(90deg);
+  transition: transform 800ms 1200ms ease-in-out;
   transform: rotateZ(90deg); }
 .trigger-pageload-animations.trigger-pageload-animations-3s .logo.animated:hover .css-rainbow .css-rainbow-s-1 .bottom-half .rainbow {
-  -webkit-transition: -webkit-transform 400ms ease-out;
-  -webkit-transition-delay: 1000ms;
-  -moz-transition: -moz-transform 400ms ease-out 1000ms;
-  -o-transition: -o-transform 400ms ease-out 1000ms;
-  transition: transform 400ms ease-out 1000ms forwards;
-  -webkit-transform: rotateZ(270deg);
-  -moz-transform: rotateZ(270deg);
-  -ms-transform: rotateZ(270deg);
-  -o-transform: rotateZ(270deg);
+  transition: transform 400ms 1000ms ease-out;
   transform: rotateZ(270deg); }
 .trigger-pageload-animations.trigger-pageload-animations-3s .logo.animated:hover .css-rainbow .css-rainbow-s-1 .top-half .rainbow {
-  -webkit-transition: -webkit-transform 400ms ease-in;
-  -webkit-transition-delay: 600ms;
-  -moz-transition: -moz-transform 400ms ease-in 600ms;
-  -o-transition: -o-transform 400ms ease-in 600ms;
-  transition: transform 400ms ease-in 600ms forwards;
-  -webkit-transform: rotateZ(90deg);
-  -moz-transform: rotateZ(90deg);
-  -ms-transform: rotateZ(90deg);
-  -o-transform: rotateZ(90deg);
+  transition: transform 400ms 600ms ease-in;
   transform: rotateZ(90deg); }
 .trigger-pageload-animations.trigger-pageload-animations-3s .logo.animated:hover .css-rainbow .css-rainbow-s-2 .bottom-half .rainbow {
-  -webkit-transition: -webkit-transform 400ms ease-out;
-  -webkit-transition-delay: 400ms;
-  -moz-transition: -moz-transform 400ms ease-out 400ms;
-  -o-transition: -o-transform 400ms ease-out 400ms;
-  transition: transform 400ms ease-out 400ms forwards;
-  -webkit-transform: rotateZ(270deg);
-  -moz-transform: rotateZ(270deg);
-  -ms-transform: rotateZ(270deg);
-  -o-transform: rotateZ(270deg);
+  transition: transform 400ms 400ms ease-out;
   transform: rotateZ(270deg); }
 .trigger-pageload-animations.trigger-pageload-animations-3s .logo.animated:hover .css-rainbow .css-rainbow-s-2 .top-half .rainbow {
-  -webkit-transition: -webkit-transform 400ms ease-in;
-  -webkit-transition-delay: 0ms;
-  -moz-transition: -moz-transform 400ms ease-in 0ms;
-  -o-transition: -o-transform 400ms ease-in 0ms;
-  transition: transform 400ms ease-in 0ms forwards;
-  -webkit-transform: rotateZ(90deg);
-  -moz-transform: rotateZ(90deg);
-  -ms-transform: rotateZ(90deg);
-  -o-transform: rotateZ(90deg);
+  transition: transform 400ms 0ms ease-in;
   transform: rotateZ(90deg); }
