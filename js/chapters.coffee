@@ -57,7 +57,7 @@ chapters.specialTerms =
 
     'box-shadow':
         description: '<p>A shadow-like styling of an element box</p>'
-        exampleCSS: 'box-shadow:\n  0 1em 4em transparent,\n  0 .1em red,\n  inset 0 .5em #000'
+        exampleCSS: 'box-shadow:\n  0 1em 4em pink,\n  0 .1em red,\n  inset 0 .5em #000'
         exampleHTML: '<div class="box"></div>'
 
     'inline-block':
