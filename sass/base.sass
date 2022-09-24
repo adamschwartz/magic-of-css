@@ -12,13 +12,21 @@
 ::-moz-selection
     text-shadow: none
     background: $selectionColor
+    color: #fff
 
 ::selection
     text-shadow: none
     background: $selectionColor
+    color: #fff
 
 html
     font-size: 16px
+    --purple: #{$purple}
+    --blue: #{$blue}
+    --green: #{$green}
+    --yellow: #{$yellow}
+    --orange: #{$orange}
+    --red: #{$red}
 
     @media (min-width: $chapterBreakPointXLarge)
         font-size: 20px
@@ -26,7 +34,7 @@ html
 body
     font-family: Avenir, "Helvetica Neue", sans-serif
     background: #fff
-    color: #333332
+    color: #000
     margin: 0
     text-rendering: optimizeLegibility
     -webkit-font-smoothing: antialiased
