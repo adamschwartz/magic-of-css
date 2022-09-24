@@ -3,11 +3,7 @@
 @import colors
 
 =rainbow($rainbowSize, $bandWidth, $reverse: false)
-    +transform(rotateZ(90deg))
-    -webkit-transform-origin: 50% 100%
-    -moz-transform-origin: 50% 100%
-    -ms-transform-origin: 50% 100%
-    -o-transform-origin: 50% 100%
+    transform: rotateZ(90deg)
     transform-origin: 50% 100%
     height: $rainbowSize / 2
     width: $rainbowSize
@@ -23,9 +19,14 @@
         overflow: hidden
 
         &::before
-            +box-shadow(0 0 0 ($bandWidth * 1) $purple, 0 0 0 ($bandWidth * 2) $blue, 0 0 0 ($bandWidth * 3) $green, 0 0 0 ($bandWidth * 4) $yellow, 0 0 0 ($bandWidth * 5) $orange, 0 0 0 ($bandWidth * 6) $red)
+            box-shadow: inset 0 0 0 ($bandWidth * 6) $purple, inset 0 0 0 ($bandWidth * 5) $blue, inset 0 0 0 ($bandWidth * 4) $green, inset 0 0 0 ($bandWidth * 3) $yellow, inset 0 0 0 ($bandWidth * 2) $orange, inset 0 0 0 ($bandWidth * 1) $red
             @if $reverse
-                +box-shadow(0 0 0 ($bandWidth * 1) $red, 0 0 0 ($bandWidth * 2) $orange, 0 0 0 ($bandWidth * 3) $yellow, 0 0 0 ($bandWidth * 4) $green, 0 0 0 ($bandWidth * 5) $blue, 0 0 0 ($bandWidth * 6) $purple)
+                box-shadow: inset 0 0 0 ($bandWidth * 6) $red, inset 0 0 0 ($bandWidth * 5) $orange, inset 0 0 0 ($bandWidth * 4) $yellow, inset 0 0 0 ($bandWidth * 3) $green, inset 0 0 0 ($bandWidth * 2) $blue, inset 0 0 0 ($bandWidth * 1) $purple
+
+            box-shadow: inset 0 0 0 ($bandWidth * 1) $red, inset 0 0 0 ($bandWidth * 2) $orange, inset 0 0 0 ($bandWidth * 3) $yellow, inset 0 0 0 ($bandWidth * 4) $green, inset 0 0 0 ($bandWidth * 5) $blue, inset 0 0 0 ($bandWidth * 6) $purple
+            @if $reverse
+                box-shadow: inset 0 0 0 ($bandWidth * 1) $purple, inset 0 0 0 ($bandWidth * 2) $blue, inset 0 0 0 ($bandWidth * 3) $green, inset 0 0 0 ($bandWidth * 4) $yellow, inset 0 0 0 ($bandWidth * 5) $orange, inset 0 0 0 ($bandWidth * 6) $red
+
             +border-radius(50%)
             content: ""
             display: block
@@ -33,6 +34,6 @@
             margin: auto
             left: 0
             right: 0
-            bottom: - ($rainbowSize - ((6 * $bandWidth) * 2)) / 2
-            height: $rainbowSize - ((6 * $bandWidth) * 2)
-            width: $rainbowSize - ((6 * $bandWidth) * 2)
+            bottom: - ($rainbowSize / 2)
+            height: $rainbowSize
+            width: $rainbowSize
