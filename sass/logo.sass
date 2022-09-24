@@ -42,11 +42,11 @@
 
             .rainbow
                 +rainbow(7.75em, .5625em)
-                +transform(rotateZ(-90deg))
+                transform: rotateZ(-90deg)
                 position: absolute
 
         .css-rainbow-s
-            +transform(rotateZ(22.5deg))
+            transform: translate3d(0, 0, 0) rotateZ(22.5deg)
             width: 5em
             height: 7.75em
 
@@ -65,7 +65,7 @@
 
                 .rainbow
                     +rainbow(5em, .375em)
-                    +transform(rotateZ(-90deg))
+                    transform: rotateZ(-90deg)
 
             .bottom-half
                 position: absolute
@@ -76,12 +76,11 @@
                 left: 2.5em
 
                 // Damn rounding
-                top: 2.725em
                 left: 2.45em
 
                 .rainbow
                     +rainbow(5em, .375em, true)
-                    +transform(rotateZ(90deg))
+                    transform: rotateZ(90deg)
                     left: -2.5em
 
             &.css-rainbow-s-1
