@@ -4,18 +4,10 @@
   home = {};
 
   home.init = function() {
-    var base, firedMouseMove, firedScroll, ref, referrerHostname;
+    var base, firedScroll, ref, referrerHostname;
     if (typeof (base = document.documentElement).setAttribute === "function") {
       base.setAttribute('data-user-agent', navigator.userAgent);
     }
-    firedMouseMove = false;
-    window.addEventListener('mousemove', function() {
-      if (firedMouseMove) {
-        return;
-      }
-      firedMouseMove = true;
-      return document.body.className += ' mouse-has-moved';
-    });
     firedScroll = false;
     window.addEventListener('scroll', function() {
       if (firedScroll) {
