@@ -26,19 +26,16 @@
     'em': {
       description: '<p>A unit of measurement which represents a multiple of the current font-size in pixels</p>',
       exampleCSS: 'font-size: 2em',
-      exampleCSSSelector: '.text',
       exampleHTML: '<div class="text">Some text</div>'
     },
     '%': {
       description: '<p>A relative unit of measurement</p>',
       exampleCSS: 'width: 80%',
-      exampleCSSSelector: '.box',
       exampleHTML: '<div class="box"></div>'
     },
     'box-sizing': {
       description: '<p>Controls how element boxes are sized</p>',
       exampleCSS: 'width: 75%;\npadding-left: 25%',
-      exampleCSSSelector: '.text-box',
       exampleHTML: '<style>\n    .contextual-example .text-box {\n        padding-right: 0;\n        margin-bottom: 1em\n    }\n    .contextual-example p {\n        text-align: left\n    }\n</style>\n<div class="text-box" style="box-sizing: content-box"><code>content-box</code></div>\n<p>The content is sized to <code>75%</code> so the padding is added.</p>\n<div class="text-box" style="box-sizing: border-box"><code>border-box</code></div>\n<p>The border is sized to <code>75%</code> so the padding is absorbed.</p>'
     },
     'border-box': 'box-sizing',
@@ -46,45 +43,38 @@
     'padding-box': 'box-sizing',
     'outline': {
       description: '<p>A line outside the box</p>',
-      exampleCSS: 'outline:\n    1.5em double lightgreen',
-      exampleCSSSelector: '.box',
-      exampleHTML: '<div class="box" style="margin: 1.5em auto"></div>'
+      exampleCSS: 'outline: 1em double green',
+      exampleHTML: '<div class="box" style="outline: 1em double var(--green)"></div>'
     },
     'border-radius': {
       description: '<p>Rounded corners</p>',
       exampleCSS: 'border-radius: 0 1em',
-      exampleCSSSelector: '.box',
       exampleHTML: '<div class="box"></div>'
     },
     'box-shadow': {
       description: '<p>A shadow-like styling of an element box</p>',
-      exampleCSS: 'box-shadow:\n    0 1em 4em pink,\n    0 .1em red,\n    inset 0 .5em #000',
-      exampleCSSSelector: '.box',
+      exampleCSS: 'box-shadow:\n  0 1em 4em transparent,\n  0 .1em red,\n  inset 0 .5em #000',
       exampleHTML: '<div class="box"></div>'
     },
     'inline-block': {
       description: '<p>A value for the <code>display</code> property.</p>\n<p>The inside of me is formatted as <code>block</code>, but the element myself is laid into the page as an <code>inline</code> element.</p>',
       exampleCSS: 'display: inline-block',
-      exampleCSSSelector: '.text-box',
       exampleHTML: 'Text <div class="text-box">Inline block</div> more text...'
     },
     'block': {
       description: '<p>A value for the <code>display</code> property.</p>\n<p>My width is sized by my parent and I can have widths and heights set on me. My height is determined by my content.</p>',
       exampleCSS: 'display: block',
-      exampleCSSSelector: '.text-box',
       exampleHTML: 'Text <div class="text-box">Block</div> more text...'
     },
     'inline': {
       description: '<p>A value for the <code>display</code> property.</p>\n<p>My width and height are determined by <em>my contents</em> and widths and heights don’t do anything to me. Think of me like a word flowing in a paragraph.</p>',
       exampleCSS: 'display: inline',
-      exampleCSSSelector: '.text-box',
       exampleHTML: 'Text <div class="text-box">Inline</div> more text...'
     },
     'top, left, right, bottom': {
       description: '<p>Positioning properties</p>',
       exampleCSS: 'position: absolute;\ntop: 1em;\nleft: 3em',
-      exampleCSSSelector: '.box .box',
-      exampleHTML: '<div class="box" style="position: relative">\n    <div class="box" style="background: lightgreen"></div>\n</div>'
+      exampleHTML: '<div class="box" style="position: relative; top: 0; left: 0">\n    <div class="box" style="background: var(--green)"></div>\n</div>'
     },
     'position': 'top, left, right, bottom',
     'position: absolute': 'top, left, right, bottom',
@@ -135,9 +125,8 @@
     },
     'text-shadow': {
       description: '<p>A shadow-like styling of element box</p>',
-      exampleCSS: 'text-shadow:\n    0 0 .4em hotpink,\n    1em 1em lightgreen',
-      exampleCSSSelector: '.text',
-      exampleHTML: '<div class="text">Text shadow</div>'
+      exampleCSS: 'text-shadow:\n  0 0 .4em red,\n  1em 1em green',
+      exampleHTML: '<div class="text" style="text-shadow: 0 0 .4em var(--red), 1em 1em var(--green)">Text shadow</div>'
     },
     'text-transform': {
       description: '<p>Typographical styling of <code>text-transform</code></p>',
@@ -158,6 +147,16 @@
     'word-spacing': {
       description: 'Additional space to the right of each word of element text',
       exampleHTML: '<div class="text-box" style="word-spacing: none">none none</div>\n<div class="text-box" style="word-spacing: 1em">1em 1em</div>\n<div class="text-box" style="word-spacing: 5em">5em 5em</div>\n<div class="text-box" style="word-spacing: -8px">-8px -8px</div>'
+    },
+    'opacity': {
+      description: '<p>Render an element partially or completely transparent</p>',
+      exampleCSS: 'opacity: 50%',
+      exampleHTML: '<div class="box" style="border-radius: 50%; transform: translateX(+25%)"></div>\n<div class="box" style="border-radius: 50%; transform: translateX(-25%)"></div>'
+    },
+    'mix-blend-mode': {
+      description: '<p>Adjust the way an element blends with what’s behind it, similar to features often found in image software with layers</p>',
+      exampleCSS: 'mix-blend-mode: multiply',
+      exampleHTML: '<div class="box" style="background: #0074d9; border-radius: 50%; transform: translateX(+25%)"></div>\n<div class="box" style="background: #2ecc40; border-radius: 50%; transform: translateX(-25%)"></div>\n<p style="text-align: left">Options include:</p>\n<pre style="text-align: left"><code>normal\nmultiply\nscreen\noverlay\ndarken\nlighten\ncolor-dodge\ncolor-burn\nhard-light\nsoft-light\ndifference\nexclusion\nhue\nsaturation\ncolor\nluminosity</code></pre>'
     }
   };
 
@@ -209,7 +208,7 @@
     };
     Array.prototype.slice.call(document.querySelectorAll('.contextual-code-example')).forEach(function(code) {
       return code.addEventListener('click', function(event) {
-        var exampleCSS, exampleHTML, ref, specialTerm, specialTermObj;
+        var div, el, exampleCSS, exampleCSSSelector, exampleHTML, firstClass, fragment, ref, specialTerm, specialTermObj;
         event.stopPropagation();
         if (event.target.classList.contains('contextual-open-tree')) {
           closeContextualDisplay();
@@ -223,7 +222,19 @@
         }
         if (specialTermObj != null) {
           closeContextualDisplay();
-          exampleCSS = specialTermObj.exampleCSS ? "<pre><code>" + specialTermObj.exampleCSS + "</code></pre>\n<style>\n    .contextual-example " + specialTermObj.exampleCSSSelector + " {\n        " + specialTermObj.exampleCSS + "\n    }\n</style>" : '';
+          exampleCSSSelector = specialTermObj.exampleCSSSelector;
+          if (!exampleCSSSelector && specialTermObj.exampleCSS && specialTermObj.exampleHTML) {
+            fragment = document.createDocumentFragment();
+            div = document.createElement('div');
+            div.innerHTML = specialTermObj.exampleHTML;
+            fragment.appendChild(div);
+            el = fragment.querySelector('[class]');
+            if (el) {
+              firstClass = el.getAttribute('class').trim().split(' ')[0];
+              exampleCSSSelector = '.' + firstClass;
+            }
+          }
+          exampleCSS = specialTermObj.exampleCSS ? "<pre><code>" + specialTermObj.exampleCSS + "</code></pre>\n<style>\n    .contextual-example " + exampleCSSSelector + " {\n        " + specialTermObj.exampleCSS + "\n    }\n</style>" : '';
           exampleHTML = specialTermObj.exampleHTML ? "<div class=\"contextual-example\">\n    " + specialTermObj.exampleHTML + "\n</div>" : '';
           contextualDisplay.innerHTML = "<h3>" + (specialTermTitle(specialTerm)) + "</h3>\n<div class=\"contextual-description\">\n    " + specialTermObj.description + "\n</div>\n" + exampleCSS + "\n" + exampleHTML + "\n<a data-contextual-close></a>";
           if ((ref = contextualDisplay.querySelector('[data-contextual-close]')) != null) {
@@ -290,6 +301,8 @@
 
   window.chapters = chapters;
 
-  addEventListener('DOMContentLoaded', _ => chapters.init());
+  addEventListener('DOMContentLoaded', function() {
+    return chapters.init();
+  });
 
 }).call(this);
